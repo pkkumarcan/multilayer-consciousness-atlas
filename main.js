@@ -8,23 +8,35 @@ function handleHashRouting() {
   const hash = window.location.hash;
   if (!hash) return false;
 
+  // Set routing flag to block feedback loop in updateHash()
+  state.isRouting = true;
+
+  let processed = false;
   if (hash.startsWith('#/floor/')) {
     const floorNum = parseInt(hash.replace('#/floor/', ''), 10);
     if (floorNum >= 1 && floorNum <= 18) {
-      if (state.activeFloor === floorNum && state.activeView === 'floor') return true;
+      if (state.activeFloor === floorNum && state.activeView === 'floor') {
+        state.isRouting = false;
+        return true;
+      }
       selectFloor(floorNum);
-      return true;
+      processed = true;
     }
   } else if (hash.startsWith('#/view/')) {
     const viewName = hash.replace('#/view/', '');
     const validViews = ['floor', 'matrix', 'graph', 'sound', 'gallery', 'energy'];
     if (validViews.includes(viewName)) {
-      if (state.activeView === viewName) return true;
+      if (state.activeView === viewName) {
+        state.isRouting = false;
+        return true;
+      }
       switchView(viewName);
-      return true;
+      processed = true;
     }
   }
-  return false;
+
+  state.isRouting = false;
+  return processed;
 }
 
 document.addEventListener('DOMContentLoaded', async () => {

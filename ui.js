@@ -55,6 +55,9 @@ export function switchView(viewName) {
 }
 
 function updateHash() {
+  // Bypasses programmatic hash updates during routing to prevent infinite loops
+  if (state.isRouting) return;
+
   let newHash = '';
   if (state.activeView === 'floor') {
     newHash = `#/floor/${state.activeFloor}`;
