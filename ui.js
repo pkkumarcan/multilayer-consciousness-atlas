@@ -246,6 +246,7 @@ function renderFloorDetails(floor) {
     `;
   });
 
+  const level = floor.classification.level;
   let esotericArtHtml = '';
   if (level === 1 || level === 2 || level === 3 || level === 4) {
     const imgName = level === 1 ? '1st chakra.png' :
