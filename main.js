@@ -70,6 +70,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
       }
     }
+
+    // Register PWA Service Worker for offline app capability
+    if ('serviceWorker' in navigator) {
+      try {
+        const reg = await navigator.serviceWorker.register('./service-worker.js');
+        console.log('Service Worker registered successfully with scope:', reg.scope);
+      } catch (err) {
+        console.error('Service Worker registration failed:', err);
+      }
+    }
   } catch (error) {
     console.error("Initialization error:", error);
   }
