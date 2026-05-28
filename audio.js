@@ -91,6 +91,9 @@ export function playCurrentSound(floorNum, volume = 0.5) {
   } else if (soundLower.includes('flute') || soundLower.includes('bansuri')) {
     // Level 2 & 11: Resonant microtonal flute melody
     synthesizeMicrotonalFlute(ctx, analyserNode);
+  } else if (soundLower.includes('bell') && soundLower.includes('conch')) {
+    // Level 7: Combined swelling conch and temple bells
+    synthesizeBellAndConch(ctx, analyserNode, floorNum);
   } else if (soundLower.includes('conch') || soundLower.includes('shankh')) {
     // Level 4 & 7: Swelling conch shell horn
     synthesizeConchHorn(ctx, analyserNode);
@@ -212,6 +215,86 @@ function synthesizeConchHorn(ctx, output) {
   activeInterval = setInterval(sweep, 6000);
 
   currentNodes.push(osc1, osc2, filter);
+}
+
+// ── COMBINED BELL & CONCH SYNTHESIS (LEVEL 7) ──
+function synthesizeBellAndConch(ctx, output, floorNum) {
+  // 1. Swelling Conch Horn
+  const conchOsc1 = ctx.createOscillator();
+  conchOsc1.type = 'triangle';
+  conchOsc1.frequency.setValueAtTime(150, ctx.currentTime); // Deep spiritual drone
+
+  const conchOsc2 = ctx.createOscillator();
+  conchOsc2.type = 'sine';
+  conchOsc2.frequency.setValueAtTime(151.5, ctx.currentTime); // Detuned chorus
+
+  const conchFilter = ctx.createBiquadFilter();
+  conchFilter.type = 'lowpass';
+  conchFilter.Q.setValueAtTime(6, ctx.currentTime);
+
+  const conchGain = ctx.createGain();
+  conchGain.gain.setValueAtTime(0.3, ctx.currentTime); // Attenuated to blend perfectly with bells
+
+  const conchSweep = () => {
+    const time = ctx.currentTime;
+    conchFilter.frequency.setValueAtTime(120, time);
+    conchFilter.frequency.exponentialRampToValueAtTime(500, time + 2.5);
+    conchFilter.frequency.exponentialRampToValueAtTime(120, time + 5.5);
+  };
+
+  conchOsc1.connect(conchFilter);
+  conchOsc2.connect(conchFilter);
+  conchFilter.connect(conchGain);
+  conchGain.connect(output);
+
+  conchOsc1.start();
+  conchOsc2.start();
+  conchSweep();
+
+  // 2. Additive Temple Bells
+  const baseFreq = 440; // Vibrant A4 bell chime
+  const harmonics = [1.0, 1.2, 1.5, 2.0, 2.7, 3.5];
+  const bellGains = [0.4, 0.28, 0.2, 0.12, 0.08, 0.04]; // Slightly attenuated to prevent clipping
+
+  const oscs = [];
+  const gainNodes = [];
+
+  harmonics.forEach((h, idx) => {
+    const osc = ctx.createOscillator();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(baseFreq * h, ctx.currentTime);
+
+    const oscGain = ctx.createGain();
+    oscGain.gain.setValueAtTime(bellGains[idx], ctx.currentTime);
+
+    osc.connect(oscGain);
+    oscGain.connect(output);
+    osc.start();
+
+    oscs.push(osc);
+    gainNodes.push(oscGain);
+  });
+
+  // Blended restrike and sweep loop
+  activeInterval = setInterval(() => {
+    const time = ctx.currentTime;
+    // Re-strike bells gently
+    gainNodes.forEach((gn, idx) => {
+      gn.gain.setValueAtTime(bellGains[idx] * 0.45, time);
+      gn.gain.exponentialRampToValueAtTime(0.001, time + (4 - idx * 0.5));
+    });
+    // Sweep conch filter
+    conchSweep();
+  }, 6000);
+
+  // Initial bell strike
+  const time = ctx.currentTime;
+  gainNodes.forEach((gn, idx) => {
+    gn.gain.setValueAtTime(bellGains[idx], time);
+    gn.gain.exponentialRampToValueAtTime(0.001, time + (4.5 - idx * 0.5));
+  });
+
+  currentNodes.push(conchOsc1, conchOsc2, conchFilter, conchGain, ...oscs, ...gainNodes);
 }
 
 // ── ROLLING COSMIC THUNDER SYNTHESIS (LEVEL 8) ──
