@@ -157,6 +157,11 @@
         <div class="panel-progress">
           <div class="panel-progress-fill" id="detail-progress"></div>
         </div>
+
+        <!-- Hero Visualizer Area (Sacred Yantra / Esoteric Art) -->
+        <div id="floor-hero-visualizer" class="floor-hero-visualizer glass">
+          <!-- Populated dynamically by JS -->
+        </div>
         
         <!-- Chips Bar -->
         <div class="chips-bar" id="detail-chips">
@@ -394,6 +399,14 @@
       </div>
 
     </main>
+  </div>
+
+  <!-- Lightbox Modal for Art & Yantras -->
+  <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Image Lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close Lightbox">&times;</button>
+    <div class="lightbox-content-container" onclick="event.stopPropagation()">
+      <div id="lightbox-content"></div>
+    </div>
   </div>
 
   <script type="module" src="main.js"></script>

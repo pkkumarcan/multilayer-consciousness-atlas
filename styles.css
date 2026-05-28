@@ -1016,10 +1016,39 @@ main {
    DYNAMIC SACRED GEOMETRY INFOGRAPHIC DASHBOARD
    ============================================================================== */
 
+/* ==============================================================================
+   DYNAMIC HERO VISUALIZER & DASHBOARD PANELS
+   ============================================================================== */
+
+.floor-hero-visualizer {
+  margin: 1.5rem 0 2rem;
+  padding: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(13, 13, 18, 0.25);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+}
+
+.floor-hero-visualizer .subtle-visualizer {
+  width: 100%;
+  max-width: 580px;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  padding: 1.8rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 24px rgba(0,0,0,0.4);
+}
+
 .floor-infographic-panel {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 2rem;
+  display: block;
   margin: 1.5rem 0 2rem;
   padding: 1.8rem;
   background: rgba(13, 13, 18, 0.45);
@@ -1030,33 +1059,15 @@ main {
   box-shadow: var(--shadow);
 }
 
-@media (max-width: 900px) {
-  .floor-infographic-panel {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1.2rem;
-  }
-}
-
-.subtle-visualizer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.015);
-  border: 1px solid rgba(255, 255, 255, 0.02);
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
 .lotus-svg {
   width: 100%;
   max-width: 220px;
   height: auto;
   filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.5));
+  transition: transform 0.2s ease;
+}
+.lotus-svg:hover {
+  transform: scale(1.02);
 }
 
 @keyframes lotus-breathe {
@@ -1079,10 +1090,88 @@ main {
 }
 
 .mapping-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .mapping-dashboard {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .floor-hero-visualizer {
+    padding: 1.2rem;
+  }
+}
+
+/* ==============================================================================
+   LIGHTBOX MODAL OVERLAY
+   ============================================================================== */
+
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(4, 4, 6, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lightbox-modal.active {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
+  opacity: 1;
+}
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  color: var(--muted);
+  font-size: 44px;
+  font-weight: 200;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 10000;
+}
+.lightbox-close:hover {
+  color: var(--accent);
+  transform: scale(1.1) rotate(90deg);
+}
+.lightbox-content-container {
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#lightbox-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#lightbox-content img,
+#lightbox-content svg {
+  max-width: 85vw;
+  max-height: 80vh;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 50px rgba(0,0,0,0.85));
+  cursor: zoom-out;
+  animation: lightbox-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes lightbox-pop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 .dashboard-section-title {

@@ -257,7 +257,7 @@ function renderFloorDetails(floor) {
       <div class="esoteric-art-frame" style="--glow-color: ${activeColor}55;">
         <img src="${imgName}" alt="Esoteric Art of ${floor.canonical_name}" class="esoteric-img">
       </div>
-      <div class="visualizer-caption">Esoteric Painting (${level}${level === 1 ? 'st' : level === 2 ? 'nd' : level === 3 ? 'rd' : 'th'} Chakra)</div>
+      <div class="visualizer-caption">Esoteric Painting (${level}${level === 1 ? 'st' : level === 2 ? 'nd' : level === 3 ? 'rd' : 'th'} Chakra) · <span style="color: var(--accent); font-weight: 500;">🔍 Zoom Artwork</span></div>
     `;
   } else {
     esotericArtHtml = `
@@ -272,9 +272,9 @@ function renderFloorDetails(floor) {
     `;
   }
 
-  const infoContainer = document.getElementById('floor-infographic');
-  if (infoContainer) {
-    infoContainer.innerHTML = `
+  const heroContainer = document.getElementById('floor-hero-visualizer');
+  if (heroContainer) {
+    heroContainer.innerHTML = `
       <div class="subtle-visualizer">
         <!-- Visualizer Tabs Toggle -->
         <div class="visualizer-tabs">
@@ -283,7 +283,7 @@ function renderFloorDetails(floor) {
         </div>
 
         <!-- Tab 1 Pane: Sacred Yantra -->
-        <div id="vis-yantra-pane" style="display: block; width: 100%;">
+        <div id="vis-yantra-pane" style="display: block; width: 100%; cursor: zoom-in;" onclick="openLightbox('yantra')">
           <svg viewBox="0 0 300 300" class="lotus-svg">
             ${defsSvg}
             <circle cx="150" cy="150" r="140" fill="url(#bgGlow)" stroke="${activeColor}" stroke-dasharray="3,5" stroke-width="0.75" opacity="0.35" />
@@ -292,15 +292,20 @@ function renderFloorDetails(floor) {
             </g>
             ${centerSvg}
           </svg>
-          <div class="visualizer-caption">Procedural Sacred Geometry (${count > 0 ? `${count} Lotus Petals` : 'Formless Mandala'})</div>
+          <div class="visualizer-caption">Procedural Sacred Geometry (${count > 0 ? `${count} Lotus Petals` : 'Formless Mandala'}) · <span style="color: var(--accent); font-weight: 500;">🔍 Zoom Yantra</span></div>
         </div>
 
         <!-- Tab 2 Pane: Esoteric Art -->
-        <div id="vis-art-pane" style="display: none; width: 100%;">
+        <div id="vis-art-pane" style="display: none; width: 100%; ${level <= 4 ? 'cursor: zoom-in;' : ''}" ${level <= 4 ? 'onclick="openLightbox(\'art\')"' : ''}>
           ${esotericArtHtml}
         </div>
       </div>
+    `;
+  }
 
+  const infoContainer = document.getElementById('floor-infographic');
+  if (infoContainer) {
+    infoContainer.innerHTML = `
       <div class="mapping-dashboard">
         <div>
           <div class="dashboard-section-title">Cosmic Ascension Scale</div>
@@ -1037,3 +1042,37 @@ export function setupGalleryOverlays() {
     });
   });
 }
+
+// ── LIGHTBOX WINDOW BINDINGS ──
+window.openLightbox = (type) => {
+  const lightbox = document.getElementById('lightbox-modal');
+  const content = document.getElementById('lightbox-content');
+  if (!lightbox || !content) return;
+  
+  if (type === 'yantra') {
+    const svgEl = document.querySelector('.lotus-svg');
+    if (svgEl) {
+      content.innerHTML = svgEl.outerHTML;
+    }
+  } else if (type === 'art') {
+    const imgEl = document.querySelector('.esoteric-img');
+    if (imgEl) {
+      content.innerHTML = `<img src="${imgEl.src}" alt="${imgEl.alt}">`;
+    }
+  }
+  
+  lightbox.classList.add('active');
+  lightbox.setAttribute('aria-hidden', 'false');
+};
+
+window.closeLightbox = () => {
+  const lightbox = document.getElementById('lightbox-modal');
+  const content = document.getElementById('lightbox-content');
+  if (lightbox) {
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+  }
+  if (content) {
+    content.innerHTML = '';
+  }
+};
