@@ -478,7 +478,7 @@ function renderFloorDetails(floor) {
         createCard(cardsContainer, trad, traditionLabels[trad] || trad, `
           <strong>${data.term}</strong>
           <p style="margin-top:0.8rem;">${data.description.replace(/\n/g, '<br>')}</p>
-        `);
+        `, true);
       }
     }
   }
@@ -595,21 +595,46 @@ function renderPlaceholderFloor(floorNum) {
   document.getElementById('next-btn').disabled = floorNum === 18;
 }
 
-function createCard(container, category, title, bodyHtml) {
-  const card = document.createElement('div');
-  card.className = `card glass category-card-${category}`;
+function createCard(container, category, title, bodyHtml, isCollapsible = false) {
+  const card = document.createElement(isCollapsible ? 'details' : 'div');
+  card.className = `card glass category-card-${category} ${isCollapsible ? 'collapsible-card' : ''}`;
   card.setAttribute('data-category', category);
-  card.setAttribute('tabindex', '0');
   
-  card.innerHTML = `
-    <div class="card-head">
-      <span class="card-tag tag-${category}">${category.replace('_', ' ')}</span>
-      <h3 class="card-title">${title}</h3>
-    </div>
-    <div class="card-body">
-      ${bodyHtml}
-    </div>
-  `;
+  if (isCollapsible) {
+    card.innerHTML = `
+      <summary class="card-head" role="button" aria-expanded="false" tabindex="0">
+        <div class="summary-title-wrapper">
+          <span class="card-tag tag-${category}">${category.replace('_', ' ')}</span>
+          <h3 class="card-title">${title}</h3>
+        </div>
+        <span class="accordion-arrow">
+          <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+        </span>
+      </summary>
+      <div class="card-body">
+        ${bodyHtml}
+      </div>
+    `;
+
+    // Modern accessibility sync on toggle
+    card.addEventListener('toggle', () => {
+      const summary = card.querySelector('summary');
+      if (summary) {
+        summary.setAttribute('aria-expanded', card.open ? 'true' : 'false');
+      }
+    });
+  } else {
+    card.setAttribute('tabindex', '0');
+    card.innerHTML = `
+      <div class="card-head">
+        <span class="card-tag tag-${category}">${category.replace('_', ' ')}</span>
+        <h3 class="card-title">${title}</h3>
+      </div>
+      <div class="card-body">
+        ${bodyHtml}
+      </div>
+    `;
+  }
 
   if (state.cardFilters[category] === false) {
     card.style.display = 'none';
