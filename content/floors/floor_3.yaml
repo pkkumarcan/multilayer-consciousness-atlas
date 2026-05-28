@@ -1,0 +1,143 @@
+# ==============================================================================
+# Consciousness Atlas - Floor 3 Entity Data
+# ==============================================================================
+id: floor_3
+canonical_name: "Nabhi / Manipura Chakra"
+sanskrit_name: "नाभि चक्र · मणिपूर · The Navel · Jewel City"
+alternate_names:
+  - "Manipura"
+  - "Nabhi"
+  - "Nabhi Swarupa"
+  - "The Navel"
+  - "Solar Plexus"
+  - "Jewel City"
+
+classification:
+  level: 3
+  realm: "Pinda"
+  category: "physical"
+
+canonical:
+  ruler: "Lord Vishnu"
+  sound: "Sound of a roaring fire / crackling furnace"
+  light: "Dazzling white light (radiating like a jewel)"
+  geometry: "Eight-petaled white lotus with a central downward-pointing red triangle representing the Fire element"
+  petals:
+    count: 8
+    color: "white"
+    seed_syllables:
+      - "ḍaṃ"
+      - "ḍhaṃ"
+      - "ṇaṃ"
+      - "taṃ"
+      - "thaṃ"
+      - "daṃ"
+      - "dhaṃ"
+      - "naṃ"
+  teachings: |
+    Located at the navel. The lotus has eight petals and its colour is dazzling white. The presiding deity is Lord Vishnu—the Preserver and maintainer of life—who stays here with his consort Goddess Lakshmi, the goddess of abundance and nourishment. Lord Shiva also stays here in attendance. The physical element associated is fire (Agni). The recitation to subdue this chakra is Hring.
+    
+    This chakra marks the absolute boundary of the animal kingdom. Animals, birds, insects, and reptiles live and operate only on floors 1 through 3. Nature has not developed their higher chakras, meaning they have no higher intellect, introspective capacity, or spiritual wisdom. They eat (Nabhi), procreate (Indriya), and rest/eliminate (Guda). So long as a human being remains entangled only in these three lower chakras, their consciousness is no better than that of an animal. Lord Shiva stays in attendance here as Pashupati-Nath—the Lord of the Beasts—ruling over this animal boundary.
+    
+    Symbolically, Lord Vishnu is represented as resting upon the coiled serpent Sheshnag, which corresponds anatomically to the coiled intestines surrounding the navel. Goddess Lakshmi directs all operations of nourishment and body maintenance from this plexus, matching how a fetus is nourished through the umbilical cord.
+  mantra: "OM svah"
+  recitation: "Hring"
+  consorts: "Lakshmi"
+  function: "Digestion, physical preservation, metabolic maintenance, and animal-boundary transition"
+
+comparative:
+  sufism:
+    term: "Nafs / Alam Malkut Border"
+    description: |
+      Sufism aligns the navel center with the upper boundary of the base Nafs and the transition into Malkut. It represents the station of hunger, physical maintenance, and survival-drive that must be disciplined. The Sufi practice of fasting (Sawm) directly purifies this navel fire, forcing the lower self (Nafs) to submit to spiritual will.
+  taoism:
+    term: "Dantian / Cinnabar Field"
+    description: |
+      In Taoism and Qi Gong, the area just below the navel is the Lower Dantian (Elixir Field), which is the absolute energetic center of the physical body. It is the storage chamber for Qi (vital energy) and Jing. Breathing from the Dantian (abdominal breathing) coordinates the physical fire (San Jiao / Triple Burner) to generate vital force and build physical longevity.
+  kabbalah:
+    term: "Netzach / Hod"
+    description: |
+      Sits at the lower dynamic boundary where Netzach (Victory/Emotion/Instinct) and Hod (Splendor/Intellect) feed down to generate active physical drive and metabolic expression. Netzach represents the primal animal desires, while Hod represents their regulation.
+  buddhism:
+    term: "Nabhi Wheel / Seat of Tummo"
+    description: |
+      In Tibetan Buddhist Tantra, the navel chakra (Nabhi Wheel) is the seat of the element of Fire and is the focal point for the generation of Tummo (inner psychic heat). By concentrating on a red syllable 'Ram' or a tiny flame at the navel, yogis generate deep spiritual heat that purifies the central channel.
+  christianity:
+    term: "The Gate of the Belly"
+    description: |
+      Refers to the physical belly and digestive region which must be sanctified. "Their god is their belly" (Philippians 3:19) warns against being trapped at this level, urging seekers to ascend beyond animalistic gluttony and sensory indulgence.
+  gnosticism:
+    term: "The Animal Soul (Psyche)"
+    description: |
+      The boundary of the animal soul which reacts purely to physical appetites and desires. The Gnostic must raise consciousness above this belly-gate to awaken the pneumatic (spiritual) intelligence.
+  hindu_tantra:
+    term: "Manipura / Rudra Realm"
+    description: |
+      Manipura literally means "City of Jewels" (Mani = jewel, Pura = city). Located at the solar plexus/navel. In mainstream Tantric systems, it has 10 dark-blue petals, a central red triangle, and is governed by Rudra Shiva (representing destruction of impurities) and the Lakini Shakti. The ram is its animal vehicle, representing stubborn fire.
+  sikhism:
+    term: "Nabhi Kamal / The Intestinal Bed"
+    description: |
+      The Guru Granth Sahib contains various hymns referencing the Nabhi Kamal (navel lotus) and the divine maintenance of the body. Kabir's Shabad describes: "Nabhi chakra dal aath viraajai, Vishnu roop Lakshmi sang saajai..." (The navel chakra has eight petals, where Vishnu resides with Lakshmi).
+  vedic:
+    term: "Vaishvanara Agni"
+    description: |
+      The Rig Veda and Upanishads heavily praise Agni (the fire god) in his digestive form, Vaishvanara. The Chandogya Upanishad details the five inner pranas that feed this digestive fire, representing it as a sacred cosmic fire sacrifice occurring within the human temple.
+  jainism:
+    term: "Tejas Kendra"
+    description: |
+      In Preksha Dhyana, the solar plexus is called the Tejas Kendra (Center of Fire/Energy). Concentrating here with a visualization of a bright yellow sun is understood to purify the digestive system, strengthen willpower, and awaken the vital fire.
+
+science:
+  neuroscience:
+    regions:
+      - "Celiac Plexus (Solar Plexus)"
+      - "Enteric Nervous System (ENS)"
+    networks:
+      - "Visceral Homeostatic Networks"
+    description: |
+      Maps anatomically to the celiac (solar) plexus and the Enteric Nervous System (ENS), often called the 'second brain'. The ENS contains over 100 million neurons and produces 90% of the body's serotonin, governing digestion, gut-brain communication, and basic gut feelings. Activating this center balances the sympathetic splanchnic nerves and parasympathetic vagus nerve inputs to the stomach.
+    confidence: "High"
+  endocrinology:
+    description: |
+      Governs the pancreas (which secretes insulin and glucagon to maintain blood glucose homeostatically) and the adrenal medulla, regulating metabolic energy and physical preservation.
+  psychology:
+    ego_state: "The Will / Personal Power / Instinctual Drive"
+    description: |
+      Jungian and modern psychology identify this solar plexus region with personal willpower, assertiveness, and the consolidation of the ego-identity against the external environment. It is the center of agency—the boundary where the biological organism asserts itself to maintain its existence.
+  cosmology:
+    description: |
+      Represented by the nuclear fusion core of active stars, where hydrogen is converted into helium, generating the light and heat that sustains surrounding life.
+  information_theory:
+    description: |
+      The homeostatic processing layer—maintaining the internal system state against external environmental entropy through dynamic feedforward loops.
+
+phenomenology:
+  emotional_tone: |
+    Warm, powerful, confident, and energetic, but highly vulnerable to anger, irritation, greed, and territorial aggression when blocked. Transcending this floor yields deep, quiet stability and master-level self-preservation.
+  visual_texture: |
+    Dazzling, blazing white or golden-yellow light. The space feels warm, expansive, and highly energetic, like standing before a glowing forge.
+  auditory_texture: |
+    A powerful, crackling, and roaring sound, resembling a large fireplace or a furnace in full operation.
+  ego_effect: |
+    Identification with personal agency, will, and biological hunger. "I act, I consume, I maintain my boundaries."
+  risks: |
+    Entrapment in anger (Krodha), greed (Lobha), or the endless pursuit of power and dominance, keeping the soul bound within the animalistic matrix of fight-or-flight drives.
+  transitions:
+    from_previous: |
+      Energy rising from the fluid sacral waters (Floor 2) and vaporizing into the intense, transformative fire of Floor 3, shifting from feeling to willful action.
+    to_next: |
+      Crossing the animal boundary. The soul moves above the solar plexus, transcends the instincts of biological survival, and enters the heart center (Floor 4), crossing the threshold into true human consciousness.
+
+memory:
+  color: "#639922"
+  icon: "Ram representing raw, stubborn fire and metabolic force"
+  metaphor: "Vishnu resting on the Sheshnag bed of the intestines, feeding the biological temple"
+  mnemonic: "Hring subdues the Nabhi. Rise above the belly-gate of the animal kingdom, let Pashupati guide you, and awaken the heart."
+
+sources:
+  primary:
+    - "Dr. H.N. Saksena, The Secret of Realisation, Chapter II"
+    - "Bhagavad Gita, Chapter 15, Verse 14 (Vaishvanara fire)"
+  secondary:
+    - "Preksha Dhyana manuals (Tejas Kendra meditation)"
+    - "Tibetan Vajrayana manuals (Tummo / Inner Heat practices)"

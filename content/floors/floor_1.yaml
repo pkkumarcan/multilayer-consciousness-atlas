@@ -1,0 +1,139 @@
+# ==============================================================================
+# Consciousness Atlas - Floor 1 Entity Data
+# ==============================================================================
+id: floor_1
+canonical_name: "Guda Chakra / Muladhara"
+sanskrit_name: "गुदा चक्र · मूलाधार · The Root · The Foundation"
+alternate_names:
+  - "Muladhara"
+  - "Guda"
+  - "The Root"
+  - "The Foundation"
+  - "Adhara"
+  - "Brahma-Padma"
+
+classification:
+  level: 1
+  realm: "Pinda"
+  category: "physical"
+
+canonical:
+  ruler: "Lord Ganesha"
+  sound: "Buzz of a honeybee"
+  light: "Heavy, dense red illumination"
+  geometry: "Four-petaled red lotus with a central yellow square representing the Earth element"
+  petals:
+    count: 4
+    color: "red"
+    seed_syllables:
+      - "vaṃ"
+      - "śaṃ"
+      - "ṣaṃ"
+      - "saṃ"
+  teachings: |
+    The first chakra from below, located at the rectum. Its colour is red, and the lotus has four petals. The deity is Lord Ganesha—the deity of Karma (action) and remover of obstacles—whose body is red. He stays here with his two consorts, Riddhi (abundance) and Siddhi (spiritual powers). The primary function of this chakra is elimination, and the physical element associated is earth (Prithvi). 
+    
+    Before ascending from floor 1, the spiritual aspirant must conquer the five enemies residing here, transforming them into their divine opposites: Kama (lust) is replaced by Sheel (pure living); Krodha (anger) is replaced by Kshama (forgiveness); Lobha (greed) is replaced by Santosha (contentment); Moha (attachment) is replaced by Viveka (discrimination); and Ahankar (ego) is replaced by Deenta (humility). 
+    
+    Yogis purify the rectum using Vasti, perform Padmasana pranayama, and concentrate on the rectum while reciting the seed sound Kling hundreds of thousands of times to subdue this chakra and gain physical Siddhis. Saksena warns that true seekers must by-pass these powers and proceed upward.
+  mantra: "OM bhuh"
+  recitation: "Kling"
+  consorts: "Riddhi and Siddhi"
+  function: "Elimination, physical foundation, and grounding"
+
+comparative:
+  sufism:
+    term: "Nafs al-Ammara"
+    description: |
+      Sufism places the Nafs (the lower, commanding ego-self) at the absolute base of the subtle system, corresponding to the survival and animalistic instincts of the Muladhara level. The station of Nafs al-Ammara (the self that commands evil) represents the lowest state of consciousness. The entire Sufi path of Tazkiya-e-Nafs (purification of the self) begins with subduing this lower self. The Sufis call the five lower chakras collectively Alam Na-Soot (the material world realm).
+  taoism:
+    term: "Hui Yin"
+    description: |
+      In Taoist inner alchemy, the corresponding physical point is Hui Yin (Meeting of Yin), located at the perineum. It is considered the gateway where the Yin energy of the Earth enters the body and the lowest reservoir of the Conception and Governing vessels. It must be locked (via Mula Bandha-like perineum contractions) to prevent the escape of vital energy (Jing) during sexual sublimation.
+  kabbalah:
+    term: "Malkuth"
+    description: |
+      Malkuth (the Kingdom) is the lowest Sephirah on the Tree of Life, representing the dense physical universe, the element of Earth, and the final crystallization of divine energy into matter. It represents the grounding foundation through which spiritual light is anchored in the physical body.
+  buddhism:
+    term: "Nirmana Chakra"
+    description: |
+      In Vajrayana (Tibetan) Tantra, the root chakra is called the Nirmana Chakra (the emanation wheel), representing physical structure, bone, flesh, and gross earthly existence. It governs the earth element (pathavi dhatu) and the transition from animalistic sensory reactivity to conscious presence.
+  christianity:
+    term: "The Foundation Gate"
+    description: |
+      Represents the foundational gate of the 'city of nine gates' mentioned in early Christian mystical interpretations of the human temple, where the soul enters the material world and must establish a clean foundation of virtue.
+  gnosticism:
+    term: "The Hylic Realm"
+    description: |
+      The gross, material layer of existence ruled by the lowest archons of the physical world. The soul must transcend hylic (purely material) attachment to begin the Gnostic ascent.
+  hindu_tantra:
+    term: "Kundalini Shakti seat"
+    description: |
+      The seat of Kundalini Shakti, the divine feminine evolutionary energy coiled 3.5 times around the Svayambhu-Linga. It is presided over by the Dakini Shakti, who radiates bright red light. Awakening Kundalini here forces her upward into the central channel (Sushumna).
+  sikhism:
+    term: "The Rectal Gate / Nau Duar"
+    description: |
+      Gurbani repeatedly refers to the nine gates (nau duar) of the physical body, which include the rectum. The spiritual path instructs the seeker to withdraw attention from these lower sensory and eliminative gates and focus on the tenth door (Dasam Dwar). Kabir's Shabad, recorded in Sikh tradition, begins at the body-palace boundary.
+  vedic:
+    term: "Adhara"
+    description: |
+      The Katha Upanishad describes the body as a city of nine gates where the Self dwells. Muladhara is the foundational gate. Early Vedic texts describe this subtle foundation as Adhara (the lower support) or Brahma-Padma (Brahma's lotus).
+  jainism:
+    term: "Shakti Kendra"
+    description: |
+      Jain Preksha Dhyana identifies the base of the spine as the Shakti Kendra (Center of Energy). Jain philosophy maps the densest, heaviest karmic matter (Pudgala) to this region, and meditation begins here to refine and elevate these energies.
+
+science:
+  neuroscience:
+    regions:
+      - "Perineal Nerve Plexus"
+      - "Coccygeal Body"
+    networks:
+      - "Autonomic Survival Networks (Fight-or-Flight)"
+    description: |
+      Maps to the coccygeal nerve plexus and the perineal nerve network that controls the pelvic floor, sphincter muscles, and structural alignment of the lower spine. Concentrating here stimulates the sacral parasympathetic outflow. The associated adrenal glands govern the release of adrenaline, which regulates basic survival, fear, and fight-or-flight states.
+    confidence: "High"
+  endocrinology:
+    description: |
+      Governs the adrenal glands, which sit atop the kidneys but are functionally connected to the survival and threat-response mechanisms of the root plexus.
+  psychology:
+    ego_state: "The Unconscious / Shadow / Survival Drive"
+    description: |
+      Carl Jung mapped Muladhara to the deep personal unconscious and the shadow—the instinctual, reptilian, and unintegrated aspects of the psyche. It represents the struggle for survival, basic safety, and trust in the physical environment.
+  cosmology:
+    description: |
+      Associated with the gravitational singularity and the absolute density of physical matter, acting as the structural anchor of the material cosmos.
+  information_theory:
+    description: |
+      Represents the binary state of physical presence (on/off, exist/non-exist)—the foundational base of information entropy in material form.
+
+phenomenology:
+  emotional_tone: |
+    Heavy, earthy, grounding, but easily plagued by deep-seated survival anxiety, primal fear, and territorial insecurity. Subduing this center induces absolute stability and fearlessness.
+  visual_texture: |
+    Thick, muddy, or deeply saturated crimson light. The space feels dense, heavy, and structurally rigid.
+  auditory_texture: |
+    A low-frequency, deep, continuous hum resembling the collective buzzing of thousands of honeybees in a closed space.
+  ego_effect: |
+    Total identification with the physical body and its immediate material environment. "I am my body, I must survive."
+  risks: |
+    Becoming trapped in material greed, physical lethargy (Tamas), or obsessive focus on survival, leading to spiritual stagnation and hoarding behaviors.
+  transitions:
+    from_previous: |
+      The entrance of consciousness into gross physical embodiment at birth, collapsing from a state of formless spirit into a singular point of heavy, material space.
+    to_next: |
+      Awakening the vital force at the perineum, subduing the five enemies (lust, anger, greed, attachment, pride), and allowing the energy to rise into the sacral center (Floor 2).
+
+memory:
+  color: "#a32d2d"
+  icon: "Elephant representing absolute physical stability and strength"
+  metaphor: "Anchoring the roots of the world-tree deep into the heavy soil"
+  mnemonic: "Root yourself, conquer the five enemies at the rectal plexus, and bypass the allure of early Siddhis."
+
+sources:
+  primary:
+    - "Dr. H.N. Saksena, The Secret of Realisation, Chapter II"
+    - "Late Upanishads (Katha and Chandogya Upanishad references to the nine gates)"
+  secondary:
+    - "C.G. Jung, Seminars on Kundalini Yoga (1932)"
+    - "Paramhansa Yogananda, Essence of the Bhagavad Gita (interpretation of Pandava brothers)"

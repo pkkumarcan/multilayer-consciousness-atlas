@@ -1,0 +1,49 @@
+import { state } from './state.js';
+import { selectFloor, setupMatrix, setupSoundTimeline, switchView, toggleCardFilter, setupGallery, toggleVisualizerTab, toggleAudioSynthesizer, changeSynthesizerVolume, switchGalleryTab } from './ui.js';
+import { setupGraph, toggleGraphFilter } from './graph.js';
+import { handleSearch } from './search.js';
+
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const dbResponse = await fetch('content/floors_db.json');
+    state.floorsDB = await dbResponse.json();
+
+    const graphResponse = await fetch('content/content_graph.json');
+    state.graphData = await graphResponse.json();
+
+    console.log("Atlas Database and Graph successfully loaded.");
+
+    selectFloor(1);
+    setupMatrix();
+    setupGraph();
+    setupSoundTimeline();
+    setupGallery();
+
+    for (let i = 1; i <= 18; i++) {
+      const btn = document.getElementById(`btn-${i}`);
+      if (btn) {
+        if (state.floorsDB[`floor_${i}`]) {
+          btn.classList.remove('disabled-floor');
+        } else {
+          btn.classList.add('disabled-floor');
+        }
+      }
+    }
+  } catch (error) {
+    console.error("Initialization error:", error);
+  }
+});
+
+// Expose to window for inline onclick handlers in HTML
+window.switchView = switchView;
+window.selectFloor = selectFloor;
+window.handleSearch = handleSearch;
+window.toggleCardFilter = toggleCardFilter;
+window.toggleVisualizerTab = toggleVisualizerTab;
+window.toggleAudioSynthesizer = toggleAudioSynthesizer;
+window.changeSynthesizerVolume = changeSynthesizerVolume;
+window.switchGalleryTab = switchGalleryTab;
+window.toggleGraphFilter = toggleGraphFilter;
+window.navigateFloor = (direction) => {
+  selectFloor(state.activeFloor + direction);
+};

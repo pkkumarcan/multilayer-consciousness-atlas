@@ -1,0 +1,140 @@
+# ==============================================================================
+# Consciousness Atlas - Floor 6 Entity Data
+# ==============================================================================
+id: floor_6
+canonical_name: "Aagya Chakra / Tisra Til"
+sanskrit_name: "आज्ञा चक्र · तिसरा तिल · Third Eye · Gateway to the Inner Worlds"
+alternate_names:
+  - "Ajna Chakra"
+  - "Tisra Til"
+  - "Third Eye"
+  - "Mukti-Dwara"
+  - "Nukta-e-Suweda"
+  - "Brahma's cleft"
+
+classification:
+  level: 6
+  realm: "Pinda"
+  category: "physical"
+
+canonical:
+  ruler: "Sat-Guru (indirectly governing the gateway)"
+  sound: "Anhad jhingaa (whistling sound current / buzz like a black wasp)"
+  light: "Taramandal (a brilliant celestial starfield / dark room illuminated)"
+  geometry: "Two-petaled lotus with a central inverted golden triangle and white crescent"
+  petals:
+    count: 2
+    color: "dark brown"
+    seed_syllables:
+      - "haṃ"
+      - "kṣaṃ"
+  teachings: |
+    Located between and behind the eyebrows, about an inch deep in the head. This is the headquarters of the soul while in the waking state. During dream state, consciousness descends to the throat (floor 5); during deep sleep, it descends to the heart (floor 4). The current of life converges here from the higher planes and flows down to feed the physical body. 
+    
+    This chakra is the absolute terminus for Hatha Yoga and pranayama practices; here, the physical prana (breath) dissolves into Chidakash (the cosmic space of the physical mind) and can go no higher. Religions of the world generally have their highest approach only to this point. For Saints and practitioners of Surat Shabd Yoga, the real spiritual journey begins here. 
+    
+    To cross the threshold, the physical mind (Pindi Mana)—symbolized by a heavy, restless black wasp (Bhanwara)—must be conquered and transformed into the Brahmandi Mana (universal mind), which is minute, pure, and capable of higher ascent. This gateway is extremely narrow, known as the Mukti-Dwara or eye of a needle. The transition requires the personal guidance and grace of a Sat-Guru.
+  mantra: "OM tapah"
+  recitation: "Anhad"
+  consorts: "Shakti (in the form of inner light/surat)"
+  function: "Gateway to the astral and spiritual planes; seat of the waking soul"
+
+comparative:
+  sufism:
+    term: "Nukta-e-Suweda"
+    description: |
+      The Sufis call this point Nukta-e-Suweda, meaning "the black point" or the secret core of the heart's consciousness. It is considered the seat of the universal mind and the gate through which the seeker exits the material domain (Na-Soot) into the angelic realms (Malkut). Here the mind gets rid of darkness and comes into the holy light of the Sat (the divine). It marks the transition from outward sensory focus (Zahir) to inward spiritual sight (Basirah or Batin).
+  taoism:
+    term: "Upper Dantian"
+    description: |
+      In Taoist inner alchemy, the point between the eyebrows corresponds to the Upper Dantian (the Cinnabar Field), which is the seat of Shen (spirit/consciousness). Meditative practices focus on drawing vitality (Jing) and energy (Qi) upward along the spine to feed and crystallize the Shen at the Upper Dantian through practices like Nei Guan (inner observation) and the union of Kan (water) and Li (fire).
+  kabbalah:
+    term: "Da'at"
+    description: |
+      Though Da'at is the invisible eleventh Sephirah on the Tree of Life, it represents the mystical union of Chokhmah (wisdom) and Binah (understanding) crossing the Abyss—serving as the gateway where the mind opens to supreme cosmic awareness, mirroring the transitional function of the third eye.
+  buddhism:
+    term: "Urna"
+    description: |
+      In Buddhist iconography, the Urna is the circular dot placed between the eyebrows of the Buddha and Bodhisattvas, representing the third eye of wisdom, spiritual sight, and the capacity to perceive the subtle realities of suffering and emptiness. In Vajrayana (Tibetan) Tantra, the Ajna chakra is connected to the Guru's mind and the primordial state of awareness (Rigpa).
+  christianity:
+    term: "The Single Eye"
+    description: |
+      "The lamp of the body is the eye. If therefore your eye is single, your whole body will be full of light." (Matthew 6:22). Christian mystics interpret this single eye as the third eye or pineal focus, where attention is unified, withdrawn from the dualistic outer senses, and filled with divine illumination.
+  gnosticism:
+    term: "The Cleft of Light"
+    description: |
+      Represented as the narrow portal of entry into the Pleroma (the divine fullness) out of the physical cosmos ruled by the Demiurge. The soul must possess the secret Gnosis (knowledge) to pass through this needle-eye boundary.
+  hindu_tantra:
+    term: "Ajna Chakra"
+    description: |
+      In classical Kundalini Tantra, the Ajna (command) chakra is the meeting point of the three primary nadis—Ida, Pingala, and Sushumna. It has two white or light grey petals representing the manifest dualities of the mind, with a central lingam around which the mind dissolves into pure consciousness.
+  sikhism:
+    term: "Tisra Til / Shiv Netra"
+    description: |
+      Gurbani and Sant Mat utilize the term Tisra Til (the third sesame spot) or Shiv Netra. It is described as a minute, invisible opening through which the surat (soul attention) must pass to escape the nine physical gates of the senses.
+  vedic:
+    term: "Brahmarandhra Entryway"
+    description: |
+      The late Upanishads refer to the subtle channels of the head converging behind the eyebrows. The Mandukya Upanishad maps the waking state (Jagrat) specifically to the active operations centered around the sensory inputs coordinated through this frontal pivot.
+  jainism:
+    term: "Darshana Kendra"
+    description: |
+      In Preksha Dhyana, the point between the eyebrows is called the Darshana Kendra (Center of Intuition). Concentrating here is understood to purify the psychic colors (leshyas) and awaken inner vision, allowing the soul to witness its true nature independent of karmic matter.
+
+science:
+  neuroscience:
+    regions:
+      - "Pineal Gland"
+      - "Thalamus"
+      - "Prefrontal Cortex"
+    networks:
+      - "Default Mode Network (DMN) Deactivation"
+      - "Fronto-Parietal Attention Network"
+    description: |
+      Anatomically associated with the pineal gland (which regulates sleep-wake cycles via melatonin and is historically called the 'seat of the soul') and the thalamus, which serves as the primary sensory gating system of the brain. The conversion of attention from dualistic sensory input to single-pointed focus correlates with high activation of the fronto-parietal attention networks and the systematic down-regulation of the Default Mode Network, inducing states of ego-transcendence and non-dual awareness.
+    confidence: "High"
+  endocrinology:
+    description: |
+      Governs the pituitary gland (the master gland regulating all other endocrine glands in the body) and the pineal gland. Melatonin production is highly light-sensitive; meditative concentration in complete darkness at this point facilitates altered states of consciousness, potentially involving endogenous tryptamine synthesis.
+  psychology:
+    ego_state: "Threshold of Individuation / Transcendence of Pindi Mana"
+    description: |
+      Jungian psychology identifies this point as the gateway to the collective unconscious. The transition from the Bhanwara (restless wasp mind) to the Brahmandi Mana represents the shift from the localized ego-identity to the transcendent Self, where the archetypal dualities of the shadow and persona are integrated.
+  cosmology:
+    description: |
+      Represents the boundary between local space-time perception (physical reality) and non-local informational dimensions, acting as a cosmological event horizon within human consciousness.
+  information_theory:
+    description: |
+      The transition from high-entropy noise of the sensory organs (the 5 senses) to a zero-entropy, coherent, single-pointed information signal through sensory gating.
+
+phenomenology:
+  emotional_tone: |
+    Deep silence, absolute stillness, and profound peace. The mind feels relieved of the heavy, exhausting gravity of emotional reactivity and enters a state of detached witnessing.
+  visual_texture: |
+    Starts as a dark room or dark void, which gradually fills with a starry sky (Taramandal), culminating in the appearance of a single, brilliant, non-burning light source or moon-like disc.
+  auditory_texture: |
+    A subtle, high-frequency whistling or ringing sound current, resembling the distant hum of millions of cicadas or a whistling black wasp, which exerts an upward magnetic pull on attention.
+  ego_effect: |
+    The local sense of physical identity ("I am this body") begins to dissolve, feeling instead like a localized point of light suspended at the boundary of a vast, limitless space.
+  risks: |
+    The trap of spiritual pride (spiritual ego) and fascination with minor psychic insights or visions (Siddhis) that manifest at this boundary. Seekers may mistake the starry sky or localized lights for the ultimate reality and stop their ascent.
+  transitions:
+    from_previous: |
+      Withdrawal of the currents of the soul from the lower five Pinda centres (rectum, sex, navel, heart, throat). As attention leaves the limbs and trunk, the physical body becomes cold and numb, and all energy converges as a unified current behind the eyebrows.
+    to_next: |
+      The soul must pass through the extremely narrow gateway (Mukti-Dwara / eye of the needle) by surrendering all concepts of the gross physical mind, collapsing its self-awareness into an infinitely small point, and entering the astral sky of Sahasra-Dal-Kamal.
+
+memory:
+  color: "#534ab7"
+  icon: "Inverted Golden Triangle with crescent moon and white dot"
+  metaphor: "Passing an elephant through the eye of a needle"
+  mnemonic: "Withdraw the ten to the single center behind the brow, let the wasp dissolve, and enter the starfield gateway."
+
+sources:
+  primary:
+    - "Dr. H.N. Saksena, The Secret of Realisation, Chapter II"
+    - "Kabir Sahib, Shabad: 'Kar naino deedar mahal mein pyaara hai'"
+    - "Guru Granth Sahib, various hymns referencing 'Tisra Til' and 'Daswai Dwar'"
+  secondary:
+    - "C.G. Jung, The Psychology of Kundalini Yoga (1932 Seminars)"
+    - "Paramhansa Yogananda, God Talks with Arjuna: The Bhagavad Gita"

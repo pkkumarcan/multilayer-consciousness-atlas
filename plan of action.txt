@@ -1,0 +1,630 @@
+plan of action
+
+Your plan of action should optimize for three things simultaneously:
+
+1. **Architectural stability**
+2. **Context-window efficiency**
+3. **Long-term scalability**
+
+Right now the biggest danger is not “lack of content.”
+It’s:
+
+# uncontrolled conceptual sprawl.
+
+So the plan should focus on:
+
+* stabilizing ontology,
+* modularizing knowledge,
+* then progressively enriching.
+
+---
+
+# THE MASTER STRATEGY
+
+# “Atlas-First, Content-Second”
+
+Do NOT continue writing massive pages.
+
+Instead:
+
+1. define the system,
+2. define entity types,
+3. define relationships,
+4. then let content grow organically.
+
+Think:
+
+# operating system
+
+not
+
+# book manuscript.
+
+---
+
+# THE 12-PHASE EXECUTION PLAN
+
+---
+
+# PHASE 0 — FREEZE & ARCHIVE CURRENT SYSTEM
+
+## Goal:
+
+Preserve your current HTML as “Generation 1.”
+
+### Actions:
+
+* archive current HTML,
+* take screenshots,
+* preserve CSS/UI ideas,
+* document:
+
+  * what feels good,
+  * what feels cluttered,
+  * what scales poorly.
+
+### Deliverable:
+
+```text
+/gen1-archive/
+```
+
+This prevents emotional loss and restart loops.
+
+---
+
+# PHASE 1 — DEFINE THE ONTOLOGY (MOST IMPORTANT)
+
+## Goal:
+
+Define the “atoms” of the system.
+
+This phase determines whether the project survives long-term.
+
+---
+
+## Step 1A — Define Core Entity Types
+
+Create a schema document:
+
+```yaml
+Floor
+Sound
+Ruler
+Realm
+Religion
+Scripture
+Symbol
+BrainRegion
+PhysicsConcept
+PhenomenologicalState
+MeditationStage
+Warning
+Quote
+Color
+Geometry
+Transition
+```
+
+---
+
+## Step 1B — Define Relationships
+
+Example:
+
+```yaml
+Floor:
+  hasSound
+  hasRuler
+  mapsToReligion
+  mapsToPhysics
+  evokesPhenomenology
+  transitionsTo
+```
+
+This is the true backbone.
+
+---
+
+## Step 1C — Define Epistemic Labels
+
+CRITICAL.
+
+Every piece of knowledge must be tagged:
+
+| Label            | Meaning                          |
+| ---------------- | -------------------------------- |
+| Canonical        | Directly from Sant Mat/Kabir/etc |
+| Comparative      | Cross-tradition analogy          |
+| Scientific       | Established science              |
+| Speculative      | Hypothesis/metaphor              |
+| Phenomenological | Subjective meditative report     |
+| Symbolic         | Archetypal representation        |
+
+This prevents future collapse into confusion.
+
+---
+
+# PHASE 2 — BUILD THE “FLOOR TEMPLATE”
+
+## Goal:
+
+Create ONE universal schema for all floors.
+
+NOT prose.
+
+STRUCTURE.
+
+---
+
+# Example Floor Schema
+
+```yaml
+id:
+canonical_name:
+alternate_names:
+
+classification:
+  level:
+  realm:
+  category:
+
+canonical:
+  ruler:
+  sound:
+  light:
+  geometry:
+  petals:
+  teachings:
+
+comparative:
+  sufism:
+  taoism:
+  kabbalah:
+  buddhism:
+  christianity:
+  gnosticism:
+
+science:
+  neuroscience:
+  endocrinology:
+  psychology:
+  cosmology:
+  information_theory:
+
+phenomenology:
+  emotional_tone:
+  visual_texture:
+  auditory_texture:
+  ego_effect:
+  risks:
+  transitions:
+
+memory:
+  color:
+  icon:
+  metaphor:
+  mnemonic:
+
+sources:
+  primary:
+  secondary:
+
+certainty:
+  canonical:
+  scientific:
+  speculative:
+```
+
+This becomes:
+
+# the DNA of the whole project.
+
+---
+
+# PHASE 3 — COMPLETE ONLY TWO FLOORS
+
+## Goal:
+
+Build the “gold standard.”
+
+Choose:
+
+* Floor 6 (Agya)
+* Floor 8 (Trikuti)
+
+Why?
+
+Because:
+
+* Floor 6 = operational pivot
+* Floor 8 = cosmological pivot
+
+These two contain almost every relationship type.
+
+---
+
+# IMPORTANT RULE
+
+## One Context Window = One Layer
+
+Never ask AI:
+
+> “Do everything for Floor 8.”
+
+Instead:
+
+### Session A
+
+Canonical layer only.
+
+### Session B
+
+Comparative religion only.
+
+### Session C
+
+Phenomenology only.
+
+### Session D
+
+Neuroscience only.
+
+### Session E
+
+Physics analogies only.
+
+### Session F
+
+Memory/mnemonic system only.
+
+THEN merge.
+
+This massively increases quality.
+
+---
+
+# PHASE 4 — CONVERT EVERYTHING INTO STRUCTURED DATA
+
+## Goal:
+
+Stop hardcoding knowledge into HTML.
+
+---
+
+# Store As:
+
+```text
+/content/floors/
+content/sounds/
+content/religions/
+content/physics/
+```
+
+Formats:
+
+* Markdown
+* YAML
+* JSON
+
+This enables:
+
+* graph navigation,
+* search,
+* auto-linking,
+* AI processing,
+* dynamic rendering.
+
+---
+
+# PHASE 5 — BUILD THE KNOWLEDGE GRAPH
+
+## Goal:
+
+Relationships become primary.
+
+This is the transformation point.
+
+---
+
+# Example Graph
+
+```text
+Trikuti
+ ↔ Thunder
+ ↔ Red Sun
+ ↔ Brahm
+ ↔ Cosmic Mind
+ ↔ Thalamus
+ ↔ Demiurge
+ ↔ Egoic Intelligence
+```
+
+Now your project becomes:
+
+# explorable intelligence.
+
+---
+
+# PHASE 6 — REBUILD THE UI
+
+## Goal:
+
+Dynamic modular rendering.
+
+Now:
+
+* pages become generated,
+* comparisons become automatic,
+* relationships become interactive.
+
+---
+
+# Recommended Stack
+
+## Authoring
+
+* Obsidian
+
+## Frontend
+
+* Next.js
+* Astro
+
+## Visualization
+
+* D3.js
+* Cytoscape.js
+
+## Styling
+
+* Tailwind
+
+## Data
+
+* Markdown + YAML
+
+---
+
+# PHASE 7 — BUILD MULTIPLE VIEWS
+
+## Goal:
+
+Different cognitive entry points.
+
+---
+
+# REQUIRED VIEWS
+
+## 1. Vertical Cosmology View
+
+The ascension map.
+
+---
+
+## 2. Comparative Religion View
+
+| Floor | Sufism | Taoism | Kabbalah |
+| ----- | ------ | ------ | -------- |
+
+---
+
+## 3. Science View
+
+| Floor | Brain | Physics | Psychology |
+| ----- | ----- | ------- | ---------- |
+
+---
+
+## 4. Sound Progression View
+
+Track evolution:
+
+* hum,
+* water,
+* fire,
+* thunder,
+* flute,
+* silence.
+
+This creates intuitive retention.
+
+---
+
+## 5. Narrative Journey View
+
+Linear guided ascent.
+
+---
+
+## 6. Relationship Graph View
+
+Most powerful long-term.
+
+---
+
+# PHASE 8 — MEMORY ENGINEERING
+
+## Goal:
+
+Make the system unforgettable.
+
+Add:
+
+* colors,
+* geometry,
+* emotional tones,
+* symbolic landscapes,
+* icons,
+* sounds,
+* compression sentences.
+
+This is where mastery happens.
+
+---
+
+# PHASE 9 — SOURCE & CITATION ENGINE
+
+## Goal:
+
+Intellectual rigor.
+
+Every claim should track:
+
+* source tradition,
+* interpretation layer,
+* confidence level.
+
+Without this:
+the project will become unstable.
+
+---
+
+# PHASE 10 — AUDIOVISUAL SYSTEM
+
+## Goal:
+
+Embodied cognition.
+
+Add:
+
+* sound demonstrations,
+* animated transitions,
+* ambient textures,
+* guided visualizations.
+
+This dramatically deepens retention.
+
+---
+
+# PHASE 11 — AI ASSISTED KNOWLEDGE EXPANSION
+
+## Goal:
+
+Use AI safely and systematically.
+
+Once ontology stabilizes:
+AI becomes extraordinarily powerful.
+
+You can ask:
+
+* “find all void concepts across traditions,”
+* “map thunder symbolism globally,”
+* “compare cosmic sound metaphors.”
+
+Because your architecture is now structured.
+
+---
+
+# PHASE 12 — FINAL SYNTHESIS
+
+## Goal:
+
+Produce:
+
+* atlas,
+* book,
+* interactive site,
+* research framework,
+* meditative companion.
+
+This is the final convergence phase.
+
+---
+
+# MOST IMPORTANT WORKFLOW RULES
+
+# RULE 1
+
+Never mix ontology design with content writing.
+
+---
+
+# RULE 2
+
+Never generate more than one abstraction layer per AI session.
+
+---
+
+# RULE 3
+
+Canonical doctrine must always remain visually distinct from speculative overlays.
+
+---
+
+# RULE 4
+
+Relationships matter more than pages.
+
+---
+
+# RULE 5
+
+Build reusable primitives, not giant prose blocks.
+
+---
+
+# YOUR NEXT 7 DAYS (EXACTLY)
+
+# Day 1
+
+Archive current HTML.
+
+---
+
+# Day 2
+
+Define entity types.
+
+---
+
+# Day 3
+
+Define relationship model.
+
+---
+
+# Day 4
+
+Build universal floor schema.
+
+---
+
+# Day 5
+
+Convert Floor 6 into structured ontology.
+
+---
+
+# Day 6
+
+Convert Floor 8 into structured ontology.
+
+---
+
+# Day 7
+
+Build first relationship graph.
+
+At that point:
+the project becomes stable.
+
+---
+
+# My Strongest Recommendation
+
+Your project should evolve into:
+
+# a semantic knowledge graph of consciousness traditions
+
+rather than:
+
+# a static chakra encyclopedia.
+
+That distinction changes everything:
+
+* scalability,
+* intelligence,
+* retention,
+* navigation,
+* and future AI integration.

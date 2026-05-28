@@ -1,0 +1,95 @@
+# ==============================================================================
+# consciousness atlas - floor template (yaml)
+# ==============================================================================
+id: floor_X                     # Format: floor_1 through floor_18
+canonical_name: ""              # Canonical English name
+sanskrit_name: ""               # Sanskrit name with script and meanings
+alternate_names: []             # List of other known names
+
+classification:
+  level: X                      # 1 to 18
+  realm: ""                     # Options: Pinda, Brahmanda, Dayal Desh, Secret
+  category: ""                  # Options: physical, astral, pure spirit, indescribable
+
+canonical:
+  ruler: ""                     # Governing ruler or deity
+  sound: ""                     # Auditory signpost of this plane
+  light: ""                     # Visual manifestation (e.g. red sun, dazzling white)
+  geometry: ""                  # Geometric symbols associated
+  petals:
+    count: 0                    # Number of petals on the chakra lotus
+    color: ""                   # Base color of the lotus petals
+    seed_syllables: []          # Syllables associated with each petal
+  teachings: ""                 # Core philosophy, how to conquer, and requirements
+  mantra: ""                    # Outer mantra or seed sound (OM, Kling, etc.)
+  recitation: ""                # Inner recitation if applicable
+  consorts: ""                  # Governing powers or consorts
+  function: ""                  # Spiritual / physical function
+
+comparative:
+  sufism:
+    term: ""
+    description: ""
+  taoism:
+    term: ""
+    description: ""
+  kabbalah:
+    term: ""
+    description: ""
+  buddhism:
+    term: ""
+    description: ""
+  christianity:
+    term: ""
+    description: ""
+  gnosticism:
+    term: ""
+    description: ""
+  hindu_tantra:
+    term: ""
+    description: ""
+  sikhism:
+    term: ""
+    description: ""
+  vedic:
+    term: ""
+    description: ""
+  jainism:
+    term: ""
+    description: ""
+
+science:
+  neuroscience:
+    regions: []
+    networks: []
+    description: ""
+    confidence: "Low"           # Options: High, Medium, Low
+  endocrinology:
+    description: ""
+  psychology:
+    ego_state: ""
+    description: ""
+  cosmology:
+    description: ""
+  information_theory:
+    description: ""
+
+phenomenology:
+  emotional_tone: ""            # Waking state feelings, mental atmosphere
+  visual_texture: ""            # Spiritual visual landscape
+  auditory_texture: ""          # Texture of the sound current
+  ego_effect: ""                # Impact on individual identity and agency
+  risks: ""                     # Spiritual ego trap, pride, or sidetracks
+  transitions:
+    from_previous: ""           # Experience of passing from the lower floor
+    to_next: ""                 # Criteria and action to ascend to the higher floor
+
+memory:
+  color: "#ffffff"              # Exact HEX color matching the chakra base
+  icon: ""                      # Core iconic symbol (e.g. elephant, crescent)
+  metaphor: ""                  # Metaphorical narrative (e.g. eye of the needle)
+  mnemonic: ""                  # Mnemonic trigger sentence to aid recall
+
+sources:
+  primary: []                   # List of direct sacred books, sggs, kabir, saksena
+  secondary: []                 # Academic analyses, commentary, modern psychology

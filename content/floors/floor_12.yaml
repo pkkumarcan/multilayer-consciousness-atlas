@@ -1,0 +1,137 @@
+# ==============================================================================
+# Consciousness Atlas - Floor 12 Entity Data
+# ==============================================================================
+id: floor_12
+canonical_name: "Sach Khand / Sat Lok"
+sanskrit_name: "सच खण्ड · सत् लोक · The True Realm · The Abode of Sat Purush"
+alternate_names:
+  - "Sach Khand"
+  - "Sat Lok"
+  - "The True Realm"
+  - "Satya Loka"
+  - "Nij-Dham"
+  - "Dayal Desh Core"
+
+classification:
+  level: 12
+  realm: "Dayal Desh"
+  category: "pure spirit"
+
+canonical:
+  ruler: "Sat Purush (the Supreme Lord of Pure Spirit, the Absolute Being)"
+  sound: "Sweet, majestic playing of the celestial harp / lute (Veena)"
+  light: "Unparalleled self-effulgent white-gold radiance, where each soul shines with the light of 16 suns, and Sat Purush radiates like billions of suns"
+  geometry: "A supreme, infinite spiritual palace with a majestic lotus of 80,000+ petals"
+  petals:
+    count: 80000
+    color: "self-effulgent white-gold"
+    seed_syllables: []
+  teachings: |
+    Sach Khand (meaning 'The True Realm') or Sat Lok (meaning 'The True Place') is the first stage of the Dayal Desh (pure spirit) region. It is the absolute, eternal home of the soul (Nij-Ghar), from which consciousness originally descended into the lower causal, astral, and physical planes of creation. 
+    
+    This plane is ruled directly by Sat Purush—the Supreme Being of pure love, truth, and spirit. The light here is beyond any earthly comparison; a single soul in Sach Khand radiates with the brightness of sixteen suns, while Sat Purush shines with a blinding, yet non-burning brilliance equal to billions of suns. The primary sound current is the incredibly sweet, majestic, and deep playing of the celestial harp or lute (Veena). 
+    
+    In Sach Khand, the soul is fully freed from all karmas, mental impressions, universal minds, and cosmic illusions (Maya). It achieves absolute union with the Supreme Lord, experiencing a state of pure Sat-Chit-Ananda (Truth-Consciousness-Bliss). There is no birth, no death, and no suffering here. It is the destination of ultimate liberation, though three higher unmanifest stages lie above it.
+  mantra: "Sat Nam"
+  recitation: "Sat Nam"
+  consorts: "None (beyond dualistic polarities of gender and energy)"
+  function: "Ultimate home of the soul, absolute reunion with the Creator, and transition into pure spirit existence"
+
+comparative:
+  sufism:
+    term: "Baqa Al-Baqa / Divine Essence Union"
+    description: |
+      In Sufism, Sach Khand corresponds to the supreme station of Baqa Al-Baqa (eternal subsistence in the Divine presence) within the unmanifest essence (Hahoot). Here, the soul has completely transcended the spiritual heart, intellect, and all subtle forms, merging fully with the Divine Beloved. The majestic Veena sound mirrors the eternal, silent celestial symphony of divine love.
+  taoism:
+    term: "Union with the Great Tao / Return to the Source"
+    description: |
+      In advanced Taoist inner alchemy, this represents the ultimate stage of 'Merging the Spirit with the Great Void of the Tao' (Lian Shen Liao Xu). The immortal adept fully returns to the primordial source of all creation, completely dissolving any remaining sense of separation to become one with the eternal, formless, and unchangeable Tao.
+  kabbalah:
+    term: "Kether (The Crown)"
+    description: |
+      Kether (The Crown) is the highest Sephirah on the Tree of Life, representing absolute unity, the unmanifest source of all light, and the primordial will of the Infinite (Ein Sof). Entering Kether represents the absolute union of the soul's spark (Yechidah) with the Divine source, where all dualities and forms dissolve into singular divine light.
+  buddhism:
+    term: "Nirvana / Dharmakaya Realization"
+    description: |
+      In Buddhist philosophy, this maps directly to Nirvana (the absolute cessation of all suffering, karma, and cyclic rebirth) and the realization of the Dharmakaya (the unmanifest, absolute truth-body of the Buddha). It represents the state of pure, formless bliss and emptiness that is completely beyond space, time, and conceptualization.
+  christianity:
+    term: "The Empyrean Heaven / The Beatific Vision"
+    description: |
+      Corresponds to the Empyrean Heaven—the highest, formless heaven of pure light and fire where the angels and saints dwell in the direct presence of the Father, experiencing the 'Beatific Vision' (direct, unmediated communion with God) and hearing the eternal harp symphonies of praise.
+  gnosticism:
+    term: "The Pleroma (The Divine Fullness)"
+    description: |
+      The absolute home of the soul (pneumatic spark) within the Pleroma—the divine fullness of light and spirit that lies completely beyond the physical, astral, and causal cosmos ruled by the Demiurge. Reentering the Pleroma represents absolute redemption, liberation, and spiritual completion.
+  hindu_tantra:
+    term: "Sahasrara Peak / Shiva-Shakti Union"
+    description: |
+      The supreme peak of the Sahasrara (thousand-petaled crown), where the awakened Kundalini Shakti fully merges with Shiva. The dualities of consciousness and energy are completely resolved, resulting in absolute, non-dual bliss and liberation (Jivanmukti).
+  sikhism:
+    term: "Sach Khand"
+    description: |
+      Sach Khand is the absolute pinnacle of the Sikh mystical journey. Guru Nanak's Japji Sahib describes: 'Sach khand vasai nirankar... kar kar vekhey nadar nihal' (In the true realm dwells the formless Creator, looking upon creation with His merciful, bliss-giving gaze). It is the realm of absolute truth and grace. Kabir's Shabad: 'Veena baje haal lok mein, Sat Purush darsaao... tahan shabd Sat Nam dhuna chhaejai'.
+  vedic:
+    term: "Satya Loka"
+    description: |
+      The highest of the seven subtle planes of the universe (Vyahritis) described in the Upanishads. It is the realm of absolute truth, inhabited by liberated souls who have fully realized their identity with the supreme Brahman (Ayam Atma Brahma).
+  jainism:
+    term: "Siddhashila"
+    description: |
+      The supreme apex of the universe where the fully liberated souls (Siddhas), completely freed from all physical and karmic envelopes, dwell eternally in a state of infinite knowledge, infinite perception, infinite power, and infinite bliss.
+
+science:
+  neuroscience:
+    regions:
+      - "Full Bi-Hemispheric Synchronization"
+      - "Peak Posterior Cingulate Cortex Deactivation"
+    networks:
+      - "Unified Non-Dual Awareness Network"
+      - "Complete Cortical Gating (Absolute Absorption)"
+    description: |
+      Correlates with the profound state of Unified Non-Dual Awareness and peak bi-hemispheric synchronization. All individual brain networks (default mode, salience, attention) dissolve into a singular, highly coherent wave pattern (unified theta-gamma coupling). Subjectively, this gates out all physical, spatial, and temporal boundaries, inducing the experience of infinite, unmediated white-gold light, absolute love, and permanent bliss. The majestic harp sounds map to supreme auditory-cortical harmonic binding.
+    confidence: "Medium"
+  endocrinology:
+    description: |
+      Associated with the total homeostatic equilibrium of all bodily systems, maximizing cellular healing, anti-aging, and neuroplastic repair under states of absolute spiritual bliss.
+  psychology:
+    ego_state: "The Transpersonal Absolute / Return to the Source"
+    description: |
+      The realization of the Transpersonal Absolute. In transpersonal psychology, this represents the transition to the ultimate, formless spiritual level (Ken Wilber's model), where the individual psyche fully returns to the primordial Source, experiencing a permanent, non-dual state of truth, love, and spiritual completion.
+  cosmology:
+    description: |
+      Symbolized by the state of pure, unified energy preceding the Big Bang—the absolute singularity where all forces (gravity, electromagnetism, nuclear forces) were perfectly unified as one singular field of infinite potential.
+  information_theory:
+    description: |
+      The infinite information state. The absolute, self-referential information matrix (Sat Nam) where the code and the coder, the observer and the observed, are fully unified as one singular field of truth.
+
+phenomenology:
+  emotional_tone: |
+    Unbounded divine love, supreme ecstasy, absolute truth, and limitless peace. The soul is filled with the most profound, unshakeable sense of being 'home,' experiencing infinite gratitude and absolute union.
+  visual_texture: |
+    An infinite, blindingly beautiful white-gold ocean of pure, self-luminous spiritual light, with a central, towering palace of Sat Purush radiating like billions of suns, yet completely soft and cool to the spirit.
+  auditory_texture: |
+    An incredibly sweet, majestic, and deep playing of a celestial harp or lute (Veena), which echoes through the spiritual expanse, filling the soul with absolute, bliss-giving vibrations.
+  ego_effect: |
+    The absolute resolution of separation. The soul merges fully into Sat Purush, realizing: "I am Sat Nam—I am the True Name, I am the Source, I am one with the Supreme Lord."
+  risks: |
+    None. This is the realm of absolute safety and permanent liberation. The soul is forever free from the traps of Kal, the mind, and the cycles of reincarnation.
+  transitions:
+    from_previous: |
+      Crossing the final causal boundary of Bhanwar Gufa (Floor 11) by fully merging into the Sohang current, which launches the soul out of causal creation and into the first pure spiritual realm of Dayal Desh: Sach Khand (Floor 12).
+    to_next: |
+      The soul, now residing eternally in Sach Khand, can choose to ascend further into the three higher unmanifest realms of Dayal Desh (Alakha Lok, Agama Lok, and Anami Lok) to experience even deeper layers of the formless Supreme Being.
+
+memory:
+  color: "#ef9f27"
+  icon: "A golden harp sitting in a towering palace of infinite white-gold suns"
+  metaphor: "Returning to the eternal home after a journey of millions of lifetimes"
+  mnemonic: "At the gate of Sat Lok, hear the Veena of Sat Purush in the white-gold light of sixteen suns. Merge into the True Name."
+
+sources:
+  primary:
+    - "Dr. H.N. Saksena, The Secret of Realisation, Chapter II"
+    - "Kabir Sahib, Shabad: 'Kar naino deedar mahal mein pyaara hai' (Verse 9)"
+    - "Guru Granth Sahib, Japji Sahib (Stanza 37 - Sach Khand)"
+  secondary:
+    - "St. John of the Cross, Ascent of Mount Carmel"
+    - "Plotinus, The Enneads (The Beatific Vision of 'The One')"

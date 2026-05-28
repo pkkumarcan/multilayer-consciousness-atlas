@@ -1,0 +1,3165 @@
+{
+  "nodes": [
+    {
+      "id": "floor_1",
+      "name": "Guda Chakra / Muladhara",
+      "type": "Floor",
+      "level": 1,
+      "realm": "Pinda",
+      "category": "physical"
+    },
+    {
+      "id": "ruler_lord_ganesha",
+      "name": "Lord Ganesha",
+      "type": "Ruler"
+    },
+    {
+      "id": "sound_buzz_of_a_honeybee",
+      "name": "Buzz of a honeybee",
+      "type": "Sound"
+    },
+    {
+      "id": "light_heavy_dense_red_illumination",
+      "name": "Heavy, dense red illumination",
+      "type": "Light"
+    },
+    {
+      "id": "comp_sufism_nafs_al_ammara",
+      "name": "Nafs al-Ammara",
+      "type": "Comparative",
+      "tradition": "sufism",
+      "description": "Sufism places the Nafs (the lower, commanding ego-self) at the absolute base of the subtle system, corresponding to the survival and animalistic instincts of the Muladhara level. The station of Nafs al-Ammara (the self that commands evil) represents the lowest state of consciousness. The entire Sufi path of Tazkiya-e-Nafs (purification of the self) begins with subduing this lower self. The Sufis call the five lower chakras collectively Alam Na-Soot (the material world realm).\n"
+    },
+    {
+      "id": "comp_taoism_hui_yin",
+      "name": "Hui Yin",
+      "type": "Comparative",
+      "tradition": "taoism",
+      "description": "In Taoist inner alchemy, the corresponding physical point is Hui Yin (Meeting of Yin), located at the perineum. It is considered the gateway where the Yin energy of the Earth enters the body and the lowest reservoir of the Conception and Governing vessels. It must be locked (via Mula Bandha-like perineum contractions) to prevent the escape of vital energy (Jing) during sexual sublimation.\n"
+    },
+    {
+      "id": "comp_kabbalah_malkuth",
+      "name": "Malkuth",
+      "type": "Comparative",
+      "tradition": "kabbalah",
+      "description": "Malkuth (the Kingdom) is the lowest Sephirah on the Tree of Life, representing the dense physical universe, the element of Earth, and the final crystallization of divine energy into matter. It represents the grounding foundation through which spiritual light is anchored in the physical body.\n"
+    },
+    {
+      "id": "comp_buddhism_nirmana_chakra",
+      "name": "Nirmana Chakra",
+      "type": "Comparative",
+      "tradition": "buddhism",
+      "description": "In Vajrayana (Tibetan) Tantra, the root chakra is called the Nirmana Chakra (the emanation wheel), representing physical structure, bone, flesh, and gross earthly existence. It governs the earth element (pathavi dhatu) and the transition from animalistic sensory reactivity to conscious presence.\n"
+    },
+    {
+      "id": "comp_christianity_the_foundation_gate",
+      "name": "The Foundation Gate",
+      "type": "Comparative",
+      "tradition": "christianity",
+      "description": "Represents the foundational gate of the 'city of nine gates' mentioned in early Christian mystical interpretations of the human temple, where the soul enters the material world and must establish a clean foundation of virtue.\n"
+    },
+    {
+      "id": "comp_gnosticism_the_hylic_realm",
+      "name": "The Hylic Realm",
+      "type": "Comparative",
+      "tradition": "gnosticism",
+      "description": "The gross, material layer of existence ruled by the lowest archons of the physical world. The soul must transcend hylic (purely material) attachment to begin the Gnostic ascent.\n"
+    },
+    {
+      "id": "comp_hindu_tantra_kundalini_shakti_seat",
+      "name": "Kundalini Shakti seat",
+      "type": "Comparative",
+      "tradition": "hindu_tantra",
+      "description": "The seat of Kundalini Shakti, the divine feminine evolutionary energy coiled 3.5 times around the Svayambhu-Linga. It is presided over by the Dakini Shakti, who radiates bright red light. Awakening Kundalini here forces her upward into the central channel (Sushumna).\n"
+    },
+    {
+      "id": "comp_sikhism_the_rectal_gate_nau_duar",
+      "name": "The Rectal Gate / Nau Duar",
+      "type": "Comparative",
+      "tradition": "sikhism",
+      "description": "Gurbani repeatedly refers to the nine gates (nau duar) of the physical body, which include the rectum. The spiritual path instructs the seeker to withdraw attention from these lower sensory and eliminative gates and focus on the tenth door (Dasam Dwar). Kabir's Shabad, recorded in Sikh tradition, begins at the body-palace boundary.\n"
+    },
+    {
+      "id": "comp_vedic_adhara",
+      "name": "Adhara",
+      "type": "Comparative",
+      "tradition": "vedic",
+      "description": "The Katha Upanishad describes the body as a city of nine gates where the Self dwells. Muladhara is the foundational gate. Early Vedic texts describe this subtle foundation as Adhara (the lower support) or Brahma-Padma (Brahma's lotus).\n"
+    },
+    {
+      "id": "comp_jainism_shakti_kendra",
+      "name": "Shakti Kendra",
+      "type": "Comparative",
+      "tradition": "jainism",
+      "description": "Jain Preksha Dhyana identifies the base of the spine as the Shakti Kendra (Center of Energy). Jain philosophy maps the densest, heaviest karmic matter (Pudgala) to this region, and meditation begins here to refine and elevate these energies.\n"
+    },
+    {
+      "id": "region_perineal_nerve_plexus",
+      "name": "Perineal Nerve Plexus",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "region_coccygeal_body",
+      "name": "Coccygeal Body",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "network_autonomic_survival_networks_fight_or_flight",
+      "name": "Autonomic Survival Networks (Fight-or-Flight)",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "floor_10",
+      "name": "Maha Shoonya",
+      "type": "Floor",
+      "level": 10,
+      "realm": "Brahmanda",
+      "category": "astral"
+    },
+    {
+      "id": "ruler_none_ruled_by_the_absolute_unmanifest_silence_though_containing_4_hidden_worlds_with_secret_rulers",
+      "name": "None (ruled by the absolute unmanifest silence, though containing 4 hidden worlds with secret rulers)",
+      "type": "Ruler"
+    },
+    {
+      "id": "sound_absolute_profound_silence",
+      "name": "Absolute, profound silence (or a sub-audible, deep cosmic hum)",
+      "type": "Sound"
+    },
+    {
+      "id": "light_impenetrable_pitch_black_darkness",
+      "name": "Impenetrable, pitch-black darkness (Tam) that is so dense it cannot be illuminated by lower light",
+      "type": "Light"
+    },
+    {
+      "id": "comp_sufism_zulmat_alam_e_hahoot",
+      "name": "Zulmat / Alam-e-Hahoot",
+      "type": "Comparative",
+      "tradition": "sufism",
+      "description": "The Sufis call this great dark void Zulmat (the Land of Darkness). It is a pitch-black abyss that lies at the border of the unmanifest essence (Hahoot) and the divine power (Jabroot). To find the water of life (Ab-e-Hayat)—representing absolute spiritual immortality—the seeker must travel through this terrifying land of darkness in absolute surrender under the guidance of the mystical guide Khidr, representing the Sat-Guru.\n"
+    },
+    {
+      "id": "comp_taoism_hundun_primordial_chaos",
+      "name": "Hundun (Primordial Chaos)",
+      "type": "Comparative",
+      "tradition": "taoism",
+      "description": "In Taoist cosmogony, Hundun represents the state of primordial chaos and absolute darkness that existed before the first emergence of Qi and the splitting of heaven and earth. It is a state of undifferentiated, formless emptiness where all potential structures are dissolved back into the absolute silence of the unmanifest Tao.\n"
+    },
+    {
+      "id": "comp_kabbalah_the_great_abyss_of_daat_formless_night",
+      "name": "The Great Abyss of Da'at (Formless Night)",
+      "type": "Comparative",
+      "tradition": "kabbalah",
+      "description": "Represents the deepest, most terrifying core of the Great Abyss of Da'at that separates the supernal triad (Kether, Chokhmah, Binah) from the lower manifest worlds. Crossing this abyss requires the absolute death of the ego (spiritual crucifixion), where the soul plunges into a formless, supportless night of nothingness, stripped of all concepts of God and self, before emerging in the divine light of Binah.\n"
+    },
+    {
+      "id": "comp_buddhism_akincanyayatana_the_sphere_of_nothingness",
+      "name": "Akincanyayatana / The Sphere of Nothingness",
+      "type": "Comparative",
+      "tradition": "buddhism",
+      "description": "In Buddhist psychology and meditation, this maps directly to the third Arupa-jhana (formless absorption) known as Akincanyayatana (the sphere of nothingness), where the meditator moves beyond infinite space and infinite consciousness to perceive: 'There is nothing whatsoever.' It also corresponds to the 'dark void' of total ego-dissolution preceding the absolute realization of Nirvana.\n"
+    },
+    {
+      "id": "comp_christianity_the_dark_night_of_the_soul_divine_darkness",
+      "name": "The Dark Night of the Soul / Divine Darkness",
+      "type": "Comparative",
+      "tradition": "christianity",
+      "description": "Saint John of the Cross detailed the 'Dark Night of the Soul'—a state of absolute sensory and spiritual deprivation where all lights, comforts, and concepts of God are stripped away to purify the soul. Additionally, Saint Dionysius the Areopagite described the 'Divine Darkness' (Caligo)—the impenetrable, blinding cloud of unknowing where the transcendent God resides beyond all intellect.\n"
+    },
+    {
+      "id": "comp_gnosticism_the_kenoma_the_great_emptiness",
+      "name": "The Kenoma (The Great Emptiness)",
+      "type": "Comparative",
+      "tradition": "gnosticism",
+      "description": "In Gnostic cosmology, the Kenoma is the vast, dark, and empty void that lies outside the divine light-fulness of the Pleroma. It is the dark chasm of matter and ignorance ruled by the archons, which the soul must cross in absolute stillness and protection, possessing the secret words of light to prevent being devoured by the dark cosmic beast.\n"
+    },
+    {
+      "id": "comp_hindu_tantra_maha_sunya_kalis_dark_womb",
+      "name": "Maha-Sunya / Kali's Dark Womb",
+      "type": "Comparative",
+      "tradition": "hindu_tantra",
+      "description": "In Tantric cosmology, Maha-Sunya is the supreme void governed by Goddess Kali in her form as the dark, unmanifest womb of time. It is the absolute silence where all elements and universes are dissolved back into the primordial cosmic night (Maha-Ratri).\n"
+    },
+    {
+      "id": "comp_sikhism_maha_shoon_gupha_e_zulmat",
+      "name": "Maha Shoon / Gupha-e-Zulmat",
+      "type": "Comparative",
+      "tradition": "sikhism",
+      "description": "Kabir and other Sant poets reference the great void (Maha Shoon) as a dark cave (gupha) that the soul must cross. Kabir's Shabad describes: \"Maha shoonya gufa ke andhara... bin Satguru koi nahi paara\" (The cave of Maha Shoonya is pitch black... without the Satguru, no one can cross its depths).\n"
+    },
+    {
+      "id": "comp_vedic_tamas_primordial_darkness_asat",
+      "name": "Tamas / Primordial Darkness (Asat)",
+      "type": "Comparative",
+      "tradition": "vedic",
+      "description": "The Rig Veda's Nasadiya Sukta (10.129) describes the state before creation: 'Darkness there was, at first concealed in darkness... all was indistinguishable water.' This primordial darkness (Tamas) or non-existence (Asat) represents the causal void from which the first seed of desire (Kama) arose to manifest the cosmos.\n"
+    },
+    {
+      "id": "comp_jainism_apravartana_kendra_dark_karma_void",
+      "name": "Apravartana Kendra / Dark Karma Void",
+      "type": "Comparative",
+      "tradition": "jainism",
+      "description": "Jain philosophy describes a boundary zone of absolute spiritual inertia where the soul encounters the heaviest, most unyielding layers of dark, unmanifest karma. Crossing this zone requires the supreme, unassisted light of the purified soul (Kevali).\n"
+    },
+    {
+      "id": "region_thalamocortical_de_synchronization",
+      "name": "Thalamocortical De-synchronization",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "region_sensory_deprivation_state",
+      "name": "Sensory Deprivation State",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "network_absolute_somatosensory_gating",
+      "name": "Absolute Somatosensory Gating",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "network_neural_silence_state",
+      "name": "Neural Silence State",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "floor_11",
+      "name": "Bhanwar Gufa",
+      "type": "Floor",
+      "level": 11,
+      "realm": "Brahmanda",
+      "category": "astral"
+    },
+    {
+      "id": "ruler_sohang_purush_the_lord_of_i_am_he_representing_the_union_of_creator_and_creation",
+      "name": "Sohang Purush (the Lord of 'I am He,' representing the union of Creator and Creation)",
+      "type": "Ruler"
+    },
+    {
+      "id": "sound_sweet_enchanting_playing_of_the_celestial_flute",
+      "name": "Sweet, enchanting playing of the celestial flute (Bansuri / Murali)",
+      "type": "Sound"
+    },
+    {
+      "id": "light_dazzling_rapidly_rotating_white_sun_creating_a_massive_whirring_whirlpool_of_spiritual_light",
+      "name": "Dazzling, rapidly rotating white sun, creating a massive, whirring whirlpool of spiritual light",
+      "type": "Light"
+    },
+    {
+      "id": "comp_sufism_rumis_reed_flute_annihilation_in_the_beloved",
+      "name": "Rumi's Reed Flute / Annihilation in the Beloved",
+      "type": "Comparative",
+      "tradition": "sufism",
+      "description": "In Sufism, the beautiful, enchanting flute sound of Bhanwar Gufa corresponds to Rumi's famous poetry of the Reed Flute (Ney). The Ney represents the hollowed soul that has been completely emptied of ego, allowing the divine breath of the Beloved to blow through it, producing sweet spiritual melodies. It marks the transition to the highest state of Baqa (subsistence in God) where the soul realizes 'Ana al-Haqq' (I am the Truth)—the Sufi equivalent to the Sanskrit Sohang.\n"
+    },
+    {
+      "id": "comp_taoism_circulation_of_the_light_the_great_whirlpool",
+      "name": "Circulation of the Light / The Great Whirlpool",
+      "type": "Comparative",
+      "tradition": "taoism",
+      "description": "In Taoist inner alchemy (e.g. Secret of the Golden Flower), this corresponds to the rapid 'Circulation of the Light' (Zhou Tian) in the head, where the refined energies of Yin and Yang are spun in a dynamic microcosmic vortex. This spiraling movement of light fuses all vital forces into a singular, unified elixir, preparing the immortal spirit (Shen) to transcend all structural limits.\n"
+    },
+    {
+      "id": "comp_kabbalah_chokhmah_primordial_wisdom",
+      "name": "Chokhmah (Primordial Wisdom)",
+      "type": "Comparative",
+      "tradition": "kabbalah",
+      "description": "Chokhmah (Wisdom / The Primordial Father) is the second Sephirah on the Tree of Life, representing the dynamic, whirling, and active positive force of creation before it crystallizes into form. It is the unmanifest spark of lightning that flashes out of the crown, mirroring the whirring, spiraling sun-vortex of Bhanwar Gufa.\n"
+    },
+    {
+      "id": "comp_buddhism_vijnananantyayatana_sphere_of_infinite_consciousness",
+      "name": "Vijnananantyayatana / Sphere of Infinite Consciousness",
+      "type": "Comparative",
+      "tradition": "buddhism",
+      "description": "Maps to the second Arupa-jhana (formless absorption) known as Vijnananantyayatana (the sphere of infinite consciousness), where the meditator moves beyond empty space to realize that the consciousness perceiving the space is itself infinite and boundless. In Vajrayana, it is the blissful, whirling dance of the Dakinis (spiritual sky-goers) carrying the soul into non-dual realization.\n"
+    },
+    {
+      "id": "comp_christianity_the_second_heaven_the_celestial_flute",
+      "name": "The Second Heaven / The Celestial Flute",
+      "type": "Comparative",
+      "tradition": "christianity",
+      "description": "Associated with the mystical accounts of the Second Heaven, characterized by the hearing of sweet, ethereal woodwind music and the vision of a rapidly spinning wheel of light and fire (similar to Ezekiel's wheels), which draws the soul upward into the presence of divine majesty.\n"
+    },
+    {
+      "id": "comp_gnosticism_the_inner_pleroma_gates_syzygy_union",
+      "name": "The Inner Pleroma Gates / Syzygy Union",
+      "type": "Comparative",
+      "tradition": "gnosticism",
+      "description": "The gateway where the soul meets its divine twin or consort (Syzygy) at the border of the true Pleroma. The union is celebrated with sweet, celestial melodies of light and joy, freeing the soul from all remaining causal traces of the Demiurge.\n"
+    },
+    {
+      "id": "comp_hindu_tantra_nirvana_chakra_ajna_sahasrara_bridge",
+      "name": "Nirvana Chakra / Ajna-Sahasrara bridge",
+      "type": "Comparative",
+      "tradition": "hindu_tantra",
+      "description": "The subtle region immediately preceding the absolute crown, situated above the third eye, where the soul experiences the unmanifest vibration of the Soham mantra, dissolving all concepts of duality into pure cosmic intelligence.\n"
+    },
+    {
+      "id": "comp_sikhism_bhanwar_gufa_the_flute_current",
+      "name": "Bhanwar Gufa / The Flute Current",
+      "type": "Comparative",
+      "tradition": "sikhism",
+      "description": "Explicitly mentioned by Kabir and Sant poets in Gurbani as the whirling cave where the flute plays. Kabir's Shabad: \"Bhanwar gufa upar baji bansuri... surti firi sab tey udaas, tahan shabd Sohang bhaas\" (The flute plays at the top of the whirling cave. The attention turns detached from all lower creation, and the sound of Sohang is revealed).\n"
+    },
+    {
+      "id": "comp_vedic_soham_asmi",
+      "name": "Soham Asmi",
+      "type": "Comparative",
+      "tradition": "vedic",
+      "description": "The supreme Vedic Mahavakya ('Soham asmi'—'I am He') from the Isha Upanishad, realized in its full, non-dual glory at the causal peak, where the seeker realizes that the transcendent Purush sitting behind the sun is identical to their own deepest self.\n"
+    },
+    {
+      "id": "comp_jainism_vitaraga_state_self_luminous_bliss",
+      "name": "Vitaraga State / Self-Luminous Bliss",
+      "type": "Comparative",
+      "tradition": "jainism",
+      "description": "The state of Vitaraga (transcendence of all attraction and aversion) where the soul experiences its inherent self-luminous bliss and infinite consciousness, spinning in its own pure nature independent of any causal frameworks.\n"
+    },
+    {
+      "id": "region_auditory_association_area_complex_harmonic_binding",
+      "name": "Auditory Association Area (Complex harmonic binding)",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "region_semicircular_canals_coordination_vestibular_integration",
+      "name": "Semicircular Canals Coordination (Vestibular Integration)",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "network_self_referential_dissolution_network",
+      "name": "Self-Referential Dissolution Network",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "network_vestibulo_ocular_reflex_gating_vortex_experience",
+      "name": "Vestibulo-Ocular Reflex Gating (Vortex experience)",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "floor_12",
+      "name": "Sach Khand / Sat Lok",
+      "type": "Floor",
+      "level": 12,
+      "realm": "Dayal Desh",
+      "category": "pure spirit"
+    },
+    {
+      "id": "ruler_sat_purush_the_supreme_lord_of_pure_spirit_the_absolute_being",
+      "name": "Sat Purush (the Supreme Lord of Pure Spirit, the Absolute Being)",
+      "type": "Ruler"
+    },
+    {
+      "id": "sound_sweet_majestic_playing_of_the_celestial_harp_lute",
+      "name": "Sweet, majestic playing of the celestial harp / lute (Veena)",
+      "type": "Sound"
+    },
+    {
+      "id": "light_unparalleled_self_effulgent_white_gold_radiance_where_each_soul_shines_with_the_light_of_16_suns_and_sat_purush_radiates_like_billions_of_suns",
+      "name": "Unparalleled self-effulgent white-gold radiance, where each soul shines with the light of 16 suns, and Sat Purush radiates like billions of suns",
+      "type": "Light"
+    },
+    {
+      "id": "comp_sufism_baqa_al_baqa_divine_essence_union",
+      "name": "Baqa Al-Baqa / Divine Essence Union",
+      "type": "Comparative",
+      "tradition": "sufism",
+      "description": "In Sufism, Sach Khand corresponds to the supreme station of Baqa Al-Baqa (eternal subsistence in the Divine presence) within the unmanifest essence (Hahoot). Here, the soul has completely transcended the spiritual heart, intellect, and all subtle forms, merging fully with the Divine Beloved. The majestic Veena sound mirrors the eternal, silent celestial symphony of divine love.\n"
+    },
+    {
+      "id": "comp_taoism_union_with_the_great_tao_return_to_the_source",
+      "name": "Union with the Great Tao / Return to the Source",
+      "type": "Comparative",
+      "tradition": "taoism",
+      "description": "In advanced Taoist inner alchemy, this represents the ultimate stage of 'Merging the Spirit with the Great Void of the Tao' (Lian Shen Liao Xu). The immortal adept fully returns to the primordial source of all creation, completely dissolving any remaining sense of separation to become one with the eternal, formless, and unchangeable Tao.\n"
+    },
+    {
+      "id": "comp_kabbalah_kether_the_crown",
+      "name": "Kether (The Crown)",
+      "type": "Comparative",
+      "tradition": "kabbalah",
+      "description": "Kether (The Crown) is the highest Sephirah on the Tree of Life, representing absolute unity, the unmanifest source of all light, and the primordial will of the Infinite (Ein Sof). Entering Kether represents the absolute union of the soul's spark (Yechidah) with the Divine source, where all dualities and forms dissolve into singular divine light.\n"
+    },
+    {
+      "id": "comp_buddhism_nirvana_dharmakaya_realization",
+      "name": "Nirvana / Dharmakaya Realization",
+      "type": "Comparative",
+      "tradition": "buddhism",
+      "description": "In Buddhist philosophy, this maps directly to Nirvana (the absolute cessation of all suffering, karma, and cyclic rebirth) and the realization of the Dharmakaya (the unmanifest, absolute truth-body of the Buddha). It represents the state of pure, formless bliss and emptiness that is completely beyond space, time, and conceptualization.\n"
+    },
+    {
+      "id": "comp_christianity_the_empyrean_heaven_the_beatific_vision",
+      "name": "The Empyrean Heaven / The Beatific Vision",
+      "type": "Comparative",
+      "tradition": "christianity",
+      "description": "Corresponds to the Empyrean Heaven—the highest, formless heaven of pure light and fire where the angels and saints dwell in the direct presence of the Father, experiencing the 'Beatific Vision' (direct, unmediated communion with God) and hearing the eternal harp symphonies of praise.\n"
+    },
+    {
+      "id": "comp_gnosticism_the_pleroma_the_divine_fullness",
+      "name": "The Pleroma (The Divine Fullness)",
+      "type": "Comparative",
+      "tradition": "gnosticism",
+      "description": "The absolute home of the soul (pneumatic spark) within the Pleroma—the divine fullness of light and spirit that lies completely beyond the physical, astral, and causal cosmos ruled by the Demiurge. Reentering the Pleroma represents absolute redemption, liberation, and spiritual completion.\n"
+    },
+    {
+      "id": "comp_hindu_tantra_sahasrara_peak_shiva_shakti_union",
+      "name": "Sahasrara Peak / Shiva-Shakti Union",
+      "type": "Comparative",
+      "tradition": "hindu_tantra",
+      "description": "The supreme peak of the Sahasrara (thousand-petaled crown), where the awakened Kundalini Shakti fully merges with Shiva. The dualities of consciousness and energy are completely resolved, resulting in absolute, non-dual bliss and liberation (Jivanmukti).\n"
+    },
+    {
+      "id": "comp_sikhism_sach_khand",
+      "name": "Sach Khand",
+      "type": "Comparative",
+      "tradition": "sikhism",
+      "description": "Sach Khand is the absolute pinnacle of the Sikh mystical journey. Guru Nanak's Japji Sahib describes: 'Sach khand vasai nirankar... kar kar vekhey nadar nihal' (In the true realm dwells the formless Creator, looking upon creation with His merciful, bliss-giving gaze). It is the realm of absolute truth and grace. Kabir's Shabad: 'Veena baje haal lok mein, Sat Purush darsaao... tahan shabd Sat Nam dhuna chhaejai'.\n"
+    },
+    {
+      "id": "comp_vedic_satya_loka",
+      "name": "Satya Loka",
+      "type": "Comparative",
+      "tradition": "vedic",
+      "description": "The highest of the seven subtle planes of the universe (Vyahritis) described in the Upanishads. It is the realm of absolute truth, inhabited by liberated souls who have fully realized their identity with the supreme Brahman (Ayam Atma Brahma).\n"
+    },
+    {
+      "id": "comp_jainism_siddhashila",
+      "name": "Siddhashila",
+      "type": "Comparative",
+      "tradition": "jainism",
+      "description": "The supreme apex of the universe where the fully liberated souls (Siddhas), completely freed from all physical and karmic envelopes, dwell eternally in a state of infinite knowledge, infinite perception, infinite power, and infinite bliss.\n"
+    },
+    {
+      "id": "region_full_bi_hemispheric_synchronization",
+      "name": "Full Bi-Hemispheric Synchronization",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "region_peak_posterior_cingulate_cortex_deactivation",
+      "name": "Peak Posterior Cingulate Cortex Deactivation",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "network_unified_non_dual_awareness_network",
+      "name": "Unified Non-Dual Awareness Network",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "network_complete_cortical_gating_absolute_absorption",
+      "name": "Complete Cortical Gating (Absolute Absorption)",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "floor_13",
+      "name": "Alakha Lok",
+      "type": "Floor",
+      "level": 13,
+      "realm": "Dayal Desh",
+      "category": "pure spirit"
+    },
+    {
+      "id": "ruler_alakh_purush_the_invisible_unknowable_and_unperceivable_lord",
+      "name": "Alakh Purush (the Invisible, Unknowable, and Unperceivable Lord)",
+      "type": "Ruler"
+    },
+    {
+      "id": "sound_sweet_subtle_playing_of_the_celestial_sitar",
+      "name": "Sweet, subtle playing of the celestial Sitar",
+      "type": "Sound"
+    },
+    {
+      "id": "light_incomprehensible_self_luminous_white_gold_radiance_where_each_soul_shines_with_the_light_of_millions_of_suns_and_the_form_of_alakh_purush_is_completely_beyond_physical_or_astral_sight",
+      "name": "Incomprehensible, self-luminous white-gold radiance, where each soul shines with the light of millions of suns, and the form of Alakh Purush is completely beyond physical or astral sight",
+      "type": "Light"
+    },
+    {
+      "id": "comp_sufism_hahoot_station_of_the_unmanifest_attributes",
+      "name": "Hahoot / Station of the unmanifest Attributes",
+      "type": "Comparative",
+      "tradition": "sufism",
+      "description": "In Sufism, Alakha Lok corresponds to the unmanifest depths of the divine essence (Hahoot) that lie beyond the manifest attributes. Here, the soul experiences the transition from Fana (ego-annihilation) to absolute union with the unmanifest and nameless God. The subtle Sitar sound mirrors the unceasing, formless vibration of the divine breath before it articulates into names or qualities.\n"
+    },
+    {
+      "id": "comp_taoism_the_nameless_tao_pre_wuji_origin",
+      "name": "The Nameless Tao / Pre-Wuji Origin",
+      "type": "Comparative",
+      "tradition": "taoism",
+      "description": "In Taoist philosophy, this represents the Nameless Tao described in the opening of the Tao Te Ching: 'The Tao that can be spoken of is not the eternal Tao.' It is the absolute, nameless essence that precedes even formless emptiness (Wuji), representing the unmanifest source from which all dimensions and dualities emerge.\n"
+    },
+    {
+      "id": "comp_kabbalah_ayin_primordial_nothingness",
+      "name": "Ayin (primordial Nothingness)",
+      "type": "Comparative",
+      "tradition": "kabbalah",
+      "description": "Ayin (Nothingness) is the first veil of the unmanifest infinite (Ein Sof) that lies completely beyond the crown (Kether). It represents the unmanifest, unperceivable source of all creation, where all forms, thoughts, and individual concepts of existence dissolve into absolute primordial silence.\n"
+    },
+    {
+      "id": "comp_buddhism_dharmadhatu_unmanifest_void",
+      "name": "Dharmadhatu / Unmanifest Void",
+      "type": "Comparative",
+      "tradition": "buddhism",
+      "description": "In Mahayana Buddhism, this represents the Dharmadhatu—the infinite, unmanifest realm of absolute truth and emptiness that is the ultimate nature of all phenomena. It represents the realization of the absolute formless body of the Buddha (Dharmakaya) beyond any spatial or temporal designations.\n"
+    },
+    {
+      "id": "comp_christianity_the_fathers_glory_the_invisible_light",
+      "name": "The Father's Glory / The Invisible Light",
+      "type": "Comparative",
+      "tradition": "christianity",
+      "description": "Corresponds to the mystical Christian vision of the Father's Glory—a light so blindingly bright that it becomes invisible to any created eyes. Apostle Paul writes of God as 'dwelling in the light which no man can approach unto; whom no man hath seen, nor can see' (1 Timothy 6:16), representing the unmanifest, unperceivable Father.\n"
+    },
+    {
+      "id": "comp_gnosticism_bythos_the_unknowable_depth",
+      "name": "Bythos (The Unknowable Depth)",
+      "type": "Comparative",
+      "tradition": "gnosticism",
+      "description": "In Gnostic cosmology, Bythos (the Depth) is the unknowable, invisible, and unmanifest Father who existed before all creation, residing in absolute silence and contemplation. Reentering the depth of Bythos represents the soul's return to the ultimate primordial source of the Pleroma.\n"
+    },
+    {
+      "id": "comp_hindu_tantra_agyata_sahasrara_peak",
+      "name": "Agyata Sahasrara Peak",
+      "type": "Comparative",
+      "tradition": "hindu_tantra",
+      "description": "The highest, unmapped peak of the Sahasrara vertex, where the soul moves beyond the Shiva-Shakti union into the absolute, formless space of the attributeless Brahman (Nirguna Brahman) that cannot be grasped by the intellect.\n"
+    },
+    {
+      "id": "comp_sikhism_alakh_lok_alakh_niranjan",
+      "name": "Alakh Lok / Alakh Niranjan",
+      "type": "Comparative",
+      "tradition": "sikhism",
+      "description": "Gurbani and Sant Mat utilize the term Alakh Lok (the invisible world) or Alakh Niranjan to describe the unmanifest Lord. Guru Nanak writes: 'Alakh purakh apara param purakh ki ghati' (The invisible Lord is unapproachable and limitless). Kabir's Shabad describes: 'Alakha lok mein sitar baje, Alakh Purush darsaao... tahan shabd Alakh dhuna chhaejai'.\n"
+    },
+    {
+      "id": "comp_vedic_adreshyam_unknowable_brahman",
+      "name": "Adreshyam / Unknowable Brahman",
+      "type": "Comparative",
+      "tradition": "vedic",
+      "description": "The Mandukya Upanishad describes the supreme state of the Self (Turiya) as adreshyam (invisible), agrahyam (ungraspable), and achintyam (unthinkable)—the unmanifest Brahman who is completely beyond sensory and cognitive grasp.\n"
+    },
+    {
+      "id": "comp_jainism_param_samadhi_pure_soul_absorption",
+      "name": "Param-Samadhi / Pure Soul Absorption",
+      "type": "Comparative",
+      "tradition": "jainism",
+      "description": "The state of Param-Samadhi (supreme absorption) where the soul resides eternally in its own unmanifest, formless essence, experiencing the absolute fullness of its spiritual attributes without any relationship to physical or causal universes.\n"
+    },
+    {
+      "id": "region_complete_bi_hemispheric_coherence",
+      "name": "Complete Bi-Hemispheric Coherence",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "region_cortical_deactivation_peak",
+      "name": "Cortical Deactivation Peak",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "network_attributeless_awareness_network",
+      "name": "Attributeless Awareness Network",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "network_complete_cognitive_gating_formless_absorption",
+      "name": "Complete Cognitive Gating (Formless Absorption)",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "floor_14",
+      "name": "Agama Lok",
+      "type": "Floor",
+      "level": 14,
+      "realm": "Dayal Desh",
+      "category": "pure spirit"
+    },
+    {
+      "id": "ruler_agam_purush_the_inaccessible_unapproachable_and_unperceivable_lord",
+      "name": "Agam Purush (the Inaccessible, Unapproachable, and Unperceivable Lord)",
+      "type": "Ruler"
+    },
+    {
+      "id": "sound_sweet_subtle_and_high_frequency_playing_of_the_celestial_flute",
+      "name": "Sweet, subtle, and high-frequency playing of the celestial Flute (Murali/Bansuri)",
+      "type": "Sound"
+    },
+    {
+      "id": "light_incomprehensible_self_luminous_white_gold_radiance_where_each_soul_shines_with_the_light_of_trillions_of_suns_and_the_form_of_agam_purush_is_completely_beyond_physical_or_astral_sight",
+      "name": "Incomprehensible, self-luminous white-gold radiance, where each soul shines with the light of trillions of suns, and the form of Agam Purush is completely beyond physical or astral sight",
+      "type": "Light"
+    },
+    {
+      "id": "comp_sufism_hahoot_station_of_the_unmanifest_essence",
+      "name": "Hahoot / Station of the unmanifest Essence",
+      "type": "Comparative",
+      "tradition": "sufism",
+      "description": "In Sufism, Agama Lok corresponds to the unmanifest depths of the divine essence (Hahoot) that lie beyond the manifest attributes. Here, the soul experiences the transition from Fana (ego-annihilation) to absolute union with the unmanifest and nameless God. The subtle Flute sound mirrors the unceasing, formless vibration of the divine breath before it articulates into names or qualities.\n"
+    },
+    {
+      "id": "comp_kabbalah_ain_soph_the_infinite",
+      "name": "Ain Soph (The Infinite)",
+      "type": "Comparative",
+      "tradition": "kabbalah",
+      "description": "Ain Soph (The Infinite) is the second veil of the unmanifest infinite (Ein Sof) that lies completely beyond the crown (Kether). It represents the unmanifest, unperceivable source of all creation, where all forms, thoughts, and individual concepts of existence dissolve into absolute primordial silence.\n"
+    },
+    {
+      "id": "comp_sikhism_agama_lok_agam_purakh",
+      "name": "Agama Lok / Agam Purakh",
+      "type": "Comparative",
+      "tradition": "sikhism",
+      "description": "Gurbani and Sant Mat utilize the term Agama Lok (the inaccessible world) or Agam Purakh to describe the unmanifest Lord. Guru Nanak writes: 'Agam purakh apara param purakh ki ghati' (The inaccessible Lord is unapproachable and limitless). Kabir's Shabad describes: 'Agama lok mein bansuri baje, Agam Purush darsaao... tahan shabd Agam dhuna chhaejai'.\n"
+    },
+    {
+      "id": "comp_vedic_agamyam_unknowable_brahman",
+      "name": "Agamyam / Unknowable Brahman",
+      "type": "Comparative",
+      "tradition": "vedic",
+      "description": "The Mandukya Upanishad describes the supreme state of the Self (Turiya) as agamyam (inaccessible), agrahyam (ungraspable), and achintyam (unthinkable)—the unmanifest Brahman who is completely beyond sensory and cognitive grasp.\n"
+    },
+    {
+      "id": "floor_15",
+      "name": "Akaha Lok / Anami",
+      "type": "Floor",
+      "level": 15,
+      "realm": "Dayal Desh",
+      "category": "pure spirit"
+    },
+    {
+      "id": "ruler_anami_purush_the_nameless_attribute_less_and_unmanifest_supreme_lord",
+      "name": "Anami Purush (the Nameless, Attribute-less, and Unmanifest Supreme Lord)",
+      "type": "Ruler"
+    },
+    {
+      "id": "sound_absolute_supreme_silence",
+      "name": "Absolute, supreme Silence (completely beyond all vibratory sounds and waves)",
+      "type": "Sound"
+    },
+    {
+      "id": "light_incomprehensible_self_luminous_white_gold_radiance_where_each_soul_shines_with_the_light_of_countless_suns_and_the_form_of_anami_purush_is_completely_beyond_physical_or_astral_sight",
+      "name": "Incomprehensible, self-luminous white-gold radiance, where each soul shines with the light of countless suns, and the form of Anami Purush is completely beyond physical or astral sight",
+      "type": "Light"
+    },
+    {
+      "id": "comp_kabbalah_ain_soph_aur_the_infinite_light",
+      "name": "Ain Soph Aur (The Infinite Light)",
+      "type": "Comparative",
+      "tradition": "kabbalah",
+      "description": "Ain Soph Aur (The Infinite Light) is the third veil of the unmanifest infinite (Ein Sof) that lies completely beyond the crown (Kether). It represents the unmanifest, unperceivable source of all creation, where all forms, thoughts, and individual concepts of existence dissolve into absolute primordial silence.\n"
+    },
+    {
+      "id": "comp_sikhism_akaha_lok_anami_purush",
+      "name": "Akaha Lok / Anami Purush",
+      "type": "Comparative",
+      "tradition": "sikhism",
+      "description": "Gurbani and Sant Mat utilize the term Akaha Lok (the nameless world) or Anami Purush to describe the unmanifest Lord. Guru Nanak writes: 'Akaha purakh apara param purakh ki ghati' (The nameless Lord is unapproachable and limitless). Kabir's Shabad describes: 'Akaha lok mein shabda nahi, Anami Purush darsaao... tahan shabd Anami dhuna chhaejai'.\n"
+    },
+    {
+      "id": "comp_vedic_anama_unknowable_brahman",
+      "name": "Anama / Unknowable Brahman",
+      "type": "Comparative",
+      "tradition": "vedic",
+      "description": "The Mandukya Upanishad describes the supreme state of the Self (Turiya) as anama (nameless), agrahyam (ungraspable), and achintyam (unthinkable)—the unmanifest Brahman who is completely beyond sensory and cognitive grasp.\n"
+    },
+    {
+      "id": "floor_16",
+      "name": "Secret stage 16",
+      "type": "Floor",
+      "level": 16,
+      "realm": "Secret",
+      "category": "indescribable"
+    },
+    {
+      "id": "ruler_primordial_purush_the_first_unmanifest_veil_of_the_absolute_radhasoami_state",
+      "name": "Primordial Purush (the first unmanifest veil of the absolute Radhasoami state)",
+      "type": "Ruler"
+    },
+    {
+      "id": "sound_infinite_silent_resonance",
+      "name": "Infinite, silent resonance (completely beyond all vibratory currents and sound-waves)",
+      "type": "Sound"
+    },
+    {
+      "id": "light_indescribable_blinding_unmanifest_radiance_of_absolute_pure_spirit_completely_beyond_the_light_of_countless_suns",
+      "name": "Indescribable, blinding unmanifest radiance of absolute pure spirit, completely beyond the light of countless suns",
+      "type": "Light"
+    },
+    {
+      "id": "comp_sufism_ahadiyyat_absolute_oneness",
+      "name": "Ahadiyyat / Absolute Oneness",
+      "type": "Comparative",
+      "tradition": "sufism",
+      "description": "In Sufism, Secret Stage 16 corresponds to the station of Ahadiyyat—absolute oneness, where even the unmanifest essence dissolves into the singular, absolute unity beyond any attributes. Here, the soul experiences the transition from Fana (ego-annihilation) to absolute union with the unmanifest and nameless God. The absolute Silence mirrors the unceasing, formless vibration of the divine breath before it articulates into names or qualities.\n"
+    },
+    {
+      "id": "comp_taoism_the_source_before_the_nameless_tao",
+      "name": "The Source before the Nameless Tao",
+      "type": "Comparative",
+      "tradition": "taoism",
+      "description": "In Taoist philosophy, this represents the source that precedes even the Nameless Tao described in the opening of the Tao Te Ching. It is the absolute, nameless essence that precedes even formless emptiness (Wuji), representing the unmanifest source from which all dimensions and dualities emerge.\n"
+    },
+    {
+      "id": "comp_kabbalah_ayin_sof_aur_absolute",
+      "name": "Ayin Sof Aur absolute",
+      "type": "Comparative",
+      "tradition": "kabbalah",
+      "description": "Ayin Sof Aur (The Infinite Light) is the third veil of the unmanifest infinite (Ein Sof) that lies completely beyond the crown (Kether). It represents the unmanifest, unperceivable source of all creation, where all forms, thoughts, and individual concepts of existence dissolve into absolute primordial silence.\n"
+    },
+    {
+      "id": "comp_buddhism_adi_buddha_parinirvana_peak",
+      "name": "Adi-Buddha / Parinirvana Peak",
+      "type": "Comparative",
+      "tradition": "buddhism",
+      "description": "In Mahayana Buddhism, this represents the Adi-Buddha state—the absolute, unmanifest primordial essence of the formless mind. It represents the realization of the absolute formless body of the Buddha (Dharmakaya) beyond any spatial or temporal designations.\n"
+    },
+    {
+      "id": "comp_christianity_the_godhead_deitas_beyond_the_father_deus",
+      "name": "The Godhead (Deitas) beyond the Father (Deus)",
+      "type": "Comparative",
+      "tradition": "christianity",
+      "description": "Corresponds to Meister Eckhart's description of the absolute Godhead (Deitas) that lies completely beyond the personal God (Deus). It represents the unmanifest, silent source of the divine, which is completely beyond sensory and cognitive grasp.\n"
+    },
+    {
+      "id": "comp_gnosticism_the_ineffable_parent_the_fore_father",
+      "name": "The Ineffable Parent / The Fore-Father",
+      "type": "Comparative",
+      "tradition": "gnosticism",
+      "description": "In Gnostic cosmology, the Ineffable Parent or Fore-Father exists in absolute silence and contemplation before any emanations. Reentering this depth represents the soul's return to the ultimate primordial source of the Pleroma.\n"
+    },
+    {
+      "id": "comp_sikhism_the_unmanifest_nirankar",
+      "name": "The Unmanifest Nirankar",
+      "type": "Comparative",
+      "tradition": "sikhism",
+      "description": "Gurbani and Sant Mat utilize the unmanifest state of the Nirankar (the formless Creator) to describe this highest plane. Guru Nanak writes: 'Nirankar apara param purakh ki ghati' (The formless Lord is unapproachable and limitless). Kabir's Shabad describes: 'Secret stage 16 has no physical description...'.\n"
+    },
+    {
+      "id": "comp_vedic_nirguna_brahman",
+      "name": "Nirguna Brahman",
+      "type": "Comparative",
+      "tradition": "vedic",
+      "description": "The Mandukya Upanishad describes the supreme state of the Self (Turiya) as Nirguna Brahman—the formless, attributeless, and unmanifest Brahman who is completely beyond sensory and cognitive grasp.\n"
+    },
+    {
+      "id": "floor_17",
+      "name": "Secret stage 17",
+      "type": "Floor",
+      "level": 17,
+      "realm": "Secret",
+      "category": "indescribable"
+    },
+    {
+      "id": "ruler_supreme_purush_the_second_unmanifest_veil_of_the_absolute_radhasoami_state",
+      "name": "Supreme Purush (the second unmanifest veil of the absolute Radhasoami state)",
+      "type": "Ruler"
+    },
+    {
+      "id": "floor_18",
+      "name": "Secret stage 18",
+      "type": "Floor",
+      "level": 18,
+      "realm": "Secret",
+      "category": "indescribable"
+    },
+    {
+      "id": "ruler_radhasoami_the_absolute_nameless_and_formless_supreme_being_the_final_source_of_all_existence",
+      "name": "Radhasoami (the absolute, nameless, and formless Supreme Being, the final Source of all existence)",
+      "type": "Ruler"
+    },
+    {
+      "id": "floor_2",
+      "name": "Indriya / Svadhisthana Chakra",
+      "type": "Floor",
+      "level": 2,
+      "realm": "Pinda",
+      "category": "physical"
+    },
+    {
+      "id": "ruler_lord_brahma",
+      "name": "Lord Brahma",
+      "type": "Ruler"
+    },
+    {
+      "id": "sound_sound_of_vital_fluid_activation_gentle_flowing_water",
+      "name": "Sound of vital fluid activation / gentle flowing water",
+      "type": "Sound"
+    },
+    {
+      "id": "light_light_black",
+      "name": "Light black (black mixed with white, representing creative dark water)",
+      "type": "Light"
+    },
+    {
+      "id": "comp_sufism_nafs_al_lawwama",
+      "name": "Nafs al-Lawwama",
+      "type": "Comparative",
+      "tradition": "sufism",
+      "description": "In Sufism, the Indriya and Kantha chakras together are associated with Alam Malkut (the angelic or subtle world). At this level, the station of Nafs al-Lawwama (the self-reproaching or questioning soul) begins to emerge. Here, the soul starts to feel guilt and question its base, instinctual sexual drives. The rigorous control and sublimation of sexual energy for spiritual advancement mirrors the Sant Mat concept of Brahmacharya. The struggle against these desires is known in Hadith as the 'Greater Jihad'.\n"
+    },
+    {
+      "id": "comp_taoism_lower_dantian_jing_gate",
+      "name": "Lower Dantian / Jing Gate",
+      "type": "Comparative",
+      "tradition": "taoism",
+      "description": "Corresponds directly to the Lower Dantian, which is the primary furnace for storing Jing (sexual/creative essence). In Taoist sexual alchemy, the goal is to prevent the downward drainage of Jing and instead \"reverse the flow\" (Xiao Zhou Tian / Microcosmic Orbit) to refine Jing into Qi (vital energy) and draw it up the spine (governing vessel) into the brain, directly mirroring Saksena's description of reversing the Kundalini.\n"
+    },
+    {
+      "id": "comp_kabbalah_yesod",
+      "name": "Yesod",
+      "type": "Comparative",
+      "tradition": "kabbalah",
+      "description": "Yesod (the Foundation) is the Sephirah associated with the reproductive organs, sexual energy, and the vital force of generation. It acts as the channel through which higher spiritual energies flow down to manifest in Malkuth (the physical body). Yesod governs dreams, the astral body, and the vital fluid currents.\n"
+    },
+    {
+      "id": "comp_buddhism_secret_place_jewel_wheel",
+      "name": "Secret Place / Jewel Wheel",
+      "type": "Comparative",
+      "tradition": "buddhism",
+      "description": "In Vajrayana (Tibetan) Buddhism, this is the 'Secret Place' or the wheel of creative energy. It represents the active sublimation of pleasure into non-dual bliss (Mahasukha) through the generation of inner heat (Tummo) and the purification of the water element.\n"
+    },
+    {
+      "id": "comp_christianity_the_gate_of_creation",
+      "name": "The Gate of Creation",
+      "type": "Comparative",
+      "tradition": "christianity",
+      "description": "Represented in mystical Christian interpretations as the second lower portal of the human temple where natural, creative forces must be sanctified and dedicated to higher spiritual work rather than worldly indulgence.\n"
+    },
+    {
+      "id": "comp_gnosticism_the_psyche_threshold",
+      "name": "The Psyche Threshold",
+      "type": "Comparative",
+      "tradition": "gnosticism",
+      "description": "The boundary of emotional desires and vital urges. The soul must master these creative waters to prevent being dragged back down into the hylic mud of base matter.\n"
+    },
+    {
+      "id": "comp_hindu_tantra_svadhisthana_varuna_realm",
+      "name": "Svadhisthana / Varuna Realm",
+      "type": "Comparative",
+      "tradition": "hindu_tantra",
+      "description": "Literally meaning \"one's own dwelling place\". Governed by Varuna (the Vedic god of cosmic order and water) and the Rakini Shakti, who carries weapons and holds a lotus. It has six vermillion-colored petals and represents the emotional body, sensuality, and creative imagination.\n"
+    },
+    {
+      "id": "comp_sikhism_svadhu_chakra",
+      "name": "Svadhu Chakra",
+      "type": "Comparative",
+      "tradition": "sikhism",
+      "description": "Explicitly mentioned in Kabir's Shabad: \"Swadu chakra shat-dal vistaaro, Brahm Savitri roop nihaaro. Ulati naagini ka sir maaro, tahan shabd Onkara hai.\" (Svadhu Chakra has six petals. Find there Brahma and Savitri. Turn back and strike on the head of the serpent [Kundalini]. The sound is Onkar).\n"
+    },
+    {
+      "id": "comp_vedic_varunas_cosmic_order",
+      "name": "Varuna's Cosmic order",
+      "type": "Comparative",
+      "tradition": "vedic",
+      "description": "The Rig Veda praises Varuna as the guardian of the water element (Jala/Ap) and cosmic order (Rta). Svadhisthana governs these waters in the body—blood, lymph, and reproductive fluids—requiring their movement to align with divine law.\n"
+    },
+    {
+      "id": "comp_jainism_swadhistan_preksha",
+      "name": "Swadhistan Preksha",
+      "type": "Comparative",
+      "tradition": "jainism",
+      "description": "Jain Preksha Dhyana maps Svadhisthana as a center of emotional fluctuation. Concentrating here with a visualization of ocean-like purity helps transmute lust and volatile passions into spiritual stability.\n"
+    },
+    {
+      "id": "region_sacral_plexus",
+      "name": "Sacral Plexus",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "region_pudendal_nerve",
+      "name": "Pudendal Nerve",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "network_autonomic_reproductive_networks",
+      "name": "Autonomic Reproductive Networks",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "floor_3",
+      "name": "Nabhi / Manipura Chakra",
+      "type": "Floor",
+      "level": 3,
+      "realm": "Pinda",
+      "category": "physical"
+    },
+    {
+      "id": "ruler_lord_vishnu",
+      "name": "Lord Vishnu",
+      "type": "Ruler"
+    },
+    {
+      "id": "sound_sound_of_a_roaring_fire_crackling_furnace",
+      "name": "Sound of a roaring fire / crackling furnace",
+      "type": "Sound"
+    },
+    {
+      "id": "light_dazzling_white_light",
+      "name": "Dazzling white light (radiating like a jewel)",
+      "type": "Light"
+    },
+    {
+      "id": "comp_sufism_nafs_alam_malkut_border",
+      "name": "Nafs / Alam Malkut Border",
+      "type": "Comparative",
+      "tradition": "sufism",
+      "description": "Sufism aligns the navel center with the upper boundary of the base Nafs and the transition into Malkut. It represents the station of hunger, physical maintenance, and survival-drive that must be disciplined. The Sufi practice of fasting (Sawm) directly purifies this navel fire, forcing the lower self (Nafs) to submit to spiritual will.\n"
+    },
+    {
+      "id": "comp_taoism_dantian_cinnabar_field",
+      "name": "Dantian / Cinnabar Field",
+      "type": "Comparative",
+      "tradition": "taoism",
+      "description": "In Taoism and Qi Gong, the area just below the navel is the Lower Dantian (Elixir Field), which is the absolute energetic center of the physical body. It is the storage chamber for Qi (vital energy) and Jing. Breathing from the Dantian (abdominal breathing) coordinates the physical fire (San Jiao / Triple Burner) to generate vital force and build physical longevity.\n"
+    },
+    {
+      "id": "comp_kabbalah_netzach_hod",
+      "name": "Netzach / Hod",
+      "type": "Comparative",
+      "tradition": "kabbalah",
+      "description": "Sits at the lower dynamic boundary where Netzach (Victory/Emotion/Instinct) and Hod (Splendor/Intellect) feed down to generate active physical drive and metabolic expression. Netzach represents the primal animal desires, while Hod represents their regulation.\n"
+    },
+    {
+      "id": "comp_buddhism_nabhi_wheel_seat_of_tummo",
+      "name": "Nabhi Wheel / Seat of Tummo",
+      "type": "Comparative",
+      "tradition": "buddhism",
+      "description": "In Tibetan Buddhist Tantra, the navel chakra (Nabhi Wheel) is the seat of the element of Fire and is the focal point for the generation of Tummo (inner psychic heat). By concentrating on a red syllable 'Ram' or a tiny flame at the navel, yogis generate deep spiritual heat that purifies the central channel.\n"
+    },
+    {
+      "id": "comp_christianity_the_gate_of_the_belly",
+      "name": "The Gate of the Belly",
+      "type": "Comparative",
+      "tradition": "christianity",
+      "description": "Refers to the physical belly and digestive region which must be sanctified. \"Their god is their belly\" (Philippians 3:19) warns against being trapped at this level, urging seekers to ascend beyond animalistic gluttony and sensory indulgence.\n"
+    },
+    {
+      "id": "comp_gnosticism_the_animal_soul_psyche",
+      "name": "The Animal Soul (Psyche)",
+      "type": "Comparative",
+      "tradition": "gnosticism",
+      "description": "The boundary of the animal soul which reacts purely to physical appetites and desires. The Gnostic must raise consciousness above this belly-gate to awaken the pneumatic (spiritual) intelligence.\n"
+    },
+    {
+      "id": "comp_hindu_tantra_manipura_rudra_realm",
+      "name": "Manipura / Rudra Realm",
+      "type": "Comparative",
+      "tradition": "hindu_tantra",
+      "description": "Manipura literally means \"City of Jewels\" (Mani = jewel, Pura = city). Located at the solar plexus/navel. In mainstream Tantric systems, it has 10 dark-blue petals, a central red triangle, and is governed by Rudra Shiva (representing destruction of impurities) and the Lakini Shakti. The ram is its animal vehicle, representing stubborn fire.\n"
+    },
+    {
+      "id": "comp_sikhism_nabhi_kamal_the_intestinal_bed",
+      "name": "Nabhi Kamal / The Intestinal Bed",
+      "type": "Comparative",
+      "tradition": "sikhism",
+      "description": "The Guru Granth Sahib contains various hymns referencing the Nabhi Kamal (navel lotus) and the divine maintenance of the body. Kabir's Shabad describes: \"Nabhi chakra dal aath viraajai, Vishnu roop Lakshmi sang saajai...\" (The navel chakra has eight petals, where Vishnu resides with Lakshmi).\n"
+    },
+    {
+      "id": "comp_vedic_vaishvanara_agni",
+      "name": "Vaishvanara Agni",
+      "type": "Comparative",
+      "tradition": "vedic",
+      "description": "The Rig Veda and Upanishads heavily praise Agni (the fire god) in his digestive form, Vaishvanara. The Chandogya Upanishad details the five inner pranas that feed this digestive fire, representing it as a sacred cosmic fire sacrifice occurring within the human temple.\n"
+    },
+    {
+      "id": "comp_jainism_tejas_kendra",
+      "name": "Tejas Kendra",
+      "type": "Comparative",
+      "tradition": "jainism",
+      "description": "In Preksha Dhyana, the solar plexus is called the Tejas Kendra (Center of Fire/Energy). Concentrating here with a visualization of a bright yellow sun is understood to purify the digestive system, strengthen willpower, and awaken the vital fire.\n"
+    },
+    {
+      "id": "region_celiac_plexus_solar_plexus",
+      "name": "Celiac Plexus (Solar Plexus)",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "region_enteric_nervous_system_ens",
+      "name": "Enteric Nervous System (ENS)",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "network_visceral_homeostatic_networks",
+      "name": "Visceral Homeostatic Networks",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "floor_4",
+      "name": "Hridaya / Anahata Chakra",
+      "type": "Floor",
+      "level": 4,
+      "realm": "Pinda",
+      "category": "physical"
+    },
+    {
+      "id": "ruler_lord_shiva",
+      "name": "Lord Shiva",
+      "type": "Ruler"
+    },
+    {
+      "id": "sound_sound_of_a_ringing_bell_deep_celestial_chime",
+      "name": "Sound of a ringing bell / deep celestial chime",
+      "type": "Sound"
+    },
+    {
+      "id": "light_soft_tranquil_blue_light",
+      "name": "Soft, tranquil blue light (radiating like a vast sky)",
+      "type": "Light"
+    },
+    {
+      "id": "comp_sufism_qalb_the_five_lataif_of_the_chest",
+      "name": "Qalb / The Five Lataif of the Chest",
+      "type": "Comparative",
+      "tradition": "sufism",
+      "description": "In Sufism, the heart (Qalb) is the absolute starting point of meditation. The Sufis bypass the lower chakras to avoid the danger of Siddhis, starting their focus directly on the Qalb (left side of the chest) through Dhikr (remembrance). The heartbeat itself is trained to recite 'Allah' or 'Hu' automatically. According to Mahatma Ramchandraji of Fatehgarh, the chest contains five subtle centers (Lataif): Qalb (heart, left), Rooh (spirit, right), Sirr (secret, above left), Khafi (hidden, above right), and Akhfa (innermost, center of the chest), which coordinate all higher emotional and spiritual purification.\n"
+    },
+    {
+      "id": "comp_taoism_middle_dantian_seat_of_qi",
+      "name": "Middle Dantian / Seat of Qi",
+      "type": "Comparative",
+      "tradition": "taoism",
+      "description": "In Taoist inner alchemy, the heart corresponds to the Middle Dantian, which is the seat of Qi (vital breath) and governs the emotional body. It is the place where the raw vital force (Jing) is converted and refined into spiritual energy (Qi) through feelings of love, compassion, and emotional balance.\n"
+    },
+    {
+      "id": "comp_kabbalah_tiphereth",
+      "name": "Tiphereth",
+      "type": "Comparative",
+      "tradition": "kabbalah",
+      "description": "Tiphereth (Beauty or Compassion) is the central Sephirah of the Tree of Life, located at the heart of the system. It represents balance, harmony, beauty, and the mediation between the higher spiritual spheres and the lower physical world. It is the seat of the higher human self and Christ-consciousness.\n"
+    },
+    {
+      "id": "comp_buddhism_dharma_chakra_heart_wheel",
+      "name": "Dharma Chakra / Heart Wheel",
+      "type": "Comparative",
+      "tradition": "buddhism",
+      "description": "In Vajrayana (Tibetan) Tantra, the heart chakra is called the Dharma Chakra (the Wheel of Law or Truth). It has eight primary channels radiating like spokes from the center, representing the eightfold path. It is considered the seat of the 'indestructible drop' (bindu) where the subtlest consciousness resides, and the source of compassionate Bodhicitta.\n"
+    },
+    {
+      "id": "comp_christianity_the_sacred_heart_love",
+      "name": "The Sacred Heart / Love",
+      "type": "Comparative",
+      "tradition": "christianity",
+      "description": "The heart is the primary organ of Christian mysticism. The Sacred Heart of Jesus represents boundless divine love and compassion. Mystics like Saint Teresa of Avila describe entering the \"interior castle\" starting through the chamber of the heart, where the soul unites with God through unconditional love (Agape).\n"
+    },
+    {
+      "id": "comp_gnosticism_the_pneumatic_core",
+      "name": "The Pneumatic Core",
+      "type": "Comparative",
+      "tradition": "gnosticism",
+      "description": "The seat of the pneuma (spirit)—the divine spark of light trapped in the physical body. Awakening this heart-spark allows the Gnostic to transcend the physical archons and begin the ascent to the Pleroma.\n"
+    },
+    {
+      "id": "comp_hindu_tantra_anahata_kakini_realm",
+      "name": "Anahata / Kakini Realm",
+      "type": "Comparative",
+      "tradition": "hindu_tantra",
+      "description": "Anahata literally means \"Unstruck Sound\"—the primordial sound of the universe that rings without two physical objects striking. It has 12 vermillion petals and a central grey shatkona (six-pointed star) representing the union of Shiva and Shakti. It is presided over by the Kakini Shakti and Isha Shiva.\n"
+    },
+    {
+      "id": "comp_sikhism_hridaya_kamal_the_unstruck_chime",
+      "name": "Hridaya Kamal / The Unstruck Chime",
+      "type": "Comparative",
+      "tradition": "sikhism",
+      "description": "Gurbani contains endless references to the Anahat Shabad (unstruck sound) ringing in the heart. Kabir's Shabad describes: \"Hridaya chakra dwadasa dal aana, tah Shiva Gauri roop nikhana... tahan shabd Soham dhuna chhaejai\" (The heart chakra has twelve petals, where Shiva and Gauri are seen. The sound of Soham echoes there).\n"
+    },
+    {
+      "id": "comp_vedic_dahar_akasha",
+      "name": "Dahar Akasha",
+      "type": "Comparative",
+      "tradition": "vedic",
+      "description": "The Upanishads (e.g., Chandogya Upanishad 8.1.1) describe the \"little space within the heart\" (Dahar Akasha) as a vast inner cosmos containing the entire physical universe. To know the Self within this heart-space is to know the supreme Brahman.\n"
+    },
+    {
+      "id": "comp_jainism_anand_kendra",
+      "name": "Anand Kendra",
+      "type": "Comparative",
+      "tradition": "jainism",
+      "description": "In Preksha Dhyana, the heart is called the Anand Kendra (Center of Bliss). Concentrating here with a visualization of emerald-green light is understood to invoke absolute emotional balance, compassion, forgiveness, and the eradication of hatred.\n"
+    },
+    {
+      "id": "region_cardiac_nerve_plexus",
+      "name": "Cardiac Nerve Plexus",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "region_vagus_nerve_parasympathetic_branch",
+      "name": "Vagus Nerve (Parasympathetic Branch)",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "network_empathy_and_social_cognition_networks",
+      "name": "Empathy and Social Cognition Networks",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "floor_5",
+      "name": "Kantha / Vishuddha Chakra",
+      "type": "Floor",
+      "level": 5,
+      "realm": "Pinda",
+      "category": "physical"
+    },
+    {
+      "id": "ruler_goddess_avidya_also_known_as_durga_or_malin_maya",
+      "name": "Goddess Avidya (also known as Durga or Malin Maya)",
+      "type": "Ruler"
+    },
+    {
+      "id": "sound_sound_of_a_blowing_shell_cosmic_wind_whispering_through_space",
+      "name": "Sound of a blowing shell / cosmic wind whispering through space",
+      "type": "Sound"
+    },
+    {
+      "id": "light_dark_blackish_blue",
+      "name": "Dark blackish blue (representing the vast, dark expanse of unmanifest space)",
+      "type": "Light"
+    },
+    {
+      "id": "comp_sufism_alam_malkut_the_gate_of_speech",
+      "name": "Alam Malkut / The Gate of Speech",
+      "type": "Comparative",
+      "tradition": "sufism",
+      "description": "In Sufi classification, the throat (Kantha) works together with the sacral organ (Indriya) to represent the angelic or subtle world (Alam Malkut). It represents the purification of speech and breath. The voice must be purified of deceptive and malicious gossip so that the throat can become a clean vessel for chanting the names of God (Dhikr) and transmitting divine love.\n"
+    },
+    {
+      "id": "comp_taoism_twelve_chambers_throat_gate",
+      "name": "Twelve Chambers / Throat Gate",
+      "type": "Comparative",
+      "tradition": "taoism",
+      "description": "In Taoist inner alchemy, the throat is referred to as the 'Twelve Chambers' or the narrow throat gate. It is the crucial bridge that connects the Middle Dantian (heart/chest) to the Upper Dantian (third eye/head). During the circulation of Qi, the practitioner must swallow the 'jade fluid' (saliva produced during deep meditation) down through the throat to nourish the lower organs, bridging the physical and spiritual.\n"
+    },
+    {
+      "id": "comp_kabbalah_daat_threshold",
+      "name": "Da'at Threshold",
+      "type": "Comparative",
+      "tradition": "kabbalah",
+      "description": "Sits immediately below the invisible Sephirah Da'at (Knowledge), serving as the physical bridge of communication where the unmanifest thoughts of the crown are articulated and spoken into creation, mirroring the throat's function as the origin of cosmic speech.\n"
+    },
+    {
+      "id": "comp_buddhism_sambhoga_chakra_throat_wheel",
+      "name": "Sambhoga Chakra / Throat Wheel",
+      "type": "Comparative",
+      "tradition": "buddhism",
+      "description": "In Tibetan Vajrayana Tantra, the throat is called the Sambhoga Chakra (the enjoyment wheel), associated with the dream state, speech, and the refinement of vital prana. It has 16 red channels radiating outward, and meditating here is understood to purify the dream state, allowing for the practice of Dream Yoga.\n"
+    },
+    {
+      "id": "comp_christianity_the_gate_of_the_word",
+      "name": "The Gate of the Word",
+      "type": "Comparative",
+      "tradition": "christianity",
+      "description": "The throat is the vehicle of the spoken word. Mystical Christian teachings emphasize that \"death and life are in the power of the tongue\" (Proverbs 18:21). The throat must be sanctified so that one speaks only words of truth, blessing, and divine love, transmuting Avidya into active Gnosis.\n"
+    },
+    {
+      "id": "comp_gnosticism_the_realm_of_sophias_fall",
+      "name": "The Realm of Sophia's Fall",
+      "type": "Comparative",
+      "tradition": "gnosticism",
+      "description": "The boundary where the divine wisdom (Sophia) fell into limitation, giving birth to the Demiurge and the gross material worlds. Transcending the throat represents crossing above the boundary of the Demiurgic illusion (Malin Maya).\n"
+    },
+    {
+      "id": "comp_hindu_tantra_vishuddha_sadashiva_realm",
+      "name": "Vishuddha / Sadashiva Realm",
+      "type": "Comparative",
+      "tradition": "hindu_tantra",
+      "description": "Vishuddha literally means \"especially pure\". It has 16 smoky-purple or blue petals inscribed with the 16 Sanskrit vowels. It is governed by Panchavaktra Shiva (five-faced Shiva) and the Shakini Shakti, representing the purification of the intellect and the integration of all five elements back into the space (Akasha) from which they arose.\n"
+    },
+    {
+      "id": "comp_sikhism_the_gate_of_shabad_kirtan",
+      "name": "The Gate of Shabad / Kirtan",
+      "type": "Comparative",
+      "tradition": "sikhism",
+      "description": "In Sikhism, the throat is the physical instrument used to sing the praises of the Creator (Kirtan) and recite the Guru's Bani. By using the voice to speak truth, the throat is purified of Malin Maya. Kabir's Shabad describes: \"Kantha chakra dar dwadasa jano... tahan shabd Onkara hai\" (Note: Kabir's Shabad maps the throat and its cosmic sounds).\n"
+    },
+    {
+      "id": "comp_vedic_akasha_tattva",
+      "name": "Akasha Tattva",
+      "type": "Comparative",
+      "tradition": "vedic",
+      "description": "The Upanishads describe Akasha (space/ether) as the subtlest of the five gross elements—the primordial medium through which the sound-vibration (Shabda) travels. All gross physical forms arise from space and eventually dissolve back into space at death.\n"
+    },
+    {
+      "id": "comp_jainism_vishuddhi_kendra",
+      "name": "Vishuddhi Kendra",
+      "type": "Comparative",
+      "tradition": "jainism",
+      "description": "In Preksha Dhyana, the throat is called the Vishuddhi Kendra (Center of Purification). Concentrating here with a visualization of bright blue light is understood to regulate thyroid function, purify speech, eliminate negative emotions, and facilitate the transition into spiritual introspection.\n"
+    },
+    {
+      "id": "region_pharyngeal_plexus",
+      "name": "Pharyngeal Plexus",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "region_recurrent_laryngeal_nerve",
+      "name": "Recurrent Laryngeal Nerve",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "network_vocalization_and_speech_motor_networks",
+      "name": "Vocalization and Speech Motor Networks",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "floor_6",
+      "name": "Aagya Chakra / Tisra Til",
+      "type": "Floor",
+      "level": 6,
+      "realm": "Pinda",
+      "category": "physical"
+    },
+    {
+      "id": "ruler_sat_guru_indirectly_governing_the_gateway",
+      "name": "Sat-Guru (indirectly governing the gateway)",
+      "type": "Ruler"
+    },
+    {
+      "id": "sound_anhad_jhingaa",
+      "name": "Anhad jhingaa (whistling sound current / buzz like a black wasp)",
+      "type": "Sound"
+    },
+    {
+      "id": "light_taramandal",
+      "name": "Taramandal (a brilliant celestial starfield / dark room illuminated)",
+      "type": "Light"
+    },
+    {
+      "id": "comp_sufism_nukta_e_suweda",
+      "name": "Nukta-e-Suweda",
+      "type": "Comparative",
+      "tradition": "sufism",
+      "description": "The Sufis call this point Nukta-e-Suweda, meaning \"the black point\" or the secret core of the heart's consciousness. It is considered the seat of the universal mind and the gate through which the seeker exits the material domain (Na-Soot) into the angelic realms (Malkut). Here the mind gets rid of darkness and comes into the holy light of the Sat (the divine). It marks the transition from outward sensory focus (Zahir) to inward spiritual sight (Basirah or Batin).\n"
+    },
+    {
+      "id": "comp_taoism_upper_dantian",
+      "name": "Upper Dantian",
+      "type": "Comparative",
+      "tradition": "taoism",
+      "description": "In Taoist inner alchemy, the point between the eyebrows corresponds to the Upper Dantian (the Cinnabar Field), which is the seat of Shen (spirit/consciousness). Meditative practices focus on drawing vitality (Jing) and energy (Qi) upward along the spine to feed and crystallize the Shen at the Upper Dantian through practices like Nei Guan (inner observation) and the union of Kan (water) and Li (fire).\n"
+    },
+    {
+      "id": "comp_kabbalah_daat",
+      "name": "Da'at",
+      "type": "Comparative",
+      "tradition": "kabbalah",
+      "description": "Though Da'at is the invisible eleventh Sephirah on the Tree of Life, it represents the mystical union of Chokhmah (wisdom) and Binah (understanding) crossing the Abyss—serving as the gateway where the mind opens to supreme cosmic awareness, mirroring the transitional function of the third eye.\n"
+    },
+    {
+      "id": "comp_buddhism_urna",
+      "name": "Urna",
+      "type": "Comparative",
+      "tradition": "buddhism",
+      "description": "In Buddhist iconography, the Urna is the circular dot placed between the eyebrows of the Buddha and Bodhisattvas, representing the third eye of wisdom, spiritual sight, and the capacity to perceive the subtle realities of suffering and emptiness. In Vajrayana (Tibetan) Tantra, the Ajna chakra is connected to the Guru's mind and the primordial state of awareness (Rigpa).\n"
+    },
+    {
+      "id": "comp_christianity_the_single_eye",
+      "name": "The Single Eye",
+      "type": "Comparative",
+      "tradition": "christianity",
+      "description": "\"The lamp of the body is the eye. If therefore your eye is single, your whole body will be full of light.\" (Matthew 6:22). Christian mystics interpret this single eye as the third eye or pineal focus, where attention is unified, withdrawn from the dualistic outer senses, and filled with divine illumination.\n"
+    },
+    {
+      "id": "comp_gnosticism_the_cleft_of_light",
+      "name": "The Cleft of Light",
+      "type": "Comparative",
+      "tradition": "gnosticism",
+      "description": "Represented as the narrow portal of entry into the Pleroma (the divine fullness) out of the physical cosmos ruled by the Demiurge. The soul must possess the secret Gnosis (knowledge) to pass through this needle-eye boundary.\n"
+    },
+    {
+      "id": "comp_hindu_tantra_ajna_chakra",
+      "name": "Ajna Chakra",
+      "type": "Comparative",
+      "tradition": "hindu_tantra",
+      "description": "In classical Kundalini Tantra, the Ajna (command) chakra is the meeting point of the three primary nadis—Ida, Pingala, and Sushumna. It has two white or light grey petals representing the manifest dualities of the mind, with a central lingam around which the mind dissolves into pure consciousness.\n"
+    },
+    {
+      "id": "comp_sikhism_tisra_til_shiv_netra",
+      "name": "Tisra Til / Shiv Netra",
+      "type": "Comparative",
+      "tradition": "sikhism",
+      "description": "Gurbani and Sant Mat utilize the term Tisra Til (the third sesame spot) or Shiv Netra. It is described as a minute, invisible opening through which the surat (soul attention) must pass to escape the nine physical gates of the senses.\n"
+    },
+    {
+      "id": "comp_vedic_brahmarandhra_entryway",
+      "name": "Brahmarandhra Entryway",
+      "type": "Comparative",
+      "tradition": "vedic",
+      "description": "The late Upanishads refer to the subtle channels of the head converging behind the eyebrows. The Mandukya Upanishad maps the waking state (Jagrat) specifically to the active operations centered around the sensory inputs coordinated through this frontal pivot.\n"
+    },
+    {
+      "id": "comp_jainism_darshana_kendra",
+      "name": "Darshana Kendra",
+      "type": "Comparative",
+      "tradition": "jainism",
+      "description": "In Preksha Dhyana, the point between the eyebrows is called the Darshana Kendra (Center of Intuition). Concentrating here is understood to purify the psychic colors (leshyas) and awaken inner vision, allowing the soul to witness its true nature independent of karmic matter.\n"
+    },
+    {
+      "id": "region_pineal_gland",
+      "name": "Pineal Gland",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "region_thalamus",
+      "name": "Thalamus",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "region_prefrontal_cortex",
+      "name": "Prefrontal Cortex",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "network_default_mode_network_dmn_deactivation",
+      "name": "Default Mode Network (DMN) Deactivation",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "network_fronto_parietal_attention_network",
+      "name": "Fronto-Parietal Attention Network",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "floor_7",
+      "name": "Sahasra-Dal-Kamal",
+      "type": "Floor",
+      "level": 7,
+      "realm": "Brahmanda",
+      "category": "astral"
+    },
+    {
+      "id": "ruler_jyoti_niranjan_also_known_as_triloki_nath_the_lord_of_the_three_worlds",
+      "name": "Jyoti Niranjan (also known as Triloki Nath, the Lord of the Three Worlds)",
+      "type": "Ruler"
+    },
+    {
+      "id": "sound_sound_of_big_bells",
+      "name": "Sound of big bells (Ghanta) and the blowing of a conch shell (Shankh)",
+      "type": "Sound"
+    },
+    {
+      "id": "light_dazzling_white_light_radiating_from_a_central_supreme_flame",
+      "name": "Dazzling white light radiating from a central supreme flame (Jyoti) like a thousand suns",
+      "type": "Light"
+    },
+    {
+      "id": "comp_sufism_alam_e_malakut_station_of_ruh",
+      "name": "Alam-e-Malakut / Station of Ruh",
+      "type": "Comparative",
+      "tradition": "sufism",
+      "description": "The Sufis call this stage Alam-e-Malakut, the angelic world of forms and subtle lights. It represents the station of Ruh (spirit) when it first escapes the physical shell (Na-Soot) into the astral skies. The seeker is wowed by beautiful spiritual lights (Anwar) and the voices of angels, which correspond to the celestial bell sounds. Sufi masters warn that these experiences are mere signs on the way (Karamat) and should not halt the soul's flight toward absolute divine unity (Lahoot).\n"
+    },
+    {
+      "id": "comp_taoism_opening_of_the_golden_flower",
+      "name": "Opening of the Golden Flower",
+      "type": "Comparative",
+      "tradition": "taoism",
+      "description": "In Taoist inner alchemy, this corresponds to the 'Opening of the Golden Flower' or the crystallization of the spirit (Shen) at the crown. Here, the unified Qi forces the spirit to emerge out of the physical body through the crown aperture (Bai Hui), allowing for conscious astral travel and the birth of the 'Sacred Embryo'.\n"
+    },
+    {
+      "id": "comp_kabbalah_yesod_astral_gateway",
+      "name": "Yesod / Astral Gateway",
+      "type": "Comparative",
+      "tradition": "kabbalah",
+      "description": "Corresponds to Yesod (the Foundation) as the threshold of the astral plane, which collects and reflects all the higher spiritual lights down into Malkuth. It is the sphere of subtle images, dreams, and astral visions, governed by the moon, representing the shimmering, non-physical landscape the soul encounters upon exiting material awareness.\n"
+    },
+    {
+      "id": "comp_buddhism_nirmana_rati_form_realm_ascent",
+      "name": "Nirmana-rati / Form Realm Ascent",
+      "type": "Comparative",
+      "tradition": "buddhism",
+      "description": "In Vajrayana Buddhist cosmology, this represents the transition from the desire realm (Kama-dhatu) into the subtle form realms (Rupa-dhatu), specifically the Nirmana-rati (the heavens of delighting in creations). Here, the yogi experiences the self-luminous mind (Prabhasvara) and projects the subtle mental body (Manomaya-kaya) for spiritual travel.\n"
+    },
+    {
+      "id": "comp_christianity_the_first_heaven_the_angelic_chime",
+      "name": "The First Heaven / The Angelic Chime",
+      "type": "Comparative",
+      "tradition": "christianity",
+      "description": "Corresponds to the vision of the First Heaven or the firmament of light in Christian apocalyptic literature (e.g. Revelation). It is characterized by the sounding of trumpets, the ringing of golden bells, and the blinding appearance of the angel of light sitting upon a crystal throne, representing the majesties of creation.\n"
+    },
+    {
+      "id": "comp_gnosticism_throne_of_sabaoth",
+      "name": "Throne of Sabaoth",
+      "type": "Comparative",
+      "tradition": "gnosticism",
+      "description": "In Gnostic cosmology, Sabaoth is the son of the Demiurge who, upon hearing the voice of Sophia, repents of his father's ignorance and is elevated by the divine wisdom to a throne of dazzling light in the seventh heaven. He sits in a chariot of fire surrounded by cherubim, representing the blinding, beautiful, yet secondary astral ruler (Jyoti Niranjan) who sits below the true, unmanifest Pleroma.\n"
+    },
+    {
+      "id": "comp_hindu_tantra_sahasrara_chakra",
+      "name": "Sahasrara Chakra",
+      "type": "Comparative",
+      "tradition": "hindu_tantra",
+      "description": "The crown chakra, illustrated as a thousand-petaled multi-colored lotus situated at the top of the head. It is the seat of Shiva, representing pure, undifferentiated consciousness. In classical Kundalini Yoga, when the Shakti reaches Sahasrara, she merges with Shiva, inducing the state of Nirvikalpa Samadhi.\n"
+    },
+    {
+      "id": "comp_sikhism_sahas_dal_kamal_jyoti_niranjan",
+      "name": "Sahas-Dal-Kamal / Jyoti Niranjan",
+      "type": "Comparative",
+      "tradition": "sikhism",
+      "description": "The Guru Granth Sahib contains various hymns referencing the Sahas-Dal-Kamal (thousand-petaled lotus) and the supreme light (Jyoti) that illumines all. Guru Nanak's Aarti hymn describes: \"Sahas tav nain nan nain hai tohi kau...\" (You have a thousand eyes, yet no physical eyes...). Kabir's Shabad describes: \"Sahas-dal kamal dwaar jagmagai, Niranjan roop taha darsae... tahan shabd ghanta bajai\".\n"
+    },
+    {
+      "id": "comp_vedic_sahasrara_akasha",
+      "name": "Sahasrara Akasha",
+      "type": "Comparative",
+      "tradition": "vedic",
+      "description": "The Vedic scriptures describe the head of cosmic man (Purusha) as the thousand-headed source of all creation. The crown is the gate of exit for the soul (Brahmarandhra) during high meditative absorption or conscious death.\n"
+    },
+    {
+      "id": "comp_jainism_tejo_leshya_awakening",
+      "name": "Tejo-Leshya Awakening",
+      "type": "Comparative",
+      "tradition": "jainism",
+      "description": "In Jainism, this corresponds to the awakening of the Tejo-Leshya (the fiery, brilliant aura color of the soul). Purifying this aura color allows the meditator to experience profound inner brilliance, shedding the heavy, dark karmas of the lower physical centres.\n"
+    },
+    {
+      "id": "region_crown_vertex_superior_parietal_lobule",
+      "name": "Crown Vertex / Superior Parietal Lobule",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "region_thalamocortical_loop",
+      "name": "Thalamocortical Loop",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "network_attention_control_network",
+      "name": "Attention-Control Network",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "network_somatosensory_cortex_vertex_representation",
+      "name": "Somatosensory Cortex (Vertex representation)",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "floor_8",
+      "name": "Trikuti",
+      "type": "Floor",
+      "level": 8,
+      "realm": "Brahmanda",
+      "category": "astral"
+    },
+    {
+      "id": "ruler_brahm_the_creatorruler_of_the_three_worlds_manifested_as_onkar",
+      "name": "Brahm (the creator/ruler of the three worlds, manifested as Onkar)",
+      "type": "Ruler"
+    },
+    {
+      "id": "sound_deep_rumbling_thunder_and_the_beating_of_giant_drums",
+      "name": "Deep rumbling thunder and the beating of giant drums (Mridang)",
+      "type": "Sound"
+    },
+    {
+      "id": "light_lal_baran_sun",
+      "name": "Lal Baran Sun (a massive, radiant red setting sun or glowing red dawn)",
+      "type": "Light"
+    },
+    {
+      "id": "comp_sufism_alam_e_jabroot",
+      "name": "Alam-e-Jabroot",
+      "type": "Comparative",
+      "tradition": "sufism",
+      "description": "The Sufis call this plane Alam-e-Jabroot, the realm of power, divine majesty, and causal determination. It is the plane where the soul is purified of individual attributes and experiences the divine names and archetypes in their unmanifest power. It sits above the angelic world of forms (Malkut) and below the realm of pure unity (Lahoot).\n"
+    },
+    {
+      "id": "comp_taoism_middle_dantian_primordial_qi_realm",
+      "name": "Middle Dantian / Primordial Qi Realm",
+      "type": "Comparative",
+      "tradition": "taoism",
+      "description": "Corresponds to the Middle Dantian centered in the chest, but elevated to its causal cosmic equivalent where individual life energy (Qi) dissolves back into the Primordial, undifferentiated Qi (Yuan Qi) of the cosmos, representing the transition from form to formless essence.\n"
+    },
+    {
+      "id": "comp_kabbalah_binah_tiphereth_border",
+      "name": "Binah / Tiphereth Border",
+      "type": "Comparative",
+      "tradition": "kabbalah",
+      "description": "Stands at the threshold of Binah (Understanding/The Cosmic Mother, the womb of form) and Tiphereth (Beauty/The Sun, the central harmonizing sphere of the Tree of Life). Binah represents the causal origin of the lower spheres, while the Lal Baran Sun mirrors the blinding, beautiful solar radiance of Tiphereth.\n"
+    },
+    {
+      "id": "comp_buddhism_rupa_dhatu_alaya_vijnana_threshold",
+      "name": "Rupa-dhatu / Alaya-vijnana threshold",
+      "type": "Comparative",
+      "tradition": "buddhism",
+      "description": "In Buddhist cosmology, this represents the highest sub-planes of the Rupa-dhatu (form realm) where consciousness is highly refined, bordering on the formless realm (Arupa-dhatu) and the Alaya-vijnana (storehouse consciousness), which contains the karmic seeds of all potential manifestations.\n"
+    },
+    {
+      "id": "comp_christianity_the_throne_of_majesty",
+      "name": "The Throne of Majesty",
+      "type": "Comparative",
+      "tradition": "christianity",
+      "description": "Associated with the vision of the Throne of God in Ezekiel and Revelation—surrounded by a rainbow of fire, rumbling thunder, and the sounding of trumpets, representing the majestic, causal governing center of the created universe.\n"
+    },
+    {
+      "id": "comp_gnosticism_domain_of_the_demiurge_yaldabaoth",
+      "name": "Domain of the Demiurge / Yaldabaoth",
+      "type": "Comparative",
+      "tradition": "gnosticism",
+      "description": "This is the exact parallel to the Sant Mat concept of Kal/Brahm. In Gnosticism, the Demiurge is the blind creator god who rules the causal and material worlds, claiming \"I am God and there is no other.\" The Gnostic seeker must recognize the Demiurge's limitations and pass through his causal gateway to reach the true, formless Father (Pleroma/Dayal Desh).\n"
+    },
+    {
+      "id": "comp_hindu_tantra_lower_sahasrara_pranava_dham",
+      "name": "Lower Sahasrara / Pranava Dham",
+      "type": "Comparative",
+      "tradition": "hindu_tantra",
+      "description": "The region immediately preceding the absolute crown, where the sound of the cosmic syllable OM (Pranava) originates. It is the realm of the unmanifest Shabda-Brahman (God as sound-vibration).\n"
+    },
+    {
+      "id": "comp_sikhism_trikuti_onkar",
+      "name": "Trikuti / Onkar",
+      "type": "Comparative",
+      "tradition": "sikhism",
+      "description": "Mentioned extensively in the Guru Granth Sahib as the realm of the three qualities (gunas) that must be crossed. Guru Nanak writes: \"Kiyu gur binu trikuti chhutsi\" (Without the Guru, how can one escape the entrapment of Trikuti?). Kabir's Shabad describes: \"Trikuti surti dharau... tahan shabd Onkara hai.\"\n"
+    },
+    {
+      "id": "comp_vedic_hiranyagarbha",
+      "name": "Hiranyagarbha",
+      "type": "Comparative",
+      "tradition": "vedic",
+      "description": "The golden womb or golden egg of cosmic creation described in the Rig Veda. It is the source of all light, form, and energy in the universe—the universal soul or mind that precedes physical manifestation.\n"
+    },
+    {
+      "id": "comp_jainism_karmic_causal_body_karmana_sharira",
+      "name": "Karmic Causal Body (Karmana Sharira)",
+      "type": "Comparative",
+      "tradition": "jainism",
+      "description": "The deep causal layer of the soul where the finest, most stubborn seeds of karma are stored. Transcending Trikuti corresponds to the dissolution of this causal body to achieve absolute liberation (Moksha).\n"
+    },
+    {
+      "id": "region_association_cortices_parieto_occipito_temporal",
+      "name": "Association Cortices (Parieto-Occipito-Temporal)",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "region_deep_limbic_system_core",
+      "name": "Deep Limbic System Core",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "network_salience_network",
+      "name": "Salience Network",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "network_high_level_cognitive_integration_networks",
+      "name": "High-Level Cognitive Integration Networks",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "floor_9",
+      "name": "Shoonya / Daswan Dwar",
+      "type": "Floor",
+      "level": 9,
+      "realm": "Brahmanda",
+      "category": "astral"
+    },
+    {
+      "id": "ruler_par_brahm_the_formless_absolute_beyond_the_causal_mind",
+      "name": "Par-Brahm (the formless absolute beyond the causal mind)",
+      "type": "Ruler"
+    },
+    {
+      "id": "sound_sweet_playing_of_stringed_instruments_like_the_sarangi",
+      "name": "Sweet playing of stringed instruments like the Sarangi (violin/fiddle) and Kingri (lute)",
+      "type": "Sound"
+    },
+    {
+      "id": "light_brilliant_self_effulgent_white_light_resembling_a_cluster_of_full_moons_or_thousands_of_suns",
+      "name": "Brilliant, self-effulgent white light resembling a cluster of full moons or thousands of suns",
+      "type": "Light"
+    },
+    {
+      "id": "comp_sufism_alam_e_lahoot",
+      "name": "Alam-e-Lahoot",
+      "type": "Comparative",
+      "tradition": "sufism",
+      "description": "The Sufis call this stage Alam-e-Lahoot, the realm of absolute divine light, formless spirit, and unmanifest essence. It is the plane where the soul experiences Fana (annihilation of individual ego) and begins to taste Baqa (subsistence in God). Here, the soul is stripped of all cosmic attributes (Sifat) and prepares to enter the absolute unmanifest essence (Hahoot).\n"
+    },
+    {
+      "id": "comp_taoism_the_void_of_wuji",
+      "name": "The Void of Wuji",
+      "type": "Comparative",
+      "tradition": "taoism",
+      "description": "In Taoist philosophy, this corresponds to Wuji—the primordial, unmanifest, absolute emptiness that precedes the creation of Yin and Yang (Taiji). It is the state of pure formless potential, where the alchemical seeker dissolves their refined spirit back into the infinite, silent Tao, returning to the origin of all existence.\n"
+    },
+    {
+      "id": "comp_kabbalah_chesed_the_supernal_abyss_crossing",
+      "name": "Chesed / The Supernal Abyss Crossing",
+      "type": "Comparative",
+      "tradition": "kabbalah",
+      "description": "Represents the crossing of the great Abyss (Da'at) into the supernal triad, entering the sphere of Chesed (Mercy/Lovingkindness). In Kabbalah, crossing the Abyss requires the soul to strip off all individual mental and causal structures (represented by the lower sephiroth), surrendering the ego to be reborn as a pure spiritual spark.\n"
+    },
+    {
+      "id": "comp_buddhism_sunyata_akasanantyayatana",
+      "name": "Sunyata / Akasanantyayatana",
+      "type": "Comparative",
+      "tradition": "buddhism",
+      "description": "Maps directly to Sunyata (the ultimate emptiness or voidness), which is understood in Mahayana Buddhism not as mere nothingness, but as the formless, interdependent nature of all reality. In Theravada/Abhidharma, it corresponds to the first Arupa-jhana (formless absorption) of Akasanantyayatana (the sphere of infinite space), where all physical and mental forms completely dissolve.\n"
+    },
+    {
+      "id": "comp_christianity_the_third_heaven_the_sea_of_glass",
+      "name": "The Third Heaven / The Sea of Glass",
+      "type": "Comparative",
+      "tradition": "christianity",
+      "description": "Corresponds to the Apostle Paul's account of being caught up to the 'Third Heaven' (2 Corinthians 12:2) where he heard unspeakable words, and John's vision of the 'Sea of Glass like crystal' before the Throne of God (Revelation 4:6), symbolizing the completely purified, transparent soul reflecting divine light.\n"
+    },
+    {
+      "id": "comp_gnosticism_the_outer_pleroma_realm_of_sophias_redemption",
+      "name": "The Outer Pleroma / Realm of Sophia's Redemption",
+      "type": "Comparative",
+      "tradition": "gnosticism",
+      "description": "The boundary where the soul is fully redeemed from the material and causal spheres of the Demiurge. The soul must strip off all planetary garments (the astral/causal weights of the archons) to stand as a pure, naked spiritual entity (pneumatic) ready to enter the true, unmanifest divine fullness (Pleroma).\n"
+    },
+    {
+      "id": "comp_hindu_tantra_upper_sahasrara_niralamba_void",
+      "name": "Upper Sahasrara / Niralamba Void",
+      "type": "Comparative",
+      "tradition": "hindu_tantra",
+      "description": "The subtle region within the crown chakra known as the Niralamba (supportless) void, where the mind ceases all its modifications (Chitta Vritti Nirodha) and experiences the absolute silence of formless Brahman.\n"
+    },
+    {
+      "id": "comp_sikhism_dasam_dwar_mansarovar",
+      "name": "Dasam Dwar / Mansarovar",
+      "type": "Comparative",
+      "tradition": "sikhism",
+      "description": "Daswan Dwar (the Tenth Gate) is heavily celebrated in Gurbani as the gate of liberation. Guru Amar Das writes: 'Nau dar thakey dhavat rahey, dasvai nij-ghar vaasa pae' (The nine organs cease their outward running, and the soul dwells in the tenth gate, its true home). Mansarovar is described in the Adi Granth as the lake of truth where the Gurmukhs bathe and collect pearls of wisdom. Kabir's Shabad: 'Trikuti chhootai daswaa dwaar, Mansarovar karahu asnaan... tahan shabd Sarangi sitar baje'.\n"
+    },
+    {
+      "id": "comp_vedic_par_brahman",
+      "name": "Par-Brahman",
+      "type": "Comparative",
+      "tradition": "vedic",
+      "description": "The Upanishads describe the transition beyond Hiranyagarbha (the golden womb/causal mind) into Par-Brahman—the formless, attributeless, and unmanifest absolute reality (Nirguna Brahman) that cannot be described by speech or grasped by the mind.\n"
+    },
+    {
+      "id": "comp_jainism_shukla_dhyana_ayoga_kevali_threshold",
+      "name": "Shukla Dhyana / Ayoga Kevali Threshold",
+      "type": "Comparative",
+      "tradition": "jainism",
+      "description": "The threshold of Shukla Dhyana (pure, formless meditation) where the Jain ascetic eliminates all mental, verbal, and physical activities (Yoga), preparing the soul to cast off the final karmic causal body to achieve absolute, formless liberation (Siddhashila).\n"
+    },
+    {
+      "id": "region_parieto_temporal_occipital_association_area_total_gating",
+      "name": "Parieto-Temporal-Occipital Association Area (Total Gating)",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "region_reticular_activating_system_ras_suppression",
+      "name": "Reticular Activating System (RAS) Suppression",
+      "type": "BrainRegion"
+    },
+    {
+      "id": "network_non_dual_awareness_state",
+      "name": "Non-Dual Awareness State",
+      "type": "BrainNetwork"
+    },
+    {
+      "id": "network_complete_default_mode_network_dmn_dissolution",
+      "name": "Complete Default Mode Network (DMN) Dissolution",
+      "type": "BrainNetwork"
+    }
+  ],
+  "edges": [
+    {
+      "source": "floor_1",
+      "target": "ruler_lord_ganesha",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_1",
+      "target": "sound_buzz_of_a_honeybee",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_1",
+      "target": "light_heavy_dense_red_illumination",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_1",
+      "target": "comp_sufism_nafs_al_ammara",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_1",
+      "target": "comp_taoism_hui_yin",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_1",
+      "target": "comp_kabbalah_malkuth",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_1",
+      "target": "comp_buddhism_nirmana_chakra",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_1",
+      "target": "comp_christianity_the_foundation_gate",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_1",
+      "target": "comp_gnosticism_the_hylic_realm",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_1",
+      "target": "comp_hindu_tantra_kundalini_shakti_seat",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_1",
+      "target": "comp_sikhism_the_rectal_gate_nau_duar",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_1",
+      "target": "comp_vedic_adhara",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_1",
+      "target": "comp_jainism_shakti_kendra",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_1",
+      "target": "region_perineal_nerve_plexus",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_1",
+      "target": "region_coccygeal_body",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_1",
+      "target": "network_autonomic_survival_networks_fight_or_flight",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_10",
+      "target": "ruler_none_ruled_by_the_absolute_unmanifest_silence_though_containing_4_hidden_worlds_with_secret_rulers",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_10",
+      "target": "sound_absolute_profound_silence",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_10",
+      "target": "light_impenetrable_pitch_black_darkness",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_10",
+      "target": "comp_sufism_zulmat_alam_e_hahoot",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_10",
+      "target": "comp_taoism_hundun_primordial_chaos",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_10",
+      "target": "comp_kabbalah_the_great_abyss_of_daat_formless_night",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_10",
+      "target": "comp_buddhism_akincanyayatana_the_sphere_of_nothingness",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_10",
+      "target": "comp_christianity_the_dark_night_of_the_soul_divine_darkness",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_10",
+      "target": "comp_gnosticism_the_kenoma_the_great_emptiness",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_10",
+      "target": "comp_hindu_tantra_maha_sunya_kalis_dark_womb",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_10",
+      "target": "comp_sikhism_maha_shoon_gupha_e_zulmat",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_10",
+      "target": "comp_vedic_tamas_primordial_darkness_asat",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_10",
+      "target": "comp_jainism_apravartana_kendra_dark_karma_void",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_10",
+      "target": "region_thalamocortical_de_synchronization",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_10",
+      "target": "region_sensory_deprivation_state",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_10",
+      "target": "network_absolute_somatosensory_gating",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_10",
+      "target": "network_neural_silence_state",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_11",
+      "target": "ruler_sohang_purush_the_lord_of_i_am_he_representing_the_union_of_creator_and_creation",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_11",
+      "target": "sound_sweet_enchanting_playing_of_the_celestial_flute",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_11",
+      "target": "light_dazzling_rapidly_rotating_white_sun_creating_a_massive_whirring_whirlpool_of_spiritual_light",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_11",
+      "target": "comp_sufism_rumis_reed_flute_annihilation_in_the_beloved",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_11",
+      "target": "comp_taoism_circulation_of_the_light_the_great_whirlpool",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_11",
+      "target": "comp_kabbalah_chokhmah_primordial_wisdom",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_11",
+      "target": "comp_buddhism_vijnananantyayatana_sphere_of_infinite_consciousness",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_11",
+      "target": "comp_christianity_the_second_heaven_the_celestial_flute",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_11",
+      "target": "comp_gnosticism_the_inner_pleroma_gates_syzygy_union",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_11",
+      "target": "comp_hindu_tantra_nirvana_chakra_ajna_sahasrara_bridge",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_11",
+      "target": "comp_sikhism_bhanwar_gufa_the_flute_current",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_11",
+      "target": "comp_vedic_soham_asmi",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_11",
+      "target": "comp_jainism_vitaraga_state_self_luminous_bliss",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_11",
+      "target": "region_auditory_association_area_complex_harmonic_binding",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_11",
+      "target": "region_semicircular_canals_coordination_vestibular_integration",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_11",
+      "target": "network_self_referential_dissolution_network",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_11",
+      "target": "network_vestibulo_ocular_reflex_gating_vortex_experience",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_12",
+      "target": "ruler_sat_purush_the_supreme_lord_of_pure_spirit_the_absolute_being",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_12",
+      "target": "sound_sweet_majestic_playing_of_the_celestial_harp_lute",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_12",
+      "target": "light_unparalleled_self_effulgent_white_gold_radiance_where_each_soul_shines_with_the_light_of_16_suns_and_sat_purush_radiates_like_billions_of_suns",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_12",
+      "target": "comp_sufism_baqa_al_baqa_divine_essence_union",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_12",
+      "target": "comp_taoism_union_with_the_great_tao_return_to_the_source",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_12",
+      "target": "comp_kabbalah_kether_the_crown",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_12",
+      "target": "comp_buddhism_nirvana_dharmakaya_realization",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_12",
+      "target": "comp_christianity_the_empyrean_heaven_the_beatific_vision",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_12",
+      "target": "comp_gnosticism_the_pleroma_the_divine_fullness",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_12",
+      "target": "comp_hindu_tantra_sahasrara_peak_shiva_shakti_union",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_12",
+      "target": "comp_sikhism_sach_khand",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_12",
+      "target": "comp_vedic_satya_loka",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_12",
+      "target": "comp_jainism_siddhashila",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_12",
+      "target": "region_full_bi_hemispheric_synchronization",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_12",
+      "target": "region_peak_posterior_cingulate_cortex_deactivation",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_12",
+      "target": "network_unified_non_dual_awareness_network",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_12",
+      "target": "network_complete_cortical_gating_absolute_absorption",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_13",
+      "target": "ruler_alakh_purush_the_invisible_unknowable_and_unperceivable_lord",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_13",
+      "target": "sound_sweet_subtle_playing_of_the_celestial_sitar",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_13",
+      "target": "light_incomprehensible_self_luminous_white_gold_radiance_where_each_soul_shines_with_the_light_of_millions_of_suns_and_the_form_of_alakh_purush_is_completely_beyond_physical_or_astral_sight",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_13",
+      "target": "comp_sufism_hahoot_station_of_the_unmanifest_attributes",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_13",
+      "target": "comp_taoism_the_nameless_tao_pre_wuji_origin",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_13",
+      "target": "comp_kabbalah_ayin_primordial_nothingness",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_13",
+      "target": "comp_buddhism_dharmadhatu_unmanifest_void",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_13",
+      "target": "comp_christianity_the_fathers_glory_the_invisible_light",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_13",
+      "target": "comp_gnosticism_bythos_the_unknowable_depth",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_13",
+      "target": "comp_hindu_tantra_agyata_sahasrara_peak",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_13",
+      "target": "comp_sikhism_alakh_lok_alakh_niranjan",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_13",
+      "target": "comp_vedic_adreshyam_unknowable_brahman",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_13",
+      "target": "comp_jainism_param_samadhi_pure_soul_absorption",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_13",
+      "target": "region_complete_bi_hemispheric_coherence",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_13",
+      "target": "region_cortical_deactivation_peak",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_13",
+      "target": "network_attributeless_awareness_network",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_13",
+      "target": "network_complete_cognitive_gating_formless_absorption",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_14",
+      "target": "ruler_agam_purush_the_inaccessible_unapproachable_and_unperceivable_lord",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_14",
+      "target": "sound_sweet_subtle_and_high_frequency_playing_of_the_celestial_flute",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_14",
+      "target": "light_incomprehensible_self_luminous_white_gold_radiance_where_each_soul_shines_with_the_light_of_trillions_of_suns_and_the_form_of_agam_purush_is_completely_beyond_physical_or_astral_sight",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_14",
+      "target": "comp_sufism_hahoot_station_of_the_unmanifest_essence",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_14",
+      "target": "comp_taoism_the_nameless_tao_pre_wuji_origin",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_14",
+      "target": "comp_kabbalah_ain_soph_the_infinite",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_14",
+      "target": "comp_buddhism_dharmadhatu_unmanifest_void",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_14",
+      "target": "comp_christianity_the_fathers_glory_the_invisible_light",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_14",
+      "target": "comp_gnosticism_bythos_the_unknowable_depth",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_14",
+      "target": "comp_hindu_tantra_agyata_sahasrara_peak",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_14",
+      "target": "comp_sikhism_agama_lok_agam_purakh",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_14",
+      "target": "comp_vedic_agamyam_unknowable_brahman",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_14",
+      "target": "comp_jainism_param_samadhi_pure_soul_absorption",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_14",
+      "target": "region_complete_bi_hemispheric_coherence",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_14",
+      "target": "region_cortical_deactivation_peak",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_14",
+      "target": "network_attributeless_awareness_network",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_14",
+      "target": "network_complete_cognitive_gating_formless_absorption",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_15",
+      "target": "ruler_anami_purush_the_nameless_attribute_less_and_unmanifest_supreme_lord",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_15",
+      "target": "sound_absolute_supreme_silence",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_15",
+      "target": "light_incomprehensible_self_luminous_white_gold_radiance_where_each_soul_shines_with_the_light_of_countless_suns_and_the_form_of_anami_purush_is_completely_beyond_physical_or_astral_sight",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_15",
+      "target": "comp_sufism_hahoot_station_of_the_unmanifest_essence",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_15",
+      "target": "comp_taoism_the_nameless_tao_pre_wuji_origin",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_15",
+      "target": "comp_kabbalah_ain_soph_aur_the_infinite_light",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_15",
+      "target": "comp_buddhism_dharmadhatu_unmanifest_void",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_15",
+      "target": "comp_christianity_the_fathers_glory_the_invisible_light",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_15",
+      "target": "comp_gnosticism_bythos_the_unknowable_depth",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_15",
+      "target": "comp_hindu_tantra_agyata_sahasrara_peak",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_15",
+      "target": "comp_sikhism_akaha_lok_anami_purush",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_15",
+      "target": "comp_vedic_anama_unknowable_brahman",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_15",
+      "target": "comp_jainism_param_samadhi_pure_soul_absorption",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_15",
+      "target": "region_complete_bi_hemispheric_coherence",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_15",
+      "target": "region_cortical_deactivation_peak",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_15",
+      "target": "network_attributeless_awareness_network",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_15",
+      "target": "network_complete_cognitive_gating_formless_absorption",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_16",
+      "target": "ruler_primordial_purush_the_first_unmanifest_veil_of_the_absolute_radhasoami_state",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_16",
+      "target": "sound_infinite_silent_resonance",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_16",
+      "target": "light_indescribable_blinding_unmanifest_radiance_of_absolute_pure_spirit_completely_beyond_the_light_of_countless_suns",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_16",
+      "target": "comp_sufism_ahadiyyat_absolute_oneness",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_16",
+      "target": "comp_taoism_the_source_before_the_nameless_tao",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_16",
+      "target": "comp_kabbalah_ayin_sof_aur_absolute",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_16",
+      "target": "comp_buddhism_adi_buddha_parinirvana_peak",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_16",
+      "target": "comp_christianity_the_godhead_deitas_beyond_the_father_deus",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_16",
+      "target": "comp_gnosticism_the_ineffable_parent_the_fore_father",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_16",
+      "target": "comp_hindu_tantra_agyata_sahasrara_peak",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_16",
+      "target": "comp_sikhism_the_unmanifest_nirankar",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_16",
+      "target": "comp_vedic_nirguna_brahman",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_16",
+      "target": "comp_jainism_param_samadhi_pure_soul_absorption",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_16",
+      "target": "region_complete_bi_hemispheric_coherence",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_16",
+      "target": "region_cortical_deactivation_peak",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_16",
+      "target": "network_attributeless_awareness_network",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_16",
+      "target": "network_complete_cognitive_gating_formless_absorption",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_17",
+      "target": "ruler_supreme_purush_the_second_unmanifest_veil_of_the_absolute_radhasoami_state",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_17",
+      "target": "sound_infinite_silent_resonance",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_17",
+      "target": "light_indescribable_blinding_unmanifest_radiance_of_absolute_pure_spirit_completely_beyond_the_light_of_countless_suns",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_17",
+      "target": "comp_sufism_ahadiyyat_absolute_oneness",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_17",
+      "target": "comp_taoism_the_source_before_the_nameless_tao",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_17",
+      "target": "comp_kabbalah_ayin_sof_aur_absolute",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_17",
+      "target": "comp_buddhism_adi_buddha_parinirvana_peak",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_17",
+      "target": "comp_christianity_the_godhead_deitas_beyond_the_father_deus",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_17",
+      "target": "comp_gnosticism_the_ineffable_parent_the_fore_father",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_17",
+      "target": "comp_hindu_tantra_agyata_sahasrara_peak",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_17",
+      "target": "comp_sikhism_the_unmanifest_nirankar",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_17",
+      "target": "comp_vedic_nirguna_brahman",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_17",
+      "target": "comp_jainism_param_samadhi_pure_soul_absorption",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_17",
+      "target": "region_complete_bi_hemispheric_coherence",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_17",
+      "target": "region_cortical_deactivation_peak",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_17",
+      "target": "network_attributeless_awareness_network",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_17",
+      "target": "network_complete_cognitive_gating_formless_absorption",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_18",
+      "target": "ruler_radhasoami_the_absolute_nameless_and_formless_supreme_being_the_final_source_of_all_existence",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_18",
+      "target": "sound_infinite_silent_resonance",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_18",
+      "target": "light_indescribable_blinding_unmanifest_radiance_of_absolute_pure_spirit_completely_beyond_the_light_of_countless_suns",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_18",
+      "target": "comp_sufism_ahadiyyat_absolute_oneness",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_18",
+      "target": "comp_taoism_the_source_before_the_nameless_tao",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_18",
+      "target": "comp_kabbalah_ayin_sof_aur_absolute",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_18",
+      "target": "comp_buddhism_adi_buddha_parinirvana_peak",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_18",
+      "target": "comp_christianity_the_godhead_deitas_beyond_the_father_deus",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_18",
+      "target": "comp_gnosticism_the_ineffable_parent_the_fore_father",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_18",
+      "target": "comp_hindu_tantra_agyata_sahasrara_peak",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_18",
+      "target": "comp_sikhism_the_unmanifest_nirankar",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_18",
+      "target": "comp_vedic_nirguna_brahman",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_18",
+      "target": "comp_jainism_param_samadhi_pure_soul_absorption",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_18",
+      "target": "region_complete_bi_hemispheric_coherence",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_18",
+      "target": "region_cortical_deactivation_peak",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_18",
+      "target": "network_attributeless_awareness_network",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_18",
+      "target": "network_complete_cognitive_gating_formless_absorption",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_2",
+      "target": "ruler_lord_brahma",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_2",
+      "target": "sound_sound_of_vital_fluid_activation_gentle_flowing_water",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_2",
+      "target": "light_light_black",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_2",
+      "target": "comp_sufism_nafs_al_lawwama",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_2",
+      "target": "comp_taoism_lower_dantian_jing_gate",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_2",
+      "target": "comp_kabbalah_yesod",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_2",
+      "target": "comp_buddhism_secret_place_jewel_wheel",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_2",
+      "target": "comp_christianity_the_gate_of_creation",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_2",
+      "target": "comp_gnosticism_the_psyche_threshold",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_2",
+      "target": "comp_hindu_tantra_svadhisthana_varuna_realm",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_2",
+      "target": "comp_sikhism_svadhu_chakra",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_2",
+      "target": "comp_vedic_varunas_cosmic_order",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_2",
+      "target": "comp_jainism_swadhistan_preksha",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_2",
+      "target": "region_sacral_plexus",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_2",
+      "target": "region_pudendal_nerve",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_2",
+      "target": "network_autonomic_reproductive_networks",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_3",
+      "target": "ruler_lord_vishnu",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_3",
+      "target": "sound_sound_of_a_roaring_fire_crackling_furnace",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_3",
+      "target": "light_dazzling_white_light",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_3",
+      "target": "comp_sufism_nafs_alam_malkut_border",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_3",
+      "target": "comp_taoism_dantian_cinnabar_field",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_3",
+      "target": "comp_kabbalah_netzach_hod",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_3",
+      "target": "comp_buddhism_nabhi_wheel_seat_of_tummo",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_3",
+      "target": "comp_christianity_the_gate_of_the_belly",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_3",
+      "target": "comp_gnosticism_the_animal_soul_psyche",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_3",
+      "target": "comp_hindu_tantra_manipura_rudra_realm",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_3",
+      "target": "comp_sikhism_nabhi_kamal_the_intestinal_bed",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_3",
+      "target": "comp_vedic_vaishvanara_agni",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_3",
+      "target": "comp_jainism_tejas_kendra",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_3",
+      "target": "region_celiac_plexus_solar_plexus",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_3",
+      "target": "region_enteric_nervous_system_ens",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_3",
+      "target": "network_visceral_homeostatic_networks",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_4",
+      "target": "ruler_lord_shiva",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_4",
+      "target": "sound_sound_of_a_ringing_bell_deep_celestial_chime",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_4",
+      "target": "light_soft_tranquil_blue_light",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_4",
+      "target": "comp_sufism_qalb_the_five_lataif_of_the_chest",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_4",
+      "target": "comp_taoism_middle_dantian_seat_of_qi",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_4",
+      "target": "comp_kabbalah_tiphereth",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_4",
+      "target": "comp_buddhism_dharma_chakra_heart_wheel",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_4",
+      "target": "comp_christianity_the_sacred_heart_love",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_4",
+      "target": "comp_gnosticism_the_pneumatic_core",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_4",
+      "target": "comp_hindu_tantra_anahata_kakini_realm",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_4",
+      "target": "comp_sikhism_hridaya_kamal_the_unstruck_chime",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_4",
+      "target": "comp_vedic_dahar_akasha",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_4",
+      "target": "comp_jainism_anand_kendra",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_4",
+      "target": "region_cardiac_nerve_plexus",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_4",
+      "target": "region_vagus_nerve_parasympathetic_branch",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_4",
+      "target": "network_empathy_and_social_cognition_networks",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_5",
+      "target": "ruler_goddess_avidya_also_known_as_durga_or_malin_maya",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_5",
+      "target": "sound_sound_of_a_blowing_shell_cosmic_wind_whispering_through_space",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_5",
+      "target": "light_dark_blackish_blue",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_5",
+      "target": "comp_sufism_alam_malkut_the_gate_of_speech",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_5",
+      "target": "comp_taoism_twelve_chambers_throat_gate",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_5",
+      "target": "comp_kabbalah_daat_threshold",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_5",
+      "target": "comp_buddhism_sambhoga_chakra_throat_wheel",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_5",
+      "target": "comp_christianity_the_gate_of_the_word",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_5",
+      "target": "comp_gnosticism_the_realm_of_sophias_fall",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_5",
+      "target": "comp_hindu_tantra_vishuddha_sadashiva_realm",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_5",
+      "target": "comp_sikhism_the_gate_of_shabad_kirtan",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_5",
+      "target": "comp_vedic_akasha_tattva",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_5",
+      "target": "comp_jainism_vishuddhi_kendra",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_5",
+      "target": "region_pharyngeal_plexus",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_5",
+      "target": "region_recurrent_laryngeal_nerve",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_5",
+      "target": "network_vocalization_and_speech_motor_networks",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_6",
+      "target": "ruler_sat_guru_indirectly_governing_the_gateway",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_6",
+      "target": "sound_anhad_jhingaa",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_6",
+      "target": "light_taramandal",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_6",
+      "target": "comp_sufism_nukta_e_suweda",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_6",
+      "target": "comp_taoism_upper_dantian",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_6",
+      "target": "comp_kabbalah_daat",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_6",
+      "target": "comp_buddhism_urna",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_6",
+      "target": "comp_christianity_the_single_eye",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_6",
+      "target": "comp_gnosticism_the_cleft_of_light",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_6",
+      "target": "comp_hindu_tantra_ajna_chakra",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_6",
+      "target": "comp_sikhism_tisra_til_shiv_netra",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_6",
+      "target": "comp_vedic_brahmarandhra_entryway",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_6",
+      "target": "comp_jainism_darshana_kendra",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_6",
+      "target": "region_pineal_gland",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_6",
+      "target": "region_thalamus",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_6",
+      "target": "region_prefrontal_cortex",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_6",
+      "target": "network_default_mode_network_dmn_deactivation",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_6",
+      "target": "network_fronto_parietal_attention_network",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_7",
+      "target": "ruler_jyoti_niranjan_also_known_as_triloki_nath_the_lord_of_the_three_worlds",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_7",
+      "target": "sound_sound_of_big_bells",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_7",
+      "target": "light_dazzling_white_light_radiating_from_a_central_supreme_flame",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_7",
+      "target": "comp_sufism_alam_e_malakut_station_of_ruh",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_7",
+      "target": "comp_taoism_opening_of_the_golden_flower",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_7",
+      "target": "comp_kabbalah_yesod_astral_gateway",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_7",
+      "target": "comp_buddhism_nirmana_rati_form_realm_ascent",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_7",
+      "target": "comp_christianity_the_first_heaven_the_angelic_chime",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_7",
+      "target": "comp_gnosticism_throne_of_sabaoth",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_7",
+      "target": "comp_hindu_tantra_sahasrara_chakra",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_7",
+      "target": "comp_sikhism_sahas_dal_kamal_jyoti_niranjan",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_7",
+      "target": "comp_vedic_sahasrara_akasha",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_7",
+      "target": "comp_jainism_tejo_leshya_awakening",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_7",
+      "target": "region_crown_vertex_superior_parietal_lobule",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_7",
+      "target": "region_thalamocortical_loop",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_7",
+      "target": "network_attention_control_network",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_7",
+      "target": "network_somatosensory_cortex_vertex_representation",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_8",
+      "target": "ruler_brahm_the_creatorruler_of_the_three_worlds_manifested_as_onkar",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_8",
+      "target": "sound_deep_rumbling_thunder_and_the_beating_of_giant_drums",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_8",
+      "target": "light_lal_baran_sun",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_8",
+      "target": "comp_sufism_alam_e_jabroot",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_8",
+      "target": "comp_taoism_middle_dantian_primordial_qi_realm",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_8",
+      "target": "comp_kabbalah_binah_tiphereth_border",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_8",
+      "target": "comp_buddhism_rupa_dhatu_alaya_vijnana_threshold",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_8",
+      "target": "comp_christianity_the_throne_of_majesty",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_8",
+      "target": "comp_gnosticism_domain_of_the_demiurge_yaldabaoth",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_8",
+      "target": "comp_hindu_tantra_lower_sahasrara_pranava_dham",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_8",
+      "target": "comp_sikhism_trikuti_onkar",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_8",
+      "target": "comp_vedic_hiranyagarbha",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_8",
+      "target": "comp_jainism_karmic_causal_body_karmana_sharira",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_8",
+      "target": "region_association_cortices_parieto_occipito_temporal",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_8",
+      "target": "region_deep_limbic_system_core",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_8",
+      "target": "network_salience_network",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_8",
+      "target": "network_high_level_cognitive_integration_networks",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_9",
+      "target": "ruler_par_brahm_the_formless_absolute_beyond_the_causal_mind",
+      "relation": "hasRuler"
+    },
+    {
+      "source": "floor_9",
+      "target": "sound_sweet_playing_of_stringed_instruments_like_the_sarangi",
+      "relation": "hasSound"
+    },
+    {
+      "source": "floor_9",
+      "target": "light_brilliant_self_effulgent_white_light_resembling_a_cluster_of_full_moons_or_thousands_of_suns",
+      "relation": "hasLight"
+    },
+    {
+      "source": "floor_9",
+      "target": "comp_sufism_alam_e_lahoot",
+      "relation": "mapsTo_sufism"
+    },
+    {
+      "source": "floor_9",
+      "target": "comp_taoism_the_void_of_wuji",
+      "relation": "mapsTo_taoism"
+    },
+    {
+      "source": "floor_9",
+      "target": "comp_kabbalah_chesed_the_supernal_abyss_crossing",
+      "relation": "mapsTo_kabbalah"
+    },
+    {
+      "source": "floor_9",
+      "target": "comp_buddhism_sunyata_akasanantyayatana",
+      "relation": "mapsTo_buddhism"
+    },
+    {
+      "source": "floor_9",
+      "target": "comp_christianity_the_third_heaven_the_sea_of_glass",
+      "relation": "mapsTo_christianity"
+    },
+    {
+      "source": "floor_9",
+      "target": "comp_gnosticism_the_outer_pleroma_realm_of_sophias_redemption",
+      "relation": "mapsTo_gnosticism"
+    },
+    {
+      "source": "floor_9",
+      "target": "comp_hindu_tantra_upper_sahasrara_niralamba_void",
+      "relation": "mapsTo_hindu_tantra"
+    },
+    {
+      "source": "floor_9",
+      "target": "comp_sikhism_dasam_dwar_mansarovar",
+      "relation": "mapsTo_sikhism"
+    },
+    {
+      "source": "floor_9",
+      "target": "comp_vedic_par_brahman",
+      "relation": "mapsTo_vedic"
+    },
+    {
+      "source": "floor_9",
+      "target": "comp_jainism_shukla_dhyana_ayoga_kevali_threshold",
+      "relation": "mapsTo_jainism"
+    },
+    {
+      "source": "floor_9",
+      "target": "region_parieto_temporal_occipital_association_area_total_gating",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_9",
+      "target": "region_reticular_activating_system_ras_suppression",
+      "relation": "correlatesToBrainRegion"
+    },
+    {
+      "source": "floor_9",
+      "target": "network_non_dual_awareness_state",
+      "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "floor_9",
+      "target": "network_complete_default_mode_network_dmn_dissolution",
+      "relation": "correlatesToBrainNetwork"
+    }
+  ]
+}

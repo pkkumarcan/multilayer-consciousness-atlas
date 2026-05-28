@@ -1,0 +1,146 @@
+# ==============================================================================
+# Consciousness Atlas - Floor 4 Entity Data
+# ==============================================================================
+id: floor_4
+canonical_name: "Hridaya / Anahata Chakra"
+sanskrit_name: "हृदय चक्र · अनाहत · The Heart · Unstruck Sound"
+alternate_names:
+  - "Anahata"
+  - "Hridaya"
+  - "The Heart"
+  - "Cordial Plexus"
+  - "Unstruck Sound"
+
+classification:
+  level: 4
+  realm: "Pinda"
+  category: "physical"
+
+canonical:
+  ruler: "Lord Shiva"
+  sound: "Sound of a ringing bell / deep celestial chime"
+  light: "Soft, tranquil blue light (radiating like a vast sky)"
+  geometry: "Twelve-petaled blue lotus with a central six-pointed star (shatkona) representing the Air/Atmosphere element"
+  petals:
+    count: 12
+    color: "blue"
+    seed_syllables:
+      - "kaṃ"
+      - "khaṃ"
+      - "gaṃ"
+      - "ghaṃ"
+      - "ṅaṃ"
+      - "caṃ"
+      - "chaṃ"
+      - "jaṃ"
+      - "jhaṃ"
+      - "ñaṃ"
+      - "ṭaṃ"
+      - "ṭhaṃ"
+  teachings: |
+    The fourth chakra from below, located at the heart (left side of the chest), at the Cordial Plexus. The lotus has twelve petals and its colour is blue. The physical element associated is Vayu (atmosphere/air). The presiding deity is Lord Shiva—the lord of destruction of ego and desires—who stays here in deep meditation with his consort Goddess Gauri (also known as Parvati or Shakti). The recitation to subdue this chakra is Soham (so'ham—meaning 'I am That').
+    
+    Lord Shiva's presence here carries profound spiritual symbolism. He has conquered all worldly desires, burnt them to ashes, and rubbed those ashes on his body. Poisonous reptiles creep over him harmlessly; similarly, when human desires are conquered, they can do no harm to the spiritual seeker. The sacred bull Nandi sits silent and completely still before Shiva. Nandi represents the Brahmandi Mana (universal mind) which has ceased all its vigorous, restless movements because all worldly desires have been extinguished. Yet Shiva rides Nandi at will, indicating that he remains the absolute master of his mind.
+    
+    By subduing this heart center through the recitation of Soham, all the physical sense organs come under direct spiritual control. This marks the true threshold of human consciousness, rising fully above the animalistic, survival-driven boundaries of the lower three chakras.
+  mantra: "OM mahah"
+  recitation: "Soham"
+  consorts: "Gauri"
+  function: "Empathy, emotional integration, sensory mastery, and ego-dissolution"
+
+comparative:
+  sufism:
+    term: "Qalb / The Five Lataif of the Chest"
+    description: |
+      In Sufism, the heart (Qalb) is the absolute starting point of meditation. The Sufis bypass the lower chakras to avoid the danger of Siddhis, starting their focus directly on the Qalb (left side of the chest) through Dhikr (remembrance). The heartbeat itself is trained to recite 'Allah' or 'Hu' automatically. According to Mahatma Ramchandraji of Fatehgarh, the chest contains five subtle centers (Lataif): Qalb (heart, left), Rooh (spirit, right), Sirr (secret, above left), Khafi (hidden, above right), and Akhfa (innermost, center of the chest), which coordinate all higher emotional and spiritual purification.
+  taoism:
+    term: "Middle Dantian / Seat of Qi"
+    description: |
+      In Taoist inner alchemy, the heart corresponds to the Middle Dantian, which is the seat of Qi (vital breath) and governs the emotional body. It is the place where the raw vital force (Jing) is converted and refined into spiritual energy (Qi) through feelings of love, compassion, and emotional balance.
+  kabbalah:
+    term: "Tiphereth"
+    description: |
+      Tiphereth (Beauty or Compassion) is the central Sephirah of the Tree of Life, located at the heart of the system. It represents balance, harmony, beauty, and the mediation between the higher spiritual spheres and the lower physical world. It is the seat of the higher human self and Christ-consciousness.
+  buddhism:
+    term: "Dharma Chakra / Heart Wheel"
+    description: |
+      In Vajrayana (Tibetan) Tantra, the heart chakra is called the Dharma Chakra (the Wheel of Law or Truth). It has eight primary channels radiating like spokes from the center, representing the eightfold path. It is considered the seat of the 'indestructible drop' (bindu) where the subtlest consciousness resides, and the source of compassionate Bodhicitta.
+  christianity:
+    term: "The Sacred Heart / Love"
+    description: |
+      The heart is the primary organ of Christian mysticism. The Sacred Heart of Jesus represents boundless divine love and compassion. Mystics like Saint Teresa of Avila describe entering the "interior castle" starting through the chamber of the heart, where the soul unites with God through unconditional love (Agape).
+  gnosticism:
+    term: "The Pneumatic Core"
+    description: |
+      The seat of the pneuma (spirit)—the divine spark of light trapped in the physical body. Awakening this heart-spark allows the Gnostic to transcend the physical archons and begin the ascent to the Pleroma.
+  hindu_tantra:
+    term: "Anahata / Kakini Realm"
+    description: |
+      Anahata literally means "Unstruck Sound"—the primordial sound of the universe that rings without two physical objects striking. It has 12 vermillion petals and a central grey shatkona (six-pointed star) representing the union of Shiva and Shakti. It is presided over by the Kakini Shakti and Isha Shiva.
+  sikhism:
+    term: "Hridaya Kamal / The Unstruck Chime"
+    description: |
+      Gurbani contains endless references to the Anahat Shabad (unstruck sound) ringing in the heart. Kabir's Shabad describes: "Hridaya chakra dwadasa dal aana, tah Shiva Gauri roop nikhana... tahan shabd Soham dhuna chhaejai" (The heart chakra has twelve petals, where Shiva and Gauri are seen. The sound of Soham echoes there).
+  vedic:
+    term: "Dahar Akasha"
+    description: |
+      The Upanishads (e.g., Chandogya Upanishad 8.1.1) describe the "little space within the heart" (Dahar Akasha) as a vast inner cosmos containing the entire physical universe. To know the Self within this heart-space is to know the supreme Brahman.
+  jainism:
+    term: "Anand Kendra"
+    description: |
+      In Preksha Dhyana, the heart is called the Anand Kendra (Center of Bliss). Concentrating here with a visualization of emerald-green light is understood to invoke absolute emotional balance, compassion, forgiveness, and the eradication of hatred.
+
+science:
+  neuroscience:
+    regions:
+      - "Cardiac Nerve Plexus"
+      - "Vagus Nerve (Parasympathetic Branch)"
+    networks:
+      - "Empathy and Social Cognition Networks"
+    description: |
+      Maps anatomically to the cardiac nerve plexus and the vagus nerve, which establishes a bi-directional communication highway between the heart and the brain. Heart Rate Variability (HRV) is heavily modulated by emotional states; high HRV correlates with active parasympathetic tone, emotional resilience, empathy, and compassionate social networks. The heart also contains intrinsic sensory neurites ('heart-brain') that synthesize catecholamines and oxytocin.
+    confidence: "High"
+  endocrinology:
+    description: |
+      Governs the thymus gland, which sits in the upper chest and is the master regulator of the immune system (producing T-lymphocytes), directly linking emotional peace to immune resilience.
+  psychology:
+    ego_state: "The Relational Self / Empathy / Transcendence of Ego"
+    description: |
+      In modern psychology, the heart center governs emotional intelligence, empathy, and interpersonal connection. In Jungian psychology, it represents the integration of the Animus and Anima, establishing a balanced, loving relationship with the self and others, bypassing egoic self-preservation.
+  cosmology:
+    description: |
+      Represented by the gravitational harmony of planetary orbits—attractive forces holding cosmic systems in dynamic, balanced equilibrium.
+  information_theory:
+    description: |
+      The integration layer—merging the sensory information of the lower body into a coherent, emotionally-grounded signal that regulates global system behavior.
+
+phenomenology:
+  emotional_tone: |
+    Unbounded love, profound compassion, absolute forgiveness, and a deep sense of universal connection. All emotional defensiveness dissolves, leaving a vulnerable yet invulnerable open space.
+  visual_texture: |
+    A vast, transparent, sky-blue space that feels light, airy, and infinitely clean.
+  auditory_texture: |
+    A sweet, high-frequency chiming sound, like the distant ringing of church bells or a clear temple bell echoing in a silent valley.
+  ego_effect: |
+    The local ego-boundary softeners. "I am not separate from the world; I am connected to all that lives through love."
+  risks: |
+    The trap of emotional attachment, sentimentality, or taking on the suffering of the world (spiritual codependency), which can drag the energy back down into grief and navel-preservation.
+  transitions:
+    from_previous: |
+      Rising above the hot, consuming fire of the navel (Floor 3) and entering the vast, cool, and expansive atmosphere of the heart (Floor 4).
+    to_next: |
+      Subduing the physical senses through Soham, transcending emotional attachment, and drawing the energy into the throat center (Floor 5) to encounter Goddess Avidya.
+
+memory:
+  color: "#185fa5"
+  icon: "Antelope representing gentleness, alertness, and swift movement"
+  metaphor: "The silent Nandi bull resting before the desire-ash-smeared Shiva"
+  mnemonic: "Soham subdues the Hridaya. Rise above the beast boundary, open the Qalb, and master the physical senses."
+
+sources:
+  primary:
+    - "Dr. H.N. Saksena, The Secret of Realisation, Chapter II"
+    - "Kabir Sahib, Shabad: 'Kar naino deedar mahal mein pyaara hai' (Verse 5)"
+  secondary:
+    - "Mahatma Ramchandraji, writings on Qalb and the Five Lataif (Fatehgarh)"
+    - "HeartMath Institute publications (HRV and physiological coherence research)"

@@ -1,0 +1,136 @@
+# ==============================================================================
+# Consciousness Atlas - Floor 11 Entity Data
+# ==============================================================================
+id: floor_11
+canonical_name: "Bhanwar Gufa"
+sanskrit_name: "भंवर गुफा · The Whirling Cave · Causal Peak · Realm of Sohang Purush"
+alternate_names:
+  - "Bhanwar Gufa"
+  - "The Whirling Cave"
+  - "Sohang Dham"
+  - "Whirlpool Cave"
+  - "Pranava Peak"
+
+classification:
+  level: 11
+  realm: "Brahmanda"
+  category: "astral"
+
+canonical:
+  ruler: "Sohang Purush (the Lord of 'I am He,' representing the union of Creator and Creation)"
+  sound: "Sweet, enchanting playing of the celestial flute (Bansuri / Murali)"
+  light: "Dazzling, rapidly rotating white sun, creating a massive, whirring whirlpool of spiritual light"
+  geometry: "A massive, whirling helical vortex or spiral cave structure with an 88-petaled rotating lotus"
+  petals:
+    count: 88
+    color: "dazzling rotating white"
+    seed_syllables: []
+  teachings: |
+    Bhanwar Gufa (meaning 'Whirling Cave') is the fifth major stage of the Brahmanda region, situated immediately above Maha Shoonya (the Great Void) and serving as the final causal peak right below Sach Khand (the first pure spiritual plane). 
+    
+    Subjectively, the soul encounters a majestic, rapidly rotating vortex or helical whirlpool of pure spiritual energy. This cosmic whirlpool exerts a powerful, magnetic upward pull on the soul, drawing it out of the gravity of lower creation. The governing Lord of this plane is Sohang Purush (Sohang meaning 'I am He' or 'I am That'). In Bhanwar Gufa, the soul realizes the profound mystical truth of Sohang—that its own true essence is identical to the Creator, resolving the illusion of separation. 
+    
+    The primary sound current here is the incredibly sweet, enchanting, and continuous playing of a celestial flute (Bansuri or Murali), which echoes through the whirling passages of the cave. The light is a dazzling, rapidly spinning white sun of immense brilliance. The soul experiences supreme joy, spiritual ecstasy, and a playful, whirling sensation of absolute freedom as it prepares to cross the final boundary of Brahmanda into pure spirit existence.
+  mantra: "Sohang"
+  recitation: "Sohang"
+  consorts: "Rukhmani (the unmanifest primal energy of this plane)"
+  function: "Integration of the soul with Sohang Purush, final causal acceleration, and transition into pure spirit worlds"
+
+comparative:
+  sufism:
+    term: "Rumi's Reed Flute / Annihilation in the Beloved"
+    description: |
+      In Sufism, the beautiful, enchanting flute sound of Bhanwar Gufa corresponds to Rumi's famous poetry of the Reed Flute (Ney). The Ney represents the hollowed soul that has been completely emptied of ego, allowing the divine breath of the Beloved to blow through it, producing sweet spiritual melodies. It marks the transition to the highest state of Baqa (subsistence in God) where the soul realizes 'Ana al-Haqq' (I am the Truth)—the Sufi equivalent to the Sanskrit Sohang.
+  taoism:
+    term: "Circulation of the Light / The Great Whirlpool"
+    description: |
+      In Taoist inner alchemy (e.g. Secret of the Golden Flower), this corresponds to the rapid 'Circulation of the Light' (Zhou Tian) in the head, where the refined energies of Yin and Yang are spun in a dynamic microcosmic vortex. This spiraling movement of light fuses all vital forces into a singular, unified elixir, preparing the immortal spirit (Shen) to transcend all structural limits.
+  kabbalah:
+    term: "Chokhmah (Primordial Wisdom)"
+    description: |
+      Chokhmah (Wisdom / The Primordial Father) is the second Sephirah on the Tree of Life, representing the dynamic, whirling, and active positive force of creation before it crystallizes into form. It is the unmanifest spark of lightning that flashes out of the crown, mirroring the whirring, spiraling sun-vortex of Bhanwar Gufa.
+  buddhism:
+    term: "Vijnananantyayatana / Sphere of Infinite Consciousness"
+    description: |
+      Maps to the second Arupa-jhana (formless absorption) known as Vijnananantyayatana (the sphere of infinite consciousness), where the meditator moves beyond empty space to realize that the consciousness perceiving the space is itself infinite and boundless. In Vajrayana, it is the blissful, whirling dance of the Dakinis (spiritual sky-goers) carrying the soul into non-dual realization.
+  christianity:
+    term: "The Second Heaven / The Celestial Flute"
+    description: |
+      Associated with the mystical accounts of the Second Heaven, characterized by the hearing of sweet, ethereal woodwind music and the vision of a rapidly spinning wheel of light and fire (similar to Ezekiel's wheels), which draws the soul upward into the presence of divine majesty.
+  gnosticism:
+    term: "The Inner Pleroma Gates / Syzygy Union"
+    description: |
+      The gateway where the soul meets its divine twin or consort (Syzygy) at the border of the true Pleroma. The union is celebrated with sweet, celestial melodies of light and joy, freeing the soul from all remaining causal traces of the Demiurge.
+  hindu_tantra:
+    term: "Nirvana Chakra / Ajna-Sahasrara bridge"
+    description: |
+      The subtle region immediately preceding the absolute crown, situated above the third eye, where the soul experiences the unmanifest vibration of the Soham mantra, dissolving all concepts of duality into pure cosmic intelligence.
+  sikhism:
+    term: "Bhanwar Gufa / The Flute Current"
+    description: |
+      Explicitly mentioned by Kabir and Sant poets in Gurbani as the whirling cave where the flute plays. Kabir's Shabad: "Bhanwar gufa upar baji bansuri... surti firi sab tey udaas, tahan shabd Sohang bhaas" (The flute plays at the top of the whirling cave. The attention turns detached from all lower creation, and the sound of Sohang is revealed).
+  vedic:
+    term: "Soham Asmi"
+    description: |
+      The supreme Vedic Mahavakya ('Soham asmi'—'I am He') from the Isha Upanishad, realized in its full, non-dual glory at the causal peak, where the seeker realizes that the transcendent Purush sitting behind the sun is identical to their own deepest self.
+  jainism:
+    term: "Vitaraga State / Self-Luminous Bliss"
+    description: |
+      The state of Vitaraga (transcendence of all attraction and aversion) where the soul experiences its inherent self-luminous bliss and infinite consciousness, spinning in its own pure nature independent of any causal frameworks.
+
+science:
+  neuroscience:
+    regions:
+      - "Auditory Association Area (Complex harmonic binding)"
+      - "Semicircular Canals Coordination (Vestibular Integration)"
+    networks:
+      - "Self-Referential Dissolution Network"
+      - "Vestibulo-Ocular Reflex Gating (Vortex experience)"
+    description: |
+      Correlates with high synchronization within the auditory association area, gating complex woodwind harmonic frequencies (flute sound) under deep meditative states. The subjective sensation of whirling or spinning in a vortex maps to the conscious neuromodulation of the vestibular system (specifically the semicircular canals) in the inner ear, which regulates the brain's sense of balance and physical spatial orientation. When physical spatial references are gated out, the vestibular signals evoke the feeling of a rapid, joyful cosmic whirlpool.
+    confidence: "Medium"
+  endocrinology:
+    description: |
+      Associated with high parasympathetic tone combined with conscious dopamine/serotonin synthesis, inducing states of supreme spiritual ecstasy, joy, and physical rejuvenation.
+  psychology:
+    ego_state: "The Transpersonal Self / Integration of Sohang"
+    description: |
+      The integration of the 'I am He' state. In transpersonal psychology, this represents the transition to the ultimate causal level (Ken Wilber's model), where the individual ego-self is fully dissolved and unified with the universal self, experiencing a state of playful, blissful cosmic identity.
+  cosmology:
+    description: |
+      Symbolized by the helical rotation of spiral galaxies and accretion discs—vast cosmic whirlpools of light and gas spinning around a central gravity well, representing the creative acceleration of forms.
+  information_theory:
+    description: |
+      The algorithmic vortex state—where informational inputs are accelerated and spun into highly compressed, self-referential feedback loops (Sohang), maximizing data throughput before translation into pure spiritual essence.
+
+phenomenology:
+  emotional_tone: |
+    Supreme spiritual ecstasy, childlike playfulness, and intense joy. The soul feels an incredible lightness, laughing and dancing as it is swept upward by the whirring currents of light.
+  visual_texture: |
+    A brilliant, rapidly spinning white sun that generates a massive, whirring vortex or helical whirlpool of glowing white-gold light, creating a dynamic, spiraling cavern.
+  auditory_texture: |
+    An incredibly sweet, enchanting, and continuous playing of a celestial flute (Bansuri), which winds and echoes through the whirling passages of the cave, completely saturating the soul with bliss.
+  ego_effect: |
+    The dynamic realization of non-duality. The soul no longer feels separate, but declares: "Sohang—I am He, I am the Beloved, I am the flute and the breath."
+  risks: |
+    Becoming enraptured by the supreme joy and sweet flute melodies of this plane, mistaking this final causal gate of Brahmanda for the ultimate Supreme Home (Sat Lok), and halting the ascent.
+  transitions:
+    from_previous: |
+      Exiting the dark, silent chasm of Maha Shoonya (Floor 10) by clinging to the Guru's light-beacon, and suddenly bursting out into the rapidly whirring, joyful flute sounds of Bhanwar Gufa.
+    to_next: |
+      Crossing the final causal boundary of Brahmanda by fully merging into the Sohang current, which launches the soul out of causal creation and into the first pure spiritual realm of Dayal Desh: Sach Khand (Floor 12).
+
+memory:
+  color: "#3b6d11"
+  icon: "A golden flute sitting in the center of a whirring white vortex"
+  metaphor: "Emptying the reed of all ego to allow the divine breath to play"
+  mnemonic: "At the top of the whirling cave, hear the Bansuri of Sohang Purush, and spin into the vortex gateway of Sach Khand."
+
+sources:
+  primary:
+    - "Dr. H.N. Saksena, The Secret of Realisation, Chapter II"
+    - "Kabir Sahib, Shabad: 'Kar naino deedar mahal mein pyaara hai' (Verse 8)"
+    - "Guru Granth Sahib, hymns by Kabir and Gurus referencing 'Bhanwar Gufa'"
+  secondary:
+    - "Jalaluddin Rumi, Masnavi (Song of the Reed Flute / Ney)"
+    - "Richard Wilhelm, The Secret of the Golden Flower (Circulation of Light)"

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Multilayer Consciousness Atlas</title>
+  <meta name="description" content="An interactive, entity-centric Consciousness Atlas exploring the 18 spiritual floors, comparative traditions, and neurobiological mappings.">
+  <meta name="keywords" content="Consciousness, Spiritual Atlas, Sant Mat, Neurobiology, Chakras, Esoteric, Meditation">
+  <meta property="og:title" content="The Multilayer Consciousness Atlas">
+  <meta property="og:description" content="Explore the topological graph and comparative traditions of the 18 floors of consciousness.">
+  <meta property="og:type" content="website">
+  <!-- Google Fonts pairing: Cormorant Garamond (Serif) & DM Sans (Sans-serif) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Three.js and OrbitControls global libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header>
+    <div class="brand">
+      <h1>The Multilayer Consciousness Atlas</h1>
+      <span>Gen II</span>
+    </div>
+    
+    <nav class="nav-tabs" role="tablist" aria-label="Main Views">
+      <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="view-floor" onclick="switchView('floor')">Floor View</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="view-matrix" onclick="switchView('matrix')">Comparative Matrix</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="view-graph" onclick="switchView('graph')">Interactive Graph</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="view-sound" onclick="switchView('sound')">Sound Progression</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="view-gallery" onclick="switchView('gallery')">Cosmic Gallery</button>
+      <button class="tab-btn" role="tab" id="tab-energy" aria-selected="false" aria-controls="view-energy" onclick="switchView('energy')">3D Energy Map</button>
+    </nav>
+
+    <div class="search-box">
+      <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+      <input type="search" id="searchInput" aria-label="Search Atlas content" placeholder="Search sounds, symbols, brain regions..." oninput="handleSearch(this.value)">
+    </div>
+  </header>
+
+  <!-- ── APP MAIN CONTAINER ── -->
+  <div class="app-container">
+    
+    <!-- ── SIDEBAR (18 FLOORS TIMELINE) ── -->
+    <aside id="sidebar" aria-label="Floor Timeline" role="navigation">
+      <div class="region-header">Region III — Dayal Desh</div>
+      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-18" onclick="selectFloor(18)">
+        <span class="floor-num-badge">18</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Secret Stage 18</span>
+      </button>
+      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-17" onclick="selectFloor(17)">
+        <span class="floor-num-badge">17</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Secret Stage 17</span>
+      </button>
+      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-16" onclick="selectFloor(16)">
+        <span class="floor-num-badge">16</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Secret Stage 16</span>
+      </button>
+      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-15" onclick="selectFloor(15)">
+        <span class="floor-num-badge">15</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Akaha Lok / Anami</span>
+      </button>
+      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-14" onclick="selectFloor(14)">
+        <span class="floor-num-badge">14</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Agama Lok</span>
+      </button>
+      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-13" onclick="selectFloor(13)">
+        <span class="floor-num-badge">13</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Alakha Lok</span>
+      </button>
+      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-12" onclick="selectFloor(12)">
+        <span class="floor-num-badge">12</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Sach Khand / Sat Lok</span>
+      </button>
+
+      <div class="region-header">Region II — Brahmanda</div>
+      <button class="floor-btn disabled-floor" data-realm="Brahmanda" id="btn-11" onclick="selectFloor(11)">
+        <span class="floor-num-badge">11</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Bhanwar Gufa</span>
+      </button>
+      <button class="floor-btn disabled-floor" data-realm="Brahmanda" id="btn-10" onclick="selectFloor(10)">
+        <span class="floor-num-badge">10</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Maha Shoonya</span>
+      </button>
+      <button class="floor-btn disabled-floor" data-realm="Brahmanda" id="btn-9" onclick="selectFloor(9)">
+        <span class="floor-num-badge">9</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Shoonya / Daswan Dwar</span>
+      </button>
+      <button class="floor-btn" data-realm="Brahmanda" id="btn-8" onclick="selectFloor(8)">
+        <span class="floor-num-badge">8</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Trikuti</span>
+      </button>
+      <button class="floor-btn disabled-floor" data-realm="Brahmanda" id="btn-7" onclick="selectFloor(7)">
+        <span class="floor-num-badge">7</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Sahasra-Dal-Kamal</span>
+      </button>
+
+      <div class="region-header">Region I — Pinda</div>
+      <button class="floor-btn" data-realm="Pinda" id="btn-6" onclick="selectFloor(6)">
+        <span class="floor-num-badge">6</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Aagya / Tisra Til</span>
+      </button>
+      <button class="floor-btn" data-realm="Pinda" id="btn-5" onclick="selectFloor(5)">
+        <span class="floor-num-badge">5</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Kantha / Vishuddha</span>
+      </button>
+      <button class="floor-btn" data-realm="Pinda" id="btn-4" onclick="selectFloor(4)">
+        <span class="floor-num-badge">4</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Hridaya / Anahata</span>
+      </button>
+      <button class="floor-btn" data-realm="Pinda" id="btn-3" onclick="selectFloor(3)">
+        <span class="floor-num-badge">3</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Nabhi / Manipura</span>
+      </button>
+      <button class="floor-btn" data-realm="Pinda" id="btn-2" onclick="selectFloor(2)">
+        <span class="floor-num-badge">2</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Indriya / Svadhisthana</span>
+      </button>
+      <button class="floor-btn active" data-realm="Pinda" id="btn-1" onclick="selectFloor(1)">
+        <span class="floor-num-badge">1</span>
+        <span class="floor-indicator"></span>
+        <span class="floor-btn-label">Guda / Muladhara</span>
+      </button>
+    </aside>
+
+    <!-- ── MAIN CONTENT DISPLAY ── -->
+    <main id="mainPanel">
+      
+      <!-- 1. FLOOR VIEW VIEWPORT -->
+      <div id="view-floor" class="view-panel active">
+        <div class="floor-banner">
+          <div class="floor-num-giant" id="detail-num">1</div>
+          <div class="floor-title-block">
+            <h2 id="detail-title">Guda Chakra / Muladhara</h2>
+            <div class="floor-sanskrit" id="detail-sanskrit">गुदा चक्र · मूलाधार · The Root · The Foundation</div>
+          </div>
+        </div>
+        <div class="panel-progress">
+          <div class="panel-progress-fill" id="detail-progress"></div>
+        </div>
+        
+        <!-- Chips Bar -->
+        <div class="chips-bar" id="detail-chips">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Dynamic Sacred Geometry & Anatomical Infographic Dashboard -->
+        <div class="floor-infographic-panel" id="floor-infographic">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Tradition Lenses Filter -->
+        <div class="filter-title">Filter Comparative Tradition Lenses</div>
+        <div class="lenses-bar" id="traditionFilters">
+          <input type="checkbox" id="lens-saksena" class="lens-checkbox" checked onchange="toggleCardFilter('saksena')">
+          <label for="lens-saksena" class="lens-label">Saksena Core</label>
+
+          <input type="checkbox" id="lens-sikhism" class="lens-checkbox" checked onchange="toggleCardFilter('sikhism')">
+          <label for="lens-sikhism" class="lens-label">Sikhism / Gurbani</label>
+
+          <input type="checkbox" id="lens-sufism" class="lens-checkbox" checked onchange="toggleCardFilter('sufism')">
+          <label for="lens-sufism" class="lens-label">Sufi Lataif</label>
+
+          <input type="checkbox" id="lens-science" class="lens-checkbox" checked onchange="toggleCardFilter('science')">
+          <label for="lens-science" class="lens-label">Neuroscience / Biology</label>
+
+          <input type="checkbox" id="lens-hindu_tantra" class="lens-checkbox" checked onchange="toggleCardFilter('hindu_tantra')">
+          <label for="lens-hindu_tantra" class="lens-label">Hindu Tantra / Kundalini</label>
+
+          <input type="checkbox" id="lens-vedic" class="lens-checkbox" checked onchange="toggleCardFilter('vedic')">
+          <label for="lens-vedic" class="lens-label">Vedas &amp; Upanishads</label>
+
+          <input type="checkbox" id="lens-buddhism" class="lens-checkbox" checked onchange="toggleCardFilter('buddhism')">
+          <label for="lens-buddhism" class="lens-label">Buddhism</label>
+
+          <input type="checkbox" id="lens-taoism" class="lens-checkbox" checked onchange="toggleCardFilter('taoism')">
+          <label for="lens-taoism" class="lens-label">Taoism</label>
+
+          <input type="checkbox" id="lens-kabbalah" class="lens-checkbox" checked onchange="toggleCardFilter('kabbalah')">
+          <label for="lens-kabbalah" class="lens-label">Kabbalah</label>
+
+          <input type="checkbox" id="lens-gnosticism" class="lens-checkbox" checked onchange="toggleCardFilter('gnosticism')">
+          <label for="lens-gnosticism" class="lens-label">Gnosticism</label>
+
+          <input type="checkbox" id="lens-jainism" class="lens-checkbox" checked onchange="toggleCardFilter('jainism')">
+          <label for="lens-jainism" class="lens-label">Jainism</label>
+        </div>
+
+        <!-- Cards Container -->
+        <div class="cards-container" id="detail-cards">
+          <!-- Dynamic cards populated by JS -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="floor-view-nav">
+          <button id="prev-btn" onclick="navigateFloor(-1)">← Previous Floor</button>
+          <button id="next-btn" onclick="navigateFloor(1)">Next Floor →</button>
+        </div>
+      </div>
+
+      <!-- 2. COMPARATIVE MATRIX VIEWPORT -->
+      <div id="view-matrix" class="view-panel">
+        <h2 style="margin-bottom:1.5rem; color:var(--accent);">Comparative Traditional Matrix</h2>
+        <div class="matrix-container">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th scope="col">Floor</th>
+                <th scope="col">Sant Mat Core</th>
+                <th scope="col">Sikhism / Gurbani</th>
+                <th scope="col">Sufism</th>
+                <th scope="col">Neuroscience / Biology</th>
+                <th scope="col">Vedas &amp; Upanishads</th>
+                <th scope="col">Vajrayana Buddhism</th>
+              </tr>
+            </thead>
+            <tbody id="matrix-tbody">
+              <!-- Dynamically populated row matrix by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 3. INTERACTIVE GRAPH VIEWPORT -->
+      <div id="view-graph" class="view-panel">
+        <h2 style="margin-bottom:0.5rem; color:var(--accent);">Interactive Relationship Graph</h2>
+        <p style="margin-bottom:1.5rem; color:var(--muted); font-size:12px;">Visualizing relationships across the 261 compiled semantic nodes (Sounds, Deities, Elements, Brain Regions, and Traditions).</p>
+        
+        <!-- Relationship Filters Menu -->
+        <div class="graph-filter-menu glass">
+          <div class="filter-group-title">Filter Graph Relationship Streams:</div>
+          <div class="filter-checkbox-grid">
+            <label class="filter-checkbox-label">
+              <input type="checkbox" id="filter-node-Floor" checked onchange="toggleGraphFilter('Floor')">
+              <span class="custom-chk" style="background-color: var(--color-pinda)"></span>
+              Spiritual Floors
+            </label>
+            <label class="filter-checkbox-label">
+              <input type="checkbox" id="filter-node-Ruler" checked onchange="toggleGraphFilter('Ruler')">
+              <span class="custom-chk" style="background-color: #c4a96a"></span>
+              Presiding Rulers
+            </label>
+            <label class="filter-checkbox-label">
+              <input type="checkbox" id="filter-node-Sound" checked onchange="toggleGraphFilter('Sound')">
+              <span class="custom-chk" style="background-color: #8fa3b8"></span>
+              Sounds &amp; Lights
+            </label>
+            <label class="filter-checkbox-label">
+              <input type="checkbox" id="filter-node-Brain" checked onchange="toggleGraphFilter('Brain')">
+              <span class="custom-chk" style="background-color: #1d9e75"></span>
+              Brain Mappings
+            </label>
+            <label class="filter-checkbox-label">
+              <input type="checkbox" id="filter-node-Comparative" checked onchange="toggleGraphFilter('Comparative')">
+              <span class="custom-chk" style="background-color: var(--accent)"></span>
+              Comparative Parallels
+            </label>
+          </div>
+        </div>
+        <div class="graph-viewport">
+          <div class="graph-instruction">Drag workspace to pan. Hover nodes to highlight relationship streams. Click floors to select.</div>
+          <svg class="graph-svg" id="graphSvg">
+            <g id="graphGroup" role="group" aria-label="Nodes and Relationships">
+              <!-- Dynamically populated nodes, edges, labels in SVG -->
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 4. SOUND PROGRESSION TIMELINE VIEWPORT -->
+      <div id="view-sound" class="view-panel">
+        <h2 style="margin-bottom:1rem; color:var(--accent);">Primordial Sound Current Progression</h2>
+        <p style="margin-bottom:2rem; color:var(--muted); font-size:13px;">The systematic transmutation of the inner Sound Current (Shabda / Dhun) as the soul ascends through the pharyngeal gate and the causal peaks of Brahmanda.</p>
+        <div class="sound-timeline" id="sound-timeline-container">
+          <!-- Dynamically populated sound timeline items by JS -->
+        </div>
+      </div>
+
+      <!-- 5. COSMIC GALLERY VIEWPORT -->
+      <div id="view-gallery" class="view-panel">
+        <h2 style="margin-bottom:0.5rem; color:var(--accent);">Cosmic Gallery &amp; Map of Consciousness</h2>
+        <p style="margin-bottom:1.5rem; color:var(--muted); font-size:12px;">The complete macroscopic cartography of the 18 spiritual floors, spanning the physical, astral, causal, and formless unmanifest realms.</p>
+        
+        <!-- Comparative Overlay Tabs -->
+        <div class="gallery-tabs-container">
+          <button class="gallery-tab-btn active" id="gal-tab-map" onclick="switchGalleryTab('map')">Cosmic Map Infographic</button>
+          <button class="gallery-tab-btn" id="gal-tab-kabbalah" onclick="switchGalleryTab('kabbalah')">Kabbalistic Tree of Life</button>
+          <button class="gallery-tab-btn" id="gal-tab-sufi" onclick="switchGalleryTab('sufi')">Sufi subtle organs</button>
+        </div>
+
+        <div class="gallery-layout-container">
+          <!-- Left: Multi-pane Viewport -->
+          <div class="gallery-viewport glass">
+            
+            <!-- Pane 1: Cosmic Map Image -->
+            <div id="gallery-map-pane" style="display: block; width: 100%;">
+              <div class="gallery-pan-instruction">Scroll or drag inside the map frame to examine the complete spiritual cartography.</div>
+              <div class="gallery-image-frame" id="galleryImageFrame">
+                <img src="picture all floors.png" alt="Cosmic Map of Consciousness Realms" class="gallery-main-image" id="galleryMainImg">
+              </div>
+            </div>
+
+            <!-- Pane 2: Kabbalistic Tree of Life SVG -->
+            <div id="gallery-kabbalah-pane" style="display: none; width: 100%; height: 100%; position: relative;">
+              <div class="gallery-pan-instruction">Hover over the Sephiroth spheres and path channels to explore Kabbalistic correspondences.</div>
+              <div class="vector-overlay-container" id="kabbalah-vector-container">
+                <!-- Dynamically populated SVG by JS -->
+              </div>
+            </div>
+
+            <!-- Pane 3: Sufi Lataif subtle organs SVG -->
+            <div id="gallery-sufi-pane" style="display: none; width: 100%; height: 100%; position: relative;">
+              <div class="gallery-pan-instruction">Hover over the light organs of the subtle body axis to explore Sufi correspondences.</div>
+              <div class="vector-overlay-container" id="sufi-vector-container">
+                <!-- Dynamically populated SVG by JS -->
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Interactive Table Legend -->
+          <div class="gallery-legend-panel glass">
+            <div class="legend-header-title">Master Floor Legend &amp; Selector</div>
+            <div class="legend-table-container">
+              <table class="legend-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Level</th>
+                    <th scope="col">Realm</th>
+                    <th scope="col">Spiritual Abode / Ruler</th>
+                  </tr>
+                </thead>
+                <tbody id="gallery-legend-tbody">
+                  <!-- Dynamically populated table rows by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5b. 3D ENERGY MAP VIEWPORT -->
+      <div id="view-energy" class="view-panel">
+        <h2 style="margin-bottom:0.5rem; color:var(--accent);">3D Holographic Energy Map of Consciousness</h2>
+        <p style="margin-bottom:1.5rem; color:var(--muted); font-size:12px;">Translucent wireframe 3D silhouette visualizing Sushumna Nadi energy currents and 18 interactive spiritual center hotspots.</p>
+        
+        <div class="energy-layout-container">
+          <!-- Left: 3D Scene viewport -->
+          <div class="energy-viewport glass">
+            <div class="energy-instruction">Drag inside body view to rotate. Scroll to zoom. Click hotspots to inspect.</div>
+            <div id="energy-canvas-container" style="width: 100%; height: 100%; flex: 1; position: relative;"></div>
+          </div>
+          
+          <!-- Right: Details Sidebar Panel -->
+          <div class="energy-sidebar glass" id="energy-sidebar-panel">
+            <div class="energy-sidebar-header">Chakra Details Selector</div>
+            <div class="energy-sidebar-body" id="energy-sidebar-content">
+              <div style="text-align: center; color: var(--muted); padding-top: 6rem; font-style: italic; font-size: 13px; line-height: 1.6;">
+                Click any glowing hotspot sphere on the 3D model to dynamically inspect metaphysical, anatomical, and neurobiological mappings.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. SEARCH RESULTS VIEWPORT -->
+      <div id="view-search" class="view-panel">
+        <h2 style="margin-bottom:0.5rem; color:var(--accent);">Atlas Search Engine</h2>
+        <div class="search-results-summary" id="search-summary">
+          Found <span>0</span> matches for keyword: <span id="search-keyword">""</span>
+        </div>
+        <div class="cards-container" id="search-results-container">
+          <!-- Dynamic search results populated by JS -->
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

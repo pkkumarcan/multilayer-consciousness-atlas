@@ -1,0 +1,135 @@
+# ==============================================================================
+# Consciousness Atlas - Floor 10 Entity Data
+# ==============================================================================
+id: floor_10
+canonical_name: "Maha Shoonya"
+sanskrit_name: "महा शून्य · The Great Void · The Great Emptiness · The Dark Abyss"
+alternate_names:
+  - "Maha Shoon"
+  - "The Great Void"
+  - "The Great Emptiness"
+  - "The Dark Abyss"
+  - "Gufa-e-Zulmat"
+
+classification:
+  level: 10
+  realm: "Brahmanda"
+  category: "astral"
+
+canonical:
+  ruler: "None (ruled by the absolute unmanifest silence, though containing 4 hidden worlds with secret rulers)"
+  sound: "Absolute, profound silence (or a sub-audible, deep cosmic hum)"
+  light: "Impenetrable, pitch-black darkness (Tam) that is so dense it cannot be illuminated by lower light"
+  geometry: "A limitless, supportless, and absolute dark vacuum with no physical or geometric coordinates"
+  petals:
+    count: 0
+    color: "pitch black"
+    seed_syllables: []
+  teachings: |
+    Maha Shoonya (meaning 'The Great Void' or 'Great Emptiness') is the fourth major stage of the Brahmanda region, serving as a vast, silent, and pitch-black chasm that separates the lower three worlds of creation from the pure spiritual worlds of Dayal Desh. 
+    
+    Subjectively, the soul encounters a limitless, supportless abyss of absolute, dense darkness. There is no physical light, no mental structure, and no sound current audible to the normal causal mind. It is a highly dangerous stage in the spiritual journey; because of the absolute absence of light and sound, a soul traveling without the personal presence and light of the Sat-Guru would become completely disoriented, terrified, and trapped in eternal oblivion or non-existence. The Sat-Guru acts as a protective beacon of light, guiding the soul safely through this terrifying dark chasm. 
+    
+    Crucially, inside this great void lie four hidden, secret worlds (known only to advanced initiates) which have their own distinct rulers and subtle sound currents. The Sat-Guru reveals these hidden worlds to the soul during the crossing, preventing it from losing orientation. Maha Shoonya represents the ultimate death of all lower universal structures, where the soul must remain in absolute trust and surrender.
+  mantra: "None"
+  recitation: "Akaal Purush (protective focus)"
+  consorts: "Maya (in her fully unmanifest, dark state)"
+  function: "Dissolution of all mental/causal structures, crossing of the great abyss, and transition to pure spirit travel"
+
+comparative:
+  sufism:
+    term: "Zulmat / Alam-e-Hahoot"
+    description: |
+      The Sufis call this great dark void Zulmat (the Land of Darkness). It is a pitch-black abyss that lies at the border of the unmanifest essence (Hahoot) and the divine power (Jabroot). To find the water of life (Ab-e-Hayat)—representing absolute spiritual immortality—the seeker must travel through this terrifying land of darkness in absolute surrender under the guidance of the mystical guide Khidr, representing the Sat-Guru.
+  taoism:
+    term: "Hundun (Primordial Chaos)"
+    description: |
+      In Taoist cosmogony, Hundun represents the state of primordial chaos and absolute darkness that existed before the first emergence of Qi and the splitting of heaven and earth. It is a state of undifferentiated, formless emptiness where all potential structures are dissolved back into the absolute silence of the unmanifest Tao.
+  kabbalah:
+    term: "The Great Abyss of Da'at (Formless Night)"
+    description: |
+      Represents the deepest, most terrifying core of the Great Abyss of Da'at that separates the supernal triad (Kether, Chokhmah, Binah) from the lower manifest worlds. Crossing this abyss requires the absolute death of the ego (spiritual crucifixion), where the soul plunges into a formless, supportless night of nothingness, stripped of all concepts of God and self, before emerging in the divine light of Binah.
+  buddhism:
+    term: "Akincanyayatana / The Sphere of Nothingness"
+    description: |
+      In Buddhist psychology and meditation, this maps directly to the third Arupa-jhana (formless absorption) known as Akincanyayatana (the sphere of nothingness), where the meditator moves beyond infinite space and infinite consciousness to perceive: 'There is nothing whatsoever.' It also corresponds to the 'dark void' of total ego-dissolution preceding the absolute realization of Nirvana.
+  christianity:
+    term: "The Dark Night of the Soul / Divine Darkness"
+    description: |
+      Saint John of the Cross detailed the 'Dark Night of the Soul'—a state of absolute sensory and spiritual deprivation where all lights, comforts, and concepts of God are stripped away to purify the soul. Additionally, Saint Dionysius the Areopagite described the 'Divine Darkness' (Caligo)—the impenetrable, blinding cloud of unknowing where the transcendent God resides beyond all intellect.
+  gnosticism:
+    term: "The Kenoma (The Great Emptiness)"
+    description: |
+      In Gnostic cosmology, the Kenoma is the vast, dark, and empty void that lies outside the divine light-fulness of the Pleroma. It is the dark chasm of matter and ignorance ruled by the archons, which the soul must cross in absolute stillness and protection, possessing the secret words of light to prevent being devoured by the dark cosmic beast.
+  hindu_tantra:
+    term: "Maha-Sunya / Kali's Dark Womb"
+    description: |
+      In Tantric cosmology, Maha-Sunya is the supreme void governed by Goddess Kali in her form as the dark, unmanifest womb of time. It is the absolute silence where all elements and universes are dissolved back into the primordial cosmic night (Maha-Ratri).
+  sikhism:
+    term: "Maha Shoon / Gupha-e-Zulmat"
+    description: |
+      Kabir and other Sant poets reference the great void (Maha Shoon) as a dark cave (gupha) that the soul must cross. Kabir's Shabad describes: "Maha shoonya gufa ke andhara... bin Satguru koi nahi paara" (The cave of Maha Shoonya is pitch black... without the Satguru, no one can cross its depths).
+  vedic:
+    term: "Tamas / Primordial Darkness (Asat)"
+    description: |
+      The Rig Veda's Nasadiya Sukta (10.129) describes the state before creation: 'Darkness there was, at first concealed in darkness... all was indistinguishable water.' This primordial darkness (Tamas) or non-existence (Asat) represents the causal void from which the first seed of desire (Kama) arose to manifest the cosmos.
+  jainism:
+    term: "Apravartana Kendra / Dark Karma Void"
+    description: |
+      Jain philosophy describes a boundary zone of absolute spiritual inertia where the soul encounters the heaviest, most unyielding layers of dark, unmanifest karma. Crossing this zone requires the supreme, unassisted light of the purified soul (Kevali).
+
+science:
+  neuroscience:
+    regions:
+      - "Thalamocortical De-synchronization"
+      - "Sensory Deprivation State"
+    networks:
+      - "Absolute Somatosensory Gating"
+      - "Neural Silence State"
+    description: |
+      Correlates with the profound state of absolute sensory deprivation and thalamocortical de-synchronization. Under absolute lack of sensory and somatic input, the brain's internal oscillators drop to an ultra-low frequency (below 0.1 Hz), inducing a state of complete neural silence and spatial/temporal disorientation. Subjectively, this gates out all concepts of physical boundaries, body schema, and time, evoking the feeling of being suspended in an infinite, dark void.
+    confidence: "Medium"
+  endocrinology:
+    description: |
+      Associated with the total suppression of the sympathetic nervous system and the optimization of the parasympathetic system, leading to a state of physical metabolic hibernation (minimum heart rate, respiration, and thyroid activity).
+  psychology:
+    ego_state: "The Archetypal Shadow / Oblivion / Dark Night"
+    description: |
+      The crossing of the ultimate archetypal Shadow. In transpersonal psychology, this represents the transition through the 'abyss' or 'dark night' of the causal level, where all mental frameworks, spiritual expectations, and ego-identities are completely shattered and dissolved before the breakthrough into non-dual spirit.
+  cosmology:
+    description: |
+      Symbolized by the 'Epoch of Reionization' or the 'Dark Ages' of the early universe—the vast, cold, and pitch-black chasm of space that existed before the first stars ignited, representing absolute, unmanifest potential.
+  information_theory:
+    description: |
+      The absolute maximum entropy state of the manifest system (thermal death / total darkness), which acts as the mathematical threshold of a phase transition into a new, higher order of informational complexity.
+
+phenomenology:
+  emotional_tone: |
+    Absolute terror, followed by profound surrender, quiet awe, and ultimate stillness. The soul is initially overwhelmed by the vast, silent, and crushing darkness, but under the Guru's protection, it enters a state of deep, undisturbed peace.
+  visual_texture: |
+    An impenetrable, limitless, and absolute pitch-black darkness that feels solid and supportless, with no points of reference or physical coordinates.
+  auditory_texture: |
+    An absolute, deafening silence that is so profound it feels like a physical pressure, occasionally accompanied by a very deep, sub-audible, and comforting cosmic hum.
+  ego_effect: |
+    The complete death and annihilation of all causal ego-structures. "I am nothing, I know nothing, I have nothing."
+  risks: |
+    The ultimate danger of spiritual disorientation and panic. Without the guide and light of the Sat-Guru, the soul loses all direction, panics in the crushing darkness, and becomes permanently lost in the oblivion of the abyss.
+  transitions:
+    from_previous: |
+      Exiting the crystal white void of Shoonya (Floor 9) and plunging directly into the absolute, pitch-black darkness of Maha Shoonya (Floor 10).
+    to_next: |
+      The soul must navigate through the four hidden secret worlds inside this darkness, guided by the Sat-Guru's light-beacon, to emerge out into the rotating, whirring spiritual sounds of Bhanwar Gufa (Floor 11).
+
+memory:
+  color: "#444441"
+  icon: "A pitch-black sphere floating in a supportless dark vacuum"
+  metaphor: "Navigating a pitch-black labyrinth using only the hand of the Guru"
+  mnemonic: "In the absolute darkness of Maha Shoon, surrender all causal maps, cling to the Sat-Guru's light, and cross the hidden worlds."
+
+sources:
+  primary:
+    - "Dr. H.N. Saksena, The Secret of Realisation, Chapter II"
+    - "Kabir Sahib, Shabad: 'Kar naino deedar mahal mein pyaara hai' (Verse 7)"
+  secondary:
+    - "St. John of the Cross, Dark Night of the Soul"
+    - "Rig Veda, Nasadiya Sukta (10.129 - Primordial Darkness)"

@@ -1,0 +1,140 @@
+# ==============================================================================
+# Consciousness Atlas - Floor 2 Entity Data
+# ==============================================================================
+id: floor_2
+canonical_name: "Indriya / Svadhisthana Chakra"
+sanskrit_name: "इन्द्रिय चक्र · स्वाधिष्ठान · The Sacral · Creative Energy"
+alternate_names:
+  - "Svadhisthana"
+  - "Indriya"
+  - "Swadu Chakra"
+  - "Swadistana"
+  - "The Sacral"
+
+classification:
+  level: 2
+  realm: "Pinda"
+  category: "physical"
+
+canonical:
+  ruler: "Lord Brahma"
+  sound: "Sound of vital fluid activation / gentle flowing water"
+  light: "Light black (black mixed with white, representing creative dark water)"
+  geometry: "Six-petaled lotus with a crescent moon representing the Water element"
+  petals:
+    count: 6
+    color: "light black"
+    seed_syllables:
+      - "baṃ"
+      - "bhaṃ"
+      - "maṃ"
+      - "yaṃ"
+      - "raṃ"
+      - "laṃ"
+  teachings: |
+    The second chakra from below, located at the sexual organ. Also called the Swadu or Swadistana Chakra. The colour is light black (black mixed with white). Six petals. The deity is Lord Brahma—the deity of creation—who stays here with his consort Savitri. The primary physical element is water. The seed recitation to conquer this chakra is Om.
+    
+    Between this chakra and Nabhi (floor 3) runs the Kundalini nerve. Kundali represents the encircled sitting pose of a serpent. This nerve runs from the upper back of the neck, along the spinal cord, down to the space between the Indriya and Nabhi. Life descends through this nerve from above in its downward trend to feed the lower physical body. Yogis reverse this downward flow upward—this reversed flow is called Sushumna. When Kundalini is awakened, invisible powers (Siddhis) develop automatically.
+    
+    By subduing this chakra through the recitation of Om hundreds of thousands of times, Brahmacharya (celibacy) is perpetuated. This provides tremendous vital strength for the spiritual ascent. Some yogis perform physical Hatha feats, such as drawing up water or mercury through the organ.
+  mantra: "OM bhuvah"
+  recitation: "Om"
+  consorts: "Savitri"
+  function: "Creation, procreation, celibacy, and energy sublimation"
+
+comparative:
+  sufism:
+    term: "Nafs al-Lawwama"
+    description: |
+      In Sufism, the Indriya and Kantha chakras together are associated with Alam Malkut (the angelic or subtle world). At this level, the station of Nafs al-Lawwama (the self-reproaching or questioning soul) begins to emerge. Here, the soul starts to feel guilt and question its base, instinctual sexual drives. The rigorous control and sublimation of sexual energy for spiritual advancement mirrors the Sant Mat concept of Brahmacharya. The struggle against these desires is known in Hadith as the 'Greater Jihad'.
+  taoism:
+    term: "Lower Dantian / Jing Gate"
+    description: |
+      Corresponds directly to the Lower Dantian, which is the primary furnace for storing Jing (sexual/creative essence). In Taoist sexual alchemy, the goal is to prevent the downward drainage of Jing and instead "reverse the flow" (Xiao Zhou Tian / Microcosmic Orbit) to refine Jing into Qi (vital energy) and draw it up the spine (governing vessel) into the brain, directly mirroring Saksena's description of reversing the Kundalini.
+  kabbalah:
+    term: "Yesod"
+    description: |
+      Yesod (the Foundation) is the Sephirah associated with the reproductive organs, sexual energy, and the vital force of generation. It acts as the channel through which higher spiritual energies flow down to manifest in Malkuth (the physical body). Yesod governs dreams, the astral body, and the vital fluid currents.
+  buddhism:
+    term: "Secret Place / Jewel Wheel"
+    description: |
+      In Vajrayana (Tibetan) Buddhism, this is the 'Secret Place' or the wheel of creative energy. It represents the active sublimation of pleasure into non-dual bliss (Mahasukha) through the generation of inner heat (Tummo) and the purification of the water element.
+  christianity:
+    term: "The Gate of Creation"
+    description: |
+      Represented in mystical Christian interpretations as the second lower portal of the human temple where natural, creative forces must be sanctified and dedicated to higher spiritual work rather than worldly indulgence.
+  gnosticism:
+    term: "The Psyche Threshold"
+    description: |
+      The boundary of emotional desires and vital urges. The soul must master these creative waters to prevent being dragged back down into the hylic mud of base matter.
+  hindu_tantra:
+    term: "Svadhisthana / Varuna Realm"
+    description: |
+      Literally meaning "one's own dwelling place". Governed by Varuna (the Vedic god of cosmic order and water) and the Rakini Shakti, who carries weapons and holds a lotus. It has six vermillion-colored petals and represents the emotional body, sensuality, and creative imagination.
+  sikhism:
+    term: "Svadhu Chakra"
+    description: |
+      Explicitly mentioned in Kabir's Shabad: "Swadu chakra shat-dal vistaaro, Brahm Savitri roop nihaaro. Ulati naagini ka sir maaro, tahan shabd Onkara hai." (Svadhu Chakra has six petals. Find there Brahma and Savitri. Turn back and strike on the head of the serpent [Kundalini]. The sound is Onkar).
+  vedic:
+    term: "Varuna's Cosmic order"
+    description: |
+      The Rig Veda praises Varuna as the guardian of the water element (Jala/Ap) and cosmic order (Rta). Svadhisthana governs these waters in the body—blood, lymph, and reproductive fluids—requiring their movement to align with divine law.
+  jainism:
+    term: "Swadhistan Preksha"
+    description: |
+      Jain Preksha Dhyana maps Svadhisthana as a center of emotional fluctuation. Concentrating here with a visualization of ocean-like purity helps transmute lust and volatile passions into spiritual stability.
+
+science:
+  neuroscience:
+    regions:
+      - "Sacral Plexus"
+      - "Pudendal Nerve"
+    networks:
+      - "Autonomic Reproductive Networks"
+    description: |
+      Maps anatomically to the sacral nerve plexus and the pudendal nerve, which control the urogenital organs and govern pelvic functions. Concentration here influences the parasympathetic sacral outflow that triggers sexual arousal, and the sympathetic pathways involved in ejaculation. Reversing this flow involves conscious neuromodulation of the pelvic floor muscles (e.g., PC muscle contractions), which stabilizes autonomic arousal.
+    confidence: "High"
+  endocrinology:
+    description: |
+      Governs the gonads (testes and ovaries), which secrete testosterone, estrogen, and progesterone, driving the physical characteristics of reproduction, cellular creation, and vital metabolic energy.
+  psychology:
+    ego_state: "The Emotional Self / Creative & Shadow Desires"
+    description: |
+      In Jungian terms, Svadhisthana governs the Anima/Animus (the inner feminine/masculine archetypes) and is the seat of raw creative drive, emotional volatility, and pleasure-seeking behaviors. Mastery here allows for the sublimation of Libido into artistic and spiritual creation.
+  cosmology:
+    description: |
+      Represented by the fluid dynamics of cosmic dust and primordial gas collapsing under gravity to form early stars and galaxies—creation emerging from fluid space.
+  information_theory:
+    description: |
+      The transition from binary existence to combinatorial complexity (represented by the 6 petals)—the emergence of code combinations and genetic variance.
+
+phenomenology:
+  emotional_tone: |
+    Fluid, sensual, flowing, but highly prone to addictive cravings, sexual obsessions, guilt, and emotional storms. Purification here yields profound creative flow and structural self-discipline.
+  visual_texture: |
+    A dark, deep black-blue or smoky-grey space with shimmering white ripples, resembling deep ocean water illuminated by starlight.
+  auditory_texture: |
+    A deep, low-frequency roaring or rushing sound, like the powerful flow of a river or the distant surge of ocean waves.
+  ego_effect: |
+    Identification with emotional feelings and desire-states. "I want, I feel pleasure, I create."
+  risks: |
+    Entrapment in sexual addiction, sensory indulgence, emotional dependency, or manipulative behaviors, which block the energy from rising to the navel.
+  transitions:
+    from_previous: |
+      Energy rising from the heavy, stable Earth foundation (Floor 1) and dissolving into the flowing, fluid waters of Floor 2, bringing movement and sensation.
+    to_next: |
+      Reversing the downward flow of Kundalini through Sushumna, establishing Brahmacharya, and raising the vital essence into the solar plexus (Floor 3).
+
+memory:
+  color: "#13131a"
+  icon: "Crescent moon indicating the tides of water and emotion"
+  metaphor: "Striking the head of the downward-coiling snake to reverse the creative river upward"
+  mnemonic: "Om subdues the Swadu. Master the waters, secure Brahmacharya, and awaken the Kundalini nerve."
+
+sources:
+  primary:
+    - "Dr. H.N. Saksena, The Secret of Realisation, Chapter II"
+    - "Kabir Sahib, Shabad: 'Kar naino deedar mahal mein pyaara hai' (Verse 4)"
+  secondary:
+    - "Mahatma Ramchandraji, Fatehgarh writings (Sufi Lataif / Ram Chandra Mission)"
+    - "Traditional Chinese Medicine (Microcosmic Orbit / Jing Sublimation texts)"

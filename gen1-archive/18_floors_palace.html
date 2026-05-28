@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 18 Floors — Inner Divine Palace</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d0d0f;
+  --bg2: #13131a;
+  --bg3: #1a1a24;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.13);
+  --text: #e8e4dc;
+  --muted: #7a7770;
+  --accent: #c4a96a;
+  --accent2: #8fa3b8;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── HEADER ── */
+header {
+  text-align: center;
+  padding: 3.5rem 2rem 2rem;
+  border-bottom: 0.5px solid var(--border2);
+  background: linear-gradient(180deg, #0a0810 0%, var(--bg) 100%);
+  position: relative;
+  overflow: hidden;
+}
+header::before {
+  content: 'ॐ';
+  position: absolute; top: 1rem; left: 50%; transform: translateX(-50%);
+  font-size: 5rem; opacity: 0.04; font-family: 'Cormorant Garamond', serif;
+  pointer-events: none;
+}
+header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6rem; font-weight: 300; letter-spacing: 0.04em;
+  color: var(--accent); margin-bottom: 0.4rem;
+}
+header p { color: var(--muted); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* ── LAYOUT ── */
+.layout { display: flex; flex: 1; min-height: 0; }
+
+/* ── SIDEBAR ── */
+aside {
+  width: 260px; flex-shrink: 0;
+  border-right: 0.5px solid var(--border2);
+  background: var(--bg2);
+  overflow-y: auto;
+  position: sticky; top: 0; height: 100vh;
+  padding: 1.5rem 0;
+}
+.region-label {
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); padding: 1.2rem 1.4rem 0.4rem;
+}
+.floor-btn {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; padding: 0.55rem 1.4rem;
+  background: none; border: none; cursor: pointer;
+  text-align: left; font-family: 'DM Sans', sans-serif;
+  font-size: 13px; color: var(--muted);
+  transition: all 0.15s; border-left: 2px solid transparent;
+}
+.floor-btn:hover { color: var(--text); background: rgba(255,255,255,0.03); }
+.floor-btn.active { color: var(--accent); border-left-color: var(--accent); background: rgba(196,169,106,0.07); }
+.floor-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px; font-weight: 500; min-width: 22px;
+  opacity: 0.5;
+}
+.floor-btn.active .floor-num { opacity: 1; }
+.floor-dot {
+  width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+}
+
+/* ── MAIN CONTENT ── */
+main {
+  flex: 1; overflow-y: auto; padding: 3rem 3.5rem;
+  max-width: 860px;
+}
+
+/* ── FLOOR PANEL ── */
+.floor-panel { display: none; animation: fadeIn 0.3s ease; }
+.floor-panel.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.floor-header {
+  display: flex; align-items: baseline; gap: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.floor-number-big {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.5rem; font-weight: 300; line-height: 1;
+  color: var(--accent); opacity: 0.5;
+}
+.floor-title-block h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 400; line-height: 1.2; color: var(--accent);
+}
+.floor-title-block .sanskrit { font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+/* Quick facts bar */
+.facts-bar {
+  display: flex; flex-wrap: wrap; gap: 8px; margin: 1.5rem 0;
+}
+.fact-chip {
+  font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 4px 12px; border-radius: 20px; border: 0.5px solid var(--border2);
+  color: var(--muted); background: var(--bg3);
+}
+.fact-chip span { color: var(--text); }
+
+/* Section cards */
+.section-card {
+  border: 0.5px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg2);
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+}
+.section-head {
+  display: flex; align-items: center; gap: 10px;
+  padding: 0.9rem 1.3rem;
+  cursor: pointer;
+  border-bottom: 0.5px solid transparent;
+  transition: background 0.15s;
+}
+.section-head:hover { background: rgba(255,255,255,0.02); }
+.section-head.open { border-bottom-color: var(--border); }
+.section-tag {
+  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 4px; font-weight: 500;
+}
+.tag-saksena { background: rgba(196,169,106,0.15); color: #c4a96a; }
+.tag-hindu { background: rgba(255,140,60,0.12); color: #e07840; }
+.tag-sikh { background: rgba(70,160,130,0.15); color: #4ea88a; }
+.tag-sufi { background: rgba(143,163,184,0.15); color: #8fa3b8; }
+.tag-buddhist { background: rgba(180,140,100,0.15); color: #c49a60; }
+.tag-jain { background: rgba(160,130,200,0.15); color: #a07ac8; }
+.tag-vedic { background: rgba(200,100,100,0.15); color: #c86060; }
+.tag-kabir { background: rgba(100,180,100,0.15); color: #64b464; }
+.tag-science { background: rgba(100,150,220,0.15); color: #6496dc; }
+.section-label {
+  font-size: 13px; font-weight: 500; color: var(--text); flex: 1;
+}
+.section-chevron {
+  font-size: 12px; color: var(--muted);
+  transition: transform 0.2s;
+}
+.section-head.open .section-chevron { transform: rotate(180deg); }
+.section-body {
+  display: none; padding: 1.1rem 1.3rem;
+  font-size: 14px; line-height: 1.8; color: #c4bfb6;
+}
+.section-body.open { display: block; }
+.section-body blockquote {
+  border-left: 2px solid var(--accent);
+  padding-left: 1rem; margin: 0.8rem 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic; font-size: 15px; color: var(--accent);
+}
+.section-body .ref { font-size: 11px; color: var(--muted); margin-top: 0.3rem; }
+.section-body strong { color: var(--text); font-weight: 500; }
+.section-body .sub-head {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); margin: 0.8rem 0 0.3rem;
+}
+
+/* Phase badge */
+.phase-badge {
+  display: inline-block;
+  font-size: 11px; padding: 3px 10px; border-radius: 4px;
+  background: rgba(143,163,184,0.1); color: var(--muted);
+  border: 0.5px solid var(--border2); margin-left: 0.5rem;
+}
+
+/* Footer nav */
+.floor-nav {
+  display: flex; gap: 1rem; margin-top: 2.5rem; padding-top: 1.5rem;
+  border-top: 0.5px solid var(--border);
+}
+.floor-nav button {
+  flex: 1; padding: 0.7rem 1rem;
+  background: var(--bg3); border: 0.5px solid var(--border2);
+  color: var(--muted); font-family: 'DM Sans', sans-serif;
+  font-size: 13px; border-radius: 8px; cursor: pointer;
+  transition: all 0.15s; text-align: center;
+}
+.floor-nav button:hover { border-color: var(--accent); color: var(--accent); }
+.floor-nav button:disabled { opacity: 0.25; cursor: not-allowed; }
+
+/* Scrollbar */
+aside::-webkit-scrollbar, main::-webkit-scrollbar { width: 4px; }
+aside::-webkit-scrollbar-track, main::-webkit-scrollbar-track { background: transparent; }
+aside::-webkit-scrollbar-thumb, main::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+/* Progress bar */
+.progress-bar {
+  height: 2px; background: var(--border);
+  margin-bottom: 2rem; border-radius: 1px; overflow: hidden;
+}
+.progress-fill {
+  height: 100%; background: var(--accent); border-radius: 1px;
+  transition: width 0.3s ease;
+}
+
+/* ── responsive ── */
+@media (max-width: 700px) {
+  .layout { flex-direction: column; }
+  aside { width: 100%; height: auto; position: static; display: flex; flex-wrap: wrap; padding: 0.5rem; gap: 4px; }
+  .region-label { display: none; }
+  .floor-btn { width: auto; padding: 0.4rem 0.8rem; border-radius: 6px; border-left: none; border: 0.5px solid var(--border); font-size: 12px; }
+  .floor-btn.active { border-color: var(--accent); }
+  main { padding: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>The 18 Floors of the Inner Divine Palace</h1>
+  <p>A cross-tradition guide to the inner planes · Based on Dr. H.N. Saksena · Expanded with comparative religion</p>
+</header>
+
+<div class="layout">
+
+<!-- ── SIDEBAR ── -->
+<aside id="sidebar">
+  <div class="region-label">Region I — Pinda (physical)</div>
+  <button class="floor-btn active" onclick="showFloor(1)" id="btn-1">
+    <span class="floor-num">1</span>
+    <span class="floor-dot" style="background:#A32D2D"></span>
+    <span>Guda / Muladhara</span>
+  </button>
+  <button class="floor-btn" onclick="showFloor(2)" id="btn-2">
+    <span class="floor-num">2</span>
+    <span class="floor-dot" style="background:#854F0B"></span>
+    <span>Indriya / Svadhisthana</span>
+  </button>
+  <button class="floor-btn" onclick="showFloor(3)" id="btn-3">
+    <span class="floor-num">3</span>
+    <span class="floor-dot" style="background:#639922"></span>
+    <span>Nabhi / Manipura</span>
+  </button>
+  <button class="floor-btn" onclick="showFloor(4)" id="btn-4">
+    <span class="floor-num">4</span>
+    <span class="floor-dot" style="background:#185FA5"></span>
+    <span>Hridaya / Anahata</span>
+  </button>
+  <button class="floor-btn" onclick="showFloor(5)" id="btn-5">
+    <span class="floor-num">5</span>
+    <span class="floor-dot" style="background:#0C447C"></span>
+    <span>Kantha / Vishuddha</span>
+  </button>
+  <button class="floor-btn" onclick="showFloor(6)" id="btn-6">
+    <span class="floor-num">6</span>
+    <span class="floor-dot" style="background:#534AB7"></span>
+    <span>Aagya / Tisra Til</span>
+  </button>
+
+  <div class="region-label">Region II — Brahmanda (astral)</div>
+  <button class="floor-btn" onclick="showFloor(7)" id="btn-7">
+    <span class="floor-num">7</span>
+    <span class="floor-dot" style="background:#7F77DD"></span>
+    <span>Sahasra-Dal-Kamal</span>
+  </button>
+  <button class="floor-btn" onclick="showFloor(8)" id="btn-8">
+    <span class="floor-num">8</span>
+    <span class="floor-dot" style="background:#D85A30"></span>
+    <span>Trikuti</span>
+  </button>
+  <button class="floor-btn" onclick="showFloor(9)" id="btn-9">
+    <span class="floor-num">9</span>
+    <span class="floor-dot" style="background:#1D9E75"></span>
+    <span>Shoonya / Daswan Dwar</span>
+  </button>
+  <button class="floor-btn" onclick="showFloor(10)" id="btn-10">
+    <span class="floor-num">10</span>
+    <span class="floor-dot" style="background:#444441"></span>
+    <span>Maha Shoonya</span>
+  </button>
+  <button class="floor-btn" onclick="showFloor(11)" id="btn-11">
+    <span class="floor-num">11</span>
+    <span class="floor-dot" style="background:#3B6D11"></span>
+    <span>Bhanwar Gufa</span>
+  </button>
+  <button class="floor-btn" onclick="showFloor(12)" id="btn-12">
+    <span class="floor-num">12</span>
+    <span class="floor-dot" style="background:#EF9F27"></span>
+    <span>Sach Khand / Sat Lok</span>
+  </button>
+
+  <div class="region-label">Region III — Dayal Desh (pure spirit)</div>
+  <button class="floor-btn" onclick="showFloor(13)" id="btn-13">
+    <span class="floor-num">13</span>
+    <span class="floor-dot" style="background:#0F6E56"></span>
+    <span>Alakha Lok</span>
+  </button>
+  <button class="floor-btn" onclick="showFloor(14)" id="btn-14">
+    <span class="floor-num">14</span>
+    <span class="floor-dot" style="background:#085041"></span>
+    <span>Agama Lok</span>
+  </button>
+  <button class="floor-btn" onclick="showFloor(15)" id="btn-15">
+    <span class="floor-num">15</span>
+    <span class="floor-dot" style="background:#042C53"></span>
+    <span>Akaha Lok / Anami</span>
+  </button>
+
+  <div class="region-label">Secret — indescribable</div>
+  <button class="floor-btn" onclick="showFloor(16)" id="btn-16">
+    <span class="floor-num">16</span>
+    <span class="floor-dot" style="background:#2C2C2A"></span>
+    <span>Secret stage 16</span>
+  </button>
+  <button class="floor-btn" onclick="showFloor(17)" id="btn-17">
+    <span class="floor-num">17</span>
+    <span class="floor-dot" style="background:#2C2C2A"></span>
+    <span>Secret stage 17</span>
+  </button>
+  <button class="floor-btn" onclick="showFloor(18)" id="btn-18">
+    <span class="floor-num">18</span>
+    <span class="floor-dot" style="background:#ffffff;opacity:0.3"></span>
+    <span>Secret stage 18</span>
+  </button>
+</aside>
+
+<!-- ── MAIN ── -->
+<main id="main">
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- FLOOR 1 — GUDA / MULADHARA -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="floor-panel active" id="floor-1">
+  <div class="progress-bar"><div class="progress-fill" style="width:5.5%"></div></div>
+  <div class="floor-header">
+    <div class="floor-number-big">1</div>
+    <div class="floor-title-block">
+      <h2>Guda Chakra / Muladhara</h2>
+      <div class="sanskrit">गुदा चक्र · मूलाधार · The Root · The Foundation</div>
+    </div>
+  </div>
+  <div class="facts-bar">
+    <div class="fact-chip">Petals: <span>4 (red)</span></div>
+    <div class="fact-chip">Element: <span>Earth</span></div>
+    <div class="fact-chip">Deity: <span>Ganesha</span></div>
+    <div class="fact-chip">Recitation: <span>Kling (क्लिं)</span></div>
+    <div class="fact-chip">Mantra: <span>OM bhuh</span></div>
+    <div class="fact-chip">Function: <span>Elimination · Foundation</span></div>
+    <div class="fact-chip">Consorts: <span>Riddhi &amp; Siddhi</span></div>
+    <div class="fact-chip">Sound: <span>Buzz of honeybee</span></div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head open" onclick="toggleSection(this)">
+      <span class="section-tag tag-saksena">Saksena</span>
+      <span class="section-label">The Secret of Realisation — primary account</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body open">
+      <p>The <strong>first chakra from below</strong>, located at the rectum. Its colour is red. The lotus has four petals. The recitation to subdue this chakra is <em>Kling (क्लिं)</em>. The deity is <strong>Lord Ganesha</strong> — the deity of Karma (action) — whose body is red. He stays here with his two consorts <strong>Riddhi</strong> (abundance) and <strong>Siddhi</strong> (invisible power). The function of this chakra is elimination; the element is earth — whatever is ejected turns to mud.</p>
+      <div class="sub-head">Subduing the five enemies</div>
+      <p>Before ascending from floor 1, the aspirant must conquer the five enemies residing here: <strong>Kama</strong> (lust) → replaced by Sheel (pure living); <strong>Krodha</strong> (anger) → Kshama (forgiveness); <strong>Lobha</strong> (greed) → Santosha (contentment); <strong>Moha</strong> (attachment) → Viveka (discrimination); <strong>Ahankar</strong> (ego) → Deenta (humility).</p>
+      <div class="sub-head">Pranayama and Hatha Yoga methods</div>
+      <p>The Yogis purify the rectum using <em>Vasti</em> (a kind of enema), perform Pranayama in Padmasana (Pooraka → Kumbhaka → Rechaka in ratio 1:2:4), then concentrate the Surat on the rectum and recite Kling hundreds of thousands of times. Control of this chakra develops will-power and Siddhis. Saksena warns: true seekers by-pass Siddhis and proceed upward.</p>
+      <blockquote>"The real seekers of the love of God do not give any importance to these Siddhies and merely by-pass them, with the assistance of the Sat-Guru."</blockquote>
+      <div class="ref">— Dr. H.N. Saksena, The Secret of Realisation, Ch. II</div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-vedic">Vedas &amp; Upanishads</span>
+      <span class="section-label">Earliest textual references to Muladhara</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p>The earliest references to subtle body concepts appear in the <strong>late Upanishads</strong> and Tantric texts. In the Vedas and Upanishads, the root chakra is mentioned under multiple names: <em>Adhara</em> (the lower one), <em>Brahma</em>, <em>Muladhara</em>, <em>Mulakanda</em> (the root-bulb). The Brahma-Padma — Brahma's lotus — is another Vedic name for this centre.</p>
+      <p>The <strong>Katha Upanishad</strong> (2.3.1) describes the body as a city of nine gates and the Self dwelling within it — Muladhara is the foundational gate through which consciousness entered the body on its descent. The <strong>Chandogya Upanishad</strong> refers to the "lotus of the heart" but presupposes the entire chakric architecture below it.</p>
+      <p>The <strong>Svayambhu-Linga</strong> of the Muladhara — and Devi Kundalini coiled around it — are described in the Tantric Upanishads as manifestations of the dual principles of Shiva and Shakti, pervading the cosmos and present in miniature within man.</p>
+      <blockquote>"This gem of wisdom was first found in the Upanishads — sacred Hindu writings that collectively form the Vedas. The word Veda means 'knowledge.'"</blockquote>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-hindu">Kundalini Yoga &amp; Tantra</span>
+      <span class="section-label">Kundalini as coiled serpent at the root</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p>In <strong>Kundalini Yoga</strong>, Muladhara is the seat of Kundalini Shakti — the divine feminine energy coiled 3½ times like a serpent around the Svayambhu-Linga. <em>Kundalini</em> (कुण्डलिनी) literally means "coiled snake." The entire yogic project of Kundalini practice is to awaken this energy from Floor 1 and raise it through each chakra to the crown.</p>
+      <p>Practices to activate Muladhara include: <strong>Mula Bandha</strong> (perineum contraction), <em>Garudasana</em>, <em>Siddhasana</em>, Nasikagra Drishti (nose-tip gazing), and specific pranayamas. When the Kundalini is awakened it immediately penetrates the Sushumna Nadi — the central channel running along the spinal cord — which had been blocked by the coiled energy itself.</p>
+      <div class="sub-head">The Dakini Shakti</div>
+      <p>The presiding Shakti of Muladhara is <strong>Dakini</strong> — four-armed, red-eyed, radiating brightness like multiple suns. Tattvagyan and Shuddha Buddha are always illuminated by her. The red lotus with four petals carries the seed syllables: <em>vaṃ, śaṃ, ṣaṃ, saṃ</em>.</p>
+      <div class="sub-head">Saksena's connection to Kundalini</div>
+      <p>Saksena places the Kundalini nerve between floors 2 (Indriya) and 3 (Nabhi), but notes it originates from the root. He describes it as the nerve through which <em>life descends</em> from above in its downward trend to feed every part of the body — and which yogis reverse upward (Sushumna).</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-hindu">Bhagavad Gita</span>
+      <span class="section-label">The Gita's references to the root and earth</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p>The Bhagavad Gita does not name chakras explicitly but encodes the chakric system symbolically. According to Paramhansa Yogananda's interpretation (<em>Essence of the Bhagavad Gita</em>), the five Pandava brothers represent five states of the awakened chakras. <strong>Sahadeva</strong>, the youngest Pandava, symbolises the Muladhara chakra in its awakened energy state.</p>
+      <p>In Chapter 15 (Purushottama Yoga), Krishna describes the Ashvattha tree (the cosmic tree of existence) with roots above and branches below — an inverted image of the Sushumna/chakra system. The roots are in Brahman (the Supreme), and the energy flows downward into material existence through the chakras. Floor 1 is the lowest branch of this cosmic tree.</p>
+      <blockquote>"Urdhva-mulam adhah-shakham — with roots above and branches below, the eternal Ashvattha tree is described by the wise."</blockquote>
+      <div class="ref">— Bhagavad Gita 15.1</div>
+      <p>Krishna's repeated injunctions to overcome <em>Kama</em> (desire) and <em>Krodha</em> (anger) directly map onto Saksena's five enemies of Floor 1. BG 3.37: <em>"It is desire alone, born of the mode of passion... know this as the enemy here on earth."</em></p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-sikh">Sikhism / Gurbani / SGGS</span>
+      <span class="section-label">The lowest gate and the body as palace</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p>Gurbani does not enumerate chakras in the yogic anatomical tradition — the Sikh Gurus deliberately moved away from Hatha Yoga's body-mapping. However, SGGS contains Kabir's bani and the hymns of various Bhagats who do reference the inner body system.</p>
+      <p>Kabir's <em>Shabad</em> (which Saksena quotes fully at the end of his book) is included in SGGS and begins: <em>"Kar naino deedar mahal mein pyaara hai"</em> — "Behold your beloved with your inner eyes, present in the palace (your own body)." The entire body is described as a nine-gated palace with the Lord dwelling within.</p>
+      <div class="sub-head">The nine gates</div>
+      <p>SGGS refers repeatedly to the <strong>nau duar</strong> (nine gates) — the two eyes, two ears, two nostrils, mouth, reproductive organ, and rectum. Gurbani's teaching is that consciousness flows outward through these nine gates and is enslaved by the senses. The spiritual path is to withdraw consciousness inward. This directly corresponds to Saksena's floors 1–5 (the lower Pinda gates) which must be transcended before reaching the Aagya (sixth, the inner gate).</p>
+      <blockquote>"Nau dar thakey dhavat rahey, dasvai nij-ghar vaasa pae" — One who controls the nine organs gets to dwell in the tenth, the home of the Creator.</blockquote>
+      <div class="ref">— Guru Amar Das, M:3, SGGS p. 124</div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-sufi">Sufism / Islam</span>
+      <span class="section-label">The Latayif and the body's lower centres</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p>Sufism does not use the word "chakra" but describes subtle centres called <strong>Lataif</strong> (singular: Latifa). The lowest five Lataif correspond to what Saksena calls the Pinda region. They are called collectively <em>Latayif-e-Satta</em> — the first three (Nafs, Qalb, Ruh) correspond to the lower physical chakras and the next two to the upper physical ones.</p>
+      <p>The Sufi concept of <strong>Nafs</strong> (the ego-self, the lower self) resides at the base of the system. The station of <em>Nafs al-Ammara</em> (the commanding self) — the self that commands evil — corresponds precisely to the energy of the Muladhara: survival, base instinct, the pull of the earth. The entire Sufi path of <em>Tazkiya-e-Nafs</em> (purification of the self) is essentially the ascending of consciousness from this base.</p>
+      <p>Saksena notes in his preface: the Sufis call the five lower chakras collectively <em>Alam Na-Soot</em> (the material world realm) — the first three corresponding to the gross physical and the next two to the subtle physical.</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-buddhist">Buddhism &amp; Jainism</span>
+      <span class="section-label">Earth element, foundation, and the lowest consciousness</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <div class="sub-head">Buddhism</div>
+      <p>Theravada Buddhism does not use the chakra system but Buddhist Tantra (Vajrayana) does. In <strong>Tibetan Buddhist Tantra</strong>, the root chakra is called <em>Nirmana chakra</em> — the emanation wheel — corresponding to the physical body and gross elements. The four petals correspond to the four immeasurables (loving-kindness, compassion, sympathetic joy, equanimity) in their seed form.</p>
+      <p>The earth element (<em>pathavi dhatu</em>) is the first of the four great elements in both Theravada analysis and the chakra system — the most gross, the most dense, the foundation. Awakening in Buddhism begins with recognising the impermanence of this very density.</p>
+      <div class="sub-head">Jainism</div>
+      <p>Jain philosophy speaks of <em>Pudgala</em> (matter) and <em>Jiva</em> (soul). The soul's deepest entanglement in gross karma — the heaviest, densest karmic matter — corresponds to the Muladhara level. Jain meditation (<em>Preksha Dhyana</em>) begins at the base — the meditator focuses awareness at the base of the body (the <em>Shakti Kendra</em>) and consciously moves upward.</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-science">Modern &amp; Western perspectives</span>
+      <span class="section-label">Carl Jung, the perineal plexus, earth energy</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p><strong>Carl Jung</strong> was deeply fascinated by Kundalini Yoga and the chakra system. He gave a series of seminars on Kundalini in 1932 and saw the Muladhara as corresponding to the unconscious — the foundation of the psyche that must be explored before individuation (the process of becoming whole) can begin. In Jungian terms, the "shadow" — the repressed, unacknowledged aspects of the self — resides at the Muladhara level.</p>
+      <p>Anatomically, the Muladhara region corresponds to the <strong>perineal nerve plexus</strong> and the coccygeal body. The nerve networks here control the pelvic floor, the rectum, and the base of the spine. In endocrinology, the adrenal glands — which govern fight-or-flight responses (survival instincts at their most basic) — are often associated with this chakra's energy.</p>
+      <div class="sub-head">Ayurveda</div>
+      <p>In Ayurvedic medicine, Muladhara is associated with <strong>Apana Vata</strong> — the downward-moving wind that governs elimination, reproduction, and grounding. Imbalance in Apana Vata indicates Muladhara needs attention. The earth element (Prithvi) in Ayurveda corresponds to stability, heaviness, structure — the qualities of this floor.</p>
+    </div>
+  </div>
+
+  <div class="floor-nav">
+    <button disabled>← previous</button>
+    <button onclick="showFloor(2)">Floor 2 — Indriya →</button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- FLOOR 2 — INDRIYA / SVADHISTHANA -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="floor-panel" id="floor-2">
+  <div class="progress-bar"><div class="progress-fill" style="width:11%"></div></div>
+  <div class="floor-header">
+    <div class="floor-number-big">2</div>
+    <div class="floor-title-block">
+      <h2>Indriya / Svadhisthana Chakra</h2>
+      <div class="sanskrit">इन्द्रिय चक्र · स्वाधिष्ठान · The Sacral · Creative Energy</div>
+    </div>
+  </div>
+  <div class="facts-bar">
+    <div class="fact-chip">Petals: <span>6 (light black)</span></div>
+    <div class="fact-chip">Element: <span>Water</span></div>
+    <div class="fact-chip">Deity: <span>Brahma &amp; Savitri</span></div>
+    <div class="fact-chip">Recitation: <span>Om (ॐ)</span></div>
+    <div class="fact-chip">Mantra: <span>OM bhuvah</span></div>
+    <div class="fact-chip">Function: <span>Creation · Celibacy</span></div>
+    <div class="fact-chip">Kundalini: <span>Located here</span></div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head open" onclick="toggleSection(this)">
+      <span class="section-tag tag-saksena">Saksena</span>
+      <span class="section-label">Primary account — Indriya / Swadu Chakra</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body open">
+      <p>The <strong>second chakra from below</strong>, located at the sexual organ. Also called Swadu Chakra. The colour is <em>light black</em> (black mixed with white). Six petals. The deity is <strong>Lord Brahma</strong> — the deity of creation — who stays here with his consort <strong>Savitri</strong>. The element is water. Recitation: <em>Om</em>.</p>
+      <div class="sub-head">The Kundalini nerve</div>
+      <p>Between this chakra and Nabhi (floor 3) runs the <strong>Kundalini</strong> nerve. <em>Kundali</em> means the encircled sitting pose of a serpent. This nerve runs from the upper back of the neck, along the spinal cord, down to the space between the Indriya and Nabhi. Life descends through this nerve from above in its downward trend. Yogis reverse this downward flow upward — this process is called <strong>Sushumna</strong>. When Kundalini is awakened, invisible powers (Siddhis) develop automatically.</p>
+      <div class="sub-head">Brahmacharya</div>
+      <p>By subduing this chakra through recitation of Om (hundreds of thousands of times), <strong>Brahmacharya</strong> (celibacy) is perpetuated — which gives tremendous strength for the ascent. Some yogis even draw water through the organ and develop the practice of drawing up mercury.</p>
+      <blockquote>"When this Kundalini is awakened by the Yogies, more Siddhies are automatically developed in them. They can perform any kind of wonder."</blockquote>
+      <div class="ref">— Dr. H.N. Saksena, The Secret of Realisation, Ch. II</div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-hindu">Kundalini &amp; Tantra</span>
+      <span class="section-label">Svadhisthana — the dwelling of the self</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p><em>Svadhisthana</em> means "one's own dwelling" (sva = own, adhisthana = dwelling/abode). It is illustrated as a <strong>white lotus with six vermillion-coloured petals</strong> inscribed with syllables: baṃ, bhaṃ, maṃ, yaṃ, raṃ, laṃ. Note: Saksena describes the colour as light black (the colour of the deity Brahma's creative darkness); mainstream Tantra often shows vermillion petals on a white lotus — different traditions emphasize different aspects.</p>
+      <p>The presiding deity in Tantric tradition is <strong>Varuna</strong> (god of water), sometimes Vishnu. The Rakini Shakti presides here. The element is water — fluid, flowing, creative. This chakra governs sexuality, creativity, pleasure, and the emotional body.</p>
+      <div class="sub-head">Kabir's Shabad (in SGGS)</div>
+      <blockquote>"Swadu chakra shat-dal vistaaro, Brahm Savitri roop nihaaro. Ulati naagini ka sir maaro, tahan shabd Onkara hai."</blockquote>
+      <p>Translation: Svadhu Chakra has a lotus of six petals. Find there the deities Brahma and Savitri. Turn back and strike on the head of the serpent (Kundalini). The Shabda of this place is Onkar.</p>
+      <div class="ref">— Kabir, Shabad verse 4 (included in SGGS)</div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-sufi">Sufism</span>
+      <span class="section-label">Alam Malkut — the first subtle realm</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p>In Saksena's own classification (Preface), the Indriya and Kantha chakras together are called <em>Alam Malkut</em> (the angelic world) by the Sufis — slightly above the gross physical. The Sufi concept of <strong>Nafs al-Lawwama</strong> (the self-reproaching soul) begins to emerge here — the soul that starts to question its base drives and feel guilt, which is the precursor to spiritual seeking.</p>
+      <p>The Sufi practice of controlling and sublimating sexual energy for spiritual advancement closely mirrors Saksena's Brahmacharya ideal. The Prophet Muhammad (in Hadith) described the greater Jihad as the struggle against one's own lower self (Nafs) — this struggle begins precisely at floor 2.</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-vedic">Vedas &amp; Ayurveda</span>
+      <span class="section-label">Water element and creative forces</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p>The water element (Ap / Jala) in the Vedas is associated with <strong>Varuna</strong> — the cosmic guardian of divine order (Rta). The Rig Veda praises Varuna as the all-seeing, all-knowing deity who witnesses human deeds. The sacral chakra governs the water element in the body — blood, lymph, reproductive fluids — and its proper function is creation guided by cosmic order, not uncontrolled desire.</p>
+      <p>In Ayurveda, Svadhisthana governs <strong>Vyana Vata</strong> (the pervasive wind) and is linked to the kidneys, bladder, and reproductive system. The Kapha dosha (water + earth) is dominant here. Balance at this chakra creates fluid creativity; imbalance creates addiction, emotional volatility, or sexual obsession.</p>
+    </div>
+  </div>
+
+  <div class="floor-nav">
+    <button onclick="showFloor(1)">← Floor 1</button>
+    <button onclick="showFloor(3)">Floor 3 →</button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- FLOOR 3 — NABHI / MANIPURA -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="floor-panel" id="floor-3">
+  <div class="progress-bar"><div class="progress-fill" style="width:16.5%"></div></div>
+  <div class="floor-header">
+    <div class="floor-number-big">3</div>
+    <div class="floor-title-block">
+      <h2>Nabhi / Manipura Chakra</h2>
+      <div class="sanskrit">नाभि चक्र · मणिपूर · The Navel · Jewel City</div>
+    </div>
+  </div>
+  <div class="facts-bar">
+    <div class="fact-chip">Petals: <span>8 (light red/white)</span></div>
+    <div class="fact-chip">Element: <span>Fire (Agni)</span></div>
+    <div class="fact-chip">Deity: <span>Vishnu &amp; Lakshmi</span></div>
+    <div class="fact-chip">Recitation: <span>Hring (ह्रीं)</span></div>
+    <div class="fact-chip">Mantra: <span>OM svah</span></div>
+    <div class="fact-chip">Function: <span>Maintenance</span></div>
+    <div class="fact-chip">Animal boundary: <span>Animals live only up to floor 3</span></div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head open" onclick="toggleSection(this)">
+      <span class="section-tag tag-saksena">Saksena</span>
+      <span class="section-label">The animal kingdom boundary</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body open">
+      <p>Located at the navel. Eight petals, colour white (some say blue). Deity: <strong>Lord Vishnu</strong> with consort <strong>Lakshmi</strong>; Lord Shiva also stays in attendance. Element: fire (Agni). The lotus is dazzling with white light. Recitation: <em>Hring (ह्रीं)</em>.</p>
+      <div class="sub-head">The most important teaching about Floor 3</div>
+      <p>This is one of Saksena's most profound observations: <strong>Animals, birds, insects, and reptiles live only on floors 1–3</strong>. Nature has not developed their higher chakras — they have no thinking power or wisdom like humans. They eat (Nabhi), procreate (Indriya), and rest/eliminate (Guda). So long as a human being is entangled in only these three chakras, they are no better than an animal.</p>
+      <p>Lord Vishnu rests on the coiled serpent Sheshnag — represented by the coiled intestines at the navel. His consort Lakshmi directs all operations of nourishment and maintenance.</p>
+      <blockquote>"When he rises above them, he comes to the next Chakra HRIDAYA — the heart — and rises above the animal kingdom. Lord Shiva is also named Pashupati-Nath — lord of the animal kingdom."</blockquote>
+      <div class="ref">— Dr. H.N. Saksena, Ch. II</div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-hindu">Manipura — the Jewel City</span>
+      <span class="section-label">Tantric and yogic accounts</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p><em>Manipura</em> (मणिपूर) means "jewel city" — mani (jewel) + pura (city). Located at the solar plexus/navel, it is the seat of the fire element, digestive fire (<em>Agni</em>), and personal power. The ten petals of Manipura (in mainstream Tantra; Saksena gives 8) carry the seed syllables: ḍaṃ, ḍhaṃ, ṇaṃ, taṃ, thaṃ, daṃ, dhaṃ, naṃ, paṃ, phaṃ.</p>
+      <p>The Rudra Shiva (fierce aspect) presides here in Tantric tradition, with Lakini Shakti as his power. The ram is the vehicle — symbolising the fire element's aggressive, transforming quality. The downward-pointing triangle within the lotus represents the fire element and its transformative heat.</p>
+      <div class="sub-head">Vishnu connection</div>
+      <p>Saksena gives Vishnu as the deity here — Vishnu the Preserver, whose function is maintenance and nourishment, exactly as the navel feeds the foetus and the digestive fire maintains the body. The coiled intestines = Sheshnag (the cosmic serpent bed of Vishnu) is one of the most beautiful symbolic correspondences in the entire system.</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-vedic">Bhagavad Gita</span>
+      <span class="section-label">The fire of digestion and Vaishvanara</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <blockquote>"I am the fire of digestion in the bodies of all living entities, and I join with the air of life, outgoing and incoming, to digest the four kinds of foodstuff."</blockquote>
+      <div class="ref">— Bhagavad Gita 15.14 (Krishna speaking)</div>
+      <p>Krishna here names himself as <strong>Vaishvanara</strong> — the digestive fire residing at the navel/solar plexus. This is a direct scriptural reference to the fire element of Manipura/Nabhi Chakra. The Chandogya Upanishad (5.18-24) elaborates the five fires of the Vaishvanara in the human body, with the navel fire as the central one.</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-buddhist">Buddhism &amp; other traditions</span>
+      <span class="section-label">The fire element and personal will</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p>In <strong>Tibetan Buddhist Tantra</strong>, the navel chakra (<em>Nabhi chakra</em>) is associated with the fire element and is the seat of <em>Tummo</em> (inner heat) — the famous practice where meditators generate intense body heat in freezing temperatures. This is the same fire energy Saksena describes — when properly awakened and directed, it becomes a vehicle for higher consciousness.</p>
+      <p>In <strong>Traditional Chinese Medicine</strong>, the corresponding point is the <em>Dantian</em> (丹田) — the "cinnabar field" — located just below the navel. This is considered the body's primary energy reservoir in Taoist and martial arts traditions. Chi Kung (Qigong) begins by building energy in the Dantian.</p>
+      <p>In <strong>Japanese Zen</strong>, the <em>Hara</em> (腹) — the navel centre — is the seat of awareness in seated meditation. "Breathing from the Hara" is the foundation of Zazen practice.</p>
+    </div>
+  </div>
+
+  <div class="floor-nav">
+    <button onclick="showFloor(2)">← Floor 2</button>
+    <button onclick="showFloor(4)">Floor 4 →</button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- FLOOR 4 — HRIDAYA / ANAHATA -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="floor-panel" id="floor-4">
+  <div class="progress-bar"><div class="progress-fill" style="width:22%"></div></div>
+  <div class="floor-header">
+    <div class="floor-number-big">4</div>
+    <div class="floor-title-block">
+      <h2>Hridaya / Anahata Chakra</h2>
+      <div class="sanskrit">हृदय चक्र · अनाहत · The Heart · Unstruck Sound</div>
+    </div>
+  </div>
+  <div class="facts-bar">
+    <div class="fact-chip">Petals: <span>12 (blue)</span></div>
+    <div class="fact-chip">Element: <span>Vayu (atmosphere)</span></div>
+    <div class="fact-chip">Deity: <span>Shiva &amp; Gauri</span></div>
+    <div class="fact-chip">Recitation: <span>Soham (सोऽहं)</span></div>
+    <div class="fact-chip">Mantra: <span>OM mahah</span></div>
+    <div class="fact-chip">Sufi: <span>Qalb — starting point</span></div>
+    <div class="fact-chip">Key: <span>Rises above animal kingdom</span></div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head open" onclick="toggleSection(this)">
+      <span class="section-tag tag-saksena">Saksena</span>
+      <span class="section-label">Full account — the human threshold</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body open">
+      <p>The <strong>fourth chakra</strong>, located on the heart (left side of chest), at the Cordial Plexus. Twelve petals, blue. Element: Vayu (atmosphere). Deity: <strong>Lord Shiva</strong> in meditation with consort <strong>Gauri</strong>. Recitation: <em>Soham</em> (so'ham — "I am That").</p>
+      <div class="sub-head">Shiva's symbolism here</div>
+      <p>Shiva has conquered all desires, burnt them, and rubbed their ashes on his body. Poisonous reptiles creep over him harmlessly — the human being's wants and desires are like these reptiles, but when conquered they do no harm. The <strong>Nandi</strong> (sacred bull) sits silent before Shiva — Nandi symbolises the Brahmandi Mana (universal mind) which has stopped all its vigorous movements with the extinction of desire. Yet Shiva rides Nandi at will — he remains master of the mind.</p>
+      <div class="sub-head">Why the Sufi path begins here</div>
+      <p>The Sufis begin their entire meditation at this point (Qalb). Their experience: meditating on the heart, with its four additional nearby points (Rooh, Sar, Khafi, Aqfa), automatically controls the lower chakras without producing dangerous Siddhis. Saksena praises this approach for modern practitioners with limited time.</p>
+      <blockquote>"By reciting the word Soham, this Chakra is subdued. All the sense organs come under direct control."</blockquote>
+      <div class="ref">— Dr. H.N. Saksena, Ch. II (Columnar Table)</div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-sufi">Sufism — the Qalb and the five Lataif</span>
+      <span class="section-label">The heart as the primary meditation centre</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p>In Sufism, the <strong>Qalb</strong> (قلب — heart) is the primary spiritual organ. The Sufi path begins with the purification of the Qalb through Dhikr (remembrance of God). The heartbeat is affiliated with the name of God — every heartbeat recites "Allah" or "Hu" automatically, all 24 hours, without the disciple's conscious effort.</p>
+      <p>The five Sufi Lataif centred on the heart (as described by Mahatma Ramchandraji of Fatehgarh, referenced by Saksena): <strong>Qalb</strong> (heart, left), <strong>Rooh</strong> (spirit, right), <strong>Sar</strong> (secret, 4–5 inches above heart on left), <strong>Khafi</strong> (hidden, above Rooh), <strong>Aqfa</strong> (most hidden, below throat). The heartbeat vibration is heard differently at each point — each carries its own quality of divine resonance.</p>
+      <blockquote>"The constant and continuous help of the Murshid (Sat-Guru) is imperative and without which no progress is possible."</blockquote>
+      <div class="ref">— Mahatma Ramchandraji of Fatehgarh, as cited by Saksena</div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-sikh">Gurbani / SGGS</span>
+      <span class="section-label">The heart as dwelling of God in Sikh scripture</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p>The heart (Hirdaya / Hird) is one of the most frequently mentioned inner locations in SGGS. Guru Nanak repeatedly points to the heart as the primary dwelling place of the Divine: <em>"Jis hirdai vasi Naam, so sant suhela"</em> — the saint in whose heart the Name dwells is truly blessed.</p>
+      <blockquote>"Hradaya wich Raam vasai, sada sada dinaara" — Within the heart dwells Ram, always, forever shining.</blockquote>
+      <p>The Anahata (unstruck sound) is central to SGGS. The Anahad Shabda — the unstruck celestial music — is what the Sikh meditator seeks to hear within. It is first encountered at this floor (the heart) as a faint tinkling sound, and grows clearer as the aspirant ascends. SGGS: <em>"Anhad sabad dhuni bajai, tis ka ant na paya"</em> — The unstruck sound vibrates; its end cannot be found.</p>
+      <div class="sub-head">Kabir in SGGS</div>
+      <blockquote>"Dwadash kamal hridaye ke mahi, bung gaur Shiv dhyan lagai. Soham shabd tahan dhun chhai, gan karai jai-jai kaara hai."</blockquote>
+      <p>Translation: The heart has a lotus of 12 petals. Shiva and Gauri sit in meditation there. The Shabda Soham resounds. The Ganas (attendants) praise their Lord.</p>
+      <div class="ref">— Kabir, Shabad verse 6 (included in SGGS)</div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-vedic">Vedas, Upanishads &amp; Bhagavad Gita</span>
+      <span class="section-label">The heart as the seat of Brahman</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p>The Chandogya Upanishad (8.1.1–3) contains one of the most famous passages on the heart: <em>"Atha yad idam asmin brahma-pure daharaṃ puṇḍarīkaṃ veśma"</em> — "There is a city of Brahman (the body), and within it a small lotus, and within that a small space. That small space is as great as the universe. Heaven and earth are contained within it."</p>
+      <p>The Katha Upanishad (2.1.12) states the Self is <em>"the size of a thumb, dwelling in the heart"</em> — this is the Purusha in the cave of the heart (hridaya-guha). The Mundaka Upanishad (3.1.7): <em>"When the seer sees the golden-hued Creator, the Lord, the Purusha, the source of Brahma, then the wise man shakes off good and evil and becomes taintless, reaching supreme identity."</em></p>
+      <blockquote>"The Lord dwells in the hearts of all beings, O Arjuna, causing all beings to revolve by His illusive power (Maya)."</blockquote>
+      <div class="ref">— Bhagavad Gita 18.61</div>
+      <p>BG 8.12 describes the yogic withdrawal process: <em>"Controlling all the doors of the body, confining the mind in the heart..."</em> — the heart is the gathering point of consciousness before it withdraws further upward.</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-buddhist">Christianity, Buddhism &amp; others</span>
+      <span class="section-label">The heart across world traditions</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <div class="sub-head">Christianity</div>
+      <p><em>"Blessed are the pure in heart, for they shall see God."</em> (Matthew 5:8) — The heart's purification is the Christian mystical path's central theme. The Hesychast tradition of Eastern Orthodox Christianity practices <em>prayer of the heart</em> — the Jesus Prayer repeated until it synchronises with the heartbeat and becomes continuous, exactly mirroring the Sufi Qalb practice.</p>
+      <div class="sub-head">Buddhism</div>
+      <p>The <strong>Anahata</strong> corresponds in Tibetan Tantra to the <em>Dharma chakra</em> — the eight-spoke wheel of dharma. The air element governs it; the heart is the home of the <em>indestructible drop</em> (Tibetan: <em>thigle</em>) — the most subtle consciousness that persists through death.</p>
+      <div class="sub-head">Islam</div>
+      <p>The Quran: <em>"Verily, in the remembrance of Allah do hearts find rest."</em> (13:28). The Sufi path of <em>Zikr-e-Qalb</em> (remembrance within the heart) is the primary practice of most Sufi orders — the Qalb is activated and its natural dhikr ("Allah, Allah") is made conscious.</p>
+    </div>
+  </div>
+
+  <div class="floor-nav">
+    <button onclick="showFloor(3)">← Floor 3</button>
+    <button onclick="showFloor(5)">Floor 5 →</button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- FLOOR 5 — KANTHA / VISHUDDHA -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="floor-panel" id="floor-5">
+  <div class="progress-bar"><div class="progress-fill" style="width:27.5%"></div></div>
+  <div class="floor-header">
+    <div class="floor-number-big">5</div>
+    <div class="floor-title-block">
+      <h2>Kantha / Vishuddha Chakra</h2>
+      <div class="sanskrit">कण्ठ चक्र · विशुद्ध · The Throat · Purification</div>
+    </div>
+  </div>
+  <div class="facts-bar">
+    <div class="fact-chip">Petals: <span>16 (dark blackish blue)</span></div>
+    <div class="fact-chip">Element: <span>Akasha (space)</span></div>
+    <div class="fact-chip">Deity: <span>Durga / Avidya</span></div>
+    <div class="fact-chip">Recitation: <span>Shring (श्रीं)</span></div>
+    <div class="fact-chip">Mantra: <span>OM janah</span></div>
+    <div class="fact-chip">Sufi: <span>Aqfa-Aqfa</span></div>
+    <div class="fact-chip">Seat of: <span>Malin Maya</span></div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head open" onclick="toggleSection(this)">
+      <span class="section-tag tag-saksena">Saksena</span>
+      <span class="section-label">Seat of Malin Maya and mother of the three deities</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body open">
+      <p>Located at the throat. Sixteen petals, dark blackish blue. Element: Akasha (space). Deity: <strong>Avidya</strong> (ignorance — as opposed to Vidya/knowledge), also called <strong>Durga</strong>. The Shuddha Maya (pure Maya) commences from floor 6 upward; the <strong>Malin Maya</strong> (impure/tainted Maya) stays in this throat chakra.</p>
+      <p>The two Gunas dominant here are <strong>Rajas</strong> and <strong>Tamas</strong>. When they flow toward the heart, the mind alternates between good and bad. When flowing to the lower chakras, they produce anger, lust, desire for food, and lethargy.</p>
+      <div class="sub-head">Durga as mother of the three deities</div>
+      <p>This is a remarkable teaching: <strong>Goddess Durga</strong> (Avidya) is the mother of Brahma, Vishnu, and Shiva. The three great cosmic functions — creation, maintenance, destruction — originate from ignorance (Avidya) at the throat. This means all of gross creation, despite its grandeur, has its root in the limitations of Maya at floor 5.</p>
+      <blockquote>"The centre of origin of these powers is the throat — the headquarters of goddess Avidya or Malin Maya."</blockquote>
+      <div class="ref">— Dr. H.N. Saksena, Ch. II</div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-hindu">Vishuddha — purification centre</span>
+      <span class="section-label">Sound, space, and the purified will</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p><em>Vishuddha</em> (विशुद्ध) means "especially pure" — the chakra of purification through sound and space. Located at the throat/neck, governing speech, hearing, and communication. Sixteen petals carrying the vowels of Sanskrit. The presiding deity is <strong>Ambara</strong> (Akasha) or Panchavaktra Shiva (five-faced Shiva).</p>
+      <p>The Sadashiva presides here — pure, eternal Shiva beyond all qualities. The white elephant is the vehicle — Airavata — symbolising the purified mind carrying immense power. The element Akasha (space/ether) is the subtlest of the five elements, the medium through which sound travels. All the other elements dissolve back into Akasha.</p>
+      <div class="sub-head">The Ambrosial nectar</div>
+      <p>When Vishuddha is activated, the <em>Amrita</em> (nectar) produced at the crown chakra (which normally falls into the solar plexus fire and is "burnt up") is instead preserved and tasted here at the throat. This is the yogic basis for claims of Yogis surviving without food — they live on this inner Amrita. This nectar is mentioned in Saksena's description of the Shoonya region (floor 9) as Man Sarovar.</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-sikh">Gurbani &amp; Sikhism</span>
+      <span class="section-label">The Word / Shabad as throat's highest function</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p>In Gurbani, the throat is the vehicle of the <strong>Shabad</strong> (the Word, the divine sound current). The Guru's Shabad, transmitted through speech and song, is considered to carry the same energy as the inner Shabad experienced in meditation. SGGS: <em>"Satgur ki bani sat sat karahu" </em> — Accept as absolutely true the bani (word) of the Satguru.</p>
+      <p>The Sikh practice of <em>Kirtan</em> (devotional singing) is essentially a throat-chakra practice elevated to its highest function — the voice becomes a vehicle for the divine Shabad rather than for idle speech, deception, or worldly chatter. The Vishuddha's purification transforms the throat from an instrument of Avidya (unconscious speech) to an instrument of Vidya (conscious, divine sound).</p>
+    </div>
+  </div>
+
+  <div class="floor-nav">
+    <button onclick="showFloor(4)">← Floor 4</button>
+    <button onclick="showFloor(6)">Floor 6 →</button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- FLOOR 6 — AAGYA / TISRA TIL -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="floor-panel" id="floor-6">
+  <div class="progress-bar"><div class="progress-fill" style="width:33%"></div></div>
+  <div class="floor-header">
+    <div class="floor-number-big">6</div>
+    <div class="floor-title-block">
+      <h2>Aagya Chakra / Tisra Til</h2>
+      <div class="sanskrit">आज्ञा चक्र · तिसरा तिल · Third Eye · Gateway to the Inner Worlds</div>
+    </div>
+  </div>
+  <div class="facts-bar">
+    <div class="fact-chip">Petals: <span>2 (dark brown)</span></div>
+    <div class="fact-chip">Element: <span>Mind (Manas)</span></div>
+    <div class="fact-chip">Soul's HQ: <span>While awake</span></div>
+    <div class="fact-chip">Recitation: <span>Anhad</span></div>
+    <div class="fact-chip">Mantra: <span>OM tapah</span></div>
+    <div class="fact-chip">Sufi: <span>Nukta-e-Suweda</span></div>
+    <div class="fact-chip">Key: <span>Terminus for Pranayam yogis</span></div>
+    <div class="fact-chip">Gateway: <span>Mukti-Dwara</span></div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head open" onclick="toggleSection(this)">
+      <span class="section-tag tag-saksena">Saksena</span>
+      <span class="section-label">The most detailed account — the soul's headquarters</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body open">
+      <p>Located between and behind the eyebrows, about an inch deep in the head. Two petals, dark brown. The <strong>headquarter of the soul while awake</strong> — while asleep it descends to the throat; in deep sleep to the heart. The current of life converges here from the higher chakras and spreads down to the lower body.</p>
+      <div class="sub-head">The dove and the black wasp</div>
+      <p>Kabir's beautiful metaphor: the soul resides here as the <strong>Baga</strong> (white dove — pure, clean) and the physical mind as the <strong>Bhanwara</strong> (black wasp — dark, restless). The Pindi Mana (physical mind) can reach no higher than this. Above the Aagya, the soul is accompanied by the <em>Brahmandi Mana</em> (universal mind) — minute, pure, capable of higher travel.</p>
+      <div class="sub-head">The eye of the needle — Mukti-Dwara</div>
+      <p>Just above the Aagya is the Taramandal (starfield) and then a <strong>Mukti-Dwara</strong> (gateway of liberation) as thin as the eye of a needle or one-tenth of a mustard seed. The Pindi Mana is as huge as an elephant — it cannot pass through. Only the Sat-Guru can transform the gross mind into the minute Brahmandi Mana small enough to cross. Beyond this crossing, the soul is free from the cycle of births and deaths.</p>
+      <div class="sub-head">Why Hatha Yogis stop here</div>
+      <p>This is the highest that Pranayama can reach — Prana (breath) dissolves in Chidakash (cosmos) here and goes no further. Religions of the world also have their highest approach only to this point. Saints begin their real journey from here.</p>
+      <blockquote>"It is impossible, but not difficult, to reach the Aagya Chakra without personal intervention through guidance by SAT-GURU. To go above, it is necessary to take shelter of a SAT-GURU whose own reach is to the highest peak."</blockquote>
+      <div class="ref">— Dr. H.N. Saksena, Ch. II</div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-vedic">Vedas &amp; Upanishads</span>
+      <span class="section-label">The Brahmarandhra and the third eye in scripture</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p>The <strong>Brahmarandhra</strong> (Brahma's cleft — the opening at the crown) is mentioned in the Upanishads as the passage through which consciousness exits the body at death for liberated souls. Saksena's Mukti-Dwara (the eye of the needle just above the Aagya) corresponds to this gateway described in the Katha Upanishad.</p>
+      <p>The <em>Mandukya Upanishad</em> describes four states of consciousness: Jagrat (waking), Svapna (dream), Sushupti (deep sleep), and Turiya (the fourth, transcendent). The Aagya Chakra is the pivot — in waking, the soul resides here; as it withdraws, it accesses higher states. Turiya — the pure witness consciousness — begins to be glimpsed above the Aagya.</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-sikh">SGGS &amp; Kabir in Gurbani</span>
+      <span class="section-label">Tisra Til, Shiv Netra, and the inner light</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p>The Aagya Chakra is called <strong>Tisra Til</strong> (the third spot/sesame) in the Sant Mat and Sikh mystical vocabulary — a tiny point between the eyebrows that is the gateway to all inner experience. Gurbani's instruction to <em>"focus your surat (attention) at the Tisra Til"</em> is the fundamental meditation instruction of this lineage.</p>
+      <blockquote>"Ankh kaan mukh band karaao, Anhad jhingaa shabd sunaao. Donon til ik taar milaao, tab dekho gulzaara hai."</blockquote>
+      <p>Translation (Kabir, SGGS): Close the eyes, the ears, and the mouth. Hear the Anhad (limitless) whistling sound. Bring both eye-balls nearer (converge them at the third eye). Then behold the celestial garden.</p>
+      <div class="ref">— Kabir, Shabad verse 10 (included in SGGS)</div>
+      <p>The Dasam Dwar (tenth door) is reached by first opening this sixth gate properly. Guru Nanak: <em>"Kiyu gur binu trikuti chhutsi"</em> — Without the Satguru, how can one cross the Trikuti (which begins just above this floor)?</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-sufi">Sufism &amp; Islam</span>
+      <span class="section-label">Nukta-e-Suweda — the black point</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <p>The Sufis call the Aagya Chakra <strong>Nukta-e-Suweda</strong> (نقطہ سودا) — the "black point." It is the seat of the universal mind and the gateway to the inner divine realms. Saksena: "At this place the mind gets rid of darkness and comes into the holy light of the Sat — the divine. He becomes very pure."</p>
+      <p>In Islamic mysticism, the concept of the <em>Batin</em> (inward, hidden) dimension begins its deepest expression here. The outer senses (Zahir) govern floors 1–5; at floor 6, the inner sense (<em>Basirah</em> — inner vision, spiritual sight) awakens. The Quran: <em>"Indeed, it is not the eyes that go blind but it is the hearts within the chests that go blind."</em> (22:46) — the "heart's sight" is the third eye.</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-tag tag-buddhist">Buddhism, Christianity &amp; others</span>
+      <span class="section-label">The third eye across world traditions</span>
+      <span class="section-chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <div class="sub-head">Buddhism</div>
+      <p>In Buddhist iconography, the <em>urna</em> — the dot between the eyebrows of the Buddha — represents the third eye of wisdom and spiritual sight. In Tibetan Buddhist Tantra, this chakra (called the <em>Ajna chakra</em>) is associated with the guru's consciousness and the state of <em>Rigpa</em> — pure awareness — begins to be directly accessed here.</p>
+      <div class="sub-head">Christianity</div>
+      <p><em>"The lamp of the body is the eye. If therefore your eye is single (focused), your whole body will be full of light."</em> (Matthew 6:22) — Many Christian mystics interpret "the single eye" as the third eye, the pineal gland, or the point of concentrated spiritual attention. When attention is "single" (undivided, withdrawn from multiplicity), the body fills with light.</p>
+      <div class="sub-head">Taoism &amp; Chinese tradition</div>
+      <p>In Taoist inner alchemy, the point between the eyebrows is called the <em>Upper Dantian</em> — the seat of Shen (spirit). The practice of <em>Nei Guan</em> (inner observation) and <em>Kan and Li</em> (water and fire union) converge here in advanced Taoist meditation.</p>
+    </div>
+  </div>
+
+  <div class="floor-nav">
+    <button onclick="showFloor(5)">← Floor 5</button>
+    <button onclick="showFloor(7)">Floor 7 — Brahmanda begins →</button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- FLOORS 7–18: PHASE 2 PLACEHOLDER -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="floor-panel" id="floor-7">
+  <div class="progress-bar"><div class="progress-fill" style="width:38.5%"></div></div>
+  <div class="floor-header">
+    <div class="floor-number-big">7</div>
+    <div class="floor-title-block">
+      <h2>Sahasra-Dal-Kamal <span class="phase-badge">Phase 2 — coming next</span></h2>
+      <div class="sanskrit">सहस्र दल कमल · Thousand-petaled Lotus · Triloki Nath / Jyoti Niranjan</div>
+    </div>
+  </div>
+  <div class="facts-bar">
+    <div class="fact-chip">Petals: <span>1,000 (white dazzling)</span></div>
+    <div class="fact-chip">Deity: <span>Triloki Nath / Jyoti Niranjan</span></div>
+    <div class="fact-chip">Sound: <span>Big bells &amp; conch</span></div>
+    <div class="fact-chip">Sufi: <span>Alam-e-Jabroot</span></div>
+    <div class="fact-chip">Warning: <span>Many stop here mistakenly</span></div>
+  </div>
+  <p style="color:var(--muted); padding: 1rem 0;">Full cross-religious content for floors 7–12 (Brahmanda region) will be added in Phase 2. This includes the rich SGGS references to Trikuti, Daswan Dwar, Shoonya, Bhanwar Gufa, and Sach Khand, plus Sufi, Buddhist, Christian, and Kabir's bani comparisons.</p>
+  <div class="floor-nav">
+    <button onclick="showFloor(6)">← Floor 6</button>
+    <button onclick="showFloor(8)">Floor 8 →</button>
+  </div>
+</div>
+
+<script>
+['8','9','10','11','12','13','14','15','16','17','18'].forEach(n => {
+  const names = {
+    '8':'Trikuti','9':'Shoonya / Daswan Dwar','10':'Maha Shoonya',
+    '11':'Bhanwar Gufa','12':'Sach Khand / Sat Lok',
+    '13':'Alakha Lok','14':'Agama Lok','15':'Akaha Lok / Anami Purush',
+    '16':'Secret stage 16','17':'Secret stage 17','18':'Secret stage 18'
+  };
+  const pct = {'8':44,'9':50,'10':55.5,'11':61,'12':66.5,'13':72,'14':77.5,'15':83,'16':88.5,'17':94,'18':100};
+  const prev = parseInt(n)-1;
+  const next = parseInt(n)+1;
+  const panel = document.createElement('div');
+  panel.className = 'floor-panel';
+  panel.id = 'floor-'+n;
+  panel.innerHTML = `
+    <div class="progress-bar"><div class="progress-fill" style="width:${pct[n]}%"></div></div>
+    <div class="floor-header">
+      <div class="floor-number-big">${n}</div>
+      <div class="floor-title-block">
+        <h2>${names[n]} <span class="phase-badge">Phase 2 — coming next</span></h2>
+        <div class="sanskrit">Full content being researched and written</div>
+      </div>
+    </div>
+    <p style="color:var(--muted);padding:1rem 0;">
+      ${parseInt(n) <= 12
+        ? 'Full cross-religious content for this floor (Brahmanda region) will be added in Phase 2, including Gurbani / SGGS, Kabir, Sufi, Buddhist, and comparative religion references.'
+        : 'Full content for this Dayal Desh / secret stage floor will be added in Phase 3, including the Alakh Niranjan discussion, SGGS upper-plane references, and all comparative traditions.'}
+    </p>
+    <div class="floor-nav">
+      <button onclick="showFloor(${prev})">← Floor ${prev}</button>
+      ${parseInt(n) < 18 ? `<button onclick="showFloor(${next})">Floor ${next} →</button>` : '<button disabled>apex reached</button>'}
+    </div>`;
+  document.getElementById('main').appendChild(panel);
+});
+</script>
+
+</main>
+</div>
+
+<script>
+function showFloor(n) {
+  document.querySelectorAll('.floor-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.floor-btn').forEach(b => b.classList.remove('active'));
+  const panel = document.getElementById('floor-'+n);
+  const btn = document.getElementById('btn-'+n);
+  if (panel) panel.classList.add('active');
+  if (btn) { btn.classList.add('active'); btn.scrollIntoView({block:'nearest',behavior:'smooth'}); }
+  document.getElementById('main').scrollTo({top:0,behavior:'smooth'});
+}
+
+function toggleSection(head) {
+  head.classList.toggle('open');
+  const body = head.nextElementSibling;
+  body.classList.toggle('open');
+}
+</script>
+</body>
+</html>
