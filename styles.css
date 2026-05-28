@@ -844,28 +844,171 @@ main {
 @media (max-width: 768px) {
   body {
     overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
   }
   .app-container {
     flex-direction: column;
-  }
-  aside {
-    width: 100%;
     height: auto;
-    max-height: 280px;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
+    min-height: calc(100vh - 70px);
   }
   header {
     flex-direction: column;
     height: auto;
-    padding: 1rem;
+    padding: 1.2rem 1rem;
     gap: 1rem;
+  }
+  .brand {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+  .brand h1 {
+    font-size: 1.4rem;
+  }
+  .nav-tabs {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    gap: 6px;
+    padding: 4px 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  .nav-tabs::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+  .tab-btn {
+    flex-shrink: 0;
+    padding: 6px 12px;
+    font-size: 11px;
   }
   .search-box {
     width: 100%;
   }
+  
+  /* Horizontal native-style slider for floor selector on mobile */
+  aside {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.75rem 1rem;
+    white-space: nowrap;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    gap: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  aside::-webkit-scrollbar {
+    display: none;
+  }
+  .region-header {
+    display: none !important;
+  }
+  .floor-btn {
+    width: auto;
+    padding: 6px 12px;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    flex-shrink: 0;
+    border-radius: 8px;
+    gap: 8px;
+  }
+  .floor-btn:hover {
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .floor-btn.active {
+    border-left-color: transparent;
+    border-bottom-color: var(--accent);
+    background: rgba(196, 169, 106, 0.08);
+  }
+  
   main {
-    padding: 1.5rem;
+    padding: 1.25rem 1rem;
+    overflow-y: visible;
+  }
+  
+  /* Typography and banners scaling */
+  .floor-banner {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  .floor-num-giant {
+    font-size: 3.5rem;
+    margin-bottom: -0.5rem;
+  }
+  .floor-title-block h2 {
+    font-size: 1.7rem;
+  }
+  .floor-sanskrit {
+    font-size: 12px;
+  }
+  
+  /* Swipeable Comparative Matrix */
+  .matrix-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .matrix-table {
+    min-width: 850px;
+  }
+  
+  /* Infographic and widget scaling */
+  .sensory-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .lotus-svg {
+    max-width: 180px;
+  }
+  
+  /* Interactive components heights scaling */
+  .graph-viewport {
+    height: 380px;
+  }
+  .gallery-viewport, 
+  .gallery-legend-panel, 
+  .energy-viewport, 
+  .energy-sidebar {
+    height: 400px;
+  }
+  
+  /* Sound timeline adjustments */
+  .sound-node {
+    gap: 1rem;
+  }
+  .sound-marker {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .sound-node::before {
+    left: 16px;
+  }
+  
+  /* Card body adjustments */
+  .card {
+    padding: 1.25rem;
+  }
+  .card-title {
+    font-size: 1.15rem;
+  }
+  .card-body blockquote {
+    font-size: 15px;
+    padding-left: 1rem;
+    margin: 1rem 0;
+  }
+  
+  /* Navigation buttons adjustments */
+  .floor-view-nav {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    gap: 1rem;
   }
 }
 
