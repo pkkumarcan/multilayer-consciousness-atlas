@@ -392,8 +392,6 @@ function renderFloorDetails(floor) {
       </div>
     `;
   }
-    `;
-  }
 
   const cardsContainer = document.getElementById('detail-cards');
   cardsContainer.innerHTML = '';
