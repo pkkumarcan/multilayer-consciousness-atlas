@@ -169,9 +169,35 @@ function renderFloorDetails(floor) {
 
   let petalsSvg = '';
   if (count > 0) {
-    for (let i = 0; i < count; i++) {
-      const rotation = (i * 360) / count;
-      petalsSvg += `<path d="M 150 150 C 120 80, 135 40, 150 40 C 165 40, 180 80, 150 150" fill="url(#petalGrad)" stroke="${activeColor}" stroke-width="1" opacity="0.75" transform="rotate(${rotation}, 150, 150)" />`;
+    if (count >= 1000) {
+      // Premium dense radiating mandala geometry for infinite/massive spiritual fields (e.g. Levels 7, 12, 13, etc.)
+      // Draw concentric layers of petals with varying scale, count, and opacity to avoid crashing while looking extremely detailed
+      const layers = [
+        { scale: 1.0, opacity: 0.25, count: 64 },
+        { scale: 0.85, opacity: 0.45, count: 48 },
+        { scale: 0.7, opacity: 0.6, count: 36 },
+        { scale: 0.5, opacity: 0.85, count: 24 }
+      ];
+      
+      layers.forEach((layer) => {
+        const layerCount = layer.count;
+        for (let i = 0; i < layerCount; i++) {
+          const rotation = (i * 360) / layerCount + (layer.scale * 15);
+          petalsSvg += `<path d="M 150 150 C 120 80, 135 40, 150 40 C 165 40, 180 80, 150 150" fill="url(#petalGrad)" stroke="${activeColor}" stroke-width="0.75" opacity="${layer.opacity}" transform="translate(150, 150) scale(${layer.scale}) translate(-150, -150) rotate(${rotation}, 150, 150)" />`;
+        }
+      });
+      
+      // Celestial radiating overlays to enhance the sacred geometry feel
+      petalsSvg += `
+        <circle cx="150" cy="150" r="120" fill="none" stroke="${activeColor}" stroke-dasharray="1,5" stroke-width="1.5" opacity="0.4" />
+        <circle cx="150" cy="150" r="95" fill="none" stroke="${activeColor}" stroke-dasharray="4,4" stroke-width="1" opacity="0.3" />
+      `;
+    } else {
+      // Normal petal loop for lower levels (up to 999 petals, e.g. 2, 4, 6, 8, 12, 16, 88)
+      for (let i = 0; i < count; i++) {
+        const rotation = (i * 360) / count;
+        petalsSvg += `<path d="M 150 150 C 120 80, 135 40, 150 40 C 165 40, 180 80, 150 150" fill="url(#petalGrad)" stroke="${activeColor}" stroke-width="1" opacity="0.75" transform="rotate(${rotation}, 150, 150)" />`;
+      }
     }
   } else {
     const rayCount = 48;
