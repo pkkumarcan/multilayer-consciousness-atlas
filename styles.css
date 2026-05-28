@@ -1021,8 +1021,8 @@ main {
    ============================================================================== */
 
 .floor-hero-visualizer {
-  margin: 1.5rem 0 2rem;
-  padding: 2.2rem;
+  margin: 1.5rem auto 2rem; /* Centers the container horizontally in the main column */
+  padding: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1032,6 +1032,8 @@ main {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 460px; /* Constrains the max-width to a beautiful portrait layout */
 }
 
 .floor-hero-visualizer .subtle-visualizer {
@@ -1401,7 +1403,7 @@ main {
 
 .esoteric-art-frame {
   width: 100%;
-  height: 220px;
+  height: 580px; /* Tall portrait height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1409,35 +1411,42 @@ main {
   overflow: hidden;
   background: rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.03);
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.7);
   position: relative;
+  transition: border-color 0.25s ease;
 }
+.esoteric-art-frame:hover {
+  border-color: rgba(196, 169, 106, 0.25);
+}
+
 .esoteric-img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Expands to beautifully fill the portrait frame */
+  border-radius: 8px;
   transition: var(--transition);
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.65));
 }
 .esoteric-art-frame:hover .esoteric-img {
-  transform: scale(1.05);
-  filter: drop-shadow(0 4px 18px var(--glow-color)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+  transform: scale(1.03);
+  filter: drop-shadow(0 8px 30px var(--glow-color)) drop-shadow(0 6px 20px rgba(0, 0, 0, 0.65));
 }
 
 .esoteric-placeholder {
-  padding: 1.5rem;
+  padding: 2.5rem;
   text-align: center;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 13px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  justify-content: center; /* Centered vertically inside the tall frame */
+  height: 100%;
+  gap: 16px;
 }
 .esoteric-placeholder svg {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   fill: var(--muted);
   opacity: 0.5;
 }
