@@ -248,16 +248,26 @@ function renderFloorDetails(floor) {
 
   const level = floor.classification.level;
   let esotericArtHtml = '';
-  if (level === 1 || level === 2 || level === 3 || level === 4) {
-    const imgName = level === 1 ? '1st chakra.png' :
-                    level === 2 ? '2nd Chakra.png' :
-                    level === 3 ? '3rd chakra.png' :
-                    '4th chakra.png';
+  if (level >= 1 && level <= 12) {
+    let imgName = '';
+    if (level === 1) imgName = '1st chakra.png';
+    else if (level === 2) imgName = '2nd Chakra.png';
+    else if (level === 3) imgName = '3rd chakra.png';
+    else if (level === 4) imgName = '4th chakra.png';
+    else if (level === 5) imgName = '5th floor.png';
+    else if (level === 6) imgName = '6th floor.png';
+    else if (level === 7) imgName = '7th floor.png';
+    else if (level === 8) imgName = '8th floor.png';
+    else if (level === 9) imgName = '9th FLoor.png';
+    else if (level === 10) imgName = '10th Floor.png';
+    else if (level === 11) imgName = '11th Floor.png';
+    else if (level === 12) imgName = '12th floor.png';
+
     esotericArtHtml = `
       <div class="esoteric-art-frame" style="--glow-color: ${activeColor}55;">
         <img src="${imgName}" alt="Esoteric Art of ${floor.canonical_name}" class="esoteric-img">
       </div>
-      <div class="visualizer-caption">Esoteric Painting (${level}${level === 1 ? 'st' : level === 2 ? 'nd' : level === 3 ? 'rd' : 'th'} Chakra) · <span style="color: var(--accent); font-weight: 500;">🔍 Zoom Artwork</span></div>
+      <div class="visualizer-caption">Esoteric Painting (${level}${level === 1 ? 'st' : level === 2 ? 'nd' : level === 3 ? 'rd' : 'th'} Level) · <span style="color: var(--accent); font-weight: 500;">🔍 Zoom Artwork</span></div>
     `;
   } else {
     esotericArtHtml = `
@@ -275,7 +285,7 @@ function renderFloorDetails(floor) {
   const heroContainer = document.getElementById('floor-hero-visualizer');
   if (heroContainer) {
     heroContainer.innerHTML = `
-      <div class="esoteric-hero-wrapper" ${level <= 4 ? 'onclick="openLightbox(\'art\')"' : ''} style="${level <= 4 ? 'cursor: zoom-in;' : ''} width: 100%; display: flex; flex-direction: column; align-items: center;">
+      <div class="esoteric-hero-wrapper" ${level <= 12 ? 'onclick="openLightbox(\'art\')"' : ''} style="${level <= 12 ? 'cursor: zoom-in;' : ''} width: 100%; display: flex; flex-direction: column; align-items: center;">
         ${esotericArtHtml}
       </div>
     `;
