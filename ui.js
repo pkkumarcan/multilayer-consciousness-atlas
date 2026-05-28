@@ -246,7 +246,6 @@ function renderFloorDetails(floor) {
     `;
   });
 
-  const level = floor.classification.level;
   let esotericArtHtml = '';
   if (level === 1 || level === 2 || level === 3 || level === 4) {
     const imgName = level === 1 ? '1st chakra.png' :
@@ -275,30 +274,8 @@ function renderFloorDetails(floor) {
   const heroContainer = document.getElementById('floor-hero-visualizer');
   if (heroContainer) {
     heroContainer.innerHTML = `
-      <div class="subtle-visualizer">
-        <!-- Visualizer Tabs Toggle -->
-        <div class="visualizer-tabs">
-          <button class="vis-tab-btn active" id="vis-tab-yantra" onclick="toggleVisualizerTab('yantra')">Sacred Yantra</button>
-          <button class="vis-tab-btn" id="vis-tab-art" onclick="toggleVisualizerTab('art')">Esoteric Art</button>
-        </div>
-
-        <!-- Tab 1 Pane: Sacred Yantra -->
-        <div id="vis-yantra-pane" style="display: block; width: 100%; cursor: zoom-in;" onclick="openLightbox('yantra')">
-          <svg viewBox="0 0 300 300" class="lotus-svg">
-            ${defsSvg}
-            <circle cx="150" cy="150" r="140" fill="url(#bgGlow)" stroke="${activeColor}" stroke-dasharray="3,5" stroke-width="0.75" opacity="0.35" />
-            <g class="lotus-group" style="--glow-color: ${activeColor};">
-              ${petalsSvg}
-            </g>
-            ${centerSvg}
-          </svg>
-          <div class="visualizer-caption">Procedural Sacred Geometry (${count > 0 ? `${count} Lotus Petals` : 'Formless Mandala'}) · <span style="color: var(--accent); font-weight: 500;">🔍 Zoom Yantra</span></div>
-        </div>
-
-        <!-- Tab 2 Pane: Esoteric Art -->
-        <div id="vis-art-pane" style="display: none; width: 100%; ${level <= 4 ? 'cursor: zoom-in;' : ''}" ${level <= 4 ? 'onclick="openLightbox(\'art\')"' : ''}>
-          ${esotericArtHtml}
-        </div>
+      <div class="esoteric-hero-wrapper" ${level <= 4 ? 'onclick="openLightbox(\'art\')"' : ''} style="${level <= 4 ? 'cursor: zoom-in;' : ''} width: 100%; display: flex; flex-direction: column; align-items: center;">
+        ${esotericArtHtml}
       </div>
     `;
   }
@@ -307,15 +284,15 @@ function renderFloorDetails(floor) {
   if (infoContainer) {
     infoContainer.innerHTML = `
       <div class="mapping-dashboard">
-        <div>
+        
+        <!-- Left Column -->
+        <div class="dashboard-col">
           <div class="dashboard-section-title">Cosmic Ascension Scale</div>
           <div class="realm-gauge-container">
             ${realmStepsHtml}
           </div>
-        </div>
 
-        <div>
-          <div class="dashboard-section-title">Physio-Spiritual Mapping</div>
+          <div class="dashboard-section-title" style="margin-top: 1.8rem;">Physio-Spiritual Mapping</div>
           <table class="dashboard-table">
             <tr>
               <th>Spiritual Axis</th>
@@ -336,55 +313,84 @@ function renderFloorDetails(floor) {
           </table>
         </div>
 
-        <div class="sensory-grid">
-          <div class="sensory-widget glass">
-            <div class="widget-header">Acoustic Current</div>
-            <svg viewBox="0 0 180 50" class="sound-wave-svg">
-              ${waveBars}
-            </svg>
-            <div class="widget-label">${floor.canonical.sound.split('(')[0]}</div>
-          </div>
-
-          <div class="sensory-widget glass">
-            <div class="widget-header">Inner Light Field</div>
-            <div class="light-swatch-box" style="background: radial-gradient(circle at center, ${activeColor} 0%, rgba(7,7,9,0.7) 100%);">
-              <span class="light-swatch-glow" style="background-color: ${activeColor}; box-shadow: 0 0 15px ${activeColor};"></span>
+        <!-- Right Column -->
+        <div class="dashboard-col">
+          <div class="dashboard-section-title">Sensory &amp; Geometric Fields</div>
+          
+          <div class="sensory-grid-three">
+            <!-- 1. Sacred Yantra Widget -->
+            <div class="sensory-widget glass yantra-widget" onclick="openLightbox('yantra')" style="cursor: zoom-in; height: 160px; justify-content: space-between;">
+              <div class="widget-header">Sacred Yantra</div>
+              <div class="yantra-svg-container" style="display: flex; align-items: center; justify-content: center; height: 90px; width: 100%;">
+                <svg viewBox="0 0 300 300" class="lotus-svg" style="max-height: 90px; width: auto;">
+                  ${defsSvg}
+                  <circle cx="150" cy="150" r="140" fill="url(#bgGlow)" stroke="${activeColor}" stroke-dasharray="3,5" stroke-width="0.75" opacity="0.35" />
+                  <g class="lotus-group" style="--glow-color: ${activeColor};">
+                    ${petalsSvg}
+                  </g>
+                  ${centerSvg}
+                </svg>
+              </div>
+              <div class="widget-label">${count > 0 ? `${count} Petals` : 'Mandala'} · <span style="color: var(--accent);">🔍 Zoom</span></div>
             </div>
-            <div class="widget-label" title="${floor.canonical.light || 'Nameless White Current'}">${floor.canonical.light ? floor.canonical.light.split('representing')[0].split(',')[0] : 'Formless White Light'}</div>
-          </div>
-        </div>
 
-        <!-- Ambient Sound Current Synthesizer -->
-        <div class="audio-widget glass">
-          <div class="audio-control-left">
-            <button class="audio-play-btn" id="audio-play-btn" onclick="toggleAudioSynthesizer(${floor.classification.level})" title="Play Audio Synthesizer">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </button>
-            <div class="audio-info">
-              <div class="audio-status-label" id="audio-status-label">Ambient Sound Current</div>
-              <div class="audio-title-label">${floor.canonical.sound.split('(')[0]}</div>
+            <!-- 2. Acoustic Current Widget -->
+            <div class="sensory-widget glass" style="height: 160px; justify-content: space-between;">
+              <div class="widget-header">Acoustic Current</div>
+              <div style="display: flex; align-items: center; justify-content: center; height: 90px; width: 100%;">
+                <svg viewBox="0 0 180 50" class="sound-wave-svg" style="max-height: 80px; width: 100%;">
+                  ${waveBars}
+                </svg>
+              </div>
+              <div class="widget-label" title="${floor.canonical.sound}">${floor.canonical.sound.split('(')[0]}</div>
+            </div>
+
+            <!-- 3. Inner Light Field Widget -->
+            <div class="sensory-widget glass" style="height: 160px; justify-content: space-between;">
+              <div class="widget-header">Inner Light Field</div>
+              <div style="display: flex; align-items: center; justify-content: center; height: 90px; width: 100%;">
+                <div class="light-swatch-box" style="background: radial-gradient(circle at center, ${activeColor} 0%, rgba(7,7,9,0.7) 100%); height: 75px; width: 100%;">
+                  <span class="light-swatch-glow" style="background-color: ${activeColor}; box-shadow: 0 0 15px ${activeColor};"></span>
+                </div>
+              </div>
+              <div class="widget-label" title="${floor.canonical.light || 'Nameless White Current'}">${floor.canonical.light ? floor.canonical.light.split('representing')[0].split(',')[0] : 'Formless Light'}</div>
             </div>
           </div>
-          <div class="audio-vol-slider-container">
-            <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-            <input type="range" class="vol-slider" id="audio-volume-slider" min="0" max="1" step="0.05" value="0.5" oninput="changeSynthesizerVolume(this.value)">
-          </div>
-        </div>
 
-        <!-- Pranayama Breath Guide -->
-        <div class="breathing-widget glass">
-          <div class="breath-circle-container">
-            <div class="breath-circle-outer"></div>
-            <div class="breath-circle" id="breath-circle">SO</div>
+          <!-- Ambient Sound Current Synthesizer -->
+          <div class="audio-widget glass" style="margin-top: 1.5rem;">
+            <div class="audio-control-left">
+              <button class="audio-play-btn" id="audio-play-btn" onclick="toggleAudioSynthesizer(${floor.classification.level})" title="Play Audio Synthesizer">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <div class="audio-info">
+                <div class="audio-status-label" id="audio-status-label">Ambient Sound Current</div>
+                <div class="audio-title-label">${floor.canonical.sound.split('(')[0]}</div>
+              </div>
+            </div>
+            <div class="audio-vol-slider-container">
+              <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+              <input type="range" class="vol-slider" id="audio-volume-slider" min="0" max="1" step="0.05" value="0.5" oninput="changeSynthesizerVolume(this.value)">
+            </div>
           </div>
-          <div class="breath-info-pane">
-            <div class="breath-label" id="breath-state-label">PRANAYAMA: INHALE</div>
-            <div class="breath-instruction" id="breath-instruction">Inhale slowly and fill your lungs...</div>
-            <div class="breath-mantra-tip">Chant mentally: <strong>${floor.canonical.mantra || floor.canonical.recitation || 'SO HUNG'}</strong></div>
+
+          <!-- Pranayama Breath Guide -->
+          <div class="breathing-widget glass" style="margin-top: 1.5rem;">
+            <div class="breath-circle-container">
+              <div class="breath-circle-outer"></div>
+              <div class="breath-circle" id="breath-circle">SO</div>
+            </div>
+            <div class="breath-info-pane">
+              <div class="breath-label" id="breath-state-label">PRANAYAMA: INHALE</div>
+              <div class="breath-instruction" id="breath-instruction">Inhale slowly and fill your lungs...</div>
+              <div class="breath-mantra-tip">Chant mentally: <strong>${floor.canonical.mantra || floor.canonical.recitation || 'SO HUNG'}</strong></div>
+            </div>
           </div>
         </div>
 
       </div>
+    `;
+  }
     `;
   }
 
@@ -501,6 +507,22 @@ function renderPlaceholderFloor(floorNum) {
   document.getElementById('detail-progress').style.width = `${progressPct}%`;
 
   document.getElementById('detail-chips').innerHTML = '';
+
+  const heroContainer = document.getElementById('floor-hero-visualizer');
+  if (heroContainer) {
+    heroContainer.innerHTML = `
+      <div class="esoteric-hero-wrapper" style="width: 100%;">
+        <div class="esoteric-art-frame">
+          <div class="esoteric-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/></svg>
+            <strong>Traditional Art Under Research</strong>
+            <span style="opacity:0.65; display:block; padding:0 1rem; line-height:1.4; margin-top:4px;">Tracing primary manuscripts for authenticated visual depictions of Level ${floorNum} realms.</span>
+          </div>
+        </div>
+        <div class="visualizer-caption">Level ${floorNum} Cosmic Painting</div>
+      </div>
+    `;
+  }
   
   const cardsContainer = document.getElementById('detail-cards');
   cardsContainer.innerHTML = `

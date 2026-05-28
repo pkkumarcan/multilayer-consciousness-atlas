@@ -1280,6 +1280,33 @@ main {
   margin-top: 0.4rem;
 }
 
+.sensory-grid-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0.4rem;
+}
+@media (max-width: 900px) {
+  .sensory-grid-three {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+.yantra-widget {
+  transition: var(--transition);
+}
+.yantra-widget:hover {
+  border-color: rgba(196, 169, 106, 0.25);
+  background: rgba(196, 169, 106, 0.03);
+}
+.yantra-svg-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .sensory-widget {
   padding: 0.8rem 1rem;
   border-radius: 10px;
