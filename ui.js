@@ -96,6 +96,13 @@ export function selectFloor(floorNum) {
 }
 
 function renderFloorDetails(floor) {
+  // Reset the accordion master toggle button state
+  const toggleBtn = document.getElementById('accordion-toggle-btn');
+  if (toggleBtn) {
+    toggleBtn.textContent = 'Expand All';
+    toggleBtn.setAttribute('aria-label', 'Expand all comparative lenses');
+  }
+
   document.getElementById('detail-num').textContent = floor.classification.level;
   document.getElementById('detail-title').textContent = floor.canonical_name;
   document.getElementById('detail-sanskrit').textContent = floor.sanskrit_name;
@@ -456,7 +463,7 @@ function renderFloorDetails(floor) {
       ${floor.canonical.consorts ? `<div class="sub-section-head">Ruler &amp; Powers</div><p>Governed by <strong>${floor.canonical.ruler}</strong> with consorts/forces: <strong>${floor.canonical.consorts}</strong>.</p>` : ''}
       <blockquote>"${floor.canonical.teachings.split('.')[0]}."</blockquote>
       <div class="citation">— Dr. H.N. Saksena, The Secret of Realisation, Chapter II</div>
-    `);
+    `, true);
   }
 
   if (floor.comparative) {
@@ -500,7 +507,7 @@ function renderFloorDetails(floor) {
       scienceHtml += `<div class="sub-section-head">Psychology &amp; Ego State</div><p><strong>${floor.science.psychology.ego_state}</strong>: ${floor.science.psychology.description}</p>`;
     }
 
-    createCard(cardsContainer, 'science', 'Modern Neurobiology &amp; Science', scienceHtml);
+    createCard(cardsContainer, 'science', 'Modern Neurobiology &amp; Science', scienceHtml, true);
   }
 
   if (floor.phenomenology) {
@@ -520,7 +527,7 @@ function renderFloorDetails(floor) {
       <p><strong>Descent/Ascent from below</strong>: ${phen.transitions.from_previous}</p>
       <p><strong>Ascension criteria to higher plane</strong>: ${phen.transitions.to_next}</p>
     `;
-    createCard(cardsContainer, 'science', 'Phenomenological Consciousness Experience', phenHtml);
+    createCard(cardsContainer, 'science', 'Phenomenological Consciousness Experience', phenHtml, true);
   }
 
   document.getElementById('prev-btn').disabled = floor.classification.level === 1;
@@ -621,6 +628,17 @@ function createCard(container, category, title, bodyHtml, isCollapsible = false)
       const summary = card.querySelector('summary');
       if (summary) {
         summary.setAttribute('aria-expanded', card.open ? 'true' : 'false');
+      }
+      
+      // Dynamic master button sync
+      const btn = document.getElementById('accordion-toggle-btn');
+      if (btn) {
+        const cards = document.querySelectorAll('#detail-cards details.collapsible-card');
+        if (cards.length > 0) {
+          const allOpen = Array.from(cards).every(card => card.open);
+          btn.textContent = allOpen ? 'Collapse All' : 'Expand All';
+          btn.setAttribute('aria-label', allOpen ? 'Collapse all comparative lenses' : 'Expand all comparative lenses');
+        }
       }
     });
   } else {
@@ -1176,3 +1194,27 @@ window.closeLightbox = () => {
     content.innerHTML = '';
   }
 };
+
+export function toggleAllAccordions() {
+  const btn = document.getElementById('accordion-toggle-btn');
+  if (!btn) return;
+
+  const cards = document.querySelectorAll('#detail-cards details.collapsible-card');
+  const allOpen = Array.from(cards).every(card => card.open);
+
+  if (allOpen) {
+    // Collapse All
+    cards.forEach(card => {
+      card.open = false;
+    });
+    btn.textContent = 'Expand All';
+    btn.setAttribute('aria-label', 'Expand all comparative lenses');
+  } else {
+    // Expand All
+    cards.forEach(card => {
+      card.open = true;
+    });
+    btn.textContent = 'Collapse All';
+    btn.setAttribute('aria-label', 'Collapse all comparative lenses');
+  }
+}

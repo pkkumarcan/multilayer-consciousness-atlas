@@ -1,5 +1,5 @@
 import { state } from './state.js';
-import { selectFloor, setupMatrix, setupSoundTimeline, switchView, toggleCardFilter, setupGallery, toggleVisualizerTab, toggleAudioSynthesizer, changeSynthesizerVolume, switchGalleryTab } from './ui.js';
+import { selectFloor, setupMatrix, setupSoundTimeline, switchView, toggleCardFilter, setupGallery, toggleVisualizerTab, toggleAudioSynthesizer, changeSynthesizerVolume, switchGalleryTab, toggleAllAccordions } from './ui.js';
 import { setupGraph, toggleGraphFilter } from './graph.js';
 import { handleSearch } from './search.js';
 
@@ -100,6 +100,7 @@ window.toggleAudioSynthesizer = toggleAudioSynthesizer;
 window.changeSynthesizerVolume = changeSynthesizerVolume;
 window.switchGalleryTab = switchGalleryTab;
 window.toggleGraphFilter = toggleGraphFilter;
+window.toggleAllAccordions = toggleAllAccordions;
 window.navigateFloor = (direction) => {
   selectFloor(state.activeFloor + direction);
 };
