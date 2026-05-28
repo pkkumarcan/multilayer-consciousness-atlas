@@ -3,6 +3,30 @@ import { selectFloor, setupMatrix, setupSoundTimeline, switchView, toggleCardFil
 import { setupGraph, toggleGraphFilter } from './graph.js';
 import { handleSearch } from './search.js';
 
+// Hash routing handler to sync URL changes to the UI
+function handleHashRouting() {
+  const hash = window.location.hash;
+  if (!hash) return false;
+
+  if (hash.startsWith('#/floor/')) {
+    const floorNum = parseInt(hash.replace('#/floor/', ''), 10);
+    if (floorNum >= 1 && floorNum <= 18) {
+      if (state.activeFloor === floorNum && state.activeView === 'floor') return true;
+      selectFloor(floorNum);
+      return true;
+    }
+  } else if (hash.startsWith('#/view/')) {
+    const viewName = hash.replace('#/view/', '');
+    const validViews = ['floor', 'matrix', 'graph', 'sound', 'gallery', 'energy'];
+    if (validViews.includes(viewName)) {
+      if (state.activeView === viewName) return true;
+      switchView(viewName);
+      return true;
+    }
+  }
+  return false;
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   try {
     const dbResponse = await fetch('content/floors_db.json');
@@ -13,11 +37,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     console.log("Atlas Database and Graph successfully loaded.");
 
-    selectFloor(1);
     setupMatrix();
     setupGraph();
     setupSoundTimeline();
     setupGallery();
+
+    // Check for deep links first, otherwise default to Floor 1
+    const routed = handleHashRouting();
+    if (!routed) {
+      selectFloor(1);
+    }
 
     for (let i = 1; i <= 18; i++) {
       const btn = document.getElementById(`btn-${i}`);
@@ -32,6 +61,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   } catch (error) {
     console.error("Initialization error:", error);
   }
+});
+
+// Sync browser back/forward and direct hash updates
+window.addEventListener('hashchange', () => {
+  handleHashRouting();
 });
 
 // Expose to window for inline onclick handlers in HTML

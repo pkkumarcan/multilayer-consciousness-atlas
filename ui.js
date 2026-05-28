@@ -49,6 +49,21 @@ export function switchView(viewName) {
   if (viewName !== 'search') {
     document.getElementById('searchInput').value = '';
   }
+
+  // Update browser URL hash in real-time
+  updateHash();
+}
+
+function updateHash() {
+  let newHash = '';
+  if (state.activeView === 'floor') {
+    newHash = `#/floor/${state.activeFloor}`;
+  } else {
+    newHash = `#/view/${state.activeView}`;
+  }
+  if (window.location.hash !== newHash) {
+    window.location.hash = newHash;
+  }
 }
 
 export function selectFloor(floorNum) {
