@@ -1648,6 +1648,69 @@
       "id": "network_complete_default_mode_network_dmn_dissolution",
       "name": "Complete Default Mode Network (DMN) Dissolution",
       "type": "BrainNetwork"
+    },
+    {
+      "id": "gw_focus3",
+      "name": "Focus 3\nOrientation",
+      "type": "Gateway",
+      "floor": 1,
+      "color": "#22c55e"
+    },
+    {
+      "id": "gw_focus10",
+      "name": "Focus 10\nMind Awake/Body Asleep",
+      "type": "Gateway",
+      "floor": 2,
+      "color": "#22c55e"
+    },
+    {
+      "id": "gw_focus12",
+      "name": "Focus 12\nExpanded Awareness",
+      "type": "Gateway",
+      "floor": 5,
+      "color": "#22c55e"
+    },
+    {
+      "id": "gw_focus15",
+      "name": "Focus 15\nNo-Time",
+      "type": "Gateway",
+      "floor": 7,
+      "color": "#22c55e"
+    },
+    {
+      "id": "gw_focus21",
+      "name": "Focus 21\nBridge State",
+      "type": "Gateway",
+      "floor": 9,
+      "color": "#22c55e"
+    },
+    {
+      "id": "gw_focus23",
+      "name": "Focus 23\nPost-Physical Zone",
+      "type": "Gateway",
+      "floor": 11,
+      "color": "#22c55e"
+    },
+    {
+      "id": "gw_focus25",
+      "name": "Focus 25\nBelief Territories",
+      "type": "Gateway",
+      "floor": 12,
+      "color": "#22c55e"
+    },
+    {
+      "id": "gw_focus27",
+      "name": "Focus 27\nReception Centre",
+      "type": "Gateway",
+      "floor": 12,
+      "color": "#22c55e"
+    },
+    {
+      "id": "gw_focus3435",
+      "name": "Focus 34/35\nThe Absolute",
+      "type": "Gateway",
+      "floor": 17,
+      "color": "#22c55e"
     }
   ],
   "edges": [
@@ -3160,6 +3223,51 @@
       "source": "floor_9",
       "target": "network_complete_default_mode_network_dmn_dissolution",
       "relation": "correlatesToBrainNetwork"
+    },
+    {
+      "source": "gw_focus3",
+      "target": "floor_1",
+      "relation": "hasPracticeEntry"
+    },
+    {
+      "source": "gw_focus10",
+      "target": "floor_2",
+      "relation": "hasPracticeEntry"
+    },
+    {
+      "source": "gw_focus12",
+      "target": "floor_5",
+      "relation": "hasPracticeEntry"
+    },
+    {
+      "source": "gw_focus15",
+      "target": "floor_7",
+      "relation": "hasPracticeEntry"
+    },
+    {
+      "source": "gw_focus21",
+      "target": "floor_9",
+      "relation": "hasPracticeEntry"
+    },
+    {
+      "source": "gw_focus23",
+      "target": "floor_11",
+      "relation": "hasPracticeEntry"
+    },
+    {
+      "source": "gw_focus25",
+      "target": "floor_12",
+      "relation": "hasPracticeEntry"
+    },
+    {
+      "source": "gw_focus27",
+      "target": "floor_12",
+      "relation": "hasPracticeEntry"
+    },
+    {
+      "source": "gw_focus3435",
+      "target": "floor_17",
+      "relation": "hasPracticeEntry"
     }
   ]
 }

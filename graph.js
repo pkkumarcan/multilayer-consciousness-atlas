@@ -41,11 +41,15 @@ export function setupGraph() {
     else if (node.type === 'Ruler') { angleOffset = -0.2; radius = 130; }
     else if (node.type === 'Comparative') {
       const tradIndex = ['sikhism', 'sufism', 'vedic', 'hindu_tantra', 'buddhism', 'taoism', 'kabbalah', 'gnosticism', 'jainism'].indexOf(node.tradition);
-      angleOffset = 0.05 + (tradIndex * 0.1);
-      radius = 180;
+      const levelOffset = (parent.node.level % 4) * 0.05 - 0.075;
+      angleOffset = 0.05 + (tradIndex * 0.1) + levelOffset;
+      radius = 180 + (parent.node.level % 3) * 12; // Vary radius to stagger and prevent overlaps
     } else if (node.type === 'BrainRegion' || node.type === 'BrainNetwork') {
       angleOffset = -0.6;
       radius = 210;
+    } else if (node.type === 'Gateway') {
+      angleOffset = 0.25;
+      radius = 150;
     }
 
     const angle = angleOffset * Math.PI;
@@ -98,6 +102,9 @@ export function setupGraph() {
       fill = '#c4a96a';
     } else if (item.node.type === 'BrainRegion' || item.node.type === 'BrainNetwork') {
       fill = '#1D9E75';
+    } else if (item.node.type === 'Gateway') {
+      fill = '#22c55e';
+      radius = 7;
     }
 
     circle.setAttribute('r', radius);
@@ -178,6 +185,64 @@ export function setupGraph() {
     }
   };
 
+  // Touch & Pinch support for Graph SVG
+  let touchStartDist = 0;
+  let baseZoom = 1;
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  svg.ontouchstart = (e) => {
+    if (e.touches.length === 1) {
+      isDragging = true;
+      startX = e.touches[0].clientX - panX;
+      startY = e.touches[0].clientY - panY;
+    } else if (e.touches.length === 2) {
+      isDragging = false;
+      touchStartDist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      baseZoom = zoomScale;
+      touchStartX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+      touchStartY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+    }
+  };
+
+  svg.ontouchmove = (e) => {
+    if (isDragging && e.touches.length === 1) {
+      panX = e.touches[0].clientX - startX;
+      panY = e.touches[0].clientY - startY;
+      if (!rafId) {
+        rafId = requestAnimationFrame(updateTransform);
+      }
+      e.preventDefault();
+    } else if (e.touches.length === 2) {
+      const dist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      const factor = dist / touchStartDist;
+      zoomScale = Math.max(0.5, Math.min(3, baseZoom * factor));
+      
+      // Keep center of pinch stable
+      const currentTouchX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+      const currentTouchY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+      panX += (currentTouchX - touchStartX);
+      panY += (currentTouchY - touchStartY);
+      touchStartX = currentTouchX;
+      touchStartY = currentTouchY;
+
+      if (!rafId) {
+        rafId = requestAnimationFrame(updateTransform);
+      }
+      e.preventDefault();
+    }
+  };
+
+  svg.ontouchend = () => {
+    isDragging = false;
+  };
+
   // Apply filters initially
   toggleGraphFilter();
 }
@@ -188,6 +253,7 @@ export function toggleGraphFilter() {
   const soundChecked = document.getElementById('filter-node-Sound')?.checked !== false;
   const brainChecked = document.getElementById('filter-node-Brain')?.checked !== false;
   const compChecked = document.getElementById('filter-node-Comparative')?.checked !== false;
+  const gatewayChecked = document.getElementById('filter-node-Gateway')?.checked !== false;
 
   const visibleTypes = new Set();
   if (floorChecked) visibleTypes.add('Floor');
@@ -198,6 +264,7 @@ export function toggleGraphFilter() {
     visibleTypes.add('BrainNetwork');
   }
   if (compChecked) visibleTypes.add('Comparative');
+  if (gatewayChecked) visibleTypes.add('Gateway');
 
   // Node groups
   document.querySelectorAll('#graphGroup g').forEach(g => {

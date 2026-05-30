@@ -110,6 +110,48 @@ export function handleSearch(query) {
       });
     }
 
+    if (floor.gateway_experience) {
+      const gw = floor.gateway_experience;
+      if (gw.bridge_note && gw.bridge_note.toLowerCase().includes(cleanQuery)) {
+        score += 5;
+        const idx = gw.bridge_note.toLowerCase().indexOf(cleanQuery);
+        const start = Math.max(0, idx - 40);
+        const end = Math.min(gw.bridge_note.length, idx + query.length + 40);
+        snippets.push(`Gateway Bridge Note: "...${gw.bridge_note.slice(start, idx)}<mark>${gw.bridge_note.slice(idx, idx + query.length)}</mark>${gw.bridge_note.slice(idx + query.length, end)}..."`);
+        matchedInFloor = true;
+      }
+      if (gw.map_limit_note && gw.map_limit_note.toLowerCase().includes(cleanQuery)) {
+        score += 5;
+        const idx = gw.map_limit_note.toLowerCase().indexOf(cleanQuery);
+        const start = Math.max(0, idx - 40);
+        const end = Math.min(gw.map_limit_note.length, idx + query.length + 40);
+        snippets.push(`Gateway Map Limit: "...${gw.map_limit_note.slice(start, idx)}<mark>${gw.map_limit_note.slice(idx, idx + query.length)}</mark>${gw.map_limit_note.slice(idx + query.length, end)}..."`);
+        matchedInFloor = true;
+      }
+      if (gw.tapes) {
+        gw.tapes.forEach(t => {
+          if (t.name && t.name.toLowerCase().includes(cleanQuery)) {
+            score += 7;
+            snippets.push(`Gateway Tape: <mark>${t.name}</mark> (#${t.tape_num}, Focus ${t.focus})`);
+            matchedInFloor = true;
+          }
+          if (t.description && t.description.toLowerCase().includes(cleanQuery)) {
+            score += 4;
+            const idx = t.description.toLowerCase().indexOf(cleanQuery);
+            const start = Math.max(0, idx - 40);
+            const end = Math.min(t.description.length, idx + query.length + 40);
+            snippets.push(`Gateway Tape (${t.name}): "...${t.description.slice(start, idx)}<mark>${t.description.slice(idx, idx + query.length)}</mark>${t.description.slice(idx + query.length, end)}..."`);
+            matchedInFloor = true;
+          }
+          if (t.state && t.state.toLowerCase().includes(cleanQuery)) {
+            score += 6;
+            snippets.push(`Gateway Tape State (${t.name}): <mark>${t.state}</mark>`);
+            matchedInFloor = true;
+          }
+        });
+      }
+    }
+
     if (matchedInFloor) {
       matches.push({ floor, score, snippets });
     }

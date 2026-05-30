@@ -11,8 +11,9 @@ const ASSETS_TO_CACHE = [
   './graph.js',
   './search.js',
   './manifest.json',
-  './icon_192.png',
-  './icon_512.png',
+  './assets/images/icon_192.png',
+  './assets/images/icon_512.png',
+  './assets/images/cosmic-map.png',
   './content/floors_db.json',
   './content/content_graph.json'
 ];

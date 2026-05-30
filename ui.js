@@ -1,10 +1,159 @@
-import { state } from './state.js';
-import { playCurrentSound, stopCurrentSound, isAudioPlaying, getCurrentPlayingFloor } from './audio.js';
-import { init3DMap } from './energy.js';
+import { state, COLOR_MAP, SPINAL_CENTERS } from './state.js';
+import { playCurrentSound, stopCurrentSound, isAudioPlaying, getCurrentPlayingFloor, setSynthesizerVolume } from './audio.js';
+import { init3DMap, pause3DMapAnimation } from './energy.js';
+import { setupGraph } from './graph.js';
+
+function escapeHTML(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function renderGatewayCard(floorData) {
+  const gw = floorData.gateway_experience;
+  if (!gw || !gw.tapes) return '';
+  
+  const CONFIDENCE_COLORS = {
+    "Very Strong":  { bg: "#0d2b1a", border: "#22c55e", badge: "#16a34a", text: "#4ade80" },
+    "Strong":       { bg: "#0d1f2b", border: "#3b82f6", badge: "#1d4ed8", text: "#60a5fa" },
+    "Approximate":  { bg: "#2b1f0d", border: "#f59e0b", badge: "#b45309", text: "#fbbf24" },
+    "Speculative":  { bg: "#2b0d0d", border: "#ef4444", badge: "#b91c1c", text: "#f87171" },
+  };
+
+  const confBadge = (conf) => {
+    const c = CONFIDENCE_COLORS[conf] || CONFIDENCE_COLORS["Approximate"];
+    return `<span style="
+      display:inline-block; padding:2px 8px; border-radius:4px;
+      background:${c.badge}; color:#fff; font-size:10px;
+      font-family: monospace; letter-spacing:0.05em; font-weight:600;
+    ">${escapeHTML(conf)}</span>`;
+  };
+
+  const rowsHtml = gw.tapes.map(t => {
+    const c = CONFIDENCE_COLORS[t.confidence] || CONFIDENCE_COLORS["Approximate"];
+    return `
+      <tr style="border-bottom:1px solid #1e2a1e; background:${c.bg};">
+        <td style="padding:6px 8px; color:#94a3b8; font-size:11px; white-space:nowrap;">#${t.tape_num}</td>
+        <td style="padding:6px 8px; color:#e2e8f0; font-size:12px; font-weight:500;">${escapeHTML(t.name)}</td>
+        <td style="padding:6px 8px; color:#94a3b8; font-size:11px; white-space:nowrap;">${escapeHTML(t.wave.replace("Wave ", "W").split("–")[0].trim())}</td>
+        <td style="padding:6px 8px; color:#60a5fa; font-size:11px; white-space:nowrap;">${escapeHTML(t.focus)}</td>
+        <td style="padding:6px 8px; color:#c4b5fd; font-size:11px;">${escapeHTML(t.state)}</td>
+        <td style="padding:6px 8px; color:#f0abfc; font-size:11px; white-space:nowrap;">${escapeHTML(t.brainwave)}</td>
+        <td style="padding:6px 8px; color:#86efac; font-size:11px; white-space:nowrap;">${escapeHTML(t.hz)}</td>
+        <td style="padding:6px 8px;">${confBadge(t.confidence)}</td>
+      </tr>
+      <tr style="background:${c.bg};">
+        <td></td>
+        <td colspan="7" style="padding:0 8px 8px 8px; color:#94a3b8; font-size:11px; font-style:italic; line-height:1.5;">
+          ${escapeHTML(t.description)}
+        </td>
+      </tr>
+    `;
+  }).join('');
+
+  const mapLimitHtml = gw.map_limit_note ? `
+    <div style="
+      margin-top:16px; padding:12px 14px;
+      background:#1a0d0d; border-left:3px solid #ef4444;
+      border-radius:0 6px 6px 0; font-size:12px; color:#fca5a5; line-height:1.6;
+    ">
+      <strong style="color:#ef4444;">⚠ Monroe's Map Limit:</strong>
+      <span style="margin-left:6px;">${escapeHTML(gw.map_limit_note)}</span>
+    </div>
+  ` : '';
+
+  const noTapesHtml = gw.tapes.length === 0 ? `
+    <div style="
+      padding:20px; text-align:center; color:#6b7280; font-style:italic; font-size:13px;
+    ">
+      No Gateway Experience tapes are mapped to this floor.<br>
+      Monroe's system does not provide a path into this realm.
+    </div>
+  ` : '';
+
+  return `
+      <!-- Card Header -->
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span style="font-size:20px;">🎧</span>
+          <div>
+            <div style="color:#4ade80; font-size:13px; font-weight:600; letter-spacing:0.05em;">
+              GATEWAY EXPERIENCE / MONROE INSTITUTE
+            </div>
+            <div style="color:#6b7280; font-size:11px; margin-top:2px;">
+              ${escapeHTML(gw.epistemic_label)}
+            </div>
+          </div>
+        </div>
+        <div style="
+          background:#052e16; border:1px solid #16a34a; border-radius:20px;
+          padding:3px 12px; color:#4ade80; font-size:11px; font-weight:600;
+        ">
+          ${gw.tape_count} tape${gw.tape_count !== 1 ? 's' : ''}
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div style="height:1px; background: linear-gradient(90deg, #22c55e44, transparent); margin:12px 0;"></div>
+
+      <!-- Tapes Table -->
+      ${gw.tapes.length > 0 ? `
+      <div style="overflow-x:auto; border-radius:6px; border:1px solid #1e3a2e;">
+        <table style="width:100%; border-collapse:collapse; font-family:'DM Sans', sans-serif;">
+          <thead>
+            <tr style="background:#0d2318;">
+              <th style="padding:8px; color:#6b7280; font-size:10px; text-align:left; font-weight:500;">#</th>
+              <th style="padding:8px; color:#6b7280; font-size:10px; text-align:left; font-weight:500;">TAPE NAME</th>
+              <th style="padding:8px; color:#6b7280; font-size:10px; text-align:left; font-weight:500;">WAVE</th>
+              <th style="padding:8px; color:#6b7280; font-size:10px; text-align:left; font-weight:500;">FOCUS</th>
+              <th style="padding:8px; color:#6b7280; font-size:10px; text-align:left; font-weight:500;">STATE</th>
+              <th style="padding:8px; color:#6b7280; font-size:10px; text-align:left; font-weight:500;">BRAINWAVE</th>
+              <th style="padding:8px; color:#6b7280; font-size:10px; text-align:left; font-weight:500;">Hz RANGE</th>
+              <th style="padding:8px; color:#6b7280; font-size:10px; text-align:left; font-weight:500;">CONFIDENCE</th>
+            </tr>
+          </thead>
+          <tbody>${rowsHtml}</tbody>
+        </table>
+      </div>` : noTapesHtml}
+
+      <!-- Bridge Note -->
+      <div style="
+        margin-top:16px; padding:14px 16px;
+        background:#0d1f12; border-left:3px solid #22c55e;
+        border-radius:0 6px 6px 0; font-size:12px; color:#bbf7d0; line-height:1.7;
+      ">
+        <strong style="color:#4ade80; display:block; margin-bottom:6px;">⊕ Bridge Note</strong>
+        ${escapeHTML(gw.bridge_note)}
+      </div>
+
+      ${mapLimitHtml}
+  `;
+}
 
 export function switchView(viewName) {
   state.activeView = viewName;
   
+  // Resource cleanups when navigating away from tabs
+  if (viewName !== 'energy') {
+    pause3DMapAnimation();
+  }
+  if (viewName === 'floor') {
+    const floorData = state.floorsDB[`floor_${state.activeFloor}`];
+    if (floorData) {
+      initBreathingGuide(floorData.canonical.mantra || floorData.canonical.recitation);
+    }
+  } else {
+    stopBreathingGuide();
+  }
+
+  if (viewName === 'graph') {
+    lazyLoadGraph();
+  }
+
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.classList.remove('active');
     btn.setAttribute('aria-selected', 'false');
@@ -71,6 +220,13 @@ function updateHash() {
 
 export function selectFloor(floorNum) {
   if (floorNum < 1 || floorNum > 18) return;
+  
+  // Guard against selecting disabled/scaffolded floors
+  const btn = document.getElementById(`btn-${floorNum}`);
+  if (btn && btn.classList.contains('disabled-floor')) {
+    return;
+  }
+
   state.activeFloor = floorNum;
 
   document.querySelectorAll('.floor-btn').forEach(btn => {
@@ -135,7 +291,7 @@ function renderFloorDetails(floor) {
     if (c.val) {
       const el = document.createElement('div');
       el.className = 'chip';
-      el.innerHTML = `${c.label}: <strong>${c.val}</strong>`;
+      el.innerHTML = `${escapeHTML(c.label)}: <strong>${escapeHTML(c.val)}</strong>`;
       chipsContainer.appendChild(el);
     }
   });
@@ -143,19 +299,7 @@ function renderFloorDetails(floor) {
   // Render Premium Sacred Geometry Infographic Dashboard
   const count = floor.canonical.petals?.count || 0;
   const rawColor = floor.canonical.petals?.color || 'white';
-  const colorMap = {
-    red: '#a32d2d',
-    vermilion: '#d66025',
-    blue: '#2c7fb8',
-    'blue-green': '#1f9e89',
-    purple: '#7f77dd',
-    gold: '#c4a96a',
-    white: '#eceae4',
-    yellow: '#dfc221',
-    crimson: '#e31a1c',
-    'white-gold': '#fff7bc'
-  };
-  const activeColor = colorMap[rawColor.toLowerCase()] || rawColor;
+  const activeColor = COLOR_MAP[rawColor.toLowerCase()] || rawColor;
 
   const defsSvg = `
     <defs>
@@ -221,31 +365,11 @@ function renderFloorDetails(floor) {
   const centralCircleRadius = count > 100 ? 25 : 35;
   const centerSvg = `
     <circle cx="150" cy="150" r="${centralCircleRadius}" fill="#0d0d12" stroke="${activeColor}" stroke-width="2" style="filter: drop-shadow(0 0 10px ${activeColor});" />
-    <text x="150" y="156" font-family="var(--font-serif)" font-size="${count > 100 ? '14px' : '18px'}" fill="var(--text)" text-anchor="middle" font-weight="400">${floor.canonical.recitation || floor.classification.level}</text>
+    <text x="150" y="156" font-family="var(--font-serif)" font-size="${count > 100 ? '14px' : '18px'}" fill="var(--text)" text-anchor="middle" font-weight="400">${escapeHTML(floor.canonical.recitation) || floor.classification.level}</text>
   `;
 
   // Mappings
-  const spinalCenters = {
-    1: 'Coccygeal / Rectal Plexus (Sacral Base)',
-    2: 'Sacral / Prostatic Plexus (Generative)',
-    3: 'Solar Plexus (Nabhi / Epigastric)',
-    4: 'Cardiac Plexus (Hridaya / Heart)',
-    5: 'Pharyngeal Plexus (Kantha / Throat)',
-    6: 'Cavernous Plexus / Optic Chiasm (3rd Eye)',
-    7: 'Pineal Gland / Superior Sagittal (Crown)',
-    8: 'Cerebral Cortex / Causal Gateway',
-    9: 'Tenth Door / Dasam Dwar (Void Gateway)',
-    10: 'Great Void Boundary (Super-Causal)',
-    11: 'Causal Peak Vortex (Whirlpool)',
-    12: 'Pure Spirit Crown (Sach Khand)',
-    13: 'Alakha Lok Abode',
-    14: 'Agama Lok Gateway',
-    15: 'The Nameless Spiritual Crown',
-    16: 'First Secret Spiritual Stage',
-    17: 'Second Secret Spiritual Stage',
-    18: 'Radhasoami Dham Peak'
-  };
-  const physicalMapping = spinalCenters[floor.classification.level] || 'Transcendent Spinal Axis';
+  const physicalMapping = SPINAL_CENTERS[floor.classification.level] || 'Transcendent Spinal Axis';
 
   // Sensory Waveform
   let waveBars = '';
@@ -300,23 +424,11 @@ function renderFloorDetails(floor) {
   const level = floor.classification.level;
   let esotericArtHtml = '';
   if (level >= 1 && level <= 12) {
-    let imgName = '';
-    if (level === 1) imgName = '1st chakra.png';
-    else if (level === 2) imgName = '2nd Chakra.png';
-    else if (level === 3) imgName = '3rd chakra.png';
-    else if (level === 4) imgName = '4th chakra.png';
-    else if (level === 5) imgName = '5th floor.png';
-    else if (level === 6) imgName = '6th floor.png';
-    else if (level === 7) imgName = '7th floor.png';
-    else if (level === 8) imgName = '8th floor.png';
-    else if (level === 9) imgName = '9th FLoor.png';
-    else if (level === 10) imgName = '10th Floor.png';
-    else if (level === 11) imgName = '11th Floor.png';
-    else if (level === 12) imgName = '12th floor.png';
+    const imgName = `assets/images/floor-${String(level).padStart(2, '0')}.png`;
 
     esotericArtHtml = `
       <div class="esoteric-art-frame" style="--glow-color: ${activeColor}55;">
-        <img src="${imgName}" alt="Esoteric Art of ${floor.canonical_name}" class="esoteric-img">
+        <img src="${imgName}" alt="Esoteric Art of ${escapeHTML(floor.canonical_name)}" class="esoteric-img" id="esotericImg">
       </div>
       <div class="visualizer-caption">Esoteric Painting (${level}${level === 1 ? 'st' : level === 2 ? 'nd' : level === 3 ? 'rd' : 'th'} Level) · <span style="color: var(--accent); font-weight: 500;">🔍 Zoom Artwork</span></div>
     `;
@@ -458,10 +570,14 @@ function renderFloorDetails(floor) {
   cardsContainer.innerHTML = '';
 
   if (floor.canonical.teachings) {
+    const escapedTeachings = escapeHTML(floor.canonical.teachings).replace(/\n/g, '<br>');
+    const escapedRuler = escapeHTML(floor.canonical.ruler);
+    const escapedConsorts = escapeHTML(floor.canonical.consorts);
+    const escapedQuote = escapeHTML(floor.canonical.teachings.split('.')[0]);
     createCard(cardsContainer, 'saksena', 'Saksena Core Account', `
-      <p>${floor.canonical.teachings.replace(/\n/g, '<br>')}</p>
-      ${floor.canonical.consorts ? `<div class="sub-section-head">Ruler &amp; Powers</div><p>Governed by <strong>${floor.canonical.ruler}</strong> with consorts/forces: <strong>${floor.canonical.consorts}</strong>.</p>` : ''}
-      <blockquote>"${floor.canonical.teachings.split('.')[0]}."</blockquote>
+      <p>${escapedTeachings}</p>
+      ${floor.canonical.consorts ? `<div class="sub-section-head">Ruler &amp; Powers</div><p>Governed by <strong>${escapedRuler}</strong> with consorts/forces: <strong>${escapedConsorts}</strong>.</p>` : ''}
+      <blockquote>"${escapedQuote}."</blockquote>
       <div class="citation">— Dr. H.N. Saksena, The Secret of Realisation, Chapter II</div>
     `, true);
   }
@@ -483,8 +599,8 @@ function renderFloorDetails(floor) {
       const data = floor.comparative[trad];
       if (data && data.term) {
         createCard(cardsContainer, trad, traditionLabels[trad] || trad, `
-          <strong>${data.term}</strong>
-          <p style="margin-top:0.8rem;">${data.description.replace(/\n/g, '<br>')}</p>
+          <strong>${escapeHTML(data.term)}</strong>
+          <p style="margin-top:0.8rem;">${escapeHTML(data.description).replace(/\n/g, '<br>')}</p>
         `, true);
       }
     }
@@ -493,18 +609,18 @@ function renderFloorDetails(floor) {
   if (floor.science && floor.science.neuroscience) {
     const neuro = floor.science.neuroscience;
     let scienceHtml = `
-      <p>${neuro.description.replace(/\n/g, '<br>')}</p>
-      ${neuro.regions ? `<div class="sub-section-head">Correlating Brain Regions</div><p>${neuro.regions.join(', ')}</p>` : ''}
-      ${neuro.networks ? `<div class="sub-section-head">Neural Networks</div><p>${neuro.networks.join(', ')}</p>` : ''}
+      <p>${escapeHTML(neuro.description).replace(/\n/g, '<br>')}</p>
+      ${neuro.regions ? `<div class="sub-section-head">Correlating Brain Regions</div><p>${escapeHTML(neuro.regions.join(', '))}</p>` : ''}
+      ${neuro.networks ? `<div class="sub-section-head">Neural Networks</div><p>${escapeHTML(neuro.networks.join(', '))}</p>` : ''}
       <div class="sub-section-head">Correlation Certainty Rating</div>
-      <p>Certainty confidence is marked as: <strong>${neuro.confidence}</strong></p>
+      <p>Certainty confidence is marked as: <strong>${escapeHTML(neuro.confidence)}</strong></p>
     `;
     
     if (floor.science.endocrinology && floor.science.endocrinology.description) {
-      scienceHtml += `<div class="sub-section-head">Endocrinology</div><p>${floor.science.endocrinology.description}</p>`;
+      scienceHtml += `<div class="sub-section-head">Endocrinology</div><p>${escapeHTML(floor.science.endocrinology.description)}</p>`;
     }
     if (floor.science.psychology && floor.science.psychology.description) {
-      scienceHtml += `<div class="sub-section-head">Psychology &amp; Ego State</div><p><strong>${floor.science.psychology.ego_state}</strong>: ${floor.science.psychology.description}</p>`;
+      scienceHtml += `<div class="sub-section-head">Psychology &amp; Ego State</div><p><strong>${escapeHTML(floor.science.psychology.ego_state)}</strong>: ${escapeHTML(floor.science.psychology.description)}</p>`;
     }
 
     createCard(cardsContainer, 'science', 'Modern Neurobiology &amp; Science', scienceHtml, true);
@@ -514,20 +630,27 @@ function renderFloorDetails(floor) {
     const phen = floor.phenomenology;
     const phenHtml = `
       <div class="sub-section-head">Waking State / Emotional Tone</div>
-      <p>${phen.emotional_tone}</p>
+      <p>${escapeHTML(phen.emotional_tone)}</p>
       <div class="sub-section-head">Visual Landscape</div>
-      <p>${phen.visual_texture}</p>
+      <p>${escapeHTML(phen.visual_texture)}</p>
       <div class="sub-section-head">Auditory Landscape</div>
-      <p>${phen.auditory_texture}</p>
+      <p>${escapeHTML(phen.auditory_texture)}</p>
       <div class="sub-section-head">Ego Dissolution / Identity shifts</div>
-      <p>${phen.ego_effect}</p>
+      <p>${escapeHTML(phen.ego_effect)}</p>
       <div class="sub-section-head">Spiritual Obstacles &amp; Risks</div>
-      <p>⚠️ ${phen.risks}</p>
+      <p>⚠️ ${escapeHTML(phen.risks)}</p>
       <div class="sub-section-head">Transitions</div>
-      <p><strong>Descent/Ascent from below</strong>: ${phen.transitions.from_previous}</p>
-      <p><strong>Ascension criteria to higher plane</strong>: ${phen.transitions.to_next}</p>
+      <p><strong>Descent/Ascent from below</strong>: ${escapeHTML(phen.transitions.from_previous)}</p>
+      <p><strong>Ascension criteria to higher plane</strong>: ${escapeHTML(phen.transitions.to_next)}</p>
     `;
     createCard(cardsContainer, 'science', 'Phenomenological Consciousness Experience', phenHtml, true);
+  }
+
+  if (floor.gateway_experience) {
+    const gatewayHtml = renderGatewayCard(floor);
+    if (gatewayHtml) {
+      createCard(cardsContainer, 'gateway', 'Gateway Experience / Monroe Institute', gatewayHtml, true);
+    }
   }
 
   document.getElementById('prev-btn').disabled = floor.classification.level === 1;
@@ -692,15 +815,15 @@ export function setupMatrix() {
     tr.style.cursor = 'pointer';
 
     if (floor) {
-      const sikh = floor.comparative?.sikhism ? `<strong>${floor.comparative.sikhism.term}</strong>` : '<span class="cell-empty">Researching</span>';
-      const sufi = floor.comparative?.sufism ? `<strong>${floor.comparative.sufism.term}</strong>` : '<span class="cell-empty">Researching</span>';
-      const neuro = floor.science?.neuroscience ? `<strong>${floor.science.neuroscience.regions?.[0] || 'Vagus Nerve'}</strong>${floor.science.neuroscience.networks ? `<br><small style="color:var(--muted)">${floor.science.neuroscience.networks?.[0] || ''}</small>` : ''}` : '<span class="cell-empty">Researching</span>';
-      const vedic = floor.comparative?.vedic ? `<strong>${floor.comparative.vedic.term}</strong>` : '<span class="cell-empty">Researching</span>';
-      const bud = floor.comparative?.buddhism ? `<strong>${floor.comparative.buddhism.term}</strong>` : '<span class="cell-empty">Researching</span>';
+      const sikh = floor.comparative?.sikhism ? `<strong>${escapeHTML(floor.comparative.sikhism.term)}</strong>` : '<span class="cell-empty">Researching</span>';
+      const sufi = floor.comparative?.sufism ? `<strong>${escapeHTML(floor.comparative.sufism.term)}</strong>` : '<span class="cell-empty">Researching</span>';
+      const neuro = floor.science?.neuroscience ? `<strong>${escapeHTML(floor.science.neuroscience.regions?.[0] || 'Vagus Nerve')}</strong>${floor.science.neuroscience.networks ? `<br><small style="color:var(--muted)">${escapeHTML(floor.science.neuroscience.networks?.[0] || '')}</small>` : ''}` : '<span class="cell-empty">Researching</span>';
+      const vedic = floor.comparative?.vedic ? `<strong>${escapeHTML(floor.comparative.vedic.term)}</strong>` : '<span class="cell-empty">Researching</span>';
+      const bud = floor.comparative?.buddhism ? `<strong>${escapeHTML(floor.comparative.buddhism.term)}</strong>` : '<span class="cell-empty">Researching</span>';
 
       tr.innerHTML = `
-        <td class="matrix-floor-cell">${i}. ${floor.canonical_name.split('/')[0]}</td>
-        <td><strong>${floor.canonical.ruler}</strong><small style="color:var(--muted)">Sound: ${floor.canonical.sound.split('(')[0]}</small></td>
+        <td class="matrix-floor-cell">${i}. ${escapeHTML(floor.canonical_name.split('/')[0])}</td>
+        <td><strong>${escapeHTML(floor.canonical.ruler)}</strong><small style="color:var(--muted)">Sound: ${escapeHTML(floor.canonical.sound.split('(')[0])}</small></td>
         <td>${sikh}</td>
         <td>${sufi}</td>
         <td>${neuro}</td>
@@ -716,7 +839,7 @@ export function setupMatrix() {
         12: 'Sach Khand'
       };
       tr.innerHTML = `
-        <td class="matrix-floor-cell" style="opacity:0.4">${i}. ${placeholderNames[i] || `Level ${i}`}</td>
+        <td class="matrix-floor-cell" style="opacity:0.4">${i}. ${escapeHTML(placeholderNames[i] || `Level ${i}`)}</td>
         <td colspan="6" style="text-align:center; color:var(--muted); font-style:italic; opacity:0.4;">Phase 2 Data Scaffolding</td>
       `;
     }
@@ -726,9 +849,16 @@ export function setupMatrix() {
 
 export function setupSoundTimeline() {
   const container = document.getElementById('sound-timeline-container');
+  if (!container) return;
   container.innerHTML = '';
 
-  const activeSoundFloors = [1, 2, 3, 4, 5, 6, 8];
+  // Dynamically compute active sound floors from the compiled database
+  const activeSoundFloors = Object.keys(state.floorsDB)
+    .filter(key => key.startsWith('floor_'))
+    .map(key => state.floorsDB[key])
+    .filter(floor => floor && floor.canonical && floor.canonical.sound && !floor.canonical.sound.toLowerCase().includes('researching'))
+    .sort((a, b) => a.classification.level - b.classification.level)
+    .map(floor => floor.classification.level);
 
   activeSoundFloors.forEach(num => {
     const floor = state.floorsDB[`floor_${num}`];
@@ -749,9 +879,9 @@ export function setupSoundTimeline() {
       item.innerHTML = `
         <div class="sound-marker">${num}</div>
         <div class="sound-content">
-          <div class="sound-meta">Level ${num} · ${floor.canonical_name.split('/')[0]}</div>
-          <h3 class="sound-title">${floor.canonical.sound}</h3>
-          <p style="margin-top:0.4rem; color:var(--muted); font-size:13px;">Recitation: <strong>${floor.canonical.recitation}</strong> · Light: <strong>${floor.canonical.light.split('(')[0]}</strong></p>
+          <div class="sound-meta">Level ${num} · ${escapeHTML(floor.canonical_name.split('/')[0])}</div>
+          <h3 class="sound-title">${escapeHTML(floor.canonical.sound)}</h3>
+          <p style="margin-top:0.4rem; color:var(--muted); font-size:13px;">Recitation: <strong>${escapeHTML(floor.canonical.recitation)}</strong> · Light: <strong>${escapeHTML(floor.canonical.light.split('(')[0])}</strong></p>
         </div>
       `;
       container.appendChild(item);
@@ -783,13 +913,6 @@ export function setupGallery() {
   if (!tbody) return;
   tbody.innerHTML = '';
 
-  const colorMap = {
-    'Pinda': 'rgba(163, 45, 45, 0.08)',
-    'Brahmanda': 'rgba(127, 119, 221, 0.08)',
-    'Dayal Desh': 'rgba(15, 110, 86, 0.08)',
-    'Secret': 'rgba(196, 169, 106, 0.08)'
-  };
-
   const textColors = {
     'Pinda': 'var(--color-pinda)',
     'Brahmanda': 'var(--color-brahmanda)',
@@ -814,20 +937,124 @@ export function setupGallery() {
     };
 
     const realm = floor.classification.realm;
-    const hoverBg = colorMap[realm] || 'rgba(255, 255, 255, 0.02)';
+    const hoverBg = COLOR_MAP[realm.toLowerCase()] ? `rgba(${COLOR_MAP[realm.toLowerCase()] === '#a32d2d' ? '163,45,45' : COLOR_MAP[realm.toLowerCase()] === '#7f77dd' ? '127,119,221' : COLOR_MAP[realm.toLowerCase()] === '#0f6e56' ? '15,110,86' : '196,169,106'}, 0.08)` : 'rgba(255, 255, 255, 0.02)';
     const nameColor = textColors[realm] || 'var(--accent)';
     tr.style.setProperty('--row-hover-color', hoverBg);
 
     tr.innerHTML = `
       <td class="legend-table-level-cell" style="color: ${nameColor}">${i}</td>
-      <td style="color: ${nameColor}; font-weight: 500; font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase;">${realm === 'Secret' ? 'Nameless Peak' : realm}</td>
-      <td><strong>${floor.canonical_name.split('/')[0]}</strong><br><small style="color: var(--muted); font-size: 10px;">Ruler: ${floor.canonical.ruler}</small></td>
+      <td style="color: ${nameColor}; font-weight: 500; font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase;">${realm === 'Secret' ? 'Nameless Peak' : escapeHTML(realm)}</td>
+      <td><strong>${escapeHTML(floor.canonical_name.split('/')[0])}</strong><br><small style="color: var(--muted); font-size: 10px;">Ruler: ${escapeHTML(floor.canonical.ruler)}</small></td>
     `;
     tbody.appendChild(tr);
   }
   
   // Render and setup Kabbalistic and Sufi vector overlays
   setupGalleryOverlays();
+  setupGalleryZoom();
+}
+
+export function setupGalleryZoom() {
+  const frame = document.getElementById('galleryImageFrame');
+  const img = document.getElementById('galleryMainImg');
+  if (!frame || !img) return;
+
+  let zoom = 1;
+  let panX = 0;
+  let panY = 0;
+  let isDragging = false;
+  let startX = 0;
+  let startY = 0;
+
+  function updateTransform() {
+    img.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
+  }
+
+  // Set initial origin and cursor styles
+  img.style.transformOrigin = 'center center';
+  img.style.transition = 'transform 0.05s ease';
+  frame.style.cursor = 'grab';
+
+  frame.onmousedown = (e) => {
+    e.preventDefault();
+    isDragging = true;
+    startX = e.clientX - panX;
+    startY = e.clientY - panY;
+    frame.style.cursor = 'grabbing';
+  };
+
+  window.addEventListener('mouseup', () => {
+    isDragging = false;
+    if (frame) frame.style.cursor = 'grab';
+  });
+
+  frame.onmousemove = (e) => {
+    if (!isDragging) return;
+    panX = e.clientX - startX;
+    panY = e.clientY - startY;
+    updateTransform();
+  };
+
+  frame.onwheel = (e) => {
+    e.preventDefault();
+    const zoomFactor = 1.1;
+    if (e.deltaY < 0) {
+      zoom *= zoomFactor;
+    } else {
+      zoom /= zoomFactor;
+    }
+    zoom = Math.max(1, Math.min(4, zoom));
+    if (zoom === 1) {
+      panX = 0;
+      panY = 0;
+    }
+    updateTransform();
+  };
+
+  // Touch & Pinch support
+  let touchStartDist = 0;
+  let baseZoom = 1;
+
+  frame.ontouchstart = (e) => {
+    if (e.touches.length === 1) {
+      isDragging = true;
+      startX = e.touches[0].clientX - panX;
+      startY = e.touches[0].clientY - panY;
+    } else if (e.touches.length === 2) {
+      isDragging = false;
+      touchStartDist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      baseZoom = zoom;
+    }
+  };
+
+  frame.ontouchmove = (e) => {
+    if (isDragging && e.touches.length === 1) {
+      panX = e.touches[0].clientX - startX;
+      panY = e.touches[0].clientY - startY;
+      updateTransform();
+      e.preventDefault();
+    } else if (e.touches.length === 2) {
+      const dist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      const factor = dist / touchStartDist;
+      zoom = Math.max(1, Math.min(4, baseZoom * factor));
+      if (zoom === 1) {
+        panX = 0;
+        panY = 0;
+      }
+      updateTransform();
+      e.preventDefault();
+    }
+  };
+
+  frame.ontouchend = () => {
+    isDragging = false;
+  };
 }
 
 // ── PRANAYAMA BREATHING VISUALIZER LOOP ──
@@ -891,6 +1118,13 @@ function updateBreathState(circle, instruction, label, mantra) {
   }
 }
 
+export function stopBreathingGuide() {
+  if (breathInterval) {
+    clearInterval(breathInterval);
+    breathInterval = null;
+  }
+}
+
 // ── AUDIO CONTROLLER TRIGGERS ──
 export function toggleAudioSynthesizer(floorNum) {
   const isPlaying = isAudioPlaying();
@@ -912,7 +1146,7 @@ export function changeSynthesizerVolume(val) {
   const isPlaying = isAudioPlaying();
   const currentFloor = getCurrentPlayingFloor();
   if (isPlaying && currentFloor > 0) {
-    playCurrentSound(currentFloor, parseFloat(val));
+    setSynthesizerVolume(parseFloat(val));
   }
 }
 
@@ -1167,13 +1401,15 @@ window.openLightbox = (type) => {
   const content = document.getElementById('lightbox-content');
   if (!lightbox || !content) return;
   
+  state.lastActiveElement = document.activeElement; // Track focus element
+
   if (type === 'yantra') {
     const svgEl = document.querySelector('.lotus-svg');
     if (svgEl) {
       content.innerHTML = svgEl.outerHTML;
     }
   } else if (type === 'art') {
-    const imgEl = document.querySelector('.esoteric-img');
+    const imgEl = document.getElementById('esotericImg') || document.querySelector('.esoteric-img');
     if (imgEl) {
       content.innerHTML = `<img src="${imgEl.src}" alt="${imgEl.alt}">`;
     }
@@ -1181,6 +1417,11 @@ window.openLightbox = (type) => {
   
   lightbox.classList.add('active');
   lightbox.setAttribute('aria-hidden', 'false');
+  
+  const closeBtn = lightbox.querySelector('.lightbox-close');
+  if (closeBtn) {
+    closeBtn.focus();
+  }
 };
 
 window.closeLightbox = () => {
@@ -1192,6 +1433,10 @@ window.closeLightbox = () => {
   }
   if (content) {
     content.innerHTML = '';
+  }
+  if (state.lastActiveElement) {
+    state.lastActiveElement.focus();
+    state.lastActiveElement = null;
   }
 };
 
@@ -1218,3 +1463,88 @@ export function toggleAllAccordions() {
     btn.setAttribute('aria-label', 'Collapse all comparative lenses');
   }
 }
+
+export async function lazyLoadGraph() {
+  if (state.graphData && state.graphData.nodes) {
+    return; // Already loaded
+  }
+
+  const svg = document.getElementById('graphSvg');
+  const group = document.getElementById('graphGroup');
+  if (!svg || !group) return;
+
+  // Render a beautiful, premium glassmorphic loader inside graph panel
+  let loader = document.getElementById('graph-loader');
+  if (!loader) {
+    loader = document.createElement('div');
+    loader.id = 'graph-loader';
+    loader.className = 'glass';
+    loader.innerHTML = `
+      <div class="spinner"></div>
+      <div style="margin-top: 1rem; font-weight: 500; letter-spacing: 0.05em; color: var(--accent);">CONNECTING ATLAS RELATIONSHIPS...</div>
+      <div style="font-size: 11px; color: var(--muted); margin-top: 4px;">Loading 261 consciousness node streams</div>
+    `;
+    loader.setAttribute('style', `
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      background: rgba(7, 7, 9, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      border-radius: 12px;
+      transition: opacity 0.4s ease;
+    `);
+    
+    const spinnerStyle = document.createElement('style');
+    spinnerStyle.textContent = `
+      .spinner {
+        width: 48px;
+        height: 48px;
+        border: 3px solid rgba(196, 169, 106, 0.15);
+        border-radius: 50%;
+        border-top-color: var(--accent);
+        animation: spin 1s ease-in-out infinite;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    `;
+    document.head.appendChild(spinnerStyle);
+    
+    svg.parentNode.appendChild(loader);
+  }
+
+  loader.style.opacity = '1';
+  loader.style.display = 'flex';
+
+  try {
+    const response = await fetch('content/content_graph.json');
+    state.graphData = await response.json();
+    setupGraph();
+    
+    // Graceful fade out
+    loader.style.opacity = '0';
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 400);
+  } catch (error) {
+    console.error("Error lazy-loading graph:", error);
+    loader.innerHTML = `
+      <div style="color: var(--color-pinda); font-size: 24px;">⚠️</div>
+      <div style="margin-top: 0.5rem; font-weight: 600; color: var(--text);">Failed to load graph data</div>
+      <div style="font-size: 11px; color: var(--muted); margin-top: 4px;">Please check your connection and reload</div>
+    `;
+  }
+}
+
+// Global Escape key listener for the Art Lightbox modal
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const lightbox = document.getElementById('lightbox-modal');
+    if (lightbox && lightbox.classList.contains('active')) {
+      window.closeLightbox();
+    }
+  }
+});
+

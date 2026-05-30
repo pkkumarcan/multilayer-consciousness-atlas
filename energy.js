@@ -2,7 +2,7 @@
 // Consciousness Atlas - 3D Holographic Energy Map Engine (Three.js)
 // ==============================================================================
 
-import { state } from './state.js';
+import { state, COLOR_MAP, SPINAL_CENTERS } from './state.js';
 
 const THREE = window.THREE;
 const OrbitControls = THREE.OrbitControls;
@@ -12,6 +12,35 @@ let hotspots = [];
 let energyParticles = [];
 let isInitialized = false;
 let animationFrameId = null;
+
+// Module-level animation loop
+function animate() {
+  animationFrameId = requestAnimationFrame(animate);
+  
+  // Idle rotation of scene to highlight 3D structure
+  scene.rotation.y += 0.0015;
+
+  // Pulse hotspots glow smoothly
+  const time = Date.now() * 0.003;
+  hotspots.forEach(h => {
+    const baseScale = h.userData.baseScale;
+    const pulse = 1 + 0.15 * Math.sin(time + h.userData.level);
+    h.scale.set(baseScale * pulse, baseScale * pulse, baseScale * pulse);
+  });
+
+  // Animate energy particles rising along spine
+  animateEnergy(time);
+
+  controls.update();
+  renderer.render(scene, camera);
+}
+
+export function pause3DMapAnimation() {
+  if (animationFrameId) {
+    cancelAnimationFrame(animationFrameId);
+    animationFrameId = null;
+  }
+}
 
 export function init3DMap() {
   const container = document.getElementById('energy-canvas-container');
@@ -24,6 +53,11 @@ export function init3DMap() {
     renderer.setSize(width, height);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
+    
+    // Resume animation loop if it was paused
+    if (!animationFrameId) {
+      animate();
+    }
     return;
   }
 
@@ -99,27 +133,7 @@ export function init3DMap() {
     }
   });
 
-  // 9. Animation Loop
-  function animate() {
-    animationFrameId = requestAnimationFrame(animate);
-    
-    // Idle rotation of scene to highlight 3D structure
-    scene.rotation.y += 0.0015;
-
-    // Pulse hotspots glow smoothly
-    const time = Date.now() * 0.003;
-    hotspots.forEach(h => {
-      const baseScale = h.userData.baseScale;
-      const pulse = 1 + 0.15 * Math.sin(time + h.userData.level);
-      h.scale.set(baseScale * pulse, baseScale * pulse, baseScale * pulse);
-    });
-
-    // Animate energy particles rising along spine
-    animateEnergy(time);
-
-    controls.update();
-    renderer.render(scene, camera);
-  }
+  // 9. Start Animation Loop
   animate();
 
   // Handle Resize
@@ -379,19 +393,7 @@ export function update3DSidebar(level) {
   }
 
   const rawColor = floor.canonical.petals?.color || 'white';
-  const colorMap = {
-    red: '#a32d2d',
-    vermilion: '#d66025',
-    blue: '#2c7fb8',
-    'blue-green': '#1f9e89',
-    purple: '#7f77dd',
-    gold: '#c4a96a',
-    white: '#eceae4',
-    yellow: '#dfc221',
-    crimson: '#e31a1c',
-    'white-gold': '#fff7bc'
-  };
-  const activeColor = colorMap[rawColor.toLowerCase()] || rawColor;
+  const activeColor = COLOR_MAP[rawColor.toLowerCase()] || rawColor;
 
   sidebar.innerHTML = `
     <div style="animation: fadeUp 0.3s ease forwards;">
@@ -399,54 +401,32 @@ export function update3DSidebar(level) {
       <div class="energy-detail-subtitle">${floor.sanskrit_name}</div>
       
       <div class="energy-detail-row">
-        <th>Level Scale</th>
-        <td>Floor ${level} / 18</td>
+        <span class="energy-detail-label">Level Scale</span>
+        <span class="energy-detail-value">Floor ${level} / 18</span>
       </div>
       <div class="energy-detail-row">
-        <th>Cosmic Realm</th>
-        <td style="color: ${activeColor}; font-weight: 600;">${floor.classification.realm}</td>
+        <span class="energy-detail-label">Cosmic Realm</span>
+        <span class="energy-detail-value" style="color: ${activeColor}; font-weight: 600;">${floor.classification.realm}</span>
       </div>
       <div class="energy-detail-row">
-        <th>Presiding Lord</th>
-        <td><strong>${floor.canonical.ruler}</strong></td>
+        <span class="energy-detail-label">Presiding Lord</span>
+        <span class="energy-detail-value"><strong>${floor.canonical.ruler}</strong></span>
       </div>
       <div class="energy-detail-row">
-        <th>Esoteric Sound</th>
-        <td>${floor.canonical.sound.split('(')[0]}</td>
+        <span class="energy-detail-label">Esoteric Sound</span>
+        <span class="energy-detail-value">${floor.canonical.sound.split('(')[0]}</span>
       </div>
       <div class="energy-detail-row">
-        <th>Seed Mantra</th>
-        <td style="color: ${activeColor}; font-family: var(--font-serif); font-size: 15px; font-weight: 600;">${floor.canonical.mantra || 'None'}</td>
+        <span class="energy-detail-label">Seed Mantra</span>
+        <span class="energy-detail-value" style="color: ${activeColor}; font-family: var(--font-serif); font-size: 15px; font-weight: 600;">${floor.canonical.mantra || 'None'}</span>
       </div>
       <div class="energy-detail-row">
-        <th>Anatomical Center</th>
-        <td style="font-size: 11px;">${(() => {
-          const spinalCenters = {
-            1: 'Coccygeal / Rectal Plexus',
-            2: 'Sacral / Prostatic Plexus',
-            3: 'Solar Plexus (Nabhi)',
-            4: 'Cardiac Plexus (Hridaya)',
-            5: 'Pharyngeal Plexus (Kantha)',
-            6: 'Cavernous Plexus / 3rd Eye',
-            7: 'Pineal Gland / Superior Sagittal',
-            8: 'Cerebral Cortex / Causal Gateway',
-            9: 'Tenth Door / Daswan Dwar',
-            10: 'Great Void Boundary',
-            11: 'Causal Peak Vortex',
-            12: 'Pure Spirit Crown (Sach Khand)',
-            13: 'Alakha Lok Abode',
-            14: 'Agama Lok Gateway',
-            15: 'The Nameless Spiritual Crown',
-            16: 'First Secret Spiritual Stage',
-            17: 'Second Secret Spiritual Stage',
-            18: 'Radhasoami Dham Peak'
-          };
-          return spinalCenters[level] || 'Transcendent Axis';
-        })()}</td>
+        <span class="energy-detail-label">Anatomical Center</span>
+        <span class="energy-detail-value" style="font-size: 11px;">${SPINAL_CENTERS[level] || 'Transcendent Axis'}</span>
       </div>
       <div class="energy-detail-row">
-        <th>Brain Region</th>
-        <td style="font-size: 11px;">${floor.science?.neuroscience?.regions?.[0] || 'Transcendent'}</td>
+        <span class="energy-detail-label">Brain Region</span>
+        <span class="energy-detail-value" style="font-size: 11px;">${floor.science?.neuroscience?.regions?.[0] || 'Transcendent'}</span>
       </div>
 
       <div class="energy-teachings-box">

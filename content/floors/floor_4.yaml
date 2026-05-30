@@ -144,3 +144,62 @@ sources:
   secondary:
     - "Mahatma Ramchandraji, writings on Qalb and the Five Lataif (Fatehgarh)"
     - "HeartMath Institute publications (HRV and physiological coherence research)"
+
+gateway_experience:
+  tradition: Gateway Experience / Monroe Institute
+  epistemic_label: Phenomenological · Empirical
+  tapes:
+    - tape_num: 5
+      name: Exploration, Sleep
+      wave: Wave I – Discovery
+      wave_num: 1
+      focus: Focus 10
+      state: Hypnagogic / sleep-bridge awareness
+      brainwave: Theta
+      hz: 4–6 Hz
+      description: >-
+        Trains awareness during the hypnagogic transition into sleep, using Focus 10 as a launchpad for exploration
+        during sleep cycles.
+      confidence: Strong
+    - tape_num: 6
+      name: Free Flow 10
+      wave: Wave I – Discovery
+      wave_num: 1
+      focus: Focus 10
+      state: Open self-directed Focus 10 exploration
+      brainwave: Theta
+      hz: 4–8 Hz
+      description: Unguided session at Focus 10. Consolidates all Wave I skills; listener explores freely without prompts.
+      confidence: Strong
+    - tape_num: 11
+      name: Energy Bar Tool
+      wave: Wave II – Threshold
+      wave_num: 2
+      focus: Focus 12
+      state: Focused energy manipulation
+      brainwave: Theta
+      hz: 4–7 Hz
+      description: >-
+        Teaches construction and use of the Energy Bar Tool — a concentrated beam of personal energy directed inward for
+        healing or outward for exploration.
+      confidence: Strong
+    - tape_num: 12
+      name: Living Body Map
+      wave: Wave II – Threshold
+      wave_num: 2
+      focus: Focus 12
+      state: Full-body energy mapping
+      brainwave: Theta
+      hz: 4–7 Hz
+      description: >-
+        Conducts a thorough internal survey of the physical and energetic body in Focus 12, deepening body-awareness and
+        identifying energy imbalances.
+      confidence: Strong
+  bridge_note: >-
+    The Heart Centre (Hridaya / Anahata) is the great bridge — where dense physical energy meets the subtle, where fear
+    dissolves and unconditional awareness begins to open. Monroe's Exploration Sleep teaches consciousness to sustain
+    itself through the fear-threshold of the hypnagogic drop, which many practitioners describe as a heart-stopping
+    sense of falling — exactly the Anahata test. Free Flow 10 opens unstructured exploration, mirroring the Anahata
+    quality of open, non-grasping awareness. The Energy Bar Tool builds directed compassionate energy projection; the
+    Living Body Map conducts the full energetic self-inventory that Anahata demands before ascending further.
+  tape_count: 4

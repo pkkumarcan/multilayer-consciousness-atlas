@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <link rel="manifest" href="manifest.json">
   <!-- iOS Mobile Web App support -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Realms Atlas">
-  <link rel="apple-touch-icon" href="icon_512.png">
+  <link rel="apple-touch-icon" href="assets/images/icon_512.png">
   <title>The Multilayer Consciousness Atlas</title>
   <meta name="description" content="An interactive, entity-centric Consciousness Atlas exploring the 18 spiritual floors, comparative traditions, and neurobiological mappings.">
   <meta name="keywords" content="Consciousness, Spiritual Atlas, Sant Mat, Neurobiology, Chakras, Esoteric, Meditation">
@@ -18,9 +18,9 @@
   <!-- Google Fonts pairing: Cormorant Garamond (Serif) & DM Sans (Sans-serif) -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <!-- Three.js and OrbitControls global libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <!-- Three.js and OrbitControls global libraries with SHA-384 SRI hashes -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha384-CI3ELBVUz9XQO+97x6nwMDPosPR5XvsxW2ua7N1Xeygeh1IxtgqtCkGfQY9WWdHu" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js" integrity="sha384-wagZhIFgY4hD+7awjQjR4e2E294y6J2HSnd8eTNc15ZubTeQeVRZwhQJ+W6hnBsf" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -32,17 +32,17 @@
     </div>
     
     <nav class="nav-tabs" role="tablist" aria-label="Main Views">
-      <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="view-floor" onclick="switchView('floor')">Floor View</button>
-      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="view-matrix" onclick="switchView('matrix')">Comparative Matrix</button>
-      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="view-graph" onclick="switchView('graph')">Interactive Graph</button>
-      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="view-sound" onclick="switchView('sound')">Sound Progression</button>
-      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="view-gallery" onclick="switchView('gallery')">Cosmic Gallery</button>
-      <button class="tab-btn" role="tab" id="tab-energy" aria-selected="false" aria-controls="view-energy" onclick="switchView('energy')">3D Energy Map</button>
+      <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="view-floor" data-view="floor">Floor View</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="view-matrix" data-view="matrix">Comparative Matrix</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="view-graph" data-view="graph">Interactive Graph</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="view-sound" data-view="sound">Sound Progression</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="view-gallery" data-view="gallery">Cosmic Gallery</button>
+      <button class="tab-btn" role="tab" id="tab-energy" aria-selected="false" aria-controls="view-energy" data-view="energy">3D Energy Map</button>
     </nav>
 
     <div class="search-box">
       <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-      <input type="search" id="searchInput" aria-label="Search Atlas content" placeholder="Search sounds, symbols, brain regions..." oninput="handleSearch(this.value)">
+      <input type="search" id="searchInput" aria-label="Search Atlas content" placeholder="Search sounds, symbols, brain regions...">
     </div>
   </header>
 
@@ -52,96 +52,96 @@
     <!-- ── SIDEBAR (18 FLOORS TIMELINE) ── -->
     <aside id="sidebar" aria-label="Floor Timeline" role="navigation">
       <div class="region-header">Region III — Dayal Desh</div>
-      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-18" onclick="selectFloor(18)">
+      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-18">
         <span class="floor-num-badge">18</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Secret Stage 18</span>
       </button>
-      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-17" onclick="selectFloor(17)">
+      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-17">
         <span class="floor-num-badge">17</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Secret Stage 17</span>
       </button>
-      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-16" onclick="selectFloor(16)">
+      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-16">
         <span class="floor-num-badge">16</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Secret Stage 16</span>
       </button>
-      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-15" onclick="selectFloor(15)">
+      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-15">
         <span class="floor-num-badge">15</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Akaha Lok / Anami</span>
       </button>
-      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-14" onclick="selectFloor(14)">
+      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-14">
         <span class="floor-num-badge">14</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Agama Lok</span>
       </button>
-      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-13" onclick="selectFloor(13)">
+      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-13">
         <span class="floor-num-badge">13</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Alakha Lok</span>
       </button>
-      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-12" onclick="selectFloor(12)">
+      <button class="floor-btn disabled-floor" data-realm="Dayal Desh" id="btn-12">
         <span class="floor-num-badge">12</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Sach Khand / Sat Lok</span>
       </button>
 
       <div class="region-header">Region II — Brahmanda</div>
-      <button class="floor-btn disabled-floor" data-realm="Brahmanda" id="btn-11" onclick="selectFloor(11)">
+      <button class="floor-btn disabled-floor" data-realm="Brahmanda" id="btn-11">
         <span class="floor-num-badge">11</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Bhanwar Gufa</span>
       </button>
-      <button class="floor-btn disabled-floor" data-realm="Brahmanda" id="btn-10" onclick="selectFloor(10)">
+      <button class="floor-btn disabled-floor" data-realm="Brahmanda" id="btn-10">
         <span class="floor-num-badge">10</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Maha Shoonya</span>
       </button>
-      <button class="floor-btn disabled-floor" data-realm="Brahmanda" id="btn-9" onclick="selectFloor(9)">
+      <button class="floor-btn disabled-floor" data-realm="Brahmanda" id="btn-9">
         <span class="floor-num-badge">9</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Shoonya / Daswan Dwar</span>
       </button>
-      <button class="floor-btn" data-realm="Brahmanda" id="btn-8" onclick="selectFloor(8)">
+      <button class="floor-btn" data-realm="Brahmanda" id="btn-8">
         <span class="floor-num-badge">8</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Trikuti</span>
       </button>
-      <button class="floor-btn disabled-floor" data-realm="Brahmanda" id="btn-7" onclick="selectFloor(7)">
+      <button class="floor-btn disabled-floor" data-realm="Brahmanda" id="btn-7">
         <span class="floor-num-badge">7</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Sahasra-Dal-Kamal</span>
       </button>
 
       <div class="region-header">Region I — Pinda</div>
-      <button class="floor-btn" data-realm="Pinda" id="btn-6" onclick="selectFloor(6)">
+      <button class="floor-btn" data-realm="Pinda" id="btn-6">
         <span class="floor-num-badge">6</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Aagya / Tisra Til</span>
       </button>
-      <button class="floor-btn" data-realm="Pinda" id="btn-5" onclick="selectFloor(5)">
+      <button class="floor-btn" data-realm="Pinda" id="btn-5">
         <span class="floor-num-badge">5</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Kantha / Vishuddha</span>
       </button>
-      <button class="floor-btn" data-realm="Pinda" id="btn-4" onclick="selectFloor(4)">
+      <button class="floor-btn" data-realm="Pinda" id="btn-4">
         <span class="floor-num-badge">4</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Hridaya / Anahata</span>
       </button>
-      <button class="floor-btn" data-realm="Pinda" id="btn-3" onclick="selectFloor(3)">
+      <button class="floor-btn" data-realm="Pinda" id="btn-3">
         <span class="floor-num-badge">3</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Nabhi / Manipura</span>
       </button>
-      <button class="floor-btn" data-realm="Pinda" id="btn-2" onclick="selectFloor(2)">
+      <button class="floor-btn" data-realm="Pinda" id="btn-2">
         <span class="floor-num-badge">2</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Indriya / Svadhisthana</span>
       </button>
-      <button class="floor-btn active" data-realm="Pinda" id="btn-1" onclick="selectFloor(1)">
+      <button class="floor-btn active" data-realm="Pinda" id="btn-1">
         <span class="floor-num-badge">1</span>
         <span class="floor-indicator"></span>
         <span class="floor-btn-label">Guda / Muladhara</span>
@@ -182,43 +182,46 @@
         <!-- Tradition Lenses Filter -->
         <div class="filter-title">Filter Comparative Tradition Lenses</div>
         <div class="lenses-bar" id="traditionFilters">
-          <input type="checkbox" id="lens-saksena" class="lens-checkbox" checked onchange="toggleCardFilter('saksena')">
+          <input type="checkbox" id="lens-saksena" class="lens-checkbox" checked>
           <label for="lens-saksena" class="lens-label">Saksena Core</label>
 
-          <input type="checkbox" id="lens-sikhism" class="lens-checkbox" checked onchange="toggleCardFilter('sikhism')">
+          <input type="checkbox" id="lens-sikhism" class="lens-checkbox" checked>
           <label for="lens-sikhism" class="lens-label">Sikhism / Gurbani</label>
 
-          <input type="checkbox" id="lens-sufism" class="lens-checkbox" checked onchange="toggleCardFilter('sufism')">
+          <input type="checkbox" id="lens-sufism" class="lens-checkbox" checked>
           <label for="lens-sufism" class="lens-label">Sufi Lataif</label>
 
-          <input type="checkbox" id="lens-science" class="lens-checkbox" checked onchange="toggleCardFilter('science')">
+          <input type="checkbox" id="lens-science" class="lens-checkbox" checked>
           <label for="lens-science" class="lens-label">Neuroscience / Biology</label>
 
-          <input type="checkbox" id="lens-hindu_tantra" class="lens-checkbox" checked onchange="toggleCardFilter('hindu_tantra')">
+          <input type="checkbox" id="lens-hindu_tantra" class="lens-checkbox" checked>
           <label for="lens-hindu_tantra" class="lens-label">Hindu Tantra / Kundalini</label>
 
-          <input type="checkbox" id="lens-vedic" class="lens-checkbox" checked onchange="toggleCardFilter('vedic')">
+          <input type="checkbox" id="lens-vedic" class="lens-checkbox" checked>
           <label for="lens-vedic" class="lens-label">Vedas &amp; Upanishads</label>
 
-          <input type="checkbox" id="lens-buddhism" class="lens-checkbox" checked onchange="toggleCardFilter('buddhism')">
+          <input type="checkbox" id="lens-buddhism" class="lens-checkbox" checked>
           <label for="lens-buddhism" class="lens-label">Buddhism</label>
 
-          <input type="checkbox" id="lens-taoism" class="lens-checkbox" checked onchange="toggleCardFilter('taoism')">
+          <input type="checkbox" id="lens-taoism" class="lens-checkbox" checked>
           <label for="lens-taoism" class="lens-label">Taoism</label>
 
-          <input type="checkbox" id="lens-kabbalah" class="lens-checkbox" checked onchange="toggleCardFilter('kabbalah')">
+          <input type="checkbox" id="lens-kabbalah" class="lens-checkbox" checked>
           <label for="lens-kabbalah" class="lens-label">Kabbalah</label>
 
-          <input type="checkbox" id="lens-gnosticism" class="lens-checkbox" checked onchange="toggleCardFilter('gnosticism')">
+          <input type="checkbox" id="lens-gnosticism" class="lens-checkbox" checked>
           <label for="lens-gnosticism" class="lens-label">Gnosticism</label>
 
-          <input type="checkbox" id="lens-jainism" class="lens-checkbox" checked onchange="toggleCardFilter('jainism')">
+          <input type="checkbox" id="lens-jainism" class="lens-checkbox" checked>
           <label for="lens-jainism" class="lens-label">Jainism</label>
+
+          <input type="checkbox" id="lens-gateway" class="lens-checkbox" checked>
+          <label for="lens-gateway" class="lens-label">Gateway Experience</label>
         </div>
 
         <!-- Accordion Master Controller -->
         <div class="accordion-master-control">
-          <button id="accordion-toggle-btn" class="accordion-toggle-btn" onclick="toggleAllAccordions()" aria-label="Expand all comparative lenses">Expand All</button>
+          <button id="accordion-toggle-btn" class="accordion-toggle-btn" aria-label="Expand all comparative lenses">Expand All</button>
         </div>
 
         <!-- Cards Container -->
@@ -228,8 +231,8 @@
 
         <!-- Pagination -->
         <div class="floor-view-nav">
-          <button id="prev-btn" onclick="navigateFloor(-1)">← Previous Floor</button>
-          <button id="next-btn" onclick="navigateFloor(1)">Next Floor →</button>
+          <button id="prev-btn">← Previous Floor</button>
+          <button id="next-btn">Next Floor →</button>
         </div>
       </div>
 
@@ -266,29 +269,34 @@
           <div class="filter-group-title">Filter Graph Relationship Streams:</div>
           <div class="filter-checkbox-grid">
             <label class="filter-checkbox-label">
-              <input type="checkbox" id="filter-node-Floor" checked onchange="toggleGraphFilter('Floor')">
+              <input type="checkbox" id="filter-node-Floor" checked>
               <span class="custom-chk" style="background-color: var(--color-pinda)"></span>
               Spiritual Floors
             </label>
             <label class="filter-checkbox-label">
-              <input type="checkbox" id="filter-node-Ruler" checked onchange="toggleGraphFilter('Ruler')">
+              <input type="checkbox" id="filter-node-Ruler" checked>
               <span class="custom-chk" style="background-color: #c4a96a"></span>
               Presiding Rulers
             </label>
             <label class="filter-checkbox-label">
-              <input type="checkbox" id="filter-node-Sound" checked onchange="toggleGraphFilter('Sound')">
+              <input type="checkbox" id="filter-node-Sound" checked>
               <span class="custom-chk" style="background-color: #8fa3b8"></span>
               Sounds &amp; Lights
             </label>
             <label class="filter-checkbox-label">
-              <input type="checkbox" id="filter-node-Brain" checked onchange="toggleGraphFilter('Brain')">
+              <input type="checkbox" id="filter-node-Brain" checked>
               <span class="custom-chk" style="background-color: #1d9e75"></span>
               Brain Mappings
             </label>
             <label class="filter-checkbox-label">
-              <input type="checkbox" id="filter-node-Comparative" checked onchange="toggleGraphFilter('Comparative')">
+              <input type="checkbox" id="filter-node-Comparative" checked>
               <span class="custom-chk" style="background-color: var(--accent)"></span>
               Comparative Parallels
+            </label>
+            <label class="filter-checkbox-label">
+              <input type="checkbox" id="filter-node-Gateway" checked>
+              <span class="custom-chk" style="background-color: #22c55e"></span>
+              Gateway Tapes
             </label>
           </div>
         </div>
@@ -318,9 +326,9 @@
         
         <!-- Comparative Overlay Tabs -->
         <div class="gallery-tabs-container">
-          <button class="gallery-tab-btn active" id="gal-tab-map" onclick="switchGalleryTab('map')">Cosmic Map Infographic</button>
-          <button class="gallery-tab-btn" id="gal-tab-kabbalah" onclick="switchGalleryTab('kabbalah')">Kabbalistic Tree of Life</button>
-          <button class="gallery-tab-btn" id="gal-tab-sufi" onclick="switchGalleryTab('sufi')">Sufi subtle organs</button>
+          <button class="gallery-tab-btn active" id="gal-tab-map">Cosmic Map Infographic</button>
+          <button class="gallery-tab-btn" id="gal-tab-kabbalah">Kabbalistic Tree of Life</button>
+          <button class="gallery-tab-btn" id="gal-tab-sufi">Sufi subtle organs</button>
         </div>
 
         <div class="gallery-layout-container">
@@ -331,7 +339,7 @@
             <div id="gallery-map-pane" style="display: block; width: 100%;">
               <div class="gallery-pan-instruction">Scroll or drag inside the map frame to examine the complete spiritual cartography.</div>
               <div class="gallery-image-frame" id="galleryImageFrame">
-                <img src="picture all floors.png" alt="Cosmic Map of Consciousness Realms" class="gallery-main-image" id="galleryMainImg">
+                <img src="assets/images/cosmic-map.png" alt="Cosmic Map of Consciousness Realms" class="gallery-main-image" id="galleryMainImg">
               </div>
             </div>
 
@@ -413,8 +421,8 @@
   </div>
 
   <!-- Lightbox Modal for Art & Yantras -->
-  <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Image Lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close Lightbox">&times;</button>
+  <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Image Lightbox">
+    <button class="lightbox-close" aria-label="Close Lightbox">&times;</button>
     <div class="lightbox-content-container" onclick="event.stopPropagation()">
       <div id="lightbox-content"></div>
     </div>

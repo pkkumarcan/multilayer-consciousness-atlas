@@ -5,8 +5,9 @@ const yaml = require('js-yaml');
 // Simple schema validation function
 function validateAgainstSchema(data, schema, pathPrefix = '') {
   const errors = [];
+  const typeUpper = (schema.type || '').toUpperCase();
 
-  if (schema.type === 'OBJECT') {
+  if (typeUpper === 'OBJECT') {
     if (typeof data !== 'object' || data === null || Array.isArray(data)) {
       errors.push(`${pathPrefix || 'root'} should be an object`);
       return errors;
@@ -32,7 +33,7 @@ function validateAgainstSchema(data, schema, pathPrefix = '') {
         errors.push(...subErrors);
       }
     }
-  } else if (schema.type === 'ARRAY') {
+  } else if (typeUpper === 'ARRAY') {
     if (!Array.isArray(data)) {
       errors.push(`${pathPrefix || 'root'} should be an array (got ${typeof data})`);
       return errors;
@@ -43,7 +44,7 @@ function validateAgainstSchema(data, schema, pathPrefix = '') {
         errors.push(...subErrors);
       });
     }
-  } else if (schema.type === 'STRING') {
+  } else if (typeUpper === 'STRING') {
     if (typeof data !== 'string') {
       errors.push(`${pathPrefix || 'root'} should be a string (got ${typeof data})`);
     } else {
@@ -57,7 +58,7 @@ function validateAgainstSchema(data, schema, pathPrefix = '') {
         }
       }
     }
-  } else if (schema.type === 'INTEGER') {
+  } else if (typeUpper === 'INTEGER') {
     if (!Number.isInteger(data)) {
       errors.push(`${pathPrefix || 'root'} should be an integer`);
     } else {

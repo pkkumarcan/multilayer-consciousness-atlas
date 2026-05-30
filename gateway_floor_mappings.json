@@ -1,0 +1,777 @@
+{
+  "gateway_experience_floor_mappings": {
+    "floor_1": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 1,
+          "name": "Orientation",
+          "wave": "Wave I – Discovery",
+          "wave_num": 1,
+          "focus": "Focus 3",
+          "state": "Light relaxation / Gateway entry",
+          "brainwave": "Alpha",
+          "hz": "8–12 Hz",
+          "description": "Introduces the Gateway Affirmation, REBAL (Resonant Energy Balloon) protective field, and the resonance tunnel. Establishes the foundational mindset for all subsequent work.",
+          "confidence": "Strong"
+        }
+      ],
+      "bridge_note": "Monroe's Orientation establishes the REBAL — a self-generated protective energy sphere before any inner work begins. This mirrors the foundational protective function of Floor 1: Lord Ganesha removes obstacles and guards the threshold before ascent. Both systems insist on establishing a stable, protected base at the gross physical boundary before any inner journey proceeds. Monroe's 'Gateway Affirmation' (I am more than my physical body) is the Western equivalent of declaring intent to transcend the gross body plane.",
+      "map_limit_note": null,
+      "tape_count": 1
+    },
+    "floor_2": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 2,
+          "name": "Intro to Focus 10",
+          "wave": "Wave I – Discovery",
+          "wave_num": 1,
+          "focus": "Focus 10",
+          "state": "Mind Awake / Body Asleep",
+          "brainwave": "Theta",
+          "hz": "4–8 Hz",
+          "description": "Guides the listener into Focus 10 — the signature mind-awake, body-asleep state where physical sensations recede but mental clarity remains sharp.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 25,
+          "name": "Mission 10",
+          "wave": "Wave V – Exploring",
+          "wave_num": 5,
+          "focus": "Focus 10",
+          "state": "Purposeful Focus 10 exploration",
+          "brainwave": "Theta",
+          "hz": "4–8 Hz",
+          "description": "Returns to Focus 10 with a specific personal mission. Demonstrates how any Focus state can be goal-directed rather than merely exploratory.",
+          "confidence": "Strong"
+        }
+      ],
+      "bridge_note": "Focus 10 — mind awake, body asleep — is Monroe's map of the withdrawal of consciousness from gross physical sensation, precisely the function of Floor 2 (Indriya / Svadhisthana). The Sanskrit root 'Indriya' means senses; this floor governs the vital force and the withdrawal of Prana from the lower gates. When Monroe's practitioner enters Focus 10, they are enacting this same Pratyahara — the turning inward of the senses. Mission 10 (tape 25) returns to this state with purposeful intent, reflecting the mastery phase of this level.",
+      "map_limit_note": null,
+      "tape_count": 2
+    },
+    "floor_3": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 3,
+          "name": "Advanced Focus 10",
+          "wave": "Wave I – Discovery",
+          "wave_num": 1,
+          "focus": "Focus 10",
+          "state": "Expanded Focus 10 / energy control",
+          "brainwave": "Theta",
+          "hz": "4–8 Hz",
+          "description": "Deepens Focus 10 proficiency. Introduces the Energy Conversion Box (ECB) and teaches active personal energy management within the state.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 4,
+          "name": "Release and Recharge",
+          "wave": "Wave I – Discovery",
+          "wave_num": 1,
+          "focus": "Focus 10",
+          "state": "Emotional release / energy renewal",
+          "brainwave": "Theta",
+          "hz": "4–7 Hz",
+          "description": "Uses the ECB to deposit fears, tensions and limiting beliefs, then draws fresh energy inward. Clears emotional static blocking deeper states.",
+          "confidence": "Strong"
+        }
+      ],
+      "bridge_note": "Floor 3 (Nabhi / Manipura) governs personal will, vital energy management, and the transformation of Tejas (fire energy). Monroe's Advanced Focus 10 teaches active personal energy control within the state — the practitioner learns to manage, direct and amplify their inner energy field. Release and Recharge directly purges stagnant emotional-energetic residue and recharges the system — functionally identical to the Manipura process of burning old karma through the solar fire. Lord Vishnu's sustaining principle is reflected in Monroe's emphasis on stable, renewable energy.",
+      "map_limit_note": null,
+      "tape_count": 2
+    },
+    "floor_4": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 5,
+          "name": "Exploration, Sleep",
+          "wave": "Wave I – Discovery",
+          "wave_num": 1,
+          "focus": "Focus 10",
+          "state": "Hypnagogic / sleep-bridge awareness",
+          "brainwave": "Theta",
+          "hz": "4–6 Hz",
+          "description": "Trains awareness during the hypnagogic transition into sleep, using Focus 10 as a launchpad for exploration during sleep cycles.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 6,
+          "name": "Free Flow 10",
+          "wave": "Wave I – Discovery",
+          "wave_num": 1,
+          "focus": "Focus 10",
+          "state": "Open self-directed Focus 10 exploration",
+          "brainwave": "Theta",
+          "hz": "4–8 Hz",
+          "description": "Unguided session at Focus 10. Consolidates all Wave I skills; listener explores freely without prompts.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 11,
+          "name": "Energy Bar Tool",
+          "wave": "Wave II – Threshold",
+          "wave_num": 2,
+          "focus": "Focus 12",
+          "state": "Focused energy manipulation",
+          "brainwave": "Theta",
+          "hz": "4–7 Hz",
+          "description": "Teaches construction and use of the Energy Bar Tool — a concentrated beam of personal energy directed inward for healing or outward for exploration.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 12,
+          "name": "Living Body Map",
+          "wave": "Wave II – Threshold",
+          "wave_num": 2,
+          "focus": "Focus 12",
+          "state": "Full-body energy mapping",
+          "brainwave": "Theta",
+          "hz": "4–7 Hz",
+          "description": "Conducts a thorough internal survey of the physical and energetic body in Focus 12, deepening body-awareness and identifying energy imbalances.",
+          "confidence": "Strong"
+        }
+      ],
+      "bridge_note": "The Heart Centre (Hridaya / Anahata) is the great bridge — where dense physical energy meets the subtle, where fear dissolves and unconditional awareness begins to open. Monroe's Exploration Sleep teaches consciousness to sustain itself through the fear-threshold of the hypnagogic drop, which many practitioners describe as a heart-stopping sense of falling — exactly the Anahata test. Free Flow 10 opens unstructured exploration, mirroring the Anahata quality of open, non-grasping awareness. The Energy Bar Tool builds directed compassionate energy projection; the Living Body Map conducts the full energetic self-inventory that Anahata demands before ascending further.",
+      "map_limit_note": null,
+      "tape_count": 4
+    },
+    "floor_5": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 7,
+          "name": "Intro to Focus 12",
+          "wave": "Wave II – Threshold",
+          "wave_num": 2,
+          "focus": "Focus 12",
+          "state": "Expanded awareness beyond body",
+          "brainwave": "Theta",
+          "hz": "4–7 Hz",
+          "description": "Introduces Focus 12 where conscious awareness expands beyond the body's sensory system into broader intuitive and subtle perception.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 8,
+          "name": "Problem Solving",
+          "wave": "Wave II – Threshold",
+          "wave_num": 2,
+          "focus": "Focus 12",
+          "state": "Creative / intuitive problem resolution",
+          "brainwave": "Theta",
+          "hz": "5–7 Hz",
+          "description": "Harnesses Focus 12 clarity to examine personal problems from an expanded viewpoint, accessing intuitive solutions unavailable in normal consciousness.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 9,
+          "name": "One-Month Patterning",
+          "wave": "Wave II – Threshold",
+          "wave_num": 2,
+          "focus": "Focus 12",
+          "state": "Intentional reality shaping",
+          "brainwave": "Theta",
+          "hz": "4–7 Hz",
+          "description": "Uses Focus 12 to implant a desired outcome into the subconscious for 30 days. Based on Monroe's observation that sustained intent alters experience.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 10,
+          "name": "Color Breathing",
+          "wave": "Wave II – Threshold",
+          "wave_num": 2,
+          "focus": "Focus 12",
+          "state": "Bioenergetic body scan",
+          "brainwave": "Theta",
+          "hz": "4–7 Hz",
+          "description": "Assigns healing colours to the breath and systematically moves them through the body's energy system, combining visualisation with rhythmic breathing.",
+          "confidence": "Strong"
+        }
+      ],
+      "bridge_note": "Floor 5 (Kantha / Vishuddha) is the throat — the centre of subtle sound, purified communication, expanded expression, and the beginning of trans-sensory perception. Focus 12 is Monroe's exact functional equivalent: awareness expands beyond the physical senses into a broader intuitive field. Intro to Focus 12 opens this expansion. Problem Solving harnesses it for creative clarity — Vishuddha's gift of discriminative wisdom. One-Month Patterning uses sound-like intention to shape reality — analogous to Mantra-Shakti at the throat. Color Breathing works with subtle vibrational frequencies, directly matching Vishuddha's domain of light-sound interplay.",
+      "map_limit_note": null,
+      "tape_count": 4
+    },
+    "floor_6": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 13,
+          "name": "Liftoff",
+          "wave": "Wave III – Freedom",
+          "wave_num": 3,
+          "focus": "Focus 12",
+          "state": "Pre-OBE departure preparation",
+          "brainwave": "Theta",
+          "hz": "4–6 Hz",
+          "description": "First direct preparation for out-of-body departure. Focuses on releasing attachment to the physical body and building energetic momentum to separate.",
+          "confidence": "Very Strong"
+        },
+        {
+          "tape_num": 14,
+          "name": "Remote Viewing",
+          "wave": "Wave III – Freedom",
+          "wave_num": 3,
+          "focus": "Focus 12",
+          "state": "Non-local perception / target acquisition",
+          "brainwave": "Theta",
+          "hz": "4–7 Hz",
+          "description": "Introduces Monroe-style remote viewing in Focus 12: projecting awareness to a physical target and perceiving details without physical travel.",
+          "confidence": "Very Strong"
+        },
+        {
+          "tape_num": 15,
+          "name": "Vectors",
+          "wave": "Wave III – Freedom",
+          "wave_num": 3,
+          "focus": "Focus 12",
+          "state": "Spatial navigation in non-physical space",
+          "brainwave": "Theta",
+          "hz": "4–7 Hz",
+          "description": "Develops ability to choose and maintain direction when consciousness is not confined to a physical body — critical for purposeful OBE navigation.",
+          "confidence": "Very Strong"
+        },
+        {
+          "tape_num": 16,
+          "name": "Five Questions",
+          "wave": "Wave III – Freedom",
+          "wave_num": 3,
+          "focus": "Focus 12",
+          "state": "Inner guidance / higher-self dialogue",
+          "brainwave": "Theta",
+          "hz": "4–7 Hz",
+          "description": "Frames five key personal questions for exploration in Focus 12, engaging the inner adviser or higher self to surface answers unavailable in waking consciousness.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 17,
+          "name": "Energy Food",
+          "wave": "Wave III – Freedom",
+          "wave_num": 3,
+          "focus": "Focus 15",
+          "state": "Time-free restorative state",
+          "brainwave": "Delta",
+          "hz": "1–4 Hz",
+          "description": "First exercise at Focus 15 (no-time). Explores drawing sustaining energy directly from the non-physical environment rather than through physical means.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 18,
+          "name": "First Stage Separation",
+          "wave": "Wave III – Freedom",
+          "wave_num": 3,
+          "focus": "Focus 12",
+          "state": "Conscious exit from physical body",
+          "brainwave": "Theta",
+          "hz": "3–6 Hz",
+          "description": "Guides the first deliberate partial separation of the energetic body from the physical — using momentum built through Liftoff and Vectors. Key OBE milestone.",
+          "confidence": "Very Strong"
+        },
+        {
+          "tape_num": 19,
+          "name": "One-Year Patterning",
+          "wave": "Wave IV – Adventure",
+          "wave_num": 4,
+          "focus": "Focus 12",
+          "state": "Long-range intentional programming",
+          "brainwave": "Theta",
+          "hz": "4–7 Hz",
+          "description": "Extends the patterning concept to a full year. Listener places a detailed desired life outcome into the subconscious to guide unconscious decisions over 12 months.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 20,
+          "name": "Five Messages",
+          "wave": "Wave IV – Adventure",
+          "wave_num": 4,
+          "focus": "Focus 12",
+          "state": "Inner-self communication",
+          "brainwave": "Theta",
+          "hz": "4–7 Hz",
+          "description": "Opens a structured channel to receive five specific messages from the inner self or non-physical guidance. Develops discernment between imagination and genuine signal.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 21,
+          "name": "Free Flow 12",
+          "wave": "Wave IV – Adventure",
+          "wave_num": 4,
+          "focus": "Focus 12",
+          "state": "Open exploration at Focus 12",
+          "brainwave": "Theta",
+          "hz": "4–7 Hz",
+          "description": "Unguided practice in Focus 12, consolidating all Adventure skills and allowing personal exploration at this expanded awareness level.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 22,
+          "name": "NVC I",
+          "wave": "Wave IV – Adventure",
+          "wave_num": 4,
+          "focus": "Focus 12",
+          "state": "Non-verbal communication — first contact",
+          "brainwave": "Theta",
+          "hz": "4–7 Hz",
+          "description": "Introduces Non-Verbal Communication (NVC): contact with non-physical intelligences that communicate via feeling, imagery, and direct knowing rather than words.",
+          "confidence": "Very Strong"
+        },
+        {
+          "tape_num": 23,
+          "name": "NVC II",
+          "wave": "Wave IV – Adventure",
+          "wave_num": 4,
+          "focus": "Focus 12",
+          "state": "Advanced non-verbal communication",
+          "brainwave": "Theta",
+          "hz": "4–7 Hz",
+          "description": "Deepens NVC skills — sustaining contact, requesting specific information, and accurately translating non-verbal impressions into meaning.",
+          "confidence": "Very Strong"
+        },
+        {
+          "tape_num": 24,
+          "name": "Compoint 12",
+          "wave": "Wave IV – Adventure",
+          "wave_num": 4,
+          "focus": "Focus 12",
+          "state": "Stable inner communication anchor",
+          "brainwave": "Theta",
+          "hz": "4–7 Hz",
+          "description": "Creates a stable communication point at Focus 12 — a reliable inner meeting place that can be revisited consistently for non-verbal guidance.",
+          "confidence": "Very Strong"
+        },
+        {
+          "tape_num": 26,
+          "name": "Mission 12",
+          "wave": "Wave V – Exploring",
+          "wave_num": 5,
+          "focus": "Focus 12",
+          "state": "Purposeful Focus 12 exploration",
+          "brainwave": "Theta",
+          "hz": "4–7 Hz",
+          "description": "Same mission framework applied to Focus 12. Listener brings a clear objective and uses expanded awareness to gather actionable guidance or insight.",
+          "confidence": "Strong"
+        }
+      ],
+      "bridge_note": "Floor 6 (Aagya / Tisra Til) is the most tape-dense floor — and rightfully so. The Aagya Chakra / Third Eye is the supreme gateway of the Pinda region: the inner eye, the seat of the Sat-Guru's light, the point of departure for all genuine inner travel. Every tape from Wave III onward that deals with OBE departure, non-verbal contact with inner intelligence, and directional navigation maps here. Liftoff and First Stage Separation are the direct Monroe equivalents of Drishti Yoga — the withdrawal of attention to the Tisra Til point and the beginning of the soul's upward flight. Remote Viewing, Vectors, and NVC I–II are all capacities that bloom when the Third Eye opens. Kabir's 'Kar Naino Deedar' (behold with your eyes) is addressed precisely to this centre — the inner gaze that initiates the ascent. Mission 12 also maps here as purposeful third-eye directed work.",
+      "map_limit_note": null,
+      "tape_count": 13
+    },
+    "floor_7": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 27,
+          "name": "Mission Day",
+          "wave": "Wave V – Exploring",
+          "wave_num": 5,
+          "focus": "Focus 15",
+          "state": "No-time daytime exploration",
+          "brainwave": "Delta",
+          "hz": "1–4 Hz",
+          "description": "Deepens Focus 15 ('no-time') during daylight hours, building familiarity with the state where linear time dissolves and broader timelines become perceptible.",
+          "confidence": "Very Strong"
+        },
+        {
+          "tape_num": 28,
+          "name": "Mission Night",
+          "wave": "Wave V – Exploring",
+          "wave_num": 5,
+          "focus": "Focus 15",
+          "state": "No-time nocturnal exploration",
+          "brainwave": "Delta",
+          "hz": "0.5–3 Hz",
+          "description": "Explores Focus 15 in nighttime conditions, utilising sleep-adjacent states to deepen access and prolong the timeless experience.",
+          "confidence": "Very Strong"
+        },
+        {
+          "tape_num": 29,
+          "name": "Horizons",
+          "wave": "Wave V – Exploring",
+          "wave_num": 5,
+          "focus": "Focus 15",
+          "state": "Multi-timeline perception",
+          "brainwave": "Delta",
+          "hz": "1–4 Hz",
+          "description": "Extends awareness to the horizons available at Focus 15: examining past and future timelines, simultaneous-life awareness, and broader personal existence structure.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 30,
+          "name": "Pathways",
+          "wave": "Wave V – Exploring",
+          "wave_num": 5,
+          "focus": "Focus 15",
+          "state": "Mapping non-physical pathways",
+          "brainwave": "Delta",
+          "hz": "1–4 Hz",
+          "description": "Consolidates Wave V by identifying stable routes between Focus levels — the practitioner can move between states with greater ease and consistency.",
+          "confidence": "Strong"
+        }
+      ],
+      "bridge_note": "Floor 7 (Sahasra-Dal-Kamal) is the thousand-petalled lotus at the crown — where linear time and the personal mind begin to dissolve, and the soul first touches the edge of the Brahmanda region. Focus 15 is Monroe's 'no-time' state, the closest functional equivalent in Western consciousness research. The dissolution of linear time perception is the defining characteristic of both. Mission Day and Mission Night systematically explore this timeless space, while Horizons explicitly maps the perception of multiple timelines — the expanded temporal panorama available at the crown threshold. Pathways stabilises the routes between Focus states, reflecting the stabilisation of the crown opening that allows safe passage into the Brahmanda realms above.",
+      "map_limit_note": null,
+      "tape_count": 4
+    },
+    "floor_8": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 17,
+          "name": "Energy Food",
+          "wave": "Wave III – Freedom",
+          "wave_num": 3,
+          "focus": "Focus 15",
+          "state": "Time-free restorative state",
+          "brainwave": "Delta",
+          "hz": "1–4 Hz",
+          "description": "First exercise at Focus 15 (no-time). Explores drawing sustaining energy directly from the non-physical environment rather than through physical means.",
+          "confidence": "Approximate"
+        }
+      ],
+      "bridge_note": "Floor 8 (Trikuti) is the realm of Brahm — the cosmic causal mind, the creator of the three worlds, the domain of the primordial Onkar sound. Monroe's Energy Food (the first Focus 15 tape, appearing also in Floor 6 context) touches this level from a different angle: the discovery that consciousness can draw sustenance directly from the non-physical field, bypassing physical needs — a quality of the causal plane where the gross laws of energy exchange no longer apply. Note: Monroe's map does not provide a dedicated tape that cleanly targets Trikuti's specific qualities of causal creation and Onkar resonance. This mapping is approximate — the tapes of Wave V (Floor 7) brush the upper edge of this territory.",
+      "map_limit_note": "Monroe's system does not provide tapes that explicitly target the causal creative intelligence of Trikuti. Waves I–V approach but do not fully enter this domain. Consider this level the upper boundary of what the Gateway Experience reaches via Focus 15.",
+      "tape_count": 1
+    },
+    "floor_9": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 31,
+          "name": "Sensing",
+          "wave": "Wave VI – Odyssey",
+          "wave_num": 6,
+          "focus": "Focus 21",
+          "state": "Energy body activation at Focus 21",
+          "brainwave": "Theta",
+          "hz": "3–6 Hz",
+          "description": "At Focus 21 ('bridge to other energy systems'), listener learns to sense and consciously control the subtle energy body — prerequisite for stable OBE travel.",
+          "confidence": "Very Strong"
+        },
+        {
+          "tape_num": 32,
+          "name": "Expansion",
+          "wave": "Wave VI – Odyssey",
+          "wave_num": 6,
+          "focus": "Focus 21",
+          "state": "Consciousness expansion beyond body",
+          "brainwave": "Theta",
+          "hz": "3–6 Hz",
+          "description": "Extends awareness outward from the body's immediate field into the wider space of Focus 21, practising sustained non-local perception at this bridge state.",
+          "confidence": "Very Strong"
+        },
+        {
+          "tape_num": 33,
+          "name": "Point of Departure",
+          "wave": "Wave VI – Odyssey",
+          "wave_num": 6,
+          "focus": "Focus 21",
+          "state": "Out-of-phase OBE launch",
+          "brainwave": "Theta",
+          "hz": "3–5 Hz",
+          "description": "Introduces the out-of-phase departure: shifting the energy body slightly out of alignment with the physical to achieve clean, full separation.",
+          "confidence": "Very Strong"
+        },
+        {
+          "tape_num": 34,
+          "name": "Nonphysical Friends",
+          "wave": "Wave VI – Odyssey",
+          "wave_num": 6,
+          "focus": "Focus 21",
+          "state": "Contact with non-physical helpers",
+          "brainwave": "Theta",
+          "hz": "3–6 Hz",
+          "description": "At Focus 21, listener meets helpers — non-physical intelligences acting as guides — and establishes a working relationship for OBE exploration assistance.",
+          "confidence": "Strong"
+        }
+      ],
+      "bridge_note": "Floor 9 (Shoonya / Daswan Dwar) is the first great Void — Par-Brahm's domain, the formless absolute beyond the causal mind. Monroe designates Focus 21 as 'the bridge to other energy systems' — a threshold state that exits the known Earth-bound framework entirely. The structural resonance is very strong: both Shoonya and Focus 21 mark the crossing from structured, ruler-governed realms into a more open, formless space. Sensing and Expansion are the preparation; Point of Departure is the moment of actual crossing — Daswan Dwar, the tenth door, thrown open. Nonphysical Friends reflects the intelligences encountered at this transitional threshold, analogous to the guardians and guides described at the Daswan Dwar level in Sant Mat.",
+      "map_limit_note": null,
+      "tape_count": 4
+    },
+    "floor_10": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 35,
+          "name": "Intro to Focus 21",
+          "wave": "Wave VI – Odyssey",
+          "wave_num": 6,
+          "focus": "Focus 21",
+          "state": "Focus 21 stabilisation & anchoring",
+          "brainwave": "Theta",
+          "hz": "3–6 Hz",
+          "description": "Thorough introduction to Focus 21 as a stable platform — teaches anchoring awareness at this level before venturing into higher Focus states.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 36,
+          "name": "Free Flow in Focus 21",
+          "wave": "Wave VI – Odyssey",
+          "wave_num": 6,
+          "focus": "Focus 21",
+          "state": "Unguided Focus 21 exploration",
+          "brainwave": "Theta",
+          "hz": "3–6 Hz",
+          "description": "Free exploration consolidating all Odyssey skills. Listener navigates Focus 21 independently, integrating OBE, non-physical contact, and sensing abilities.",
+          "confidence": "Strong"
+        }
+      ],
+      "bridge_note": "Floor 10 (Maha Shoonya) is the Great Void — an unmanifest expanse containing four hidden worlds with secret rulers. Monroe's Intro to Focus 21 and Free Flow in Focus 21 map this territory as the stable platform of Focus 21 — learning to anchor awareness in this borderless, formless space and then exploring it freely. The Free Flow session is particularly resonant with Maha Shoonya's quality: it is truly open, unstructured, and beyond ordinary navigational landmarks. Monroe himself described Focus 21 as vast and open in ways that Focus 15 is not — matching the 'great' quality of this void.",
+      "map_limit_note": null,
+      "tape_count": 2
+    },
+    "floor_11": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 37,
+          "name": "Explore Total Self",
+          "wave": "Wave VII – Voyager",
+          "wave_num": 7,
+          "focus": "Focus 21",
+          "state": "Holistic multi-dimensional self-understanding",
+          "brainwave": "Theta",
+          "hz": "3–6 Hz",
+          "description": "Opens Voyager with expanded understanding of the multi-dimensional self — physical, energetic, and higher aspects. Prepares for contact with post-physical realms.",
+          "confidence": "Approximate"
+        },
+        {
+          "tape_num": 38,
+          "name": "Intro to Focus 23",
+          "wave": "Wave VII – Voyager",
+          "wave_num": 7,
+          "focus": "Focus 23",
+          "state": "Transitional post-physical zone",
+          "brainwave": "Theta",
+          "hz": "3–5 Hz",
+          "description": "First contact with Focus 23: the transitional region populated by recently deceased individuals not yet aware they have left physical life.",
+          "confidence": "Approximate"
+        }
+      ],
+      "bridge_note": "Floor 11 (Bhanwar Gufa — the Whirling Cave) is the domain of Sohang Purush: 'I am He' — the mystical union of the individual soul with the creator principle. Monroe's Explore Total Self is the closest functional approach: a deep investigation of the multi-dimensional self that begins to dissolve the boundary between personal identity and universal consciousness. Intro to Focus 23 represents the first contact with realms beyond the living — the beginning of the Voyager territory that maps to the upper Brahmanda / lower Dayal Desh boundary. The mapping here is approximate; the true Bhanwar Gufa experience is described in Sant Mat as a whirling vortex of light and sound without Western parallel.",
+      "map_limit_note": "Monroe's system approaches but does not fully map Bhanwar Gufa. The Sohang ('I am He') realisation has no direct equivalent in the Gateway Experience framework. These tapes represent the closest available approach.",
+      "tape_count": 2
+    },
+    "floor_12": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 39,
+          "name": "Intro to Focus 25",
+          "wave": "Wave VII – Voyager",
+          "wave_num": 7,
+          "focus": "Focus 25",
+          "state": "Belief-system territory exploration",
+          "brainwave": "Theta",
+          "hz": "3–5 Hz",
+          "description": "Explores Focus 25 where belief-based after-death realities exist. Practitioners witness how strongly held beliefs shape non-physical environments.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 40,
+          "name": "Intro to Focus 27",
+          "wave": "Wave VII – Voyager",
+          "wave_num": 7,
+          "focus": "Focus 27",
+          "state": "Reception Centre / The Park",
+          "brainwave": "Theta",
+          "hz": "3–4 Hz",
+          "description": "Introduces Focus 27 — the Reception Centre or Park — a highly organised non-physical support structure for souls between lives.",
+          "confidence": "Very Strong"
+        },
+        {
+          "tape_num": 41,
+          "name": "Retrieval",
+          "wave": "Wave VII – Voyager",
+          "wave_num": 7,
+          "focus": "Focus 23",
+          "state": "Active soul retrieval service",
+          "brainwave": "Theta",
+          "hz": "3–5 Hz",
+          "description": "Active service exercise: practitioner travels to Focus 23 to locate and assist stuck souls in recognising their situation and moving toward Focus 27.",
+          "confidence": "Strong"
+        },
+        {
+          "tape_num": 42,
+          "name": "Messages From Beyond",
+          "wave": "Wave VII – Voyager",
+          "wave_num": 7,
+          "focus": "Focus 27",
+          "state": "Inter-dimensional messaging",
+          "brainwave": "Theta",
+          "hz": "3–4 Hz",
+          "description": "At Focus 27, listener receives messages from departed loved ones and sends messages outward across the non-physical spectrum.",
+          "confidence": "Strong"
+        }
+      ],
+      "bridge_note": "Floor 12 (Sach Khand / Sat Lok) is the strongest cross-map point in the entire Gateway–Kabir comparison. Sach Khand is Sat Purush's domain — the first purely divine, luminous, spirit realm: the true home of the soul. Monroe's Focus 27 (the Reception Centre / the Park) is described in virtually identical terms: a radiant, highly organised non-physical environment populated by beings of light that assist souls between lives. Both systems describe it as a place of rest, review, healing, and preparation for what comes next. Intro to Focus 27 is the direct entry; Retrieval maps the compassionate service role; Messages From Beyond reflects the soul-to-soul communication that Sat Purush's domain makes possible. Intro to Focus 25 maps the belief-system territories — the lower sub-regions of Sach Khand's neighbourhood.",
+      "map_limit_note": null,
+      "tape_count": 4
+    },
+    "floor_13": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 43,
+          "name": "Special Tour",
+          "wave": "Wave VIII – Union",
+          "wave_num": 8,
+          "focus": "Focus 27",
+          "state": "Overview of Focus 27 sub-regions",
+          "brainwave": "Theta",
+          "hz": "2–5 Hz",
+          "description": "Returns to Focus 27 and receives an expanded tour of its various sub-regions, preparing for targeted explorations in the exercises that follow.",
+          "confidence": "Approximate"
+        },
+        {
+          "tape_num": 44,
+          "name": "Meeting the Entry Director",
+          "wave": "Wave VIII – Union",
+          "wave_num": 8,
+          "focus": "Focus 27",
+          "state": "Pre-birth planning review",
+          "brainwave": "Theta",
+          "hz": "2–4 Hz",
+          "description": "Meeting with the Entry Director: an intelligence overseeing preparation of souls entering physical life. Includes personal life-plan review and pre-birth history.",
+          "confidence": "Approximate"
+        }
+      ],
+      "bridge_note": "Floor 13 (Alakha Lok — the Invisible, Unknowable realm) is where Alakh Purush dwells — beyond perception, beyond form, beyond the instruments of knowing. Monroe's Special Tour of Focus 27 sub-regions and Meeting the Entry Director push toward the outer edges of what the guided program can access — approaching intelligences that operate at a level of knowledge and causality far beyond the personal. The Entry Director's knowledge of pre-birth history and soul trajectories hints at the impersonal, omniscient quality of Alakh Purush's domain. Mapping is approximate — Monroe's system does not claim to access the Unknowable; it merely approaches its neighbourhood.",
+      "map_limit_note": "Monroe's map is approaching its upper boundary here. The Alakha qualities — true invisibility, unknowability, imperceptibility — cannot be fully represented by any guided audio exercise. These tapes are the closest available approach.",
+      "tape_count": 2
+    },
+    "floor_14": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 45,
+          "name": "Educational Opportunities",
+          "wave": "Wave VIII – Union",
+          "wave_num": 8,
+          "focus": "Focus 27",
+          "state": "Non-physical learning centre access",
+          "brainwave": "Theta",
+          "hz": "2–4 Hz",
+          "description": "Explores the Educational Centres within Focus 27 where consciousness can access knowledge and receive demonstrations of cosmic principles directly.",
+          "confidence": "Speculative"
+        },
+        {
+          "tape_num": 46,
+          "name": "Healing and Regeneration",
+          "wave": "Wave VIII – Union",
+          "wave_num": 8,
+          "focus": "Focus 27",
+          "state": "Non-physical healing centre",
+          "brainwave": "Theta",
+          "hz": "2–4 Hz",
+          "description": "Personal visit to the Healing and Regeneration Centre of Focus 27 to receive whatever physical, energetic, or psychological healing is most needed.",
+          "confidence": "Speculative"
+        }
+      ],
+      "bridge_note": "Floor 14 (Agama Lok — the Inaccessible, Unapproachable realm) is Agam Purush's domain — beyond approach, beyond method, beyond technique. Monroe's Educational Opportunities and Healing and Regeneration Centre represent his deepest forays into the intelligence and healing structures of Focus 27. Both involve receiving from sources of knowledge and restoration that vastly exceed personal capacity — which structurally resonates with Agama's quality of grace that descends from the inaccessible. This mapping is speculative: the inaccessibility of Agam Lok is precisely what makes direct mapping impossible. These tapes are offered as the nearest experiential approach within Monroe's framework.",
+      "map_limit_note": "Monroe's system is at its functional limit here. Agam Lok is by definition inaccessible to technique. What is offered is not a map of this realm but the deepest available pointer toward it within the Gateway Experience.",
+      "tape_count": 2
+    },
+    "floor_15": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 47,
+          "name": "The Planning Center",
+          "wave": "Wave VIII – Union",
+          "wave_num": 8,
+          "focus": "Focus 27",
+          "state": "Life-pattern oversight region",
+          "brainwave": "Theta",
+          "hz": "2–4 Hz",
+          "description": "Explores the Planning Centre where energy patterns governing Earth life systems are overseen. Listener observes how collective and personal life patterns are managed.",
+          "confidence": "Speculative"
+        },
+        {
+          "tape_num": 48,
+          "name": "Coordination Area",
+          "wave": "Wave VIII – Union",
+          "wave_num": 8,
+          "focus": "Focus 27",
+          "state": "Management hub of Focus 27",
+          "brainwave": "Theta",
+          "hz": "2–4 Hz",
+          "description": "Meets energy beings responsible for coordinating Focus 27 itself, gaining insight into the administrative fabric of non-physical organisation.",
+          "confidence": "Speculative"
+        }
+      ],
+      "bridge_note": "Floor 15 (Akaha Lok / Anami — the Nameless, Attribute-less Supreme) is Anami Purush's domain — beyond name, form, quality, and description. Monroe's Planning Center explores the oversight of entire Earth life-pattern systems, and the Coordination Area meets the energy beings maintaining the cosmic fabric of Focus 27. Both point toward the impersonal, omnidirectional intelligence that underlies all manifest structure — the closest Monroe's system comes to the unmanifest ground of all existence. The mapping is deeply speculative and offered with reverence for the distance between Monroe's empirical frontier and Kabir's ultimate vision.",
+      "map_limit_note": "Monroe's system ends here. Focus 34/35 (The Absolute) is his designation for the I-There cluster — his deepest station. Anami Purush extends infinitely beyond. The remaining tapes (49–50) point toward this horizon but do not cross it.",
+      "tape_count": 2
+    },
+    "floor_16": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 49,
+          "name": "Inner Earth",
+          "wave": "Wave VIII – Union",
+          "wave_num": 8,
+          "focus": "Focus 27+",
+          "state": "Trans-Focus Earth consciousness",
+          "brainwave": "Delta",
+          "hz": "0.5–2 Hz",
+          "description": "Moves beyond standard Focus 27 to meet intelligences maintaining the physical Earth, exploring mineral kingdoms and the consciousness within matter.",
+          "confidence": "Speculative"
+        }
+      ],
+      "bridge_note": "Floor 16 is the first Nameless Peak — Primordial Purush, the first unmanifest veil of the absolute Radhasoami state. Monroe's Inner Earth tape ventures beyond standard Focus 27 into Earth-consciousness itself — meeting intelligences embedded in the mineral and geological fabric of physical reality. This is mapped here speculatively as a reflection of the primordial substrate underlying all manifestation. The connection is symbolic rather than experiential: both point toward the intelligence in the foundational layer of existence.",
+      "map_limit_note": "Monroe's map ends before this territory. Floors 16–18 represent realms for which no Western consciousness research framework provides an adequate map. These tapes are offered as the farthest visible horizon of Monroe's system — not as actual maps of the Nameless Peak.",
+      "tape_count": 1
+    },
+    "floor_17": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [
+        {
+          "tape_num": 50,
+          "name": "The Absolute",
+          "wave": "Wave VIII – Union",
+          "wave_num": 8,
+          "focus": "Focus 34/35",
+          "state": "I-There / Source connection",
+          "brainwave": "Delta/Gamma",
+          "hz": "0.5–2 Hz+",
+          "description": "The culminating exercise: approaching Focus 34/35, Monroe's I-There cluster. A direct approach to Source — the edge of the Earth Life System and Monroe's deepest station.",
+          "confidence": "Speculative"
+        }
+      ],
+      "bridge_note": "Floor 17 is the second Nameless Peak — Supreme Purush, the second unmanifest veil. Monroe's The Absolute (Focus 34/35) is his I-There cluster: the point where individual identity merges into a vast collective consciousness field, and Monroe himself described this as the edge of what he could navigate. This is mapped here as the closest Western empirical marker to the Supreme Purush territory — not as an equivalence but as a directional pointer from the farthest reach of Monroe's map toward the second veil of the absolute.",
+      "map_limit_note": "This is the final tape of the Gateway Experience. Monroe's I-There (Focus 34/35) is the outermost mapped station in his system. Beyond this point, Kabir's map continues through Floor 17 and 18 into Radhasoami — realms that Monroe acknowledged exist but for which he had no reliable guided exercises. The path from here requires a living Sat-Guru, not audio technology.",
+      "tape_count": 1
+    },
+    "floor_18": {
+      "tradition": "Gateway Experience / Monroe Institute",
+      "epistemic_label": "Phenomenological · Empirical",
+      "tapes": [],
+      "bridge_note": "Floor 18 (Radhasoami — the Absolute, Nameless, Formless Supreme) is beyond all maps, all systems, and all technology. No Gateway Experience tape is assigned here. Monroe's system, at its deepest point (Focus 34/35, The Absolute), acknowledges the existence of what lies beyond but provides no guided path into it. Kabir's poem 'Kar Naino Deedar' was composed from the direct experience of this ultimate state — an experience that transcends all technique, all framework, and all comparative analysis. This floor stands in the Atlas as a reminder that the greatest cartographies are humbled at the boundary of the Absolute.",
+      "map_limit_note": "No Gateway Experience tapes map to this floor. Monroe's deepest station (Focus 34/35) is itself only a distant approach to the Radhasoami state. The path to Floor 18 is described in Sant Mat as accessible only through the grace of a perfect living Master (Sat-Guru) and the inner Shabd (Sound Current) — not through any external technique or audio technology.",
+      "tape_count": 0
+    }
+  }
+}

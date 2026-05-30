@@ -8,21 +8,23 @@ const floorFiles = fs.readdirSync(floorsDir).filter(f => f.endsWith('.yaml') || 
 const nodes = [];
 const edges = [];
 
-// Helper to add a node uniquely
+const nodeIds = new Set();
+const edgeKeys = new Set();
+
+// Helper to add a node uniquely in O(1)
 function addNode(id, name, type, details = {}) {
-  const exists = nodes.find(n => n.id === id);
-  if (!exists) {
+  if (!nodeIds.has(id)) {
+    nodeIds.add(id);
     nodes.push({ id, name, type, ...details });
   }
 }
 
-// Helper to add an edge uniquely
+// Helper to add an edge uniquely in O(1)
 function addEdge(source, target, relation) {
-  const exists = edges.find(e => 
-    (e.source === source && e.target === target && e.relation === relation) ||
-    (e.source === target && e.target === source && e.relation === relation)
-  );
-  if (!exists) {
+  const key1 = `${source}_${target}_${relation}`;
+  const key2 = `${target}_${source}_${relation}`;
+  if (!edgeKeys.has(key1) && !edgeKeys.has(key2)) {
+    edgeKeys.add(key1);
     edges.push({ source, target, relation });
   }
 }
@@ -117,6 +119,24 @@ floorFiles.forEach(file => {
   }
 });
 
+// Gateway Experience nodes — one per unique Focus level per floor
+const GATEWAY_NODES = [
+  { id: "gw_focus3",    label: "Focus 3\nOrientation",         type: "Gateway", floor: 1,  color: "#22c55e" },
+  { id: "gw_focus10",   label: "Focus 10\nMind Awake/Body Asleep", type: "Gateway", floor: 2,  color: "#22c55e" },
+  { id: "gw_focus12",   label: "Focus 12\nExpanded Awareness", type: "Gateway", floor: 5,  color: "#22c55e" },
+  { id: "gw_focus15",   label: "Focus 15\nNo-Time",            type: "Gateway", floor: 7,  color: "#22c55e" },
+  { id: "gw_focus21",   label: "Focus 21\nBridge State",       type: "Gateway", floor: 9,  color: "#22c55e" },
+  { id: "gw_focus23",   label: "Focus 23\nPost-Physical Zone", type: "Gateway", floor: 11, color: "#22c55e" },
+  { id: "gw_focus25",   label: "Focus 25\nBelief Territories", type: "Gateway", floor: 12, color: "#22c55e" },
+  { id: "gw_focus27",   label: "Focus 27\nReception Centre",   type: "Gateway", floor: 12, color: "#22c55e" },
+  { id: "gw_focus3435", label: "Focus 34/35\nThe Absolute",    type: "Gateway", floor: 17, color: "#22c55e" },
+];
+
+GATEWAY_NODES.forEach(node => {
+  addNode(node.id, node.label, node.type, { floor: node.floor, color: node.color });
+  addEdge(node.id, `floor_${node.floor}`, "hasPracticeEntry");
+});
+
 // Compile and output graph JSON
 const graph = { nodes, edges };
 const graphPath = path.join(__dirname, 'content', 'content_graph.json');
@@ -127,8 +147,16 @@ if (!fs.existsSync(path.join(__dirname, 'content'))) {
   fs.mkdirSync(path.join(__dirname, 'content'));
 }
 
+// Add compiled_at timestamp metadata wrapper
+const floorsDBWithMetadata = {
+  metadata: {
+    compiled_at: Date.now()
+  },
+  ...floorsDB
+};
+
 fs.writeFileSync(graphPath, JSON.stringify(graph, null, 2), 'utf8');
-fs.writeFileSync(dbPath, JSON.stringify(floorsDB, null, 2), 'utf8');
+fs.writeFileSync(dbPath, JSON.stringify(floorsDBWithMetadata, null, 2), 'utf8');
 
 console.log(`\nSuccessfully wrote combined graph to ${graphPath}`);
 console.log(`Successfully wrote consolidated database to ${dbPath}`);

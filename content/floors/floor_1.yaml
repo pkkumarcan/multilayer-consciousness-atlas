@@ -137,3 +137,27 @@ sources:
   secondary:
     - "C.G. Jung, Seminars on Kundalini Yoga (1932)"
     - "Paramhansa Yogananda, Essence of the Bhagavad Gita (interpretation of Pandava brothers)"
+
+gateway_experience:
+  tradition: Gateway Experience / Monroe Institute
+  epistemic_label: Phenomenological · Empirical
+  tapes:
+    - tape_num: 1
+      name: Orientation
+      wave: Wave I – Discovery
+      wave_num: 1
+      focus: Focus 3
+      state: Light relaxation / Gateway entry
+      brainwave: Alpha
+      hz: 8–12 Hz
+      description: >-
+        Introduces the Gateway Affirmation, REBAL (Resonant Energy Balloon) protective field, and the resonance tunnel.
+        Establishes the foundational mindset for all subsequent work.
+      confidence: Strong
+  bridge_note: >-
+    Monroe's Orientation establishes the REBAL — a self-generated protective energy sphere before any inner work begins.
+    This mirrors the foundational protective function of Floor 1: Lord Ganesha removes obstacles and guards the
+    threshold before ascent. Both systems insist on establishing a stable, protected base at the gross physical boundary
+    before any inner journey proceeds. Monroe's 'Gateway Affirmation' (I am more than my physical body) is the Western
+    equivalent of declaring intent to transcend the gross body plane.
+  tape_count: 1

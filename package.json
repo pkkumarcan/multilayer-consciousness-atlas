@@ -2,7 +2,7 @@
   "name": "consciousness-atlas",
   "version": "2.0.0",
   "description": "Multilayer Consciousness Atlas - Generation 2",
-  "main": "app.js",
+  "main": "main.js",
   "scripts": {
     "dev": "npx http-server -p 8080 -c-1",
     "validate": "node validate_data.js",

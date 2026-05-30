@@ -1,0 +1,277 @@
+Let me now build the complete JSON data block for all 18 floors — all 50 tapes mapped, with full columns and confidence labels.All 50 tapes assigned, none missing. Tape 17 (Energy Food) intentionally appears on both floors 6 and 8 — it's the only deliberate double-placement since it bridges the Focus 12/15 threshold. Now let me build the companion UI integration code.Two files delivered:
+
+**`gateway_floor_mappings.json`** — the complete data layer. All 50 tapes across 18 floors, each entry containing: tape number, name, wave, Focus level, state/description, brainwave, Hz range, description, and confidence label. Plus a bridge note and optional map-limit note per floor. Ready to merge directly into your floor content files.
+
+**`gateway_integration_guide.md`** — exact code for 5 steps:
+1. The lens checkbox to add to `index.html`
+2. The complete `renderGatewayCard()` function with the styled table, confidence colour coding, bridge note panel, and map-limit warning panel
+3. The one-line wire-up in your card dispatch switch
+4. How to merge the JSON into each floor's content file
+5. The graph nodes and edge type for `compile_graph.js`
+
+**A few things worth noting from the mapping:**
+
+Floor 6 (Tisra Til / Third Eye) is correctly the most tape-dense — 13 tapes — because it is genuinely the pivot of the entire Gateway system just as it is the pivot of Kabir's path. Every OBE departure tape, all NVC work, and remote viewing all operate at this gateway point.
+
+Floor 8 (Trikuti) has only one tape, marked Approximate, with an honest note that Monroe's system doesn't cleanly target the causal creative intelligence of Brahm/Onkar. This is intellectually accurate and matches your confidence-tagging philosophy.
+
+Floor 18 (Radhasoami) has zero tapes, with a bridge note explaining why — which I think is actually the most powerful entry in the whole set. The absence itself is the teaching.
+
+
+
+================================================================================
+GATEWAY EXPERIENCE — ATLAS INTEGRATION GUIDE
+Complete code for adding Gateway tapes to your Atlas floor pages
+================================================================================
+
+This guide gives you EXACT code to paste into your repo files.
+No guessing. No adaptation needed beyond one merge step per file.
+
+────────────────────────────────────────────────────────────────────────────────
+STEP 1 — index.html
+Add the Gateway lens toggle checkbox (paste after your Jainism lens label)
+────────────────────────────────────────────────────────────────────────────────
+
+FIND this line in index.html:
+  <label for="lens-jainism" class="lens-label">Jainism</label>
+
+ADD AFTER IT:
+  <input type="checkbox" id="lens-gateway" class="lens-checkbox" checked onchange="toggleCardFilter('gateway')">
+  <label for="lens-gateway" class="lens-label">Gateway Experience</label>
+
+────────────────────────────────────────────────────────────────────────────────
+STEP 2 — main.js (or wherever your card renderer lives)
+Add the Gateway card renderer function
+────────────────────────────────────────────────────────────────────────────────
+
+ADD this function to your JS (near your other card-render functions):
+
+  function renderGatewayCard(floorData) {
+    const gw = floorData.gateway_experience;
+    if (!gw || !gw.tapes) return '';
+    
+    const CONFIDENCE_COLORS = {
+      "Very Strong":  { bg: "#0d2b1a", border: "#22c55e", badge: "#16a34a", text: "#4ade80" },
+      "Strong":       { bg: "#0d1f2b", border: "#3b82f6", badge: "#1d4ed8", text: "#60a5fa" },
+      "Approximate":  { bg: "#2b1f0d", border: "#f59e0b", badge: "#b45309", text: "#fbbf24" },
+      "Speculative":  { bg: "#2b0d0d", border: "#ef4444", badge: "#b91c1c", text: "#f87171" },
+    };
+
+    const confBadge = (conf) => {
+      const c = CONFIDENCE_COLORS[conf] || CONFIDENCE_COLORS["Approximate"];
+      return `<span style="
+        display:inline-block; padding:2px 8px; border-radius:4px;
+        background:${c.badge}; color:#fff; font-size:10px;
+        font-family: monospace; letter-spacing:0.05em; font-weight:600;
+      ">${conf}</span>`;
+    };
+
+    const rowsHtml = gw.tapes.map(t => {
+      const c = CONFIDENCE_COLORS[t.confidence] || CONFIDENCE_COLORS["Approximate"];
+      return `
+        <tr style="border-bottom:1px solid #1e2a1e; background:${c.bg};">
+          <td style="padding:6px 8px; color:#94a3b8; font-size:11px; white-space:nowrap;">#${t.tape_num}</td>
+          <td style="padding:6px 8px; color:#e2e8f0; font-size:12px; font-weight:500;">${t.name}</td>
+          <td style="padding:6px 8px; color:#94a3b8; font-size:11px; white-space:nowrap;">${t.wave.replace("Wave ", "W").split("–")[0].trim()}</td>
+          <td style="padding:6px 8px; color:#60a5fa; font-size:11px; white-space:nowrap;">${t.focus}</td>
+          <td style="padding:6px 8px; color:#c4b5fd; font-size:11px;">${t.state}</td>
+          <td style="padding:6px 8px; color:#f0abfc; font-size:11px; white-space:nowrap;">${t.brainwave}</td>
+          <td style="padding:6px 8px; color:#86efac; font-size:11px; white-space:nowrap;">${t.hz}</td>
+          <td style="padding:6px 8px;">${confBadge(t.confidence)}</td>
+        </tr>
+        <tr style="background:${c.bg};">
+          <td></td>
+          <td colspan="7" style="padding:0 8px 8px 8px; color:#94a3b8; font-size:11px; font-style:italic; line-height:1.5;">
+            ${t.description}
+          </td>
+        </tr>
+      `;
+    }).join('');
+
+    const mapLimitHtml = gw.map_limit_note ? `
+      <div style="
+        margin-top:16px; padding:12px 14px;
+        background:#1a0d0d; border-left:3px solid #ef4444;
+        border-radius:0 6px 6px 0; font-size:12px; color:#fca5a5; line-height:1.6;
+      ">
+        <strong style="color:#ef4444;">⚠ Monroe's Map Limit:</strong>
+        <span style="margin-left:6px;">${gw.map_limit_note}</span>
+      </div>
+    ` : '';
+
+    const noTapesHtml = gw.tapes.length === 0 ? `
+      <div style="
+        padding:20px; text-align:center; color:#6b7280; font-style:italic; font-size:13px;
+      ">
+        No Gateway Experience tapes are mapped to this floor.<br>
+        Monroe's system does not provide a path into this realm.
+      </div>
+    ` : '';
+
+    return `
+      <div class="card" data-tradition="gateway" style="
+        border:1px solid #22c55e33; background:#0a1a0f;
+        border-radius:10px; padding:20px; margin-bottom:16px;
+      ">
+        <!-- Card Header -->
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span style="font-size:20px;">🎧</span>
+            <div>
+              <div style="color:#4ade80; font-size:13px; font-weight:600; letter-spacing:0.05em;">
+                GATEWAY EXPERIENCE / MONROE INSTITUTE
+              </div>
+              <div style="color:#6b7280; font-size:11px; margin-top:2px;">
+                ${gw.epistemic_label}
+              </div>
+            </div>
+          </div>
+          <div style="
+            background:#052e16; border:1px solid #16a34a; border-radius:20px;
+            padding:3px 12px; color:#4ade80; font-size:11px; font-weight:600;
+          ">
+            ${gw.tape_count} tape${gw.tape_count !== 1 ? 's' : ''}
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div style="height:1px; background: linear-gradient(90deg, #22c55e44, transparent); margin:12px 0;"></div>
+
+        <!-- Tapes Table -->
+        ${gw.tapes.length > 0 ? `
+        <div style="overflow-x:auto; border-radius:6px; border:1px solid #1e3a2e;">
+          <table style="width:100%; border-collapse:collapse; font-family:'DM Sans', sans-serif;">
+            <thead>
+              <tr style="background:#0d2318;">
+                <th style="padding:8px; color:#6b7280; font-size:10px; text-align:left; font-weight:500;">#</th>
+                <th style="padding:8px; color:#6b7280; font-size:10px; text-align:left; font-weight:500;">TAPE NAME</th>
+                <th style="padding:8px; color:#6b7280; font-size:10px; text-align:left; font-weight:500;">WAVE</th>
+                <th style="padding:8px; color:#6b7280; font-size:10px; text-align:left; font-weight:500;">FOCUS</th>
+                <th style="padding:8px; color:#6b7280; font-size:10px; text-align:left; font-weight:500;">STATE</th>
+                <th style="padding:8px; color:#6b7280; font-size:10px; text-align:left; font-weight:500;">BRAINWAVE</th>
+                <th style="padding:8px; color:#6b7280; font-size:10px; text-align:left; font-weight:500;">Hz RANGE</th>
+                <th style="padding:8px; color:#6b7280; font-size:10px; text-align:left; font-weight:500;">CONFIDENCE</th>
+              </tr>
+            </thead>
+            <tbody>${rowsHtml}</tbody>
+          </table>
+        </div>` : noTapesHtml}
+
+        <!-- Bridge Note -->
+        <div style="
+          margin-top:16px; padding:14px 16px;
+          background:#0d1f12; border-left:3px solid #22c55e;
+          border-radius:0 6px 6px 0; font-size:12px; color:#bbf7d0; line-height:1.7;
+        ">
+          <strong style="color:#4ade80; display:block; margin-bottom:6px;">⊕ Bridge Note</strong>
+          ${gw.bridge_note}
+        </div>
+
+        ${mapLimitHtml}
+      </div>
+    `;
+  }
+
+────────────────────────────────────────────────────────────────────────────────
+STEP 3 — main.js  
+Wire renderGatewayCard into your existing card dispatch logic
+────────────────────────────────────────────────────────────────────────────────
+
+FIND your card factory / switch statement (wherever you render per-tradition cards).
+It likely looks something like:
+
+  case "sufism":     return renderSufismCard(floorData);
+  case "kabbalah":   return renderKabbalahCard(floorData);
+  // etc.
+
+ADD:
+  case "gateway":    return renderGatewayCard(floorData);
+
+────────────────────────────────────────────────────────────────────────────────
+STEP 4 — Your floor content files (in /content/floors/)
+Add the gateway_experience object to each floor's data
+────────────────────────────────────────────────────────────────────────────────
+
+The complete data is in: gateway_floor_mappings.json
+
+For each floor, merge the object at:
+  gateway_experience_floor_mappings.floor_N
+
+into your existing floor data as a new key:
+  "gateway_experience": { ... }
+
+Example — floor 1 data file gets:
+  "gateway_experience": {
+    "tradition": "Gateway Experience / Monroe Institute",
+    "epistemic_label": "Phenomenological · Empirical",
+    "tapes": [ { tape objects... } ],
+    "bridge_note": "Monroe's Orientation establishes the REBAL...",
+    "map_limit_note": null,
+    "tape_count": 1
+  }
+
+────────────────────────────────────────────────────────────────────────────────
+STEP 5 — compile_graph.js
+Add Gateway tape nodes to the relationship graph
+────────────────────────────────────────────────────────────────────────────────
+
+ADD this node type to your graph filter panel in index.html:
+
+  <label class="filter-checkbox-label">
+    <input type="checkbox" id="filter-node-Gateway" checked onchange="toggleGraphFilter('Gateway')">
+    <span class="custom-chk" style="background-color: #22c55e"></span>
+    Gateway Tapes
+  </label>
+
+ADD this to compile_graph.js (node generation section):
+
+  // Gateway Experience nodes — one per unique Focus level per floor
+  const GATEWAY_NODES = [
+    { id: "gw_focus3",    label: "Focus 3\nOrientation",         type: "Gateway", floor: 1,  color: "#22c55e" },
+    { id: "gw_focus10",   label: "Focus 10\nMind Awake/Body Asleep", type: "Gateway", floor: 2,  color: "#22c55e" },
+    { id: "gw_focus12",   label: "Focus 12\nExpanded Awareness", type: "Gateway", floor: 5,  color: "#22c55e" },
+    { id: "gw_focus15",   label: "Focus 15\nNo-Time",            type: "Gateway", floor: 7,  color: "#22c55e" },
+    { id: "gw_focus21",   label: "Focus 21\nBridge State",       type: "Gateway", floor: 9,  color: "#22c55e" },
+    { id: "gw_focus23",   label: "Focus 23\nPost-Physical Zone", type: "Gateway", floor: 11, color: "#22c55e" },
+    { id: "gw_focus25",   label: "Focus 25\nBelief Territories", type: "Gateway", floor: 12, color: "#22c55e" },
+    { id: "gw_focus27",   label: "Focus 27\nReception Centre",   type: "Gateway", floor: 12, color: "#22c55e" },
+    { id: "gw_focus3435", label: "Focus 34/35\nThe Absolute",    type: "Gateway", floor: 17, color: "#22c55e" },
+  ];
+
+  // Edges connecting Gateway nodes to their Floor nodes:
+  // { source: "gw_focus10", target: "floor_2", type: "hasPracticeEntry" }
+
+────────────────────────────────────────────────────────────────────────────────
+CONFIDENCE COLOUR LEGEND (for your CSS or docs)
+────────────────────────────────────────────────────────────────────────────────
+
+  Very Strong  →  Green   #22c55e  (direct structural match, both systems describe same state)
+  Strong       →  Blue    #3b82f6  (clear functional parallel, different vocabularies)
+  Approximate  →  Amber   #f59e0b  (resonant but indirect; use as pointer not equivalence)
+  Speculative  →  Red     #ef4444  (Monroe's system near its limit; offered as direction only)
+
+================================================================================
+TAPE COUNT VERIFICATION
+================================================================================
+
+Floor  1: 1 tape   (Tape 1)
+Floor  2: 2 tapes  (Tapes 2, 25)
+Floor  3: 2 tapes  (Tapes 3, 4)
+Floor  4: 4 tapes  (Tapes 5, 6, 11, 12)
+Floor  5: 4 tapes  (Tapes 7, 8, 9, 10)
+Floor  6: 13 tapes (Tapes 13-24, 26) ← most tape-dense: Tisra Til / Third Eye gateway
+Floor  7: 4 tapes  (Tapes 27-30)
+Floor  8: 1 tape   (Tape 17) ← also on Floor 6; intentional double-placement
+Floor  9: 4 tapes  (Tapes 31-34)
+Floor 10: 2 tapes  (Tapes 35-36)
+Floor 11: 2 tapes  (Tapes 37-38)
+Floor 12: 4 tapes  (Tapes 39-42)
+Floor 13: 2 tapes  (Tapes 43-44)
+Floor 14: 2 tapes  (Tapes 45-46)
+Floor 15: 2 tapes  (Tapes 47-48)
+Floor 16: 1 tape   (Tape 49)
+Floor 17: 1 tape   (Tape 50)
+Floor 18: 0 tapes  ← no mapping; beyond all technology
+
+Total unique tapes assigned: 50 / 50  ✓
+================================================================================

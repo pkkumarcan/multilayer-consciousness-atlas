@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "FloorSchema",
-  "type": "OBJECT",
+  "type": "object",
   "required": [
     "id",
     "canonical_name",
@@ -13,198 +13,229 @@
     "science",
     "phenomenology",
     "memory",
-    "sources"
+    "sources",
+    "gateway_experience"
   ],
   "properties": {
-    "id": { "type": "STRING", "pattern": "^floor_([1-9]|1[0-8])$" },
-    "canonical_name": { "type": "STRING" },
-    "sanskrit_name": { "type": "STRING" },
+    "id": { "type": "string", "pattern": "^floor_([1-9]|1[0-8])$" },
+    "canonical_name": { "type": "string" },
+    "sanskrit_name": { "type": "string" },
     "alternate_names": {
-      "type": "ARRAY",
-      "items": { "type": "STRING" }
+      "type": "array",
+      "items": { "type": "string" }
     },
     "classification": {
-      "type": "OBJECT",
+      "type": "object",
       "required": ["level", "realm", "category"],
       "properties": {
-        "level": { "type": "INTEGER", "minimum": 1, "maximum": 18 },
-        "realm": { "type": "STRING", "enum": ["Pinda", "Brahmanda", "Dayal Desh", "Secret"] },
-        "category": { "type": "STRING", "enum": ["physical", "astral", "pure spirit", "indescribable"] }
+        "level": { "type": "integer", "minimum": 1, "maximum": 18 },
+        "realm": { "type": "string", "enum": ["Pinda", "Brahmanda", "Dayal Desh", "Secret"] },
+        "category": { "type": "string", "enum": ["physical", "astral", "pure spirit", "indescribable"] }
       }
     },
     "canonical": {
-      "type": "OBJECT",
+      "type": "object",
       "required": ["ruler", "sound", "light", "geometry", "petals", "teachings"],
       "properties": {
-        "ruler": { "type": "STRING" },
-        "sound": { "type": "STRING" },
-        "light": { "type": "STRING" },
-        "geometry": { "type": "STRING" },
+        "ruler": { "type": "string" },
+        "sound": { "type": "string" },
+        "light": { "type": "string" },
+        "geometry": { "type": "string" },
         "petals": {
-          "type": "OBJECT",
+          "type": "object",
           "required": ["count", "color", "seed_syllables"],
           "properties": {
-            "count": { "type": "INTEGER" },
-            "color": { "type": "STRING" },
-            "seed_syllables": { "type": "ARRAY", "items": { "type": "STRING" } }
+            "count": { "type": "integer" },
+            "color": { "type": "string" },
+            "seed_syllables": { "type": "array", "items": { "type": "string" } }
           }
         },
-        "teachings": { "type": "STRING" },
-        "mantra": { "type": "STRING" },
-        "recitation": { "type": "STRING" },
-        "consorts": { "type": "STRING" },
-        "function": { "type": "STRING" }
+        "teachings": { "type": "string" },
+        "mantra": { "type": "string" },
+        "recitation": { "type": "string" },
+        "consorts": { "type": "string" },
+        "function": { "type": "string" }
       }
     },
     "comparative": {
-      "type": "OBJECT",
+      "type": "object",
       "properties": {
         "sufism": {
-          "type": "OBJECT",
+          "type": "object",
           "properties": {
-            "term": { "type": "STRING" },
-            "description": { "type": "STRING" }
+            "term": { "type": "string" },
+            "description": { "type": "string" }
           }
         },
         "taoism": {
-          "type": "OBJECT",
+          "type": "object",
           "properties": {
-            "term": { "type": "STRING" },
-            "description": { "type": "STRING" }
+            "term": { "type": "string" },
+            "description": { "type": "string" }
           }
         },
         "kabbalah": {
-          "type": "OBJECT",
+          "type": "object",
           "properties": {
-            "term": { "type": "STRING" },
-            "description": { "type": "STRING" }
+            "term": { "type": "string" },
+            "description": { "type": "string" }
           }
         },
         "buddhism": {
-          "type": "OBJECT",
+          "type": "object",
           "properties": {
-            "term": { "type": "STRING" },
-            "description": { "type": "STRING" }
+            "term": { "type": "string" },
+            "description": { "type": "string" }
           }
         },
         "christianity": {
-          "type": "OBJECT",
+          "type": "object",
           "properties": {
-            "term": { "type": "STRING" },
-            "description": { "type": "STRING" }
+            "term": { "type": "string" },
+            "description": { "type": "string" }
           }
         },
         "gnosticism": {
-          "type": "OBJECT",
+          "type": "object",
           "properties": {
-            "term": { "type": "STRING" },
-            "description": { "type": "STRING" }
+            "term": { "type": "string" },
+            "description": { "type": "string" }
           }
         },
         "hindu_tantra": {
-          "type": "OBJECT",
+          "type": "object",
           "properties": {
-            "term": { "type": "STRING" },
-            "description": { "type": "STRING" }
+            "term": { "type": "string" },
+            "description": { "type": "string" }
           }
         },
         "sikhism": {
-          "type": "OBJECT",
+          "type": "object",
           "properties": {
-            "term": { "type": "STRING" },
-            "description": { "type": "STRING" }
+            "term": { "type": "string" },
+            "description": { "type": "string" }
           }
         },
         "vedic": {
-          "type": "OBJECT",
+          "type": "object",
           "properties": {
-            "term": { "type": "STRING" },
-            "description": { "type": "STRING" }
+            "term": { "type": "string" },
+            "description": { "type": "string" }
           }
         },
         "jainism": {
-          "type": "OBJECT",
+          "type": "object",
           "properties": {
-            "term": { "type": "STRING" },
-            "description": { "type": "STRING" }
+            "term": { "type": "string" },
+            "description": { "type": "string" }
           }
         }
       }
     },
     "science": {
-      "type": "OBJECT",
+      "type": "object",
       "properties": {
         "neuroscience": {
-          "type": "OBJECT",
+          "type": "object",
           "properties": {
-            "regions": { "type": "ARRAY", "items": { "type": "STRING" } },
-            "networks": { "type": "ARRAY", "items": { "type": "STRING" } },
-            "description": { "type": "STRING" },
-            "confidence": { "type": "STRING", "enum": ["High", "Medium", "Low"] }
+            "regions": { "type": "array", "items": { "type": "string" } },
+            "networks": { "type": "array", "items": { "type": "string" } },
+            "description": { "type": "string" },
+            "confidence": { "type": "string", "enum": ["High", "Medium", "Low"] }
           }
         },
         "endocrinology": {
-          "type": "OBJECT",
+          "type": "object",
           "properties": {
-            "description": { "type": "STRING" }
+            "description": { "type": "string" }
           }
         },
         "psychology": {
-          "type": "OBJECT",
+          "type": "object",
           "properties": {
-            "ego_state": { "type": "STRING" },
-            "description": { "type": "STRING" }
+            "ego_state": { "type": "string" },
+            "description": { "type": "string" }
           }
         },
         "cosmology": {
-          "type": "OBJECT",
+          "type": "object",
           "properties": {
-            "description": { "type": "STRING" }
+            "description": { "type": "string" }
           }
         },
         "information_theory": {
-          "type": "OBJECT",
+          "type": "object",
           "properties": {
-            "description": { "type": "STRING" }
+            "description": { "type": "string" }
           }
         }
       }
     },
     "phenomenology": {
-      "type": "OBJECT",
+      "type": "object",
       "required": ["emotional_tone", "visual_texture", "auditory_texture", "ego_effect", "risks", "transitions"],
       "properties": {
-        "emotional_tone": { "type": "STRING" },
-        "visual_texture": { "type": "STRING" },
-        "auditory_texture": { "type": "STRING" },
-        "ego_effect": { "type": "STRING" },
-        "risks": { "type": "STRING" },
+        "emotional_tone": { "type": "string" },
+        "visual_texture": { "type": "string" },
+        "auditory_texture": { "type": "string" },
+        "ego_effect": { "type": "string" },
+        "risks": { "type": "string" },
         "transitions": {
-          "type": "OBJECT",
+          "type": "object",
           "required": ["from_previous", "to_next"],
           "properties": {
-            "from_previous": { "type": "STRING" },
-            "to_next": { "type": "STRING" }
+            "from_previous": { "type": "string" },
+            "to_next": { "type": "string" }
           }
         }
       }
     },
     "memory": {
-      "type": "OBJECT",
+      "type": "object",
       "required": ["color", "icon", "metaphor", "mnemonic"],
       "properties": {
-        "color": { "type": "STRING", "pattern": "^#[0-9a-fA-F]{6}$" },
-        "icon": { "type": "STRING" },
-        "metaphor": { "type": "STRING" },
-        "mnemonic": { "type": "STRING" }
+        "color": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+        "icon": { "type": "string" },
+        "metaphor": { "type": "string" },
+        "mnemonic": { "type": "string" }
       }
     },
     "sources": {
-      "type": "OBJECT",
+      "type": "object",
       "required": ["primary", "secondary"],
       "properties": {
-        "primary": { "type": "ARRAY", "items": { "type": "STRING" } },
-        "secondary": { "type": "ARRAY", "items": { "type": "STRING" } }
+        "primary": { "type": "array", "items": { "type": "string" } },
+        "secondary": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "gateway_experience": {
+      "type": "object",
+      "required": ["tradition", "epistemic_label", "tapes", "bridge_note", "tape_count"],
+      "properties": {
+        "tradition": { "type": "string" },
+        "epistemic_label": { "type": "string" },
+        "tapes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["tape_num", "name", "wave", "wave_num", "focus", "state", "brainwave", "hz", "description", "confidence"],
+            "properties": {
+              "tape_num": { "type": "integer" },
+              "name": { "type": "string" },
+              "wave": { "type": "string" },
+              "wave_num": { "type": "integer" },
+              "focus": { "type": "string" },
+              "state": { "type": "string" },
+              "brainwave": { "type": "string" },
+              "hz": { "type": "string" },
+              "description": { "type": "string" },
+              "confidence": { "type": "string", "enum": ["Very Strong", "Strong", "Approximate", "Speculative"] }
+            }
+          }
+        },
+        "bridge_note": { "type": "string" },
+        "map_limit_note": { "type": "string" },
+        "tape_count": { "type": "integer" }
       }
     }
   }

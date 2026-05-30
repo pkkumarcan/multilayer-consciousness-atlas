@@ -515,6 +515,24 @@ graph TD
   class network_non_dual_awareness_state neuro;
   network_complete_default_mode_network_dmn_dissolution["Complete Default Mode Network (DMN) Dissolution"]
   class network_complete_default_mode_network_dmn_dissolution neuro;
+  gw_focus3["Focus 3
+Orientation"]
+  gw_focus10["Focus 10
+Mind Awake/Body Asleep"]
+  gw_focus12["Focus 12
+Expanded Awareness"]
+  gw_focus15["Focus 15
+No-Time"]
+  gw_focus21["Focus 21
+Bridge State"]
+  gw_focus23["Focus 23
+Post-Physical Zone"]
+  gw_focus25["Focus 25
+Belief Territories"]
+  gw_focus27["Focus 27
+Reception Centre"]
+  gw_focus3435["Focus 34/35
+The Absolute"]
 
   floor_1 -->|"hasRuler"| ruler_lord_ganesha
   floor_1 -->|"hasSound"| sound_buzz_of_a_honeybee
@@ -818,4 +836,13 @@ graph TD
   floor_9 -->|"correlatesToBrainRegion"| region_reticular_activating_system_ras_suppression
   floor_9 -->|"correlatesToBrainNetwork"| network_non_dual_awareness_state
   floor_9 -->|"correlatesToBrainNetwork"| network_complete_default_mode_network_dmn_dissolution
+  gw_focus3 -->|"hasPracticeEntry"| floor_1
+  gw_focus10 -->|"hasPracticeEntry"| floor_2
+  gw_focus12 -->|"hasPracticeEntry"| floor_5
+  gw_focus15 -->|"hasPracticeEntry"| floor_7
+  gw_focus21 -->|"hasPracticeEntry"| floor_9
+  gw_focus23 -->|"hasPracticeEntry"| floor_11
+  gw_focus25 -->|"hasPracticeEntry"| floor_12
+  gw_focus27 -->|"hasPracticeEntry"| floor_12
+  gw_focus3435 -->|"hasPracticeEntry"| floor_17
 ```
