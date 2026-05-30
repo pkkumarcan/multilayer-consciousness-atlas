@@ -134,6 +134,78 @@ export function playCurrentSound(floorNum, volume = 0.5) {
   }
 }
 
+export function playBinauralBeat(tapeNum, brainwave, hzRange, volume = 0.5) {
+  const ctx = getAudioContext();
+  stopCurrentSound();
+
+  isPlaying = true;
+  currentFloor = -tapeNum; // Negative represents tape
+
+  // Master Gain and Analyser
+  masterGainNode = ctx.createGain();
+  masterGainNode.gain.setValueAtTime(0, ctx.currentTime);
+  masterGainNode.gain.linearRampToValueAtTime(volume * 0.35, ctx.currentTime + 0.3); // Smooth ramp
+  masterGainNode.connect(ctx.destination);
+  connectableNodes.push(masterGainNode);
+
+  analyserNode = ctx.createAnalyser();
+  analyserNode.fftSize = 64;
+  analyserNode.connect(masterGainNode);
+  connectableNodes.push(analyserNode);
+
+  // Parse average beat frequency
+  let beatFreq = 6.0; // Default to Theta 6Hz
+  const matches = hzRange.match(/([0-9.]+)[^0-9.]+([0-9.]+)/);
+  if (matches) {
+    const min = parseFloat(matches[1]);
+    const max = parseFloat(matches[2]);
+    beatFreq = (min + max) / 2;
+  }
+
+  // Base carrier frequency (soothing low sine)
+  let baseFreq = 150.0; // Default
+  const bwLower = brainwave.toLowerCase();
+  if (bwLower.includes('delta')) baseFreq = 100.0;      // Lower carrier for deep delta sleep
+  else if (bwLower.includes('theta')) baseFreq = 140.0;
+  else if (bwLower.includes('alpha')) baseFreq = 180.0;
+  else if (bwLower.includes('beta')) baseFreq = 220.0;
+  else if (bwLower.includes('gamma')) baseFreq = 300.0;
+
+  // Create Stereo Channel Merger
+  const merger = ctx.createChannelMerger(2);
+  merger.connect(analyserNode);
+  connectableNodes.push(merger);
+
+  // Left Ear Oscillator (base - beat/2)
+  const oscLeft = ctx.createOscillator();
+  oscLeft.type = 'sine';
+  oscLeft.frequency.setValueAtTime(baseFreq - beatFreq / 2, ctx.currentTime);
+  stoppableNodes.push(oscLeft);
+
+  const gainLeft = ctx.createGain();
+  gainLeft.gain.setValueAtTime(0.5, ctx.currentTime);
+  connectableNodes.push(gainLeft);
+
+  oscLeft.connect(gainLeft);
+  gainLeft.connect(merger, 0, 0); // Connect to Left channel
+
+  // Right Ear Oscillator (base + beat/2)
+  const oscRight = ctx.createOscillator();
+  oscRight.type = 'sine';
+  oscRight.frequency.setValueAtTime(baseFreq + beatFreq / 2, ctx.currentTime);
+  stoppableNodes.push(oscRight);
+
+  const gainRight = ctx.createGain();
+  gainRight.gain.setValueAtTime(0.5, ctx.currentTime);
+  connectableNodes.push(gainRight);
+
+  oscRight.connect(gainRight);
+  gainRight.connect(merger, 0, 1); // Connect to Right channel
+
+  oscLeft.start();
+  oscRight.start();
+}
+
 // ── HONEYBEE SWARM SYNTHESIS (LEVEL 1) ──
 function synthesizeHoneybeeSwarm(ctx, output) {
   const baseOsc = ctx.createOscillator();

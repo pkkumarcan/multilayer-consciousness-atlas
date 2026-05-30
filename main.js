@@ -10,7 +10,9 @@ import {
   toggleAudioSynthesizer, 
   changeSynthesizerVolume, 
   switchGalleryTab, 
-  toggleAllAccordions 
+  toggleAllAccordions,
+  toggleBinauralBeat,
+  updateBinauralUI 
 } from './ui.js';
 import { setupGraph, toggleGraphFilter } from './graph.js';
 import { handleSearch } from './search.js';
@@ -280,6 +282,8 @@ window.handleSearch = handleSearch;
 window.toggleCardFilter = toggleCardFilter;
 window.toggleVisualizerTab = toggleVisualizerTab;
 window.toggleAudioSynthesizer = toggleAudioSynthesizer;
+window.toggleBinauralBeat = toggleBinauralBeat;
+window.updateBinauralUI = updateBinauralUI;
 window.changeSynthesizerVolume = changeSynthesizerVolume;
 window.switchGalleryTab = switchGalleryTab;
 window.toggleGraphFilter = toggleGraphFilter;

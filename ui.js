@@ -1,5 +1,5 @@
 import { state, COLOR_MAP, SPINAL_CENTERS } from './state.js';
-import { playCurrentSound, stopCurrentSound, isAudioPlaying, getCurrentPlayingFloor, setSynthesizerVolume } from './audio.js';
+import { playCurrentSound, stopCurrentSound, isAudioPlaying, getCurrentPlayingFloor, setSynthesizerVolume, playBinauralBeat } from './audio.js';
 import { init3DMap, pause3DMapAnimation } from './energy.js';
 import { setupGraph } from './graph.js';
 
@@ -42,7 +42,12 @@ function renderGatewayCard(floorData) {
         <td style="padding:6px 8px; color:#94a3b8; font-size:11px; white-space:nowrap;">${escapeHTML(t.wave.replace("Wave ", "W").split("–")[0].trim())}</td>
         <td style="padding:6px 8px; color:#60a5fa; font-size:11px; white-space:nowrap;">${escapeHTML(t.focus)}</td>
         <td style="padding:6px 8px; color:#c4b5fd; font-size:11px;">${escapeHTML(t.state)}</td>
-        <td style="padding:6px 8px; color:#f0abfc; font-size:11px; white-space:nowrap;">${escapeHTML(t.brainwave)}</td>
+        <td style="padding:6px 8px; color:#f0abfc; font-size:11px; white-space:nowrap; display: flex; align-items: center; gap: 4px; border-bottom: none;">
+          ${escapeHTML(t.brainwave)}
+          <button class="binaural-play-btn" id="btn-binaural-${t.tape_num}" onclick="event.stopPropagation(); toggleBinauralBeat(${t.tape_num}, '${escapeHTML(t.brainwave)}', '${escapeHTML(t.hz)}')" title="Play Binaural Beat" style="background: none; border: none; cursor: pointer; color: #4ade80; padding: 2px; display: inline-flex; align-items: center;">
+            <svg style="width:12px; height:12px; fill:currentColor;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          </button>
+        </td>
         <td style="padding:6px 8px; color:#86efac; font-size:11px; white-space:nowrap;">${escapeHTML(t.hz)}</td>
         <td style="padding:6px 8px;">${confBadge(t.confidence)}</td>
       </tr>
@@ -662,6 +667,11 @@ function renderFloorDetails(floor) {
     const isPlaying = isAudioPlaying();
     const currentFloor = getCurrentPlayingFloor();
     updateAudioUI(floor.classification.level, isPlaying && currentFloor === floor.classification.level);
+    
+    // Restore active binaural beat button UI state on navigation/render
+    if (isPlaying && currentFloor < 0) {
+      updateBinauralUI(-currentFloor, true);
+    }
   }, 50);
 }
 
@@ -1135,10 +1145,53 @@ export function toggleAudioSynthesizer(floorNum) {
     updateAudioUI(floorNum, false);
   } else {
     stopCurrentSound();
+    updateBinauralUI(0, false); // Turn off any active binaural beat buttons
+    
     const volSlider = document.getElementById('audio-volume-slider');
     const volume = volSlider ? parseFloat(volSlider.value) : 0.5;
     playCurrentSound(floorNum, volume);
     updateAudioUI(floorNum, true);
+  }
+}
+
+export function toggleBinauralBeat(tapeNum, brainwave, hzRange) {
+  const isPlaying = isAudioPlaying();
+  const currentFloor = getCurrentPlayingFloor();
+  
+  if (isPlaying && currentFloor === -tapeNum) {
+    stopCurrentSound();
+    updateBinauralUI(tapeNum, false);
+  } else {
+    stopCurrentSound();
+    
+    const volSlider = document.getElementById('audio-volume-slider');
+    const volume = volSlider ? parseFloat(volSlider.value) : 0.5;
+    playBinauralBeat(tapeNum, brainwave, hzRange, volume);
+    updateBinauralUI(tapeNum, true);
+  }
+}
+
+export function updateBinauralUI(tapeNum, isPlaying) {
+  document.querySelectorAll('.binaural-play-btn').forEach(btn => {
+    btn.innerHTML = `
+      <svg style="width:12px; height:12px; fill:currentColor;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+    `;
+    btn.title = "Play Binaural Beat";
+    btn.style.color = "#4ade80";
+  });
+
+  if (isPlaying) {
+    const activeBtn = document.getElementById(`btn-binaural-${tapeNum}`);
+    if (activeBtn) {
+      activeBtn.innerHTML = `
+        <svg style="width:12px; height:12px; fill:currentColor;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-4 4h8v8H8z"/></svg>
+      `;
+      activeBtn.title = "Stop Binaural Beat";
+      activeBtn.style.color = "#ef4444";
+    }
+    
+    // De-activate standard floor play button UI
+    updateAudioUI(state.activeFloor, false);
   }
 }
 
