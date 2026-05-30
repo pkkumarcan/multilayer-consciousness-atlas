@@ -55,18 +55,25 @@ export function stopCurrentSound() {
     } catch (e) {}
   }
 
-  // Stop stoppable nodes and disconnect all
+  // Capture the old nodes locally so the async timeout only stops them,
+  // preventing a race condition with any newly created nodes!
+  const nodesToStop = [...stoppableNodes];
+  const nodesToDisconnect = [...connectableNodes];
+
+  // Clear global trackers synchronously
+  stoppableNodes = [];
+  connectableNodes = [];
+  masterGainNode = null;
+
+  // Stop captured old nodes asynchronously after fade-out completes
   setTimeout(() => {
-    stoppableNodes.forEach(node => {
+    nodesToStop.forEach(node => {
       try { node.stop(); } catch (e) {}
       try { node.disconnect(); } catch (e) {}
     });
-    connectableNodes.forEach(node => {
+    nodesToDisconnect.forEach(node => {
       try { node.disconnect(); } catch (e) {}
     });
-    stoppableNodes = [];
-    connectableNodes = [];
-    masterGainNode = null;
   }, 450);
 
   isPlaying = false;
